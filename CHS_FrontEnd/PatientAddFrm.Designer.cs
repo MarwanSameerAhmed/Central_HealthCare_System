@@ -31,6 +31,7 @@ namespace CHS_FrontEnd
         private void InitializeComponent()
         {
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.labelError = new System.Windows.Forms.Label();
             this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.nationalIDtxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,11 +48,12 @@ namespace CHS_FrontEnd
             this.fullNametxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.labelerrorPhone = new System.Windows.Forms.Label();
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.PhoneNumbertxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -79,6 +81,7 @@ namespace CHS_FrontEnd
             // 
             this.guna2ContainerControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ContainerControl1.BorderRadius = 15;
+            this.guna2ContainerControl1.Controls.Add(this.labelError);
             this.guna2ContainerControl1.Controls.Add(this.guna2ComboBox3);
             this.guna2ContainerControl1.Controls.Add(this.label13);
             this.guna2ContainerControl1.Controls.Add(this.nationalIDtxt);
@@ -95,12 +98,23 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl1.Controls.Add(this.fullNametxt);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(792, 89);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(792, 74);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(971, 373);
             this.guna2ContainerControl1.TabIndex = 0;
             this.guna2ContainerControl1.Text = "الاسم الكامل ";
-            this.guna2ContainerControl1.Click += new System.EventHandler(this.guna2ContainerControl1_Click);
+            // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Location = new System.Drawing.Point(770, 63);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(20, 17);
+            this.labelError.TabIndex = 20;
+            this.labelError.Text = "\"\"";
+            this.labelError.Visible = false;
             // 
             // guna2ComboBox3
             // 
@@ -261,7 +275,6 @@ namespace CHS_FrontEnd
             this.birthdaytxt.Size = new System.Drawing.Size(453, 36);
             this.birthdaytxt.TabIndex = 9;
             this.birthdaytxt.Value = new System.DateTime(2024, 12, 14, 21, 13, 20, 682);
-            this.birthdaytxt.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
             // 
             // agetxt
             // 
@@ -339,7 +352,7 @@ namespace CHS_FrontEnd
             this.fullNametxt.SelectedText = "";
             this.fullNametxt.Size = new System.Drawing.Size(940, 33);
             this.fullNametxt.TabIndex = 1;
-            this.fullNametxt.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.fullNametxt.TextChanged += new System.EventHandler(this.fullNametxt_TextChanged);
             // 
             // label1
             // 
@@ -353,25 +366,37 @@ namespace CHS_FrontEnd
             this.label1.TabIndex = 0;
             this.label1.Text = "الاسم الكامل";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2ContainerControl2
             // 
             this.guna2ContainerControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ContainerControl2.BorderRadius = 15;
+            this.guna2ContainerControl2.Controls.Add(this.labelerrorPhone);
             this.guna2ContainerControl2.Controls.Add(this.guna2TextBox6);
             this.guna2ContainerControl2.Controls.Add(this.label12);
             this.guna2ContainerControl2.Controls.Add(this.guna2TextBox5);
             this.guna2ContainerControl2.Controls.Add(this.label11);
-            this.guna2ContainerControl2.Controls.Add(this.guna2TextBox4);
+            this.guna2ContainerControl2.Controls.Add(this.PhoneNumbertxt);
             this.guna2ContainerControl2.Controls.Add(this.label8);
             this.guna2ContainerControl2.Controls.Add(this.label9);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(200, 89);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(200, 74);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(573, 373);
             this.guna2ContainerControl2.TabIndex = 1;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
+            // 
+            // labelerrorPhone
+            // 
+            this.labelerrorPhone.AutoSize = true;
+            this.labelerrorPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.labelerrorPhone.ForeColor = System.Drawing.Color.Red;
+            this.labelerrorPhone.Location = new System.Drawing.Point(323, 61);
+            this.labelerrorPhone.Name = "labelerrorPhone";
+            this.labelerrorPhone.Size = new System.Drawing.Size(20, 17);
+            this.labelerrorPhone.TabIndex = 21;
+            this.labelerrorPhone.Text = "\"\"";
+            this.labelerrorPhone.Visible = false;
             // 
             // guna2TextBox6
             // 
@@ -447,30 +472,30 @@ namespace CHS_FrontEnd
             this.label11.Text = "العنوان";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // guna2TextBox4
+            // PhoneNumbertxt
             // 
-            this.guna2TextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2TextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.guna2TextBox4.BorderRadius = 10;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(15, 87);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox4.PlaceholderText = "ادخل رقم هاتف المريض";
-            this.guna2TextBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(545, 33);
-            this.guna2TextBox4.TabIndex = 3;
+            this.PhoneNumbertxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.PhoneNumbertxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.PhoneNumbertxt.BorderRadius = 10;
+            this.PhoneNumbertxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PhoneNumbertxt.DefaultText = "";
+            this.PhoneNumbertxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.PhoneNumbertxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.PhoneNumbertxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PhoneNumbertxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PhoneNumbertxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PhoneNumbertxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PhoneNumbertxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PhoneNumbertxt.Location = new System.Drawing.Point(15, 87);
+            this.PhoneNumbertxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PhoneNumbertxt.Name = "PhoneNumbertxt";
+            this.PhoneNumbertxt.PasswordChar = '\0';
+            this.PhoneNumbertxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.PhoneNumbertxt.PlaceholderText = "ادخل رقم هاتف المريض";
+            this.PhoneNumbertxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.PhoneNumbertxt.SelectedText = "";
+            this.PhoneNumbertxt.Size = new System.Drawing.Size(545, 33);
+            this.PhoneNumbertxt.TabIndex = 3;
             // 
             // label8
             // 
@@ -542,12 +567,11 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl4.Controls.Add(this.guna2TextBox7);
             this.guna2ContainerControl4.Controls.Add(this.label14);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(200, 482);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(200, 467);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
             this.guna2ContainerControl4.Size = new System.Drawing.Size(1563, 292);
             this.guna2ContainerControl4.TabIndex = 3;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Click += new System.EventHandler(this.guna2ContainerControl4_Click);
             // 
             // guna2TextBox10
             // 
@@ -758,11 +782,12 @@ namespace CHS_FrontEnd
             this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.createBtn.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(673, 806);
+            this.createBtn.Location = new System.Drawing.Point(755, 806);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(329, 45);
             this.createBtn.TabIndex = 4;
             this.createBtn.Text = "إنشاء";
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // addingPatientFrm
             // 
@@ -810,7 +835,7 @@ namespace CHS_FrontEnd
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox PhoneNumbertxt;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl3;
         private System.Windows.Forms.Label label10;
@@ -833,5 +858,7 @@ namespace CHS_FrontEnd
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
         private Label label18;
         private Guna.UI2.WinForms.Guna2Button createBtn;
+        private Label labelError;
+        private Label labelerrorPhone;
     }
 }

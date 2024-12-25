@@ -15,10 +15,37 @@ namespace CHS_FrontEnd
     public partial class searchPatientFrm : Form
     {
         private DockPanel dockPanel;
+
+        private Form currentForm = null;
         public searchPatientFrm(DockPanel dockPanel)
         {
             InitializeComponent();
             this.dockPanel = dockPanel;
+        }
+
+        private void OpenForm(Form childForm)
+        {
+
+            if (currentForm != null && currentForm.GetType() == childForm.GetType())
+            {
+
+                return;
+            }
+            currentForm = childForm;
+
+
+            childForm.TopLevel = false;
+
+            var dockContent = new DockContent()
+            {
+                Text = childForm.Text
+            };
+
+            childForm.Dock = DockStyle.Fill;
+            dockContent.Controls.Add(childForm);
+            childForm.Show();
+            dockContent.Show(dockPanel);
+
         }
 
         private void guna2ContainerControl3_Click(object sender, EventArgs e)
@@ -70,7 +97,7 @@ namespace CHS_FrontEnd
                 guna2VScrollBar1.LargeChange = searchPatientView.DisplayedRowCount(false);
                 guna2VScrollBar1.SmallChange = 1;
 
-                // تأكد أن القيمة الحالية ضمن النطاق
+                
                 if (guna2VScrollBar1.Value > guna2VScrollBar1.Maximum)
                 {
                     guna2VScrollBar1.Value = guna2VScrollBar1.Maximum;
@@ -109,6 +136,17 @@ namespace CHS_FrontEnd
         }
 
        
-        
+
+        private void searchPatientView_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            if (e.RowIndex >= 0)
+            {
+               
+                Form1 fr = new Form1(dockPanel);
+                OpenForm(fr);
+
+            }
+        }
     }
 }

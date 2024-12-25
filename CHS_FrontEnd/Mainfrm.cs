@@ -16,7 +16,9 @@ namespace CHS_FrontEnd
     public partial class Mainfrm : Form
     {
         private DockPanel dockPanel;
-     
+        
+
+
         private Form currentForm = null;
         private bool isCollapsed = false;
 
@@ -25,6 +27,7 @@ namespace CHS_FrontEnd
         public Mainfrm()
         {
             InitializeComponent();
+          
             customDes();
             this.WindowState = FormWindowState.Maximized;
             dockPanel = new DockPanel() { Dock = DockStyle.Fill };
@@ -43,6 +46,7 @@ namespace CHS_FrontEnd
         private void Form1_Load(object sender, EventArgs e)
         {
             MainPage.PerformClick();
+       
         }
 
        
@@ -76,7 +80,7 @@ namespace CHS_FrontEnd
 
         private void show()
         {
-            MainServicePage fr = new MainServicePage();
+            MainService fr = new MainService(dockPanel);
             OpenForm(fr);
         }
 
@@ -191,5 +195,30 @@ namespace CHS_FrontEnd
         {
 
         }
+
+        private void LogOutBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("هل تريد تسجيل الخروج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+               
+                frmLogin loginForm = new frmLogin();
+                loginForm.Show();
+
+              
+                this.Close();
+            }
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+
+
+
