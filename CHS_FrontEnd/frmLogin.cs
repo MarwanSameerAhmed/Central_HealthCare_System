@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CHS.Client.API;
+using CHS.Client.API.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -116,7 +118,20 @@ namespace CHS_FrontEnd
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
+            try
+            {
+                LoginResponse response = RequestSender.Login(UserNametxt.Text, passwordtxt.Text);
+                if (!(response is null) && !string.IsNullOrEmpty(response.Token))
+                {
+                    DialogResult = DialogResult.OK;
+                    return;
+                }
+                MessageBox.Show("حصل خطأ اثناء تسجيل الدخول", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.InnerException is null? ex.Message: ex.InnerException.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

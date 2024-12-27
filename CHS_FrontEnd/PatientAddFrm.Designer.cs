@@ -111,7 +111,7 @@ namespace CHS_FrontEnd
             this.labelError.ForeColor = System.Drawing.Color.Red;
             this.labelError.Location = new System.Drawing.Point(770, 63);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(20, 17);
+            this.labelError.Size = new System.Drawing.Size(17, 13);
             this.labelError.TabIndex = 20;
             this.labelError.Text = "\"\"";
             this.labelError.Visible = false;
@@ -141,7 +141,7 @@ namespace CHS_FrontEnd
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label13.Location = new System.Drawing.Point(380, 288);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 17);
+            this.label13.Size = new System.Drawing.Size(77, 13);
             this.label13.TabIndex = 18;
             this.label13.Text = "الحالة الاجتماعية";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -179,7 +179,7 @@ namespace CHS_FrontEnd
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label7.Location = new System.Drawing.Point(901, 288);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 16;
             this.label7.Text = "رقم الهوية";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -210,7 +210,7 @@ namespace CHS_FrontEnd
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label6.Location = new System.Drawing.Point(414, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 17);
+            this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "المحافظة";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -241,7 +241,7 @@ namespace CHS_FrontEnd
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label5.Location = new System.Drawing.Point(918, 209);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 17);
+            this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "الجنس";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -253,7 +253,7 @@ namespace CHS_FrontEnd
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label3.Location = new System.Drawing.Point(403, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
+            this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "تاريخ الميلاد";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -309,7 +309,7 @@ namespace CHS_FrontEnd
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label2.Location = new System.Drawing.Point(924, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 17);
+            this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "العمر";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -321,10 +321,10 @@ namespace CHS_FrontEnd
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label4.Location = new System.Drawing.Point(705, 0);
+            this.label4.Location = new System.Drawing.Point(763, 0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(15);
-            this.label4.Size = new System.Drawing.Size(266, 55);
+            this.label4.Size = new System.Drawing.Size(208, 50);
             this.label4.TabIndex = 6;
             this.label4.Text = "المعلومات الشخصية للمريض";
             // 
@@ -362,7 +362,7 @@ namespace CHS_FrontEnd
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(891, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "الاسم الكامل";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -393,7 +393,7 @@ namespace CHS_FrontEnd
             this.labelerrorPhone.ForeColor = System.Drawing.Color.Red;
             this.labelerrorPhone.Location = new System.Drawing.Point(323, 61);
             this.labelerrorPhone.Name = "labelerrorPhone";
-            this.labelerrorPhone.Size = new System.Drawing.Size(20, 17);
+            this.labelerrorPhone.Size = new System.Drawing.Size(17, 13);
             this.labelerrorPhone.TabIndex = 21;
             this.labelerrorPhone.Text = "\"\"";
             this.labelerrorPhone.Visible = false;
@@ -504,10 +504,10 @@ namespace CHS_FrontEnd
             this.label8.Dock = System.Windows.Forms.DockStyle.Right;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label8.Location = new System.Drawing.Point(343, 0);
+            this.label8.Location = new System.Drawing.Point(385, 0);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(15);
-            this.label8.Size = new System.Drawing.Size(230, 53);
+            this.label8.Size = new System.Drawing.Size(188, 49);
             this.label8.TabIndex = 0;
             this.label8.Text = "معلومات الاتصال بالمريض";
             // 
@@ -545,7 +545,7 @@ namespace CHS_FrontEnd
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(707, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(234, 37);
+            this.label10.Size = new System.Drawing.Size(191, 30);
             this.label10.TabIndex = 0;
             this.label10.Text = "إنشاء ملف طبي جديد";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -606,7 +606,7 @@ namespace CHS_FrontEnd
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label19.Location = new System.Drawing.Point(481, 53);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(122, 17);
+            this.label19.Size = new System.Drawing.Size(94, 13);
             this.label19.TabIndex = 28;
             this.label19.Text = "الادوية التي تم تناولها";
             this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -644,7 +644,7 @@ namespace CHS_FrontEnd
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label18.Location = new System.Drawing.Point(929, 53);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(138, 17);
+            this.label18.Size = new System.Drawing.Size(109, 13);
             this.label18.TabIndex = 26;
             this.label18.Text = "الحساسيات لدى المريض";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -682,7 +682,7 @@ namespace CHS_FrontEnd
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label17.Location = new System.Drawing.Point(1467, 202);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(96, 17);
+            this.label17.Size = new System.Drawing.Size(81, 13);
             this.label17.TabIndex = 24;
             this.label17.Text = "الامراض المزمنة ";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -713,7 +713,7 @@ namespace CHS_FrontEnd
             this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label16.Location = new System.Drawing.Point(1491, 124);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 17);
+            this.label16.Size = new System.Drawing.Size(50, 13);
             this.label16.TabIndex = 23;
             this.label16.Text = "فصيلة الدم";
             this.label16.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -725,10 +725,10 @@ namespace CHS_FrontEnd
             this.label15.Dock = System.Windows.Forms.DockStyle.Right;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label15.Location = new System.Drawing.Point(1346, 0);
+            this.label15.Location = new System.Drawing.Point(1391, 0);
             this.label15.Name = "label15";
             this.label15.Padding = new System.Windows.Forms.Padding(15);
-            this.label15.Size = new System.Drawing.Size(217, 53);
+            this.label15.Size = new System.Drawing.Size(172, 49);
             this.label15.TabIndex = 22;
             this.label15.Text = "معلومات المريض الطبية";
             // 
@@ -765,7 +765,7 @@ namespace CHS_FrontEnd
             this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label14.Location = new System.Drawing.Point(1467, 53);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 17);
+            this.label14.Size = new System.Drawing.Size(81, 13);
             this.label14.TabIndex = 20;
             this.label14.Text = "الامراض المزمنة ";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -791,10 +791,10 @@ namespace CHS_FrontEnd
             // 
             // addingPatientFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1808, 912);
+            this.ClientSize = new System.Drawing.Size(1444, 882);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.guna2ContainerControl4);
             this.Controls.Add(this.guna2ContainerControl3);
