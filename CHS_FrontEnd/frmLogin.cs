@@ -118,6 +118,10 @@ namespace CHS_FrontEnd
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+#if DEBUG
+            DialogResult = DialogResult.OK;
+            return;
+#endif
             try
             {
                 LoginResponse response = RequestSender.Login(UserNametxt.Text, passwordtxt.Text);
