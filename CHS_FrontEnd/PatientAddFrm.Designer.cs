@@ -709,7 +709,7 @@ namespace CHS_FrontEnd
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(621, 9);
+            this.label10.Location = new System.Drawing.Point(621, 4);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(234, 37);
             this.label10.TabIndex = 0;

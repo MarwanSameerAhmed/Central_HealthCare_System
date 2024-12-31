@@ -38,6 +38,8 @@
             this.passwordtxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.UserNametxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelError = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,8 +57,11 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.labelError);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.passwordtxt);
@@ -64,21 +69,21 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.Closebtn);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(180)))));
             this.panel2.Location = new System.Drawing.Point(364, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(386, 530);
+            this.panel2.Size = new System.Drawing.Size(452, 530);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(138)))), ((int)(((byte)(195)))));
-            this.linkLabel1.Location = new System.Drawing.Point(143, 420);
+            this.linkLabel1.Location = new System.Drawing.Point(155, 420);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(115, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(104, 17);
             this.linkLabel1.TabIndex = 10;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "نسيت كلمة المرور";
@@ -105,11 +110,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Dubai", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(148, 110);
+            this.label1.Location = new System.Drawing.Point(150, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 51);
+            this.label1.Size = new System.Drawing.Size(116, 41);
             this.label1.TabIndex = 3;
             this.label1.Text = "مرحبا بك";
             this.label1.Click += new System.EventHandler(this.label4_Click);
@@ -117,11 +122,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Dubai", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label4.Location = new System.Drawing.Point(66, 156);
+            this.label4.Location = new System.Drawing.Point(57, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(276, 48);
+            this.label4.Size = new System.Drawing.Size(295, 38);
             this.label4.TabIndex = 3;
             this.label4.Text = "سجل الدخول الى حسابك";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -206,6 +211,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.BackColor = System.Drawing.Color.White;
+            this.labelError.Cursor = System.Windows.Forms.Cursors.Default;
+            this.labelError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Location = new System.Drawing.Point(88, 198);
+            this.labelError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(18, 17);
+            this.labelError.TabIndex = 21;
+            this.labelError.Text = "\"\"";
+            this.labelError.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(110, 198);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 17);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "\"\"";
+            this.label2.Visible = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -225,6 +260,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -240,6 +276,8 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox passwordtxt;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Label label2;
     }
 }
 

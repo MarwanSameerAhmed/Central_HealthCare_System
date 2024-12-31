@@ -1,5 +1,5 @@
-﻿using CHS.Client.API;
-using CHS.Client.API.Models;
+﻿using CHS.Client.API.Models;
+using CHS.Client.API;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -118,10 +118,13 @@ namespace CHS_FrontEnd
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-#if DEBUG
-            DialogResult = DialogResult.OK;
-            return;
-#endif
+            if (string.IsNullOrWhiteSpace(UserNametxt.Text) || string.IsNullOrWhiteSpace(passwordtxt.Text))
+            {
+                labelError.Text = "يرجى إدخال اسم المستخدم وكلمة المرور.";
+                labelError.ForeColor = Color.Red; 
+                labelError.Visible = true;       
+                return; 
+            }
             try
             {
                 LoginResponse response = RequestSender.Login(UserNametxt.Text, passwordtxt.Text);
@@ -130,11 +133,17 @@ namespace CHS_FrontEnd
                     DialogResult = DialogResult.OK;
                     return;
                 }
-                MessageBox.Show("حصل خطأ اثناء تسجيل الدخول", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                labelError.Visible=false;
+                label2.Text = "حصل خطأ أثناء تسجيل الدخول";
+                label2.ForeColor = Color.Red; 
+                label2.Visible = true;       
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.InnerException is null? ex.Message: ex.InnerException.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                labelError.Visible = false;
+                label2.Text = ex.InnerException is null ? ex.Message : ex.InnerException.Message;
+                label2.ForeColor = Color.Red; 
+                label2.Visible = true;       
             }
         }
     }

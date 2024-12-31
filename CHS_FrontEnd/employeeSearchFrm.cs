@@ -14,9 +14,11 @@ namespace CHS_FrontEnd
 {
     public partial class employeeSearchFrm : Form
     {
+        private DockPanel dockPanel;
         public employeeSearchFrm(DockPanel dockPanel)
         {
             InitializeComponent();
+            this.dockPanel = dockPanel;
         }
 
         private void employeeSearchFrm_Load(object sender, EventArgs e)

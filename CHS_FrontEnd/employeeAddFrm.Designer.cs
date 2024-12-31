@@ -32,6 +32,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.empIDTxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.countryErrorLabel = new System.Windows.Forms.Label();
+            this.gendererrorlbl = new System.Windows.Forms.Label();
+            this.nationallblerror = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.errorlblage = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.empNationalIDtxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,6 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.labelerrorPhone = new System.Windows.Forms.Label();
+            this.addresslblerror = new System.Windows.Forms.Label();
             this.empAddressTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.empPhoneNumbertxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -58,6 +64,9 @@
             this.empDegreeCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.employmentDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.emptypelbl = new System.Windows.Forms.Label();
+            this.emaillbl = new System.Windows.Forms.Label();
+            this.degreelbl = new System.Windows.Forms.Label();
             this.empEmailTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.empTypeCombo = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -73,15 +82,14 @@
             // 
             // guna2ContainerControl3
             // 
-            this.guna2ContainerControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ContainerControl3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(48, 10);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(1, 5);
             this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1349, 42);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1398, 52);
             this.guna2ContainerControl3.TabIndex = 3;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -92,7 +100,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(550, 7);
+            this.label10.Location = new System.Drawing.Point(594, 5);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(214, 37);
@@ -102,9 +110,14 @@
             // 
             // guna2ContainerControl1
             // 
-            this.guna2ContainerControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ContainerControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl1.BorderRadius = 15;
             this.guna2ContainerControl1.Controls.Add(this.empIDTxt);
+            this.guna2ContainerControl1.Controls.Add(this.countryErrorLabel);
+            this.guna2ContainerControl1.Controls.Add(this.gendererrorlbl);
+            this.guna2ContainerControl1.Controls.Add(this.nationallblerror);
+            this.guna2ContainerControl1.Controls.Add(this.label19);
+            this.guna2ContainerControl1.Controls.Add(this.errorlblage);
             this.guna2ContainerControl1.Controls.Add(this.labelError);
             this.guna2ContainerControl1.Controls.Add(this.label13);
             this.guna2ContainerControl1.Controls.Add(this.empNationalIDtxt);
@@ -121,12 +134,13 @@
             this.guna2ContainerControl1.Controls.Add(this.empFullNametxt);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(642, 68);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(405, 72);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(755, 298);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(990, 359);
             this.guna2ContainerControl1.TabIndex = 4;
             this.guna2ContainerControl1.Text = "الاسم الكامل ";
+            this.guna2ContainerControl1.Click += new System.EventHandler(this.guna2ContainerControl1_Click);
             // 
             // empIDTxt
             // 
@@ -142,7 +156,7 @@
             this.empIDTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empIDTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.empIDTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empIDTxt.Location = new System.Drawing.Point(373, 190);
+            this.empIDTxt.Location = new System.Drawing.Point(460, 224);
             this.empIDTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.empIDTxt.Name = "empIDTxt";
             this.empIDTxt.PasswordChar = '\0';
@@ -150,34 +164,107 @@
             this.empIDTxt.PlaceholderText = "ادخل الرقم المميز للموظف ";
             this.empIDTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.empIDTxt.SelectedText = "";
-            this.empIDTxt.Size = new System.Drawing.Size(373, 26);
+            this.empIDTxt.Size = new System.Drawing.Size(519, 33);
             this.empIDTxt.TabIndex = 21;
+            // 
+            // countryErrorLabel
+            // 
+            this.countryErrorLabel.AutoSize = true;
+            this.countryErrorLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.countryErrorLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countryErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.countryErrorLabel.Location = new System.Drawing.Point(275, 198);
+            this.countryErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.countryErrorLabel.Name = "countryErrorLabel";
+            this.countryErrorLabel.Size = new System.Drawing.Size(18, 17);
+            this.countryErrorLabel.TabIndex = 20;
+            this.countryErrorLabel.Text = "\"\"";
+            this.countryErrorLabel.Visible = false;
+            // 
+            // gendererrorlbl
+            // 
+            this.gendererrorlbl.AutoSize = true;
+            this.gendererrorlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.gendererrorlbl.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gendererrorlbl.ForeColor = System.Drawing.Color.Red;
+            this.gendererrorlbl.Location = new System.Drawing.Point(282, 272);
+            this.gendererrorlbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gendererrorlbl.Name = "gendererrorlbl";
+            this.gendererrorlbl.Size = new System.Drawing.Size(18, 17);
+            this.gendererrorlbl.TabIndex = 20;
+            this.gendererrorlbl.Text = "\"\"";
+            this.gendererrorlbl.Visible = false;
+            // 
+            // nationallblerror
+            // 
+            this.nationallblerror.AutoSize = true;
+            this.nationallblerror.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.nationallblerror.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nationallblerror.ForeColor = System.Drawing.Color.Red;
+            this.nationallblerror.Location = new System.Drawing.Point(759, 270);
+            this.nationallblerror.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nationallblerror.Name = "nationallblerror";
+            this.nationallblerror.Size = new System.Drawing.Size(18, 17);
+            this.nationallblerror.TabIndex = 20;
+            this.nationallblerror.Text = "\"\"";
+            this.nationallblerror.Visible = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(758, 199);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(18, 17);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "\"\"";
+            this.label19.Visible = false;
+            // 
+            // errorlblage
+            // 
+            this.errorlblage.AutoSize = true;
+            this.errorlblage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.errorlblage.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorlblage.ForeColor = System.Drawing.Color.Red;
+            this.errorlblage.Location = new System.Drawing.Point(757, 126);
+            this.errorlblage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.errorlblage.Name = "errorlblage";
+            this.errorlblage.Size = new System.Drawing.Size(18, 17);
+            this.errorlblage.TabIndex = 20;
+            this.errorlblage.Text = "\"\"";
+            this.errorlblage.Visible = false;
             // 
             // labelError
             // 
             this.labelError.AutoSize = true;
             this.labelError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.labelError.Cursor = System.Windows.Forms.Cursors.Default;
+            this.labelError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(599, 50);
+            this.labelError.Location = new System.Drawing.Point(754, 57);
             this.labelError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(20, 17);
+            this.labelError.Size = new System.Drawing.Size(18, 17);
             this.labelError.TabIndex = 20;
             this.labelError.Text = "\"\"";
             this.labelError.Visible = false;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label13.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(660, 171);
+            this.label13.Location = new System.Drawing.Point(852, 200);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(127, 17);
             this.label13.TabIndex = 18;
             this.label13.Text = "الرقم المميز للموظف";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // empNationalIDtxt
             // 
@@ -193,7 +280,7 @@
             this.empNationalIDtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empNationalIDtxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.empNationalIDtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empNationalIDtxt.Location = new System.Drawing.Point(373, 250);
+            this.empNationalIDtxt.Location = new System.Drawing.Point(460, 296);
             this.empNationalIDtxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.empNationalIDtxt.Name = "empNationalIDtxt";
             this.empNationalIDtxt.PasswordChar = '\0';
@@ -201,22 +288,23 @@
             this.empNationalIDtxt.PlaceholderText = "ادخل رقم الهوية الوطنية";
             this.empNationalIDtxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.empNationalIDtxt.SelectedText = "";
-            this.empNationalIDtxt.Size = new System.Drawing.Size(375, 26);
+            this.empNationalIDtxt.Size = new System.Drawing.Size(519, 33);
             this.empNationalIDtxt.TabIndex = 17;
+            this.empNationalIDtxt.TextChanged += new System.EventHandler(this.empNationalIDtxt_TextChanged);
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label7.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(701, 230);
+            this.label7.Location = new System.Drawing.Point(913, 269);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 17);
             this.label7.TabIndex = 16;
             this.label7.Text = "رقم الهوية";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // empStatetxt
             // 
@@ -231,22 +319,23 @@
             this.empStatetxt.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.empStatetxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.empStatetxt.ItemHeight = 30;
-            this.empStatetxt.Location = new System.Drawing.Point(16, 191);
+            this.empStatetxt.Location = new System.Drawing.Point(16, 223);
             this.empStatetxt.Margin = new System.Windows.Forms.Padding(2);
             this.empStatetxt.Name = "empStatetxt";
             this.empStatetxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.empStatetxt.Size = new System.Drawing.Size(353, 36);
+            this.empStatetxt.Size = new System.Drawing.Size(440, 36);
             this.empStatetxt.TabIndex = 15;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(322, 167);
+            this.label6.Location = new System.Drawing.Point(398, 203);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.Size = new System.Drawing.Size(59, 17);
             this.label6.TabIndex = 14;
             this.label6.Text = "المحافظة";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -263,23 +352,23 @@
             this.empGendertxt.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.empGendertxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.empGendertxt.ItemHeight = 30;
-            this.empGendertxt.Location = new System.Drawing.Point(16, 250);
+            this.empGendertxt.Location = new System.Drawing.Point(16, 295);
             this.empGendertxt.Margin = new System.Windows.Forms.Padding(2);
             this.empGendertxt.Name = "empGendertxt";
             this.empGendertxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.empGendertxt.Size = new System.Drawing.Size(356, 36);
+            this.empGendertxt.Size = new System.Drawing.Size(440, 36);
             this.empGendertxt.TabIndex = 13;
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(338, 226);
+            this.label5.Location = new System.Drawing.Point(410, 272);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 17);
+            this.label5.Size = new System.Drawing.Size(45, 17);
             this.label5.TabIndex = 11;
             this.label5.Text = "الجنس";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -288,11 +377,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(313, 110);
+            this.label3.Location = new System.Drawing.Point(376, 127);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "تاريخ الميلاد";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -307,12 +397,12 @@
             this.empBirthdaytxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.empBirthdaytxt.ForeColor = System.Drawing.Color.Black;
             this.empBirthdaytxt.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.empBirthdaytxt.Location = new System.Drawing.Point(16, 130);
+            this.empBirthdaytxt.Location = new System.Drawing.Point(16, 150);
             this.empBirthdaytxt.Margin = new System.Windows.Forms.Padding(2);
             this.empBirthdaytxt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.empBirthdaytxt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.empBirthdaytxt.Name = "empBirthdaytxt";
-            this.empBirthdaytxt.Size = new System.Drawing.Size(352, 29);
+            this.empBirthdaytxt.Size = new System.Drawing.Size(440, 33);
             this.empBirthdaytxt.TabIndex = 9;
             this.empBirthdaytxt.Value = new System.DateTime(2024, 12, 14, 21, 13, 20, 682);
             // 
@@ -330,7 +420,7 @@
             this.empAgetxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empAgetxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.empAgetxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empAgetxt.Location = new System.Drawing.Point(373, 130);
+            this.empAgetxt.Location = new System.Drawing.Point(460, 150);
             this.empAgetxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.empAgetxt.Name = "empAgetxt";
             this.empAgetxt.PasswordChar = '\0';
@@ -338,17 +428,16 @@
             this.empAgetxt.PlaceholderText = "ادخل العمر للموظف";
             this.empAgetxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.empAgetxt.SelectedText = "";
-            this.empAgetxt.Size = new System.Drawing.Size(374, 26);
+            this.empAgetxt.Size = new System.Drawing.Size(519, 33);
             this.empAgetxt.TabIndex = 8;
             this.empAgetxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.empAgetxt_KeyPress);
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(719, 110);
+            this.label2.Location = new System.Drawing.Point(942, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 17);
@@ -363,7 +452,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label4.Location = new System.Drawing.Point(493, 0);
+            this.label4.Location = new System.Drawing.Point(728, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(12);
@@ -385,7 +474,7 @@
             this.empFullNametxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empFullNametxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.empFullNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empFullNametxt.Location = new System.Drawing.Point(16, 70);
+            this.empFullNametxt.Location = new System.Drawing.Point(16, 80);
             this.empFullNametxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.empFullNametxt.Name = "empFullNametxt";
             this.empFullNametxt.PasswordChar = '\0';
@@ -393,38 +482,39 @@
             this.empFullNametxt.PlaceholderText = "ادخل الاسم كاملا";
             this.empFullNametxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.empFullNametxt.SelectedText = "";
-            this.empFullNametxt.Size = new System.Drawing.Size(731, 26);
+            this.empFullNametxt.Size = new System.Drawing.Size(963, 33);
             this.empFullNametxt.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(693, 50);
+            this.label1.Location = new System.Drawing.Point(898, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "الاسم الكامل";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2ContainerControl2
             // 
-            this.guna2ContainerControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ContainerControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl2.BorderRadius = 15;
             this.guna2ContainerControl2.Controls.Add(this.labelerrorPhone);
+            this.guna2ContainerControl2.Controls.Add(this.addresslblerror);
             this.guna2ContainerControl2.Controls.Add(this.empAddressTxt);
             this.guna2ContainerControl2.Controls.Add(this.label11);
             this.guna2ContainerControl2.Controls.Add(this.empPhoneNumbertxt);
             this.guna2ContainerControl2.Controls.Add(this.label8);
             this.guna2ContainerControl2.Controls.Add(this.label9);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(115, 68);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(1, 76);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(446, 217);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(392, 355);
             this.guna2ContainerControl2.TabIndex = 5;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -432,17 +522,33 @@
             // 
             this.labelerrorPhone.AutoSize = true;
             this.labelerrorPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.labelerrorPhone.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelerrorPhone.ForeColor = System.Drawing.Color.Red;
-            this.labelerrorPhone.Location = new System.Drawing.Point(251, 49);
+            this.labelerrorPhone.Location = new System.Drawing.Point(157, 55);
             this.labelerrorPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelerrorPhone.Name = "labelerrorPhone";
-            this.labelerrorPhone.Size = new System.Drawing.Size(20, 17);
+            this.labelerrorPhone.Size = new System.Drawing.Size(18, 17);
             this.labelerrorPhone.TabIndex = 21;
             this.labelerrorPhone.Text = "\"\"";
             this.labelerrorPhone.Visible = false;
             // 
+            // addresslblerror
+            // 
+            this.addresslblerror.AutoSize = true;
+            this.addresslblerror.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.addresslblerror.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addresslblerror.ForeColor = System.Drawing.Color.Red;
+            this.addresslblerror.Location = new System.Drawing.Point(160, 124);
+            this.addresslblerror.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addresslblerror.Name = "addresslblerror";
+            this.addresslblerror.Size = new System.Drawing.Size(18, 17);
+            this.addresslblerror.TabIndex = 20;
+            this.addresslblerror.Text = "\"\"";
+            this.addresslblerror.Visible = false;
+            // 
             // empAddressTxt
             // 
+            this.empAddressTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.empAddressTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.empAddressTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.empAddressTxt.BorderRadius = 10;
@@ -455,7 +561,7 @@
             this.empAddressTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empAddressTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.empAddressTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empAddressTxt.Location = new System.Drawing.Point(12, 130);
+            this.empAddressTxt.Location = new System.Drawing.Point(18, 148);
             this.empAddressTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.empAddressTxt.Name = "empAddressTxt";
             this.empAddressTxt.PasswordChar = '\0';
@@ -463,15 +569,16 @@
             this.empAddressTxt.PlaceholderText = "ادخل عنوان الموظف";
             this.empAddressTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.empAddressTxt.SelectedText = "";
-            this.empAddressTxt.Size = new System.Drawing.Size(424, 26);
+            this.empAddressTxt.Size = new System.Drawing.Size(363, 33);
             this.empAddressTxt.TabIndex = 5;
             // 
             // label11
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(348, 109);
+            this.label11.Location = new System.Drawing.Point(294, 127);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 17);
@@ -481,6 +588,7 @@
             // 
             // empPhoneNumbertxt
             // 
+            this.empPhoneNumbertxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.empPhoneNumbertxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.empPhoneNumbertxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.empPhoneNumbertxt.BorderRadius = 10;
@@ -493,7 +601,7 @@
             this.empPhoneNumbertxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empPhoneNumbertxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.empPhoneNumbertxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empPhoneNumbertxt.Location = new System.Drawing.Point(12, 71);
+            this.empPhoneNumbertxt.Location = new System.Drawing.Point(18, 79);
             this.empPhoneNumbertxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.empPhoneNumbertxt.Name = "empPhoneNumbertxt";
             this.empPhoneNumbertxt.PasswordChar = '\0';
@@ -501,7 +609,7 @@
             this.empPhoneNumbertxt.PlaceholderText = "ادخل رقم هاتف الموظف";
             this.empPhoneNumbertxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.empPhoneNumbertxt.SelectedText = "";
-            this.empPhoneNumbertxt.Size = new System.Drawing.Size(424, 26);
+            this.empPhoneNumbertxt.Size = new System.Drawing.Size(362, 33);
             this.empPhoneNumbertxt.TabIndex = 3;
             // 
             // label8
@@ -511,7 +619,7 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Right;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label8.Location = new System.Drawing.Point(219, 0);
+            this.label8.Location = new System.Drawing.Point(165, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(12);
@@ -523,8 +631,9 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(337, 50);
+            this.label9.Location = new System.Drawing.Point(283, 57);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 18);
@@ -534,12 +643,15 @@
             // 
             // guna2ContainerControl4
             // 
-            this.guna2ContainerControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ContainerControl4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl4.BackColor = System.Drawing.Color.White;
             this.guna2ContainerControl4.BorderRadius = 15;
             this.guna2ContainerControl4.Controls.Add(this.empDegreeCombo);
             this.guna2ContainerControl4.Controls.Add(this.label18);
             this.guna2ContainerControl4.Controls.Add(this.employmentDate);
+            this.guna2ContainerControl4.Controls.Add(this.emptypelbl);
+            this.guna2ContainerControl4.Controls.Add(this.emaillbl);
+            this.guna2ContainerControl4.Controls.Add(this.degreelbl);
             this.guna2ContainerControl4.Controls.Add(this.empEmailTxt);
             this.guna2ContainerControl4.Controls.Add(this.label17);
             this.guna2ContainerControl4.Controls.Add(this.empTypeCombo);
@@ -547,15 +659,16 @@
             this.guna2ContainerControl4.Controls.Add(this.label15);
             this.guna2ContainerControl4.Controls.Add(this.label14);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(182, 387);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(405, 447);
             this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(1216, 234);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(990, 234);
             this.guna2ContainerControl4.TabIndex = 6;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
             // 
             // empDegreeCombo
             // 
+            this.empDegreeCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.empDegreeCombo.BackColor = System.Drawing.Color.Transparent;
             this.empDegreeCombo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.empDegreeCombo.BorderRadius = 10;
@@ -566,7 +679,7 @@
             this.empDegreeCombo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.empDegreeCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.empDegreeCombo.ItemHeight = 30;
-            this.empDegreeCombo.Location = new System.Drawing.Point(832, 70);
+            this.empDegreeCombo.Location = new System.Drawing.Point(606, 72);
             this.empDegreeCombo.Margin = new System.Windows.Forms.Padding(2);
             this.empDegreeCombo.Name = "empDegreeCombo";
             this.empDegreeCombo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -575,19 +688,22 @@
             // 
             // label18
             // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label18.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(753, 104);
+            this.label18.Location = new System.Drawing.Point(518, 128);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(84, 17);
+            this.label18.Size = new System.Drawing.Size(89, 17);
             this.label18.TabIndex = 27;
             this.label18.Text = "تاريخ التوظيف";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // employmentDate
             // 
+            this.employmentDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.employmentDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.employmentDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.employmentDate.BorderRadius = 10;
@@ -596,17 +712,60 @@
             this.employmentDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.employmentDate.ForeColor = System.Drawing.Color.Black;
             this.employmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.employmentDate.Location = new System.Drawing.Point(443, 122);
+            this.employmentDate.Location = new System.Drawing.Point(222, 153);
             this.employmentDate.Margin = new System.Windows.Forms.Padding(2);
             this.employmentDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.employmentDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.employmentDate.Name = "employmentDate";
-            this.employmentDate.Size = new System.Drawing.Size(380, 29);
+            this.employmentDate.Size = new System.Drawing.Size(376, 33);
             this.employmentDate.TabIndex = 26;
             this.employmentDate.Value = new System.DateTime(2024, 12, 14, 21, 13, 20, 682);
             // 
+            // emptypelbl
+            // 
+            this.emptypelbl.AutoSize = true;
+            this.emptypelbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.emptypelbl.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptypelbl.ForeColor = System.Drawing.Color.Red;
+            this.emptypelbl.Location = new System.Drawing.Point(742, 125);
+            this.emptypelbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emptypelbl.Name = "emptypelbl";
+            this.emptypelbl.Size = new System.Drawing.Size(18, 17);
+            this.emptypelbl.TabIndex = 20;
+            this.emptypelbl.Text = "\"\"";
+            this.emptypelbl.Visible = false;
+            // 
+            // emaillbl
+            // 
+            this.emaillbl.AutoSize = true;
+            this.emaillbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.emaillbl.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emaillbl.ForeColor = System.Drawing.Color.Red;
+            this.emaillbl.Location = new System.Drawing.Point(279, 45);
+            this.emaillbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emaillbl.Name = "emaillbl";
+            this.emaillbl.Size = new System.Drawing.Size(18, 17);
+            this.emaillbl.TabIndex = 20;
+            this.emaillbl.Text = "\"\"";
+            this.emaillbl.Visible = false;
+            // 
+            // degreelbl
+            // 
+            this.degreelbl.AutoSize = true;
+            this.degreelbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.degreelbl.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.degreelbl.ForeColor = System.Drawing.Color.Red;
+            this.degreelbl.Location = new System.Drawing.Point(685, 49);
+            this.degreelbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.degreelbl.Name = "degreelbl";
+            this.degreelbl.Size = new System.Drawing.Size(18, 17);
+            this.degreelbl.TabIndex = 20;
+            this.degreelbl.Text = "\"\"";
+            this.degreelbl.Visible = false;
+            // 
             // empEmailTxt
             // 
+            this.empEmailTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.empEmailTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.empEmailTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.empEmailTxt.BorderRadius = 10;
@@ -619,7 +778,7 @@
             this.empEmailTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empEmailTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.empEmailTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empEmailTxt.Location = new System.Drawing.Point(448, 70);
+            this.empEmailTxt.Location = new System.Drawing.Point(222, 72);
             this.empEmailTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.empEmailTxt.Name = "empEmailTxt";
             this.empEmailTxt.PasswordChar = '\0';
@@ -627,7 +786,7 @@
             this.empEmailTxt.PlaceholderText = "ادخل البريد الالكتروني للموظف";
             this.empEmailTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.empEmailTxt.SelectedText = "";
-            this.empEmailTxt.Size = new System.Drawing.Size(376, 26);
+            this.empEmailTxt.Size = new System.Drawing.Size(376, 33);
             this.empEmailTxt.TabIndex = 25;
             // 
             // label17
@@ -635,17 +794,19 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label17.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(746, 50);
+            this.label17.Location = new System.Drawing.Point(497, 47);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(100, 17);
+            this.label17.Size = new System.Drawing.Size(103, 17);
             this.label17.TabIndex = 24;
             this.label17.Text = "البريد الالكتروني";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // empTypeCombo
             // 
+            this.empTypeCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.empTypeCombo.BackColor = System.Drawing.Color.Transparent;
             this.empTypeCombo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.empTypeCombo.BorderRadius = 10;
@@ -656,7 +817,7 @@
             this.empTypeCombo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.empTypeCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.empTypeCombo.ItemHeight = 30;
-            this.empTypeCombo.Location = new System.Drawing.Point(834, 122);
+            this.empTypeCombo.Location = new System.Drawing.Point(608, 150);
             this.empTypeCombo.Margin = new System.Windows.Forms.Padding(2);
             this.empTypeCombo.Name = "empTypeCombo";
             this.empTypeCombo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -668,8 +829,9 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label16.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label16.Location = new System.Drawing.Point(1149, 104);
+            this.label16.Location = new System.Drawing.Point(911, 121);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(74, 17);
@@ -684,7 +846,7 @@
             this.label15.Dock = System.Windows.Forms.DockStyle.Right;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label15.Location = new System.Drawing.Point(1052, 0);
+            this.label15.Location = new System.Drawing.Point(826, 0);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Padding = new System.Windows.Forms.Padding(12);
@@ -695,10 +857,10 @@
             // label14
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label14.Font = new System.Drawing.Font("Segoe UI Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(1138, 48);
+            this.label14.Location = new System.Drawing.Point(875, 46);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(110, 17);
@@ -708,8 +870,7 @@
             // 
             // createBtn
             // 
-            this.createBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.createBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.createBtn.BorderRadius = 15;
             this.createBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.createBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -718,18 +879,20 @@
             this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.createBtn.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(590, 656);
+            this.createBtn.Location = new System.Drawing.Point(453, 721);
             this.createBtn.Margin = new System.Windows.Forms.Padding(2);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(256, 36);
+            this.createBtn.Size = new System.Drawing.Size(526, 45);
             this.createBtn.TabIndex = 7;
             this.createBtn.Text = "إنشاء";
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // employeeAddFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1459, 742);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1484, 882);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.guna2ContainerControl4);
             this.Controls.Add(this.guna2ContainerControl2);
@@ -791,5 +954,14 @@
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2DateTimePicker employmentDate;
         private Guna.UI2.WinForms.Guna2Button createBtn;
+        private System.Windows.Forms.Label countryErrorLabel;
+        private System.Windows.Forms.Label gendererrorlbl;
+        private System.Windows.Forms.Label nationallblerror;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label errorlblage;
+        private System.Windows.Forms.Label addresslblerror;
+        private System.Windows.Forms.Label emptypelbl;
+        private System.Windows.Forms.Label emaillbl;
+        private System.Windows.Forms.Label degreelbl;
     }
 }
