@@ -215,6 +215,18 @@ namespace CHS_FrontEnd
         {
 
         }
+
+        private void EmployessAddBtn_Click(object sender, EventArgs e)
+        {
+            OpenForm(new employeeAddFrm(dockPanel));
+            hideSub();
+        }
+
+        private void EmployessSearchBtn_Click(object sender, EventArgs e)
+        {
+            OpenForm(new employeeSearchFrm(dockPanel));
+            hideSub();
+        }
     }
 }
 
