@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,77 +15,290 @@ namespace CHS_FrontEnd
     public partial class addingPatientFrm : Form
     {
         private DockPanel dockPanel;
+        private List<string> diseasesList = new List<string>();
+        private List<string> allergiesList = new List<string>();
+        private List<string> medicationsList = new List<string>();
+
+        private int currentX = 10; 
+        private int currentY = 10; 
+        private int chipSpacing = 10;
+
+       
+
         public addingPatientFrm(DockPanel dockPanel)
         {
             InitializeComponent();
             this.dockPanel = dockPanel;
+
+           
+            InitializeAutoComplete(sensitivitiesTxt, new[] { "السكري", "الربو", "ارتفاع ضغط الدم", "حساسية القمح" });
+            InitializeAutoComplete(diseasesTxt, new[] { "مرض السكري", "الضغط", "السرطان" });
+            InitializeAutoComplete(medicinesTxt, new[] { "أسبيرين", "أموكسيسيلين", "باراسيتامول" });
+
+            sensitivitiesTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الحساسية");
+            diseasesTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "المرض");
+            medicinesTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الدواء");
+
+          
+
         }
 
-        
 
-       
-        
 
-       
+        private void InitializeAutoComplete(Guna2TextBox textBox, string[] suggestions)
+        {
+            textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            var autoComplete = new AutoCompleteStringCollection();
+            autoComplete.AddRange(suggestions);
+            textBox.AutoCompleteCustomSource = autoComplete;
+        }
 
-       
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e, string type)
+        {
+            var textBox = sender as Guna2TextBox;
+            Label errorLabel = null; // ليبل خاص بالخطأ
+
+            // تحديد الليبل بناءً على نوع الحقل
+            switch (type)
+            {
+                case "المرض":
+                    errorLabel = label22;
+                    break;
+                case "الحساسية":
+                    errorLabel = label23;
+                    break;
+                case "الدواء":
+                    errorLabel = label24;
+                    break;
+            }
+
+            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                string inputText = textBox.Text.Trim();
+
+                // التحقق من صحة المدخلات
+                if (!IsValidInput(textBox, inputText))
+                {
+                    errorLabel.Visible = true;
+                    errorLabel.Text = $"{type} غير موجود بالقائمة*";
+                    textBox.Clear();
+                    return;
+                }
+
+                // إذا كان الإدخال صحيحًا، إخفاء الرسالة
+                errorLabel.Visible = false;
+
+
+                if (!IsDuplicate(inputText, type))
+                {
+                    
+                    switch (type)
+                    {
+                        case "المرض":
+                            diseasesList.Add(inputText);
+                            AddChip(inputText, type, flowLayoutPanel3);
+                            break;
+                        case "الحساسية":
+                            allergiesList.Add(inputText);
+                            AddChip(inputText, type, flowLayoutPanel2);
+                            break;
+                        case "الدواء":
+                            medicationsList.Add(inputText);
+                            AddChip(inputText, type, flowLayoutPanel1);
+                            break;
+                    }
+                    textBox.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("العنصر مضاف بالفعل.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private bool IsValidInput(Guna2TextBox textBox, string inputText)
+        {
+            
+            return textBox.AutoCompleteCustomSource.Contains(inputText);
+        }
+        private bool IsDuplicate(string inputText, string type)
+        {
+            switch (type)
+            {
+                case "المرض":
+                    return diseasesList.Contains(inputText);
+                case "الحساسية":
+                    return allergiesList.Contains(inputText);
+                case "الدواء":
+                    return medicationsList.Contains(inputText);
+                default:
+                    return false;
+            }
+        }
+
+
+        private void AddChip(string text, string type, FlowLayoutPanel container)
+        {
+            var chip = new Guna2Chip
+            {
+                Text = text,
+                FillColor = GetChipColor(type),
+                ForeColor = System.Drawing.Color.White,
+                BorderRadius = 15,
+               
+                Padding = new Padding(2),
+                AutoSize = true,
+            };
+
+            chip.Location = new Point(currentX, currentY);
+
+            // تحديث الموقع
+            currentX += chip.Width + chipSpacing;
+            if (currentX + chip.Width > container.Width)
+            {
+                currentX = 10;
+                currentY += chip.Height + chipSpacing;
+            }
+
+            // الحدث المخصص لإزالة الشيب عند النقر المزدوج
+            chip.DoubleClick += (s, e) =>
+            {
+                container.Controls.Remove(chip);
+                RemoveFromList(text, type);
+            };
+
+            container.Controls.Add(chip);
+        }
+
+
+        private Color GetChipColor(string type)
+        {
+            switch (type)
+            {
+                case "المرض":
+                    return Color.DarkBlue;
+                case "الحساسية":
+                    return Color.Green;
+                case "الدواء":
+                    return Color.Purple;
+                default:
+                    return Color.Gray;
+            }
+        }
+        private void RemoveFromList(string text, string type)
+        {
+            switch (type)
+            {
+                case "المرض":
+                    diseasesList.Remove(text);
+                    break;
+                case "الحساسية":
+                    allergiesList.Remove(text);
+                    break;
+                case "الدواء":
+                    medicationsList.Remove(text);
+                    break;
+            }
+        }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+          
         }
 
-        private bool ValidateFields()
+
+        private bool ValidateFields(
+      List<(Guna.UI2.WinForms.Guna2TextBox TextBox, Label ErrorLabel, string ErrorMessage)> textFields,
+      List<(Guna.UI2.WinForms.Guna2ComboBox ComboBox, Label ErrorLabel, string ErrorMessage)> comboFields)
         {
             bool isValid = true;
 
-            
-            if (string.IsNullOrWhiteSpace(fullNametxt.Text))
+            foreach (var field in textFields)
             {
-                labelError.Text = "هذا الحقل مطلوب*";
-                labelError.Visible = true;
-                fullNametxt.BorderColor = Color.Red; 
-                isValid = false;
-            }
-            else
-            {
-                labelError.Visible = false; 
-                fullNametxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155); 
-            }
+                var textBox = field.TextBox;
+                var errorLabel = field.ErrorLabel;
+                var errorMessage = field.ErrorMessage;
 
-            
-            if (string.IsNullOrWhiteSpace(PhoneNumbertxt.Text))
-            {
-                labelerrorPhone.Text = "هذا الحقل مطلوب*" ;
-                labelerrorPhone.Visible = true;
-                PhoneNumbertxt.BorderColor = Color.Red;
-                isValid = false;
-            }
-            else
-            {
-                labelerrorPhone.Visible = false;
-                PhoneNumbertxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    errorLabel.Text = errorMessage;
+                    errorLabel.Visible = true;
+                    textBox.BorderColor = Color.Red;
+                    isValid = false;
+                }
+                else
+                {
+                    errorLabel.Visible = false;
+                    textBox.BorderColor = Color.FromArgb(1, 87, 155); 
+                }
             }
 
            
+            foreach (var field in comboFields)
+            {
+                var comboBox = field.ComboBox;
+                var errorLabel = field.ErrorLabel;
+                var errorMessage = field.ErrorMessage;
+
+                if (comboBox.SelectedIndex == -1) 
+                {
+                    errorLabel.Text = errorMessage;
+                    errorLabel.Visible = true;
+                    comboBox.BorderColor = Color.Red;
+                    isValid = false;
+                }
+                else
+                {
+                    errorLabel.Visible = false;
+                    comboBox.BorderColor = Color.FromArgb(1, 87, 155); // اللون الافتراضي
+                }
+            }
 
             return isValid;
         }
 
 
+
+
+
         private void createBtn_Click(object sender, EventArgs e)
         {
-                if (ValidateFields())
-                {
-                   
-                    MessageBox.Show("تمت الإضافة بنجاح");
-                   
-                }
-                else
-                {
-                    MessageBox.Show("يرجى تصحيح الأخطاء قبل المتابعة");
-                }
+            List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)> textFields = new List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)>
+{
+    (fullNametxt, labelError, "هذا الحقل مطلوب*"),
+    (PhoneNumbertxt, labelerrorPhone, "يرجى إدخال رقم الهاتف*"),
+    (agetxt, errorlblage, "يرجى إدخال العمر*"),
+   
+    (nationalIDtxt, nationallblerror, "يرجى إدخال رقم الهوية*"),
+     (addresstxt, addresslblerror, "يرجى إدخال العنوان للمريض*"),
+      (parenttxt, parentlblerror, "يرجى إدخال اسم ولي الامر *")
+};
+
+            List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)> comboFields = new List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)>
+{
+    (gendertxt, gendererrorlbl, "يرجى اختيار الجنس*"),
+    (statetxt, countryErrorLabel, "يرجى اختيار المحافظة*"),
+     (bloodtxt, bloodlbl, "يرجى اختيار فصيلة الدم*"),
+      (comuintystateCombo, cumintystatelblerror, "يرجى اختيار الحالة الاجتماعية*"),
+};
+
+            if (ValidateFields(textFields,comboFields))
+            {
+                MessageBox.Show("تم ملء جميع الحقول بنجاح!", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                MessageBox.Show("يرجى ملء جميع الحقول المطلوبة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
+   
+
 
         private void fullNametxt_TextChanged(object sender, EventArgs e)
         {
@@ -92,7 +306,82 @@ namespace CHS_FrontEnd
             fullNametxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
         }
 
-     
+        private void agetxt_TextChanged(object sender, EventArgs e)
+        {
+            errorlblage.Visible = false;
+            agetxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+       
+
+        private void gendertxt_TextChanged(object sender, EventArgs e)
+        {
+            gendererrorlbl.Visible = false;
+            gendertxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void nationalIDtxt_TextChanged(object sender, EventArgs e)
+        {
+            nationallblerror.Visible = false;
+            nationalIDtxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void statetxt_TextChanged(object sender, EventArgs e)
+        {
+            countryErrorLabel.Visible = false;
+            statetxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void bloodtxt_TextChanged(object sender, EventArgs e)
+        {
+            bloodlbl.Visible = false;
+            bloodtxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void PhoneNumbertxt_TextChanged(object sender, EventArgs e)
+        {
+            labelerrorPhone.Visible = false;
+            PhoneNumbertxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void addresstxt_TextChanged(object sender, EventArgs e)
+        {
+            addresslblerror.Visible = false;
+            addresstxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void parenttxt_TextChanged(object sender, EventArgs e)
+        {
+            parentlblerror.Visible = false;
+            parenttxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void comuintystateCombo_TextChanged(object sender, EventArgs e)
+        {
+            cumintystatelblerror.Visible = false;
+            comuintystateCombo.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void diseasesTxt_TextChanged(object sender, EventArgs e)
+        {
+            label17.Visible = true;
+           
+        }
+
+        private void sensitivitiesTxt_TextChanged(object sender, EventArgs e)
+        {
+            label20.Visible = true;
+        }
+
+        private void medicinesTxt_TextChanged(object sender, EventArgs e)
+        {
+            label21.Visible = true;
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

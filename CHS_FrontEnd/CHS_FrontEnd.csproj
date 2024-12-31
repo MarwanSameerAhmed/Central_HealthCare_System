@@ -176,6 +176,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="employeeAddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeeAddFrm.Designer.cs">
+      <DependentUpon>employeeAddFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employeeSearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeeSearchFrm.Designer.cs">
+      <DependentUpon>employeeSearchFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +229,12 @@
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="employeeAddFrm.resx">
+      <DependentUpon>employeeAddFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeeSearchFrm.resx">
+      <DependentUpon>employeeSearchFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +359,9 @@
       <Project>{fe50c20f-457b-4696-b0a6-5cad951ae294}</Project>
       <Name>CHS.Client.API</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\sub1.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
