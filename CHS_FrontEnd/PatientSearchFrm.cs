@@ -143,7 +143,7 @@ namespace CHS_FrontEnd
             if (e.RowIndex >= 0)
             {
                
-                Form1 fr = new Form1(dockPanel);
+                PatientFileView fr = new PatientFileView(dockPanel);
                 OpenForm(fr);
 
             }

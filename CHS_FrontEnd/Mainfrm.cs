@@ -46,7 +46,8 @@ namespace CHS_FrontEnd
         private void Form1_Load(object sender, EventArgs e)
         {
             MainPage.PerformClick();
-       
+           
+
         }
 
        
