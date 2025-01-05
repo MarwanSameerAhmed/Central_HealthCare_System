@@ -1,4 +1,5 @@
-﻿using FontAwesome.Sharp;
+﻿using CHS.Client;
+using FontAwesome.Sharp;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -227,6 +228,16 @@ namespace CHS_FrontEnd
         {
             OpenForm(new employeeSearchFrm(dockPanel));
             hideSub();
+        }
+
+        private void demoButton_Click(object sender, EventArgs e)
+        {
+            OpenForm(new LocalEDManagementFrm(dockPanel));
+        }
+
+        private void LabDepSearchBtn_Click(object sender, EventArgs e)
+        {
+            OpenForm(new LIMBsFrm(dockPanel));
         }
     }
 }
