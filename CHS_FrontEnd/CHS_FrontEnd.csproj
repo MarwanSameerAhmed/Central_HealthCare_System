@@ -39,7 +39,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
+    <DocumentationFile>bin\Debug\CHS_FrontEnd.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -188,17 +189,50 @@
     <Compile Include="employeeSearchFrm.Designer.cs">
       <DependentUpon>employeeSearchFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddEDRoomFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEDRoomFrm.Designer.cs">
+      <DependentUpon>AddEDRoomFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EDRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EDRoomBeds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LIMBsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LIMBsFrm.Designer.cs">
+      <DependentUpon>LIMBsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalEDManagementFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalEDManagementFrm.Designer.cs">
+      <DependentUpon>LocalEDManagementFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocalEDRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainService.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainService.Designer.cs">
       <DependentUpon>MainService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTestPopupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newTestPopupFrm.Designer.cs">
+      <DependentUpon>newTestPopupFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="PatientAddFrm.cs">
       <SubType>Form</SubType>
@@ -235,11 +269,26 @@
     <EmbeddedResource Include="employeeSearchFrm.resx">
       <DependentUpon>employeeSearchFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddEDRoomFrm.resx">
+      <DependentUpon>AddEDRoomFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LIMBsFrm.resx">
+      <DependentUpon>LIMBsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalEDManagementFrm.resx">
+      <DependentUpon>LocalEDManagementFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LocalEDRooms.resx">
+      <DependentUpon>LocalEDRooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainService.resx">
       <DependentUpon>MainService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTestPopupFrm.resx">
+      <DependentUpon>newTestPopupFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientAddFrm.resx">
       <DependentUpon>PatientAddFrm.cs</DependentUpon>
