@@ -118,6 +118,8 @@ namespace CHS_FrontEnd
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
+            return;
             if (string.IsNullOrWhiteSpace(UserNametxt.Text) || string.IsNullOrWhiteSpace(passwordtxt.Text))
             {
                 labelError.Text = "يرجى إدخال اسم المستخدم وكلمة المرور.";

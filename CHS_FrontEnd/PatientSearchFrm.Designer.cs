@@ -235,19 +235,19 @@ namespace CHS_FrontEnd
             // 
             this.searchPatientView.AllowUserToAddRows = false;
             this.searchPatientView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.searchPatientView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            //dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            //dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            //this.searchPatientView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.searchPatientView.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Snap ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchPatientView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            //dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            //dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            //dataGridViewCellStyle10.Font = new System.Drawing.Font("Snap ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            //dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            //dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            //dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            //this.searchPatientView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.searchPatientView.ColumnHeadersHeight = 25;
             this.searchPatientView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.searchPatientView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

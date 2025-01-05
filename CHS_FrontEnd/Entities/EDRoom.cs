@@ -1,9 +1,12 @@
 ﻿using System;
-using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace CHS_FrontEnd
+namespace CHS_FrontEnd.Entities
 {
-    internal class EDRoom : Form
+    internal class EDRoom
     {
         public struct BedsArray
         {
@@ -66,7 +69,7 @@ namespace CHS_FrontEnd
 
             var bed = bedsArray[bedIndex];
             bool newBedState = !bed.GetState();
-            bed.SetState(newBedState);        
+            bed.SetState(newBedState);
             bedsArray[bedIndex] = bed;
         }
     }

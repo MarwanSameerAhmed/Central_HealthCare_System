@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using CHS_FrontEnd.Entities;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -169,7 +169,7 @@
             this.guna2PictureBox7.BackColor = System.Drawing.Color.White;
             this.guna2PictureBox7.BorderRadius = 20;
             this.guna2PictureBox7.FillColor = System.Drawing.Color.Black;
-            this.guna2PictureBox7.Image = global::CHS_FrontEnd.Properties.Resources.talent_management;
+            //this.guna2PictureBox7.Image = global::CHS_FrontEnd.Properties.Resources.talent_management;
             this.guna2PictureBox7.ImageRotate = 0F;
             this.guna2PictureBox7.Location = new System.Drawing.Point(20, 10);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
@@ -223,7 +223,7 @@
             this.guna2PictureBox3.BackColor = System.Drawing.Color.White;
             this.guna2PictureBox3.BorderRadius = 20;
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Black;
-            this.guna2PictureBox3.Image = global::CHS_FrontEnd.Properties.Resources.job_search2;
+            //this.guna2PictureBox3.Image = global::CHS_FrontEnd.Properties.Resources.job_search2;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(20, 10);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
