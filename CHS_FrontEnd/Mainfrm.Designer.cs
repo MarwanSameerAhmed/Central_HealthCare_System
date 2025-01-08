@@ -53,15 +53,7 @@
             this.lebJobName = new System.Windows.Forms.Label();
             this.pictureBoxUserName = new System.Windows.Forms.PictureBox();
             this.labUserName = new System.Windows.Forms.Label();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.demoButton = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.HmbSizeBtn = new FontAwesome.Sharp.IconPictureBox();
-            this.UserInfoPanel = new System.Windows.Forms.Panel();
-            this.lebJobName = new System.Windows.Forms.Label();
-            this.pictureBoxUserName = new System.Windows.Forms.PictureBox();
-            this.labUserName = new System.Windows.Forms.Label();
             this.SideMenuPanel.SuspendLayout();
             this.LabDepSubMenu.SuspendLayout();
             this.EmployeesSubMenu.SuspendLayout();
