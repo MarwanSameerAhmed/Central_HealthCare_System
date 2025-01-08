@@ -21,7 +21,7 @@ namespace CHS.Client.API
                 client.Timeout = TimeSpan.FromSeconds(30);
                 string credentials = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{username}:{password}"));
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", credentials);
-                HttpResponseMessage response = client.GetAsync(RoutesOfRequest.BASE_URL + RoutesOfRequest.LOGIN).Result;
+                HttpResponseMessage response = client.GetAsync("http://localhost:44332/api/Login").Result;
                 string responseBody = response.Content.ReadAsStringAsync().Result;
                 if (response.IsSuccessStatusCode)
                 {

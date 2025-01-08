@@ -536,16 +536,6 @@
             this.labUserName.TabIndex = 2;
             this.labUserName.Text = "علي مرجاني";
             // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.demoButton);
-            this.panelLogo.Controls.Add(this.guna2PictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 308);
-            this.panelLogo.TabIndex = 0;
-            // 
             // demoButton
             // 
             this.demoButton.BorderRadius = 20;
@@ -561,92 +551,6 @@
             this.demoButton.TabIndex = 2;
             this.demoButton.Text = "زر سفري";
             this.demoButton.Click += new System.EventHandler(this.demoButton_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.HEATHCARE_0١__2_1;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-82, -90);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(400, 400);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.panel1.Controls.Add(this.HmbSizeBtn);
-            this.panel1.Controls.Add(this.UserInfoPanel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(250, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1732, 54);
-            this.panel1.TabIndex = 1;
-            // 
-            // HmbSizeBtn
-            // 
-            this.HmbSizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.HmbSizeBtn.IconChar = FontAwesome.Sharp.IconChar.Navicon;
-            this.HmbSizeBtn.IconColor = System.Drawing.Color.White;
-            this.HmbSizeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.HmbSizeBtn.IconSize = 37;
-            this.HmbSizeBtn.Location = new System.Drawing.Point(2, 8);
-            this.HmbSizeBtn.Name = "HmbSizeBtn";
-            this.HmbSizeBtn.Size = new System.Drawing.Size(37, 43);
-            this.HmbSizeBtn.TabIndex = 2;
-            this.HmbSizeBtn.TabStop = false;
-            this.HmbSizeBtn.Click += new System.EventHandler(this.HmbSizeBtn_Click);
-            // 
-            // UserInfoPanel
-            // 
-            this.UserInfoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.UserInfoPanel.Controls.Add(this.lebJobName);
-            this.UserInfoPanel.Controls.Add(this.pictureBoxUserName);
-            this.UserInfoPanel.Controls.Add(this.labUserName);
-            this.UserInfoPanel.Location = new System.Drawing.Point(1548, 3);
-            this.UserInfoPanel.Name = "UserInfoPanel";
-            this.UserInfoPanel.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.UserInfoPanel.Size = new System.Drawing.Size(179, 45);
-            this.UserInfoPanel.TabIndex = 2;
-            // 
-            // lebJobName
-            // 
-            this.lebJobName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lebJobName.AutoSize = true;
-            this.lebJobName.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lebJobName.ForeColor = System.Drawing.Color.White;
-            this.lebJobName.Location = new System.Drawing.Point(78, 23);
-            this.lebJobName.Name = "lebJobName";
-            this.lebJobName.Size = new System.Drawing.Size(56, 21);
-            this.lebJobName.TabIndex = 3;
-            this.lebJobName.Text = "موظف";
-            // 
-            // pictureBoxUserName
-            // 
-            this.pictureBoxUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxUserName.Image = global::CHS_FrontEnd.Properties.Resources.user;
-            this.pictureBoxUserName.Location = new System.Drawing.Point(131, 5);
-            this.pictureBoxUserName.Name = "pictureBoxUserName";
-            this.pictureBoxUserName.Size = new System.Drawing.Size(35, 35);
-            this.pictureBoxUserName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUserName.TabIndex = 0;
-            this.pictureBoxUserName.TabStop = false;
-            // 
-            // labUserName
-            // 
-            this.labUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labUserName.AutoSize = true;
-            this.labUserName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labUserName.ForeColor = System.Drawing.Color.White;
-            this.labUserName.Location = new System.Drawing.Point(45, 3);
-            this.labUserName.Name = "labUserName";
-            this.labUserName.Size = new System.Drawing.Size(105, 25);
-            this.labUserName.TabIndex = 2;
-            this.labUserName.Text = "علي مرجاني";
             // 
             // Mainfrm
             // 

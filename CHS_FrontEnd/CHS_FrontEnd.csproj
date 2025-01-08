@@ -436,6 +436,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\sub1.sql" />
+    <None Include="Resources\talent-management.png" />
+    <None Include="Resources\participant.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
