@@ -19,7 +19,7 @@ namespace CHS_FrontEnd.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -203,6 +203,16 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap job_search2 {
+            get {
+                object obj = ResourceManager.GetObject("job-search2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Leonardo_Phoenix_A_modern_minimalist_logo_design_for_the_Centr_3 {
             get {
                 object obj = ResourceManager.GetObject("Leonardo_Phoenix_A_modern_minimalist_logo_design_for_the_Centr_3", resourceCulture);
@@ -216,6 +226,16 @@ namespace CHS_FrontEnd.Properties {
         internal static System.Drawing.Bitmap medical {
             get {
                 object obj = ResourceManager.GetObject("medical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medical1 {
+            get {
+                object obj = ResourceManager.GetObject("medical1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +283,9 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap participant {
+        internal static System.Drawing.Bitmap pin_code {
             get {
-                object obj = ResourceManager.GetObject("participant", resourceCulture);
+                object obj = ResourceManager.GetObject("pin-code", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -275,7 +295,7 @@ namespace CHS_FrontEnd.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap talent_management {
             get {
-                object obj = ResourceManager.GetObject("talent_management", resourceCulture);
+                object obj = ResourceManager.GetObject("talent-management", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +306,16 @@ namespace CHS_FrontEnd.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap welfare {
+            get {
+                object obj = ResourceManager.GetObject("welfare", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

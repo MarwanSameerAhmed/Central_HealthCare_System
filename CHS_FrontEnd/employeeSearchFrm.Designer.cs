@@ -65,7 +65,7 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(11, 11);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(17, 11);
             this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
             this.guna2ContainerControl3.Size = new System.Drawing.Size(1220, 52);
@@ -77,11 +77,11 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.label10.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(511, 9);
+            this.label10.Location = new System.Drawing.Point(527, 1);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(200, 37);
+            this.label10.Size = new System.Drawing.Size(186, 52);
             this.label10.TabIndex = 0;
             this.label10.Text = "البحث عن موظف";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -98,7 +98,7 @@
             this.guna2ContainerControl1.Controls.Add(this.empIDSearchtxt);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(11, 74);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(17, 74);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1220, 121);
@@ -117,7 +117,7 @@
             this.empNationalSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empNationalSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empNationalSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empNationalSearchtxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.empNationalSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empNationalSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
             this.empNationalSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empNationalSearchtxt.Location = new System.Drawing.Point(152, 50);
@@ -127,7 +127,7 @@
             this.empNationalSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.empNationalSearchtxt.PlaceholderText = "رقم الهوية";
             this.empNationalSearchtxt.SelectedText = "";
-            this.empNationalSearchtxt.Size = new System.Drawing.Size(319, 48);
+            this.empNationalSearchtxt.Size = new System.Drawing.Size(319, 40);
             this.empNationalSearchtxt.TabIndex = 5;
             this.empNationalSearchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -136,11 +136,11 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label3.Font = new System.Drawing.Font("Simplified Arabic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(483, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 29);
+            this.label3.Size = new System.Drawing.Size(26, 36);
             this.label3.TabIndex = 4;
             this.label3.Text = "او";
             // 
@@ -156,7 +156,7 @@
             this.empPhoneSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empPhoneSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empPhoneSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empPhoneSearchtxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.empPhoneSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empPhoneSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
             this.empPhoneSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empPhoneSearchtxt.Location = new System.Drawing.Point(518, 50);
@@ -166,7 +166,7 @@
             this.empPhoneSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.empPhoneSearchtxt.PlaceholderText = "رقم الهاتف";
             this.empPhoneSearchtxt.SelectedText = "";
-            this.empPhoneSearchtxt.Size = new System.Drawing.Size(319, 48);
+            this.empPhoneSearchtxt.Size = new System.Drawing.Size(319, 40);
             this.empPhoneSearchtxt.TabIndex = 3;
             this.empPhoneSearchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -175,11 +175,11 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label2.Font = new System.Drawing.Font("Simplified Arabic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(851, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 29);
+            this.label2.Size = new System.Drawing.Size(26, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "او";
             // 
@@ -195,7 +195,7 @@
             this.empIDSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empIDSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empIDSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empIDSearchtxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.empIDSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empIDSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empIDSearchtxt.Location = new System.Drawing.Point(885, 50);
             this.empIDSearchtxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -204,7 +204,7 @@
             this.empIDSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.empIDSearchtxt.PlaceholderText = "الرقم المميز";
             this.empIDSearchtxt.SelectedText = "";
-            this.empIDSearchtxt.Size = new System.Drawing.Size(319, 48);
+            this.empIDSearchtxt.Size = new System.Drawing.Size(319, 40);
             this.empIDSearchtxt.TabIndex = 1;
             this.empIDSearchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -214,12 +214,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label1.Location = new System.Drawing.Point(1081, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(16, 14, 16, 14);
-            this.label1.Size = new System.Drawing.Size(159, 51);
+            this.label1.Size = new System.Drawing.Size(151, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "ابحث عن موظف";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -231,7 +231,7 @@
             this.guna2ContainerControl2.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl2.Controls.Add(this.searchPatientView);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(11, 214);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(17, 214);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(1220, 423);
@@ -247,7 +247,7 @@
             this.guna2VScrollBar1.Maximum = 99;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 17;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(17, 361);
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(17, 362);
             this.guna2VScrollBar1.TabIndex = 6;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.DarkGray;
             // 
@@ -371,12 +371,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1265, 742);
+            this.ClientSize = new System.Drawing.Size(1338, 742);
             this.Controls.Add(this.guna2ContainerControl2);
             this.Controls.Add(this.guna2ContainerControl1);
             this.Controls.Add(this.guna2ContainerControl3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "employeeSearchFrm";
             this.Text = "البحث عن موظف";
             this.Load += new System.EventHandler(this.employeeSearchFrm_Load);

@@ -19,59 +19,16 @@ namespace CHS_FrontEnd
         {
             InitializeComponent();
             this.dockPanel = dockPanel;
-          
-            CustomizeRowsAppearance();
-         
-            this.AutoScrollPosition = new Point(0, 0);
-            foreach (DataGridViewRow row in Viewdaig.Rows)
-            {
-                var buttonCell = row.Cells["edit"] as DataGridViewButtonCell;
-                if (buttonCell != null)
-                {
-                    buttonCell.Style.BackColor = Color.FromArgb(1, 87, 155);
-                    buttonCell.Style.ForeColor = Color.White;// تغيير لون الخلفية هنا
-                }
-            }
-          
+
+
+
+
+
         }
 
-      
-      
-        private void CustomizeRowsAppearance()
-        {
-            
-            Viewdaig.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray; 
-            Viewdaig.RowsDefaultCellStyle.BackColor = Color.White; 
-            Viewdaig.CellMouseEnter += (sender, e) =>
-            {
-                if (e.RowIndex >= 0)
-                {
-                    Viewdaig.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightBlue; 
-                }
-            };
-
-            Viewdaig.CellMouseLeave += (sender, e) =>
-            {
-                if (e.RowIndex >= 0)
-                {
-                    Viewdaig.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White; 
-                }
-            };
-
-            Viewdaig.DefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            Viewdaig.DefaultCellStyle.ForeColor = Color.Black; 
-            Viewdaig.DefaultCellStyle.SelectionForeColor = Color.Black; 
-           
-            Viewdaig.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            Viewdaig.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-         
-
-
-         
-        }
         private void PopulatePatientCardData()
         {
-            
+
             string fullName = "علي محمد علي صالح المرجاني";
             string age = "35";
             string birthDate = "1989-04-25";
@@ -80,76 +37,27 @@ namespace CHS_FrontEnd
             string phoneNumber = "01234567890";
             string bloodType = "O+";
 
-           
-            veiwtNamelbl.Text = fullName; 
-            viewAgelbl.Text = age; 
+
+            veiwtNamelbl.Text = fullName;
+            viewAgelbl.Text = age;
             veiwBirthDaylbl.Text = birthDate;
-            viewStatelbl.Text = city; 
-            viewCumlbl.Text = maritalStatus; 
-            viewPhonelbl.Text = phoneNumber; 
-            viewbloodlbl.Text = bloodType; 
+            viewStatelbl.Text = city;
+            viewCumlbl.Text = maritalStatus;
+            viewPhonelbl.Text = phoneNumber;
+            viewbloodlbl.Text = bloodType;
 
             string allergies = "غبار, فول سوداني, سمك";
             alg.Text = allergies;
             string medications = "دواء A, دواء B, دواء C";
             medlbl.Text = medications;
             string chronicDiseases = "سكري, ضغط دم مرتفع, كوليسترول";
-            dislbl.Text = chronicDiseases; 
-          
+            dislbl.Text = chronicDiseases;
 
-           
+
+
         }
 
 
-        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-            Viewdaig.FirstDisplayedScrollingRowIndex = guna2VScrollBar1.Value;
-        }
-        private void UpdateScrollBar()
-        {
-            if (Viewdaig.RowCount > 0)
-            {
-                guna2VScrollBar1.Maximum = Viewdaig.RowCount - 1;
-                guna2VScrollBar1.LargeChange = Viewdaig.DisplayedRowCount(false);
-                guna2VScrollBar1.SmallChange = 1;
-
-
-                if (guna2VScrollBar1.Value > guna2VScrollBar1.Maximum)
-                {
-                    guna2VScrollBar1.Value = guna2VScrollBar1.Maximum;
-                }
-            }
-            else
-            {
-                guna2VScrollBar1.Maximum = 0;
-                guna2VScrollBar1.LargeChange = 0;
-                guna2VScrollBar1.SmallChange = 0;
-            }
-        }
-
-
-        private void RemoveData()
-        {
-            if (Viewdaig.Rows.Count > 0)
-            {
-                Viewdaig.Rows.RemoveAt(0);
-                UpdateScrollBar();
-            }
-        }
-        private void Viewdaig_MouseWheel(object sender, MouseEventArgs e)
-        {
-            if (Viewdaig.RowCount > 0)
-            {
-                int scrollAmount = e.Delta > 0 ? -1 : 1;
-                int newValue = guna2VScrollBar1.Value + scrollAmount;
-
-                if (newValue >= guna2VScrollBar1.Minimum && newValue <= guna2VScrollBar1.Maximum)
-                {
-                    guna2VScrollBar1.Value = newValue;
-                    Viewdaig.FirstDisplayedScrollingRowIndex = guna2VScrollBar1.Value;
-                }
-            }
-        }
 
 
 
@@ -165,14 +73,20 @@ namespace CHS_FrontEnd
 
 
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
-         
-            Viewdaig.MouseWheel += Viewdaig_MouseWheel;
+
+
+            guna2VScrollBar1.ValueChanged += guna2VScrollBar1_ValueChanged;
+            guna2VScrollBar1.Maximum = Viewdaig.RowCount - 1;
+            guna2VScrollBar1.Minimum = 0;
+            guna2VScrollBar1.Value = 0;
+            Viewdaig.MouseWheel += dataGridView1_MouseWheel;
             PopulatePatientCardData();
             AddDemoData();
             UpdateScrollBar();
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -180,7 +94,69 @@ namespace CHS_FrontEnd
             addNewDaignosis newform = new addNewDaignosis();
             newform.StartPosition = FormStartPosition.CenterScreen;
             newform.Show();
+
+        }
+        private void guna2VScrollBar1_ValueChanged(object sender, EventArgs e)
+        {
+           
+            if (guna2VScrollBar1.Value < 0)
+                guna2VScrollBar1.Value = 0;
+            else if (guna2VScrollBar1.Value > guna2VScrollBar1.Maximum)
+                guna2VScrollBar1.Value = guna2VScrollBar1.Maximum;
+
+           
+            if (Viewdaig.RowCount > 0)
+            {
+               
+                int rowIndex = guna2VScrollBar1.Value;
+                if (rowIndex >= Viewdaig.RowCount)
+                    rowIndex = Viewdaig.RowCount - 1;
+
+                Viewdaig.FirstDisplayedScrollingRowIndex = rowIndex;
+            }
+        }
+        private void UpdateScrollBar()
+        {
+            int totalRows = Viewdaig.RowCount;
+
             
+            guna2VScrollBar1.Maximum = totalRows - 1;
+
+           
+            guna2VScrollBar1.LargeChange = totalRows / 3;  
+            guna2VScrollBar1.SmallChange = 1; 
+        }
+
+        private void dataGridView1_MouseWheel(object sender, MouseEventArgs e)
+        {
+           
+            if (e.Delta > 0)
+            {
+                
+                if (guna2VScrollBar1.Value > 0)
+                {
+                    guna2VScrollBar1.Value -= 1;
+                }
+            }
+            else if (e.Delta < 0)
+            {
+                
+                if (guna2VScrollBar1.Value < guna2VScrollBar1.Maximum)
+                {
+                    guna2VScrollBar1.Value += 1;
+                }
+            }
+        }
+
+        private void Viewdaig_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+
+                DaignosisesViewFrm detailsForm = new DaignosisesViewFrm();
+                detailsForm.Show();
+            }
         }
     }
 }

@@ -65,9 +65,10 @@
             this.flowLayoutPanel1.Controls.Add(this.guna2ContainerControl3);
             this.flowLayoutPanel1.Controls.Add(this.guna2ContainerControl2);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(-12, 0);
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1484, 735);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1484, 755);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // guna2ContainerControl1
@@ -78,6 +79,7 @@
             this.guna2ContainerControl1.Controls.Add(this.label2);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.Controls.Add(this.guna2PictureBox1);
+            this.guna2ContainerControl1.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ContainerControl1.Location = new System.Drawing.Point(1146, 15);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(10, 15, 15, 15);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
@@ -89,11 +91,11 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(144, 59);
+            this.label2.Location = new System.Drawing.Point(138, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 32);
+            this.label2.Size = new System.Drawing.Size(160, 52);
             this.label2.TabIndex = 3;
             this.label2.Text = "يرجى التأكد من إدخال جميع\r\n       البيانات بدقة عالية     ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -101,14 +103,14 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(148, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 32);
+            this.label1.Size = new System.Drawing.Size(157, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "إنشاء ملف طبي";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2ContainerControl7
             // 
@@ -118,6 +120,7 @@
             this.guna2ContainerControl7.Controls.Add(this.label7);
             this.guna2ContainerControl7.Controls.Add(this.label8);
             this.guna2ContainerControl7.Controls.Add(this.guna2PictureBox7);
+            this.guna2ContainerControl7.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ContainerControl7.Location = new System.Drawing.Point(803, 15);
             this.guna2ContainerControl7.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.guna2ContainerControl7.Name = "guna2ContainerControl7";
@@ -129,11 +132,11 @@
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label7.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(136, 60);
+            this.label7.Location = new System.Drawing.Point(133, 64);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 32);
+            this.label7.Size = new System.Drawing.Size(160, 52);
             this.label7.TabIndex = 3;
             this.label7.Text = "يرجى التأكد من إدخال جميع\r\n       البيانات بدقة عالية     ";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -141,14 +144,14 @@
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(130, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(174, 32);
+            this.label8.Size = new System.Drawing.Size(174, 50);
             this.label8.TabIndex = 2;
             this.label8.Text = "البحث عن موظف";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2ContainerControl3
             // 
@@ -158,6 +161,7 @@
             this.guna2ContainerControl3.Controls.Add(this.label5);
             this.guna2ContainerControl3.Controls.Add(this.label6);
             this.guna2ContainerControl3.Controls.Add(this.guna2PictureBox3);
+            this.guna2ContainerControl3.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ContainerControl3.Location = new System.Drawing.Point(460, 15);
             this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
@@ -169,11 +173,11 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label5.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(145, 60);
+            this.label5.Location = new System.Drawing.Point(131, 64);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 32);
+            this.label5.Size = new System.Drawing.Size(160, 52);
             this.label5.TabIndex = 3;
             this.label5.Text = "يرجى التأكد من إدخال جميع\r\n       البيانات بدقة عالية     ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -181,14 +185,14 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(127, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(180, 32);
+            this.label6.Size = new System.Drawing.Size(180, 42);
             this.label6.TabIndex = 2;
             this.label6.Text = "البحث عن مريض";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2ContainerControl2
             // 
@@ -198,6 +202,7 @@
             this.guna2ContainerControl2.Controls.Add(this.label3);
             this.guna2ContainerControl2.Controls.Add(this.label4);
             this.guna2ContainerControl2.Controls.Add(this.guna2PictureBox2);
+            this.guna2ContainerControl2.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ContainerControl2.Location = new System.Drawing.Point(117, 15);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
@@ -209,11 +214,11 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(143, 60);
+            this.label3.Location = new System.Drawing.Point(143, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 32);
+            this.label3.Size = new System.Drawing.Size(160, 52);
             this.label3.TabIndex = 3;
             this.label3.Text = "يرجى التأكد من إدخال جميع\r\n       البيانات بدقة عالية     ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -221,14 +226,14 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(149, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 32);
+            this.label4.Size = new System.Drawing.Size(156, 41);
             this.label4.TabIndex = 2;
             this.label4.Text = "إضافة موظف";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2PictureBox1
             // 

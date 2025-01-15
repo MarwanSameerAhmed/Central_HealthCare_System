@@ -60,7 +60,7 @@ namespace CHS_FrontEnd
             var textBox = sender as Guna2TextBox;
             Label errorLabel = null; // ليبل خاص بالخطأ
 
-            // تحديد الليبل بناءً على نوع الحقل
+            
             switch (type)
             {
                 case "المرض":
@@ -78,7 +78,7 @@ namespace CHS_FrontEnd
             {
                 string inputText = textBox.Text.Trim();
 
-                // التحقق من صحة المدخلات
+                
                 if (!IsValidInput(textBox, inputText))
                 {
                     errorLabel.Visible = true;
@@ -87,7 +87,7 @@ namespace CHS_FrontEnd
                     return;
                 }
 
-                // إذا كان الإدخال صحيحًا، إخفاء الرسالة
+              
                 errorLabel.Visible = false;
 
 
@@ -154,7 +154,7 @@ namespace CHS_FrontEnd
 
             chip.Location = new Point(currentX, currentY);
 
-            // تحديث الموقع
+            
             currentX += chip.Width + chipSpacing;
             if (currentX + chip.Width > container.Width)
             {
@@ -162,7 +162,7 @@ namespace CHS_FrontEnd
                 currentY += chip.Height + chipSpacing;
             }
 
-            // الحدث المخصص لإزالة الشيب عند النقر المزدوج
+            
             chip.DoubleClick += (s, e) =>
             {
                 container.Controls.Remove(chip);

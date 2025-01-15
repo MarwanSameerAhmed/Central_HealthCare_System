@@ -24,35 +24,13 @@ namespace CHS_FrontEnd
             passwordtxt.RightToLeft = RightToLeft.Yes;
             UserNametxt.Focus();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void Closebtn_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void textBox1_Click(object sender, EventArgs e)
         {
@@ -71,10 +49,7 @@ namespace CHS_FrontEnd
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-           // textBox2.UseSystemPasswordChar = false;
-        }
+        
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
             passwordtxt.UseSystemPasswordChar = false;
@@ -85,10 +60,7 @@ namespace CHS_FrontEnd
             passwordtxt .UseSystemPasswordChar = true;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
@@ -100,21 +72,28 @@ namespace CHS_FrontEnd
             UserNametxt.Focus();
         }
 
-        private void loginbtn_Click(object sender, EventArgs e)
-        {          
-            DialogResult = DialogResult.OK;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void validationsCodeTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
-         //   patientAddingPage f = new patientAddingPage();
-          //  f.ShowDialog();
+            // السماح فقط للأرقام
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8) // (char)8 هو الكود الخاص بمفتاح Backspace
+            {
+                e.Handled = true; // إذا كانت الحرف ليس رقماً ولا مفتاح العودة، يتم منع الإدخال
+            }
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        private void validationsCodeTxt_TextChanged(object sender, EventArgs e)
         {
-
+            // التحقق من أن النص لا يحتوي على أكثر من 9 أرقام
+            if (validationsCodeTxt.Text.Length > 9)
+            {
+                validationsCodeTxt.Text = validationsCodeTxt.Text.Substring(0, 9); // اقتصار النص على 9 أرقام
+                validationsCodeTxt.SelectionStart = validationsCodeTxt.Text.Length; // إبقاء مؤشر الكتابة في نهاية النص
+            }
         }
+
+
+
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {

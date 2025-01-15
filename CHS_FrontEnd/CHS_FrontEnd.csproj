@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -73,8 +73,8 @@
     <Reference Include="FontAwesome.Sharp">
       <HintPath>..\libs\FontAwesome.Sharp.dll</HintPath>
     </Reference>
-    <Reference Include="GLWpfControl">
-      <HintPath>..\libs\GLWpfControl.dll</HintPath>
+    <Reference Include="GLWpfControl, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLWpfControl.3.3.0\lib\net452\GLWpfControl.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\libs\Guna.UI2.dll</HintPath>
@@ -90,28 +90,28 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\libs\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="OpenTK">
-      <HintPath>..\libs\OpenTK.dll</HintPath>
+    <Reference Include="OpenTK, Version=3.3.1.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.3.1\lib\net20\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="RestSharp">
-      <HintPath>..\libs\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=112.1.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.112.1.1-alpha.0.4\lib\net471\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp">
-      <HintPath>..\libs\SkiaSharp.dll</HintPath>
+    <Reference Include="SkiaSharp, Version=3.118.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.3.118.0-preview.2.3\lib\net462\SkiaSharp.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp.SceneGraph">
-      <HintPath>..\libs\SkiaSharp.SceneGraph.dll</HintPath>
+    <Reference Include="SkiaSharp.SceneGraph, Version=3.118.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.SceneGraph.3.118.0-preview.2.3\lib\net462\SkiaSharp.SceneGraph.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp.Skottie">
-      <HintPath>..\libs\SkiaSharp.Skottie.dll</HintPath>
+    <Reference Include="SkiaSharp.Skottie, Version=3.118.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.Skottie.3.118.0-preview.2.3\lib\net462\SkiaSharp.Skottie.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp.Views.Desktop.Common">
-      <HintPath>..\libs\SkiaSharp.Views.Desktop.Common.dll</HintPath>
+    <Reference Include="SkiaSharp.Views.Desktop.Common, Version=3.118.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.Views.Desktop.Common.3.118.0-preview.2.3\lib\net462\SkiaSharp.Views.Desktop.Common.dll</HintPath>
     </Reference>
-    <Reference Include="SkiaSharp.Views.WPF">
-      <HintPath>..\libs\SkiaSharp.Views.WPF.dll</HintPath>
+    <Reference Include="SkiaSharp.Views.WPF, Version=3.118.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.Views.WPF.3.118.0-preview.2.3\lib\net462\SkiaSharp.Views.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -177,17 +177,44 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEDRoomFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEDRoomFrm.Designer.cs">
+      <DependentUpon>AddEDRoomFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddNewDaignosisesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddNewDaignosisesFrm.Designer.cs">
       <DependentUpon>AddNewDaignosisesFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewDoctorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewDoctorFrm.Designer.cs">
+      <DependentUpon>AddNewDoctorFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewFacilityFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewFacilityFrm.Designer.cs">
+      <DependentUpon>AddNewFacilityFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DaignosisesViewFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DaignosisesViewFrm.Designer.cs">
       <DependentUpon>DaignosisesViewFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorViewrFrmcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorViewrFrmcs.Designer.cs">
+      <DependentUpon>DoctorViewrFrmcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EDRoomBeds.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="employeeAddFrm.cs">
       <SubType>Form</SubType>
@@ -201,16 +228,18 @@
     <Compile Include="employeeSearchFrm.Designer.cs">
       <DependentUpon>employeeSearchFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEDRoomFrm.cs">
+    <Compile Include="EmployeeViwerFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEDRoomFrm.Designer.cs">
-      <DependentUpon>AddEDRoomFrm.cs</DependentUpon>
+    <Compile Include="EmployeeViwerFrm.Designer.cs">
+      <DependentUpon>EmployeeViwerFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EDRoomBeds.cs">
+    <Compile Include="FacilityViewrFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Entities\EDRoom.cs" />
+    <Compile Include="FacilityViewrFrm.Designer.cs">
+      <DependentUpon>FacilityViewrFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LIMBsFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,14 +252,26 @@
     <Compile Include="LocalEDManagementFrm.Designer.cs">
       <DependentUpon>LocalEDManagementFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="LocalEDRooms.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientFileViewrFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientFileViewrFrm.Designer.cs">
+      <DependentUpon>PatientFileViewrFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchDoctorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchDoctorFrm.Designer.cs">
+      <DependentUpon>searchDoctorFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchFacilityFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchFacilityFrm.Designer.cs">
+      <DependentUpon>searchFacilityFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainService.cs">
       <SubType>Form</SubType>
@@ -279,11 +320,23 @@
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEDRoomFrm.resx">
+      <DependentUpon>AddEDRoomFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddNewDaignosisesFrm.resx">
       <DependentUpon>AddNewDaignosisesFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddNewDoctorFrm.resx">
+      <DependentUpon>AddNewDoctorFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewFacilityFrm.resx">
+      <DependentUpon>AddNewFacilityFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DaignosisesViewFrm.resx">
       <DependentUpon>DaignosisesViewFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorViewrFrmcs.resx">
+      <DependentUpon>DoctorViewrFrmcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="employeeAddFrm.resx">
       <DependentUpon>employeeAddFrm.cs</DependentUpon>
@@ -291,17 +344,14 @@
     <EmbeddedResource Include="employeeSearchFrm.resx">
       <DependentUpon>employeeSearchFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEDRoomFrm.resx">
-      <DependentUpon>AddEDRoomFrm.cs</DependentUpon>
+    <EmbeddedResource Include="FacilityViewrFrm.resx">
+      <DependentUpon>FacilityViewrFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LIMBsFrm.resx">
       <DependentUpon>LIMBsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalEDManagementFrm.resx">
       <DependentUpon>LocalEDManagementFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalEDRooms.resx">
       <DependentUpon>LocalEDRooms.cs</DependentUpon>
@@ -317,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientFileView.resx">
       <DependentUpon>PatientFileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientFileViewrFrm.resx">
+      <DependentUpon>PatientFileViewrFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientSearchFrm.resx">
       <DependentUpon>PatientSearchFrm.cs</DependentUpon>
@@ -337,6 +390,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="searchDoctorFrm.resx">
+      <DependentUpon>searchDoctorFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchFacilityFrm.resx">
+      <DependentUpon>searchFacilityFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CHS_FrontEnd_TemporaryKey.pfx" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
@@ -436,8 +496,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\sub1.sql" />
-    <None Include="Resources\talent-management.png" />
-    <None Include="Resources\participant.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

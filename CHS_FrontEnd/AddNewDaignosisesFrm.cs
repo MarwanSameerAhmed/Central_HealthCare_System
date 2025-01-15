@@ -13,222 +13,313 @@ namespace CHS_FrontEnd
 {
     public partial class addNewDaignosis : Form
     {
+        private int selectedRowIndex = -1;
+        private List<string> symptomsList = new List<string>();
+        private List<string> testsList = new List<string>();
+
+        private List<string> demoMedicineNames = new List<string>
+{
+    "أسبيرين", "باراسيتامول", "إيبوبروفين", "أموكسيسيلين", "كلاريثروميسين"
+};
+
+        private List<string> demoDosages = new List<string>
+{
+    "500 ملجم", "250 ملجم", "1 جم", "5 مل", "10 مل"
+};
+        private List<string> demoDurations = new List<string>
+{
+    "5 أيام", "7 أيام", "10 أيام", "2 أسابيع", "شهر"
+        };
+        List<string> MidTimes = new List<string>
+        {
+            "08:00 صباحًا",
+            "12:00 ظهرًا",
+            "04:00 مساءً",
+            "08:00 مساءً",
+            "06:00 صباحًا"
+        };
+
         public addNewDaignosis()
         {
             InitializeComponent();
+
+            InitializeAutoComplete(testsTxt, new[] { "فحص الدم", "فحص السكري", "فحص الأشعة", "فحص البول" });
+
+
+            symptomsTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "العَرَض");
+            testsTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الفحص");
+
+        }
+        private void InitializeAutoComplete(Guna2TextBox textBox, string[] suggestions)
+        {
+            textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            var autoComplete = new AutoCompleteStringCollection();
+            autoComplete.AddRange(suggestions);
+            textBox.AutoCompleteCustomSource = autoComplete;
         }
 
-
-
-        private void SetupDataGridView()
+        private void OnKeyDownHandler(object sender, KeyEventArgs e, string type)
         {
-            // إعداد الأعمدة
-            gunaDataGridView1.Columns.Clear();
+            var textBox = sender as Guna2TextBox;
 
-            gunaDataGridView1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "DrugId", HeaderText = "رقم الدواء" });
-            gunaDataGridView1.Columns.Add(new DataGridViewComboBoxColumn() { Name = "DrugName", HeaderText = "اسم الدواء" });
-            gunaDataGridView1.Columns.Add(new DataGridViewComboBoxColumn() { Name = "Dosage", HeaderText = "الجرعة" });
-            gunaDataGridView1.Columns.Add(new DataGridViewComboBoxColumn() { Name = "Time", HeaderText = "وقت الجرعة" });
-            gunaDataGridView1.Columns.Add(new DataGridViewComboBoxColumn() { Name = "Period", HeaderText = "الفترة" });
-
-            // إعداد عمود التعديل
-            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn
+            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(textBox.Text))
             {
-                Name = "Edit",
-                HeaderText = "",
-                Text = "تعديل",
-                UseColumnTextForButtonValue = true,
-                FlatStyle = FlatStyle.Flat,
-                DefaultCellStyle = new DataGridViewCellStyle
+                string inputText = textBox.Text.Trim();
+
+                if (type == "الفحص" && !IsValidInput(textBox, inputText))
                 {
-                    BackColor = System.Drawing.Color.LightGray,
-                    ForeColor = System.Drawing.Color.Black,
-                    Alignment = DataGridViewContentAlignment.MiddleCenter,
-                    Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold),
-                },
-                Width = 60 
-            };
-            gunaDataGridView1.Columns.Add(editButtonColumn);
+                    MessageBox.Show("الفحص غير موجود بالقائمة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox.Clear();
+                    return;
+                }
 
-            // إعداد عمود الحذف
-            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
-            {
-                Name = "Delete",
-                HeaderText = "",
-                Text = "حذف",
-                UseColumnTextForButtonValue = true,
-                FlatStyle = FlatStyle.Flat,
-                DefaultCellStyle = new DataGridViewCellStyle
+                if (!IsDuplicate(inputText, type))
                 {
-                    BackColor = System.Drawing.Color.LightGray,
-                    ForeColor = System.Drawing.Color.Black,
-                    Alignment = DataGridViewContentAlignment.MiddleCenter,
-                    Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold), 
-                },
-                Width = 60 // عرض العمود
-            };
-            gunaDataGridView1.Columns.Add(deleteButtonColumn);
-            
-            gunaDataGridView1.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular);
-            gunaDataGridView1.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            gunaDataGridView1.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            gunaDataGridView1.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.LightBlue;
-            gunaDataGridView1.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            gunaDataGridView1.RowTemplate.Height = 30;
-            gunaDataGridView1.AlternatingRowsDefaultCellStyle = gunaDataGridView1.DefaultCellStyle;
-          
-            gunaDataGridView1.EditingControlShowing += gunaDataGridView1_EditingControlShowing;
-            gunaDataGridView1.CellClick += gunaDataGridView1_CellClick;
-            gunaDataGridView1.RowValidating += gunaDataGridView1_RowValidating;
-        }
-
-
-        // إعداد DataSource للأعمدة
-        private void SetupComboBoxData()
-        {
-
-            var drugNames = new List<string> { "Paracetamol", "Ibuprofen", "Aspirin" };
-            var dosages = new List<string> { "5mg", "10mg", "15mg", "20mg" };
-            var times = new List<string> { "صباحًا", "ظهرًا", "مساءً" };
-            var periods = new List<string> { "3 أيام", "5 أيام", "7 أيام", "شهر" };
-
-            (gunaDataGridView1.Columns["DrugName"] as DataGridViewComboBoxColumn).DataSource = drugNames;
-            (gunaDataGridView1.Columns["Dosage"] as DataGridViewComboBoxColumn).DataSource = dosages;
-            (gunaDataGridView1.Columns["Time"] as DataGridViewComboBoxColumn).DataSource = times;
-            (gunaDataGridView1.Columns["Period"] as DataGridViewComboBoxColumn).DataSource = periods;
-        }
-
-
-        private void AddInitialEmptyRow()
-        {
-
-            gunaDataGridView1.Rows.Add();
-        }
-
-        private void AddNewRowIfNeeded()
-        {
-
-            DataGridViewRow lastRow = gunaDataGridView1.Rows[gunaDataGridView1.Rows.Count - 1];
-            if (lastRow.Cells["DrugId"].Value != null && lastRow.Cells["DrugName"].Value != null &&
-                lastRow.Cells["Dosage"].Value != null && lastRow.Cells["Time"].Value != null &&
-                lastRow.Cells["Period"].Value != null)
-            {
-               
-                gunaDataGridView1.Rows.Add();
+                    switch (type)
+                    {
+                        case "العَرَض":
+                            symptomsList.Add(inputText);
+                            AddChip(inputText, type, flowLayoutPanel3);
+                            break;
+                        case "الفحص":
+                            testsList.Add(inputText);
+                            AddChip(inputText, type, flowLayoutPanel1);
+                            break;
+                    }
+                    textBox.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("العنصر مضاف بالفعل.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
-
-        private void Form3_Load(object sender, EventArgs e)
+        private bool IsValidInput(Guna2TextBox textBox, string inputText)
         {
-            gunaDataGridView1.EditMode = DataGridViewEditMode.EditOnKeystrokeOrF2;
-            SetupDataGridView();
-            SetupComboBoxData();
-            AddInitialEmptyRow();
+            // التحقق من أن النص موجود في قائمة الإكمال التلقائي
+            return textBox.AutoCompleteCustomSource.Contains(inputText);
+        }
+
+        private bool IsDuplicate(string inputText, string type)
+        {
+            switch (type)
+            {
+                case "العَرَض":
+                    return symptomsList.Contains(inputText);
+                case "الفحص":
+                    return testsList.Contains(inputText);
+                default:
+                    return false;
+            }
+        }
+
+        private void AddChip(string text, string type, FlowLayoutPanel container)
+        {
+            var chip = new Guna2Chip
+            {
+                Text = text,
+                FillColor = GetChipColor(type),
+                ForeColor = System.Drawing.Color.White,
+                BorderRadius = 15,
+                Padding = new Padding(2),
+                AutoSize = true,
+            };
+
+            chip.DoubleClick += (s, e) =>
+            {
+                container.Controls.Remove(chip);
+                RemoveFromList(text, type);
+            };
+
+            container.Controls.Add(chip);
+        }
+
+        private Color GetChipColor(string type)
+        {
+            switch (type)
+            {
+                case "العَرَض":
+                    return Color.DarkOrange;
+                case "الفحص":
+                    return Color.Teal;
+                default:
+                    return Color.Gray;
+            }
+        }
+
+        private void RemoveFromList(string text, string type)
+        {
+            switch (type)
+            {
+                case "العَرَض":
+                    symptomsList.Remove(text);
+                    break;
+                case "الفحص":
+                    testsList.Remove(text);
+                    break;
+            }
+        }
+        private void InitializeAutoCompleteTextbox(Guna.UI2.WinForms.Guna2TextBox textBox, List<string> demoData)
+        {
+           
+            var autoComplete = new AutoCompleteStringCollection();
+            autoComplete.AddRange(demoData.ToArray());
+
+            
+            textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            textBox.AutoCompleteCustomSource = autoComplete;
+
+            
+            textBox.KeyDown += (sender, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    
+                    if (!autoComplete.Contains(textBox.Text.Trim()))
+                    {
+                        MessageBox.Show("القيمة المدخلة غير موجودة في القائمة. الرجاء اختيار قيمة من الاقتراحات.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBox.Clear();
+                    }
+                }
+            };
+        }
+        private bool IsValidInputTextBox(Guna.UI2.WinForms.Guna2TextBox textBox, List<string> demoData)
+        {
+           
+            return demoData.Contains(textBox.Text.Trim(), StringComparer.OrdinalIgnoreCase);
+        }
+        private void UpdateAutoCompleteData()
+        {
+
+            InitializeAutoCompleteTextbox(medicineNameTxt, demoMedicineNames);
+            InitializeAutoCompleteTextbox(dosageTxt, demoDosages);
+            InitializeAutoCompleteTextbox(MidTimeTxt, MidTimes);
+            InitializeAutoCompleteTextbox(midDratxt, demoDurations);
 
         }
 
-        private void gunaDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void addNewDaignosis_Load(object sender, EventArgs e)
+        {
+            UpdateAutoCompleteData();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+            if (IsValidInputTextBox(medicineNameTxt, demoMedicineNames) &&
+               IsValidInputTextBox(dosageTxt, demoDosages) &&
+                IsValidInputTextBox(MidTimeTxt, MidTimes) &&
+                IsValidInputTextBox(midDratxt, demoDurations))
+            {
+              
+                string medicineName = medicineNameTxt.Text.Trim();
+                string dosage = dosageTxt.Text.Trim();
+                string Time = MidTimeTxt.Text.Trim();
+                string duration = midDratxt.Text.Trim();
+
+
+                gunaDataGridView1.Rows.Add(medicineName, dosage,Time, duration);
+
+                medicineNameTxt.Clear();
+                dosageTxt.Clear();
+                MidTimeTxt.Clear();
+                midDratxt.Clear();
+
+                MessageBox.Show("تم إضافة البيانات بنجاح إلى الجدول.", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("الرجاء إدخال قيمة صحيحة من القائمة المعروضة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        
+
+
+        private void gunaDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
             if (e.RowIndex >= 0)
             {
-                var clickedColumn = gunaDataGridView1.Columns[e.ColumnIndex].Name;
-                var currentRow = gunaDataGridView1.Rows[e.RowIndex];
 
-                if (clickedColumn == "Edit")
-                {
-                    foreach (DataGridViewCell cell in currentRow.Cells)
-                    {
-                        if (gunaDataGridView1.Columns[cell.ColumnIndex].Name != "Edit" &&
-                            gunaDataGridView1.Columns[cell.ColumnIndex].Name != "Delete")
-                        {
-                            cell.ReadOnly = false; 
-                        }
-                    }
-                    MessageBox.Show($"الآن يمكنك تعديل الصف رقم {e.RowIndex + 1}.", "تعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (clickedColumn == "Delete")
-                {
-                   
-                    var confirmResult = MessageBox.Show("هل أنت متأكد من حذف هذا الصف؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (confirmResult == DialogResult.Yes)
-                    {
-                        gunaDataGridView1.Rows.RemoveAt(e.RowIndex);
-                    }
-                }
-            }
-        }
-        private void gunaDataGridView1_CellValueChanged_1(object sender, DataGridViewCellEventArgs e)
-        {
-            AddNewRowIfNeeded();
-        }
-
-        private void gunaDataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            if (gunaDataGridView1.CurrentCell.OwningColumn is DataGridViewComboBoxColumn)
-            {
-                ComboBox comboBox = e.Control as ComboBox;
-                if (comboBox != null)
-                {
-
-                    comboBox.DropDownStyle = ComboBoxStyle.DropDown;
-                    comboBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                    comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
+                selectedRowIndex = e.RowIndex;
 
 
-                    comboBox.KeyDown -= ComboBox_KeyDown;
-                    comboBox.KeyDown += ComboBox_KeyDown;
-                }
+                DataGridViewRow row = gunaDataGridView1.Rows[selectedRowIndex];
+
+
+                medicineNameTxt.Text = row.Cells["medName"].Value.ToString();
+                dosageTxt.Text = row.Cells["medDOS"].Value.ToString();
+                MidTimeTxt.Text = row.Cells["MedTime"].Value.ToString();
+                midDratxt.Text = row.Cells["midDra"].Value.ToString();
+                midDratxt.Text = row.Cells.ToString();
             }
         }
 
-        private void ComboBox_KeyDown(object sender, KeyEventArgs e)
+        private void guna2Button2_Click_1(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (selectedRowIndex >= 0)
             {
-                gunaDataGridView1.EndEdit();
-                e.Handled = true;
+              
+                string updatedMedicineName = medicineNameTxt.Text.Trim();
+                string updatedDosage = dosageTxt.Text.Trim();
+                string updatedMidTime = MidTimeTxt.Text.Trim();
+                string updatedDuration = midDratxt.Text.Trim();
+
+
+                DataGridViewRow row = gunaDataGridView1.Rows[selectedRowIndex];
+                row.Cells["medName"].Value = updatedMedicineName;
+                row.Cells["medDOS"].Value = updatedDosage;
+                row.Cells["MedTime"].Value = updatedMidTime;
+                row.Cells["midDra"].Value = updatedDuration;
+
+
+                medicineNameTxt.Clear();
+                dosageTxt.Clear();
+                MidTimeTxt.Clear();
+                midDratxt.Clear();
+
+                
+                selectedRowIndex = -1;
+
+                MessageBox.Show("تم تحديث البيانات بنجاح.", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("لم يتم اختيار صف للتعديل.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            
+        }
 
-        private void gunaDataGridView1_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
+        private void guna2ContainerControl7_Click(object sender, EventArgs e)
         {
 
 
-            DataGridViewRow row = gunaDataGridView1.Rows[e.RowIndex];
 
-         
-            if (row.IsNewRow) return;
 
-          
-            bool isRowFullyFilled = true;
-            foreach (DataGridViewCell cell in row.Cells)
-            {
-                if (cell.ColumnIndex < 5 && (cell.Value == null || string.IsNullOrWhiteSpace(cell.Value.ToString())))
-                {
-                    isRowFullyFilled = false;
-                    break;
-                }
-            }
 
-            if (!isRowFullyFilled)
-            {
-                MessageBox.Show("يرجى إكمال جميع الحقول المطلوبة قبل المتابعة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true;
-                return;
-            }
 
-          
-            if (!e.Cancel)
-            {
-                row.Cells["Edit"].Style.BackColor = System.Drawing.Color.LightGreen;
-                row.Cells["Edit"].Style.ForeColor = System.Drawing.Color.White;
+        }
 
-                row.Cells["Delete"].Style.BackColor = System.Drawing.Color.Red;
-                row.Cells["Delete"].Style.ForeColor = System.Drawing.Color.White;
-            }
+        private void guna2ContainerControl8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }
+
+
+
+    
