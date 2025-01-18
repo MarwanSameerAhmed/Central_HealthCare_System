@@ -125,5 +125,10 @@ namespace CHS_FrontEnd
                 label2.Visible = true;       
             }
         }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
