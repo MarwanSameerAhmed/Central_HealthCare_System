@@ -15,7 +15,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>C:\CHS\</PublishUrl>
+    <PublishUrl>E:\مجلد جديد %282%29\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -213,9 +213,6 @@
     <Compile Include="DoctorViewrFrmcs.Designer.cs">
       <DependentUpon>DoctorViewrFrmcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="EDRoomBeds.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="employeeAddFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,9 +249,6 @@
     <Compile Include="LocalEDManagementFrm.Designer.cs">
       <DependentUpon>LocalEDManagementFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LocalEDRooms.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="PatientFileViewrFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +260,12 @@
     </Compile>
     <Compile Include="searchDoctorFrm.Designer.cs">
       <DependentUpon>searchDoctorFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchEmployees%28praivte%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchEmployees%28praivte%29.Designer.cs">
+      <DependentUpon>searchEmployees%28praivte%29.cs</DependentUpon>
     </Compile>
     <Compile Include="searchFacilityFrm.cs">
       <SubType>Form</SubType>
@@ -317,6 +317,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchPatient%28praivte%29cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchPatient%28praivte%29cs.Designer.cs">
+      <DependentUpon>searchPatient%28praivte%29cs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
@@ -344,6 +350,9 @@
     <EmbeddedResource Include="employeeSearchFrm.resx">
       <DependentUpon>employeeSearchFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeViwerFrm.resx">
+      <DependentUpon>EmployeeViwerFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FacilityViewrFrm.resx">
       <DependentUpon>FacilityViewrFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,9 +361,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LocalEDManagementFrm.resx">
       <DependentUpon>LocalEDManagementFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LocalEDRooms.resx">
-      <DependentUpon>LocalEDRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainService.resx">
       <DependentUpon>MainService.cs</DependentUpon>
@@ -393,10 +399,15 @@
     <EmbeddedResource Include="searchDoctorFrm.resx">
       <DependentUpon>searchDoctorFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="searchEmployees%28praivte%29.resx">
+      <DependentUpon>searchEmployees%28praivte%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="searchFacilityFrm.resx">
       <DependentUpon>searchFacilityFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CHS_FrontEnd_TemporaryKey.pfx" />
+    <EmbeddedResource Include="searchPatient%28praivte%29cs.resx">
+      <DependentUpon>searchPatient%28praivte%29cs.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
@@ -496,6 +507,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\sub1.sql" />
+    <None Include="Resources\icons8-expand-arrow-64 %281%29.png" />
+    <None Include="Resources\icons8-expand-arrow-64 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

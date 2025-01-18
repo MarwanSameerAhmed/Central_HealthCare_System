@@ -1,4 +1,4 @@
-﻿using CHS_FrontEnd.Entities;
+﻿
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -134,7 +134,7 @@ namespace CHS_FrontEnd
             string bedsTxtBox = bedsNumBox.Text;
             if (int.TryParse(roomTxtBox, out int roomNumValue) && int.TryParse(bedsTxtBox, out int bedsNumValue))
             {
-               EDRoom edRoom = new EDRoom(roomNumValue, bedsNumValue);
+               //EDRoom edRoom = new EDRoom(roomNumValue, bedsNumValue);
                //edRoom.initializeBedsState();
             }
 

@@ -15,7 +15,7 @@ namespace CHS_FrontEnd
     public partial class PatientFileViewrFrm : Form
     {
 
-        public PatientFileViewrFrm(DockPanel dockPanel)
+        public PatientFileViewrFrm()
         {
             InitializeComponent();
             

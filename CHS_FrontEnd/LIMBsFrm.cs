@@ -22,9 +22,10 @@ namespace CHS.Client
 
         private void LIMBsFrm_Load(object sender, EventArgs e)
         {
-            StyleDataGridView();
+      
             SyncScrollbar();
             PopulateData();
+            testsGridView.MouseWheel += testsGridView_MouseWheel;
         }
 
         private void testsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -78,42 +79,7 @@ namespace CHS.Client
             SyncScrollbar();
         }
 
-        private void StyleDataGridView()
-        {
-            // Apply Guna2 visual themes to the DataGridView
-            testsGridView.Theme = DataGridViewPresetThemes.Default;
-            testsGridView.EnableHeadersVisualStyles = false;
-
-            // Customize header style
-            testsGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
-            testsGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            testsGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            testsGridView.ColumnHeadersHeight = 50;
-
-            // Customize cell style
-            testsGridView.DefaultCellStyle.Font = new Font("Segoe UI", 10);
-            testsGridView.DefaultCellStyle.ForeColor = Color.Black;
-            testsGridView.DefaultCellStyle.BackColor = Color.WhiteSmoke;
-            testsGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-
-            // Disable default scrollbar
-            testsGridView.ScrollBars = ScrollBars.None;
-
-            // Set the rows height & alignment
-            testsGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            testsGridView.RowTemplate.Height = 100;
-
-            // Apply height to existing rows
-            foreach (DataGridViewRow row in testsGridView.Rows)
-            {
-                row.Height = 40;
-            }
-
-            testsGridView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            // Make the grid view scroll with the mouse wheel
-            testsGridView.MouseWheel += testsGridView_MouseWheel;
-        }
+       
 
         private void testsGridView_MouseWheel(object sender, MouseEventArgs e)
         {
@@ -163,6 +129,11 @@ namespace CHS.Client
         {
             var popup = new newTestPopupFrm();
             popup.ShowDialog();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

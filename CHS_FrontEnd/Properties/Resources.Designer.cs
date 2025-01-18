@@ -183,6 +183,36 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_expand_arrow_64__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-expand-arrow-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_expand_arrow_64__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-expand-arrow-64 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_expand_arrow_64__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-expand-arrow-64 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap job_search {
             get {
                 object obj = ResourceManager.GetObject("job-search", resourceCulture);
@@ -283,9 +313,9 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pin_code {
+        internal static System.Drawing.Bitmap participant {
             get {
-                object obj = ResourceManager.GetObject("pin-code", resourceCulture);
+                object obj = ResourceManager.GetObject("participant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +323,9 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap talent_management {
+        internal static System.Drawing.Bitmap pin_code {
             get {
-                object obj = ResourceManager.GetObject("talent-management", resourceCulture);
+                object obj = ResourceManager.GetObject("pin-code", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

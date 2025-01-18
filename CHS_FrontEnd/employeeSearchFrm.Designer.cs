@@ -30,12 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -47,16 +43,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.searchPatientView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column_empID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_empFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_empPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_empNationalID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_empType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchEmpView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.empName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empIDNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ContainerControl3.SuspendLayout();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchPatientView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchEmpView)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ContainerControl3
@@ -229,7 +224,7 @@
             this.guna2ContainerControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl2.BorderRadius = 15;
             this.guna2ContainerControl2.Controls.Add(this.guna2VScrollBar1);
-            this.guna2ContainerControl2.Controls.Add(this.searchPatientView);
+            this.guna2ContainerControl2.Controls.Add(this.searchEmpView);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2ContainerControl2.Location = new System.Drawing.Point(17, 214);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -242,129 +237,119 @@
             // 
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1187, 42);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1187, 58);
             this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2VScrollBar1.Maximum = 99;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 17;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(17, 362);
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(17, 346);
             this.guna2VScrollBar1.TabIndex = 6;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.DarkGray;
             // 
-            // searchPatientView
+            // searchEmpView
             // 
-            this.searchPatientView.AllowUserToAddRows = false;
-            this.searchPatientView.AllowUserToDeleteRows = false;
+            this.searchEmpView.AllowUserToAddRows = false;
+            this.searchEmpView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.searchPatientView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.searchPatientView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchEmpView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.searchEmpView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Snap ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchPatientView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.searchPatientView.ColumnHeadersHeight = 25;
-            this.searchPatientView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.searchPatientView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column_empID,
-            this.Column_empFullName,
-            this.Column_empPhoneNumber,
-            this.Column_empNationalID,
-            this.Column_empType});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.searchPatientView.DefaultCellStyle = dataGridViewCellStyle8;
-            this.searchPatientView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.searchPatientView.GridColor = System.Drawing.Color.Gray;
-            this.searchPatientView.Location = new System.Drawing.Point(16, 18);
-            this.searchPatientView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchPatientView.Name = "searchPatientView";
-            this.searchPatientView.ReadOnly = true;
-            this.searchPatientView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.searchPatientView.RowHeadersVisible = false;
-            this.searchPatientView.RowHeadersWidth = 51;
-            this.searchPatientView.RowTemplate.Height = 40;
-            this.searchPatientView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.searchPatientView.Size = new System.Drawing.Size(1188, 386);
-            this.searchPatientView.TabIndex = 0;
-            this.searchPatientView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.searchPatientView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchPatientView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.searchPatientView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.searchPatientView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.searchPatientView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.searchPatientView.ThemeStyle.GridColor = System.Drawing.Color.Gray;
-            this.searchPatientView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.searchPatientView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.searchPatientView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Snap ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchPatientView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.searchPatientView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.searchPatientView.ThemeStyle.HeaderStyle.Height = 25;
-            this.searchPatientView.ThemeStyle.ReadOnly = true;
-            this.searchPatientView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.searchPatientView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.searchPatientView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.searchPatientView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.searchPatientView.ThemeStyle.RowsStyle.Height = 40;
-            this.searchPatientView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.searchPatientView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column_empID
-            // 
+            this.searchEmpView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.searchEmpView.ColumnHeadersHeight = 40;
+            this.searchEmpView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.empName,
+            this.empType,
+            this.empNumber,
+            this.empIDNumber});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_empID.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column_empID.HeaderText = "الرقم المميز";
-            this.Column_empID.MinimumWidth = 10;
-            this.Column_empID.Name = "Column_empID";
-            this.Column_empID.ReadOnly = true;
-            // 
-            // Column_empFullName
-            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchEmpView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.searchEmpView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.searchEmpView.GridColor = System.Drawing.Color.Gray;
+            this.searchEmpView.Location = new System.Drawing.Point(16, 18);
+            this.searchEmpView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchEmpView.Name = "searchEmpView";
+            this.searchEmpView.ReadOnly = true;
+            this.searchEmpView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_empFullName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column_empFullName.HeaderText = "اسم الموظف";
-            this.Column_empFullName.MinimumWidth = 6;
-            this.Column_empFullName.Name = "Column_empFullName";
-            this.Column_empFullName.ReadOnly = true;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchEmpView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.searchEmpView.RowHeadersVisible = false;
+            this.searchEmpView.RowHeadersWidth = 51;
+            this.searchEmpView.RowTemplate.Height = 40;
+            this.searchEmpView.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.searchEmpView.Size = new System.Drawing.Size(1188, 386);
+            this.searchEmpView.TabIndex = 0;
+            this.searchEmpView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.searchEmpView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchEmpView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.searchEmpView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.searchEmpView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.searchEmpView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.searchEmpView.ThemeStyle.GridColor = System.Drawing.Color.Gray;
+            this.searchEmpView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.searchEmpView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.searchEmpView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Snap ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchEmpView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.searchEmpView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.searchEmpView.ThemeStyle.HeaderStyle.Height = 40;
+            this.searchEmpView.ThemeStyle.ReadOnly = true;
+            this.searchEmpView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.searchEmpView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.searchEmpView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.searchEmpView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.searchEmpView.ThemeStyle.RowsStyle.Height = 40;
+            this.searchEmpView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.searchEmpView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Column_empPhoneNumber
+            // empName
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_empPhoneNumber.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column_empPhoneNumber.HeaderText = "رقم الهاتف";
-            this.Column_empPhoneNumber.MinimumWidth = 6;
-            this.Column_empPhoneNumber.Name = "Column_empPhoneNumber";
-            this.Column_empPhoneNumber.ReadOnly = true;
+            this.empName.HeaderText = "أسم الموظف";
+            this.empName.MinimumWidth = 6;
+            this.empName.Name = "empName";
+            this.empName.ReadOnly = true;
             // 
-            // Column_empNationalID
+            // empType
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_empNationalID.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column_empNationalID.HeaderText = "رقم الهوية";
-            this.Column_empNationalID.MinimumWidth = 6;
-            this.Column_empNationalID.Name = "Column_empNationalID";
-            this.Column_empNationalID.ReadOnly = true;
+            this.empType.HeaderText = "نوع الموظف";
+            this.empType.MinimumWidth = 6;
+            this.empType.Name = "empType";
+            this.empType.ReadOnly = true;
             // 
-            // Column_empType
+            // empNumber
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_empType.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Column_empType.HeaderText = "نوع الموظف";
-            this.Column_empType.MinimumWidth = 6;
-            this.Column_empType.Name = "Column_empType";
-            this.Column_empType.ReadOnly = true;
+            this.empNumber.HeaderText = "رقم الهاتف";
+            this.empNumber.MinimumWidth = 6;
+            this.empNumber.Name = "empNumber";
+            this.empNumber.ReadOnly = true;
+            // 
+            // empIDNumber
+            // 
+            this.empIDNumber.HeaderText = "الرقم الوظيفي";
+            this.empIDNumber.MinimumWidth = 6;
+            this.empIDNumber.Name = "empIDNumber";
+            this.empIDNumber.ReadOnly = true;
             // 
             // employeeSearchFrm
             // 
@@ -385,7 +370,7 @@
             this.guna2ContainerControl1.ResumeLayout(false);
             this.guna2ContainerControl1.PerformLayout();
             this.guna2ContainerControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.searchPatientView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchEmpView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,11 +388,10 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
-        private Guna.UI2.WinForms.Guna2DataGridView searchPatientView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_empID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_empFullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_empPhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_empNationalID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_empType;
+        private Guna.UI2.WinForms.Guna2DataGridView searchEmpView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn empIDNumber;
     }
 }

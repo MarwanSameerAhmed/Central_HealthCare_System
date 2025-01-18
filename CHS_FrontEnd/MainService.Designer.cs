@@ -32,27 +32,27 @@
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ContainerControl7 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2ContainerControl1.SuspendLayout();
-            this.guna2ContainerControl7.SuspendLayout();
-            this.guna2ContainerControl3.SuspendLayout();
-            this.guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2ContainerControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
+            this.guna2ContainerControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +64,6 @@
             this.flowLayoutPanel1.Controls.Add(this.guna2ContainerControl7);
             this.flowLayoutPanel1.Controls.Add(this.guna2ContainerControl3);
             this.flowLayoutPanel1.Controls.Add(this.guna2ContainerControl2);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -80,7 +79,7 @@
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.Controls.Add(this.guna2PictureBox1);
             this.guna2ContainerControl1.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(1146, 15);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(10, 15);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(10, 15, 15, 15);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(323, 141);
@@ -112,6 +111,20 @@
             this.label1.Text = "إنشاء ملف طبي";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox1.BorderRadius = 20;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Black;
+            this.guna2PictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.icons8_add_64;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(20, 10);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // guna2ContainerControl7
             // 
             this.guna2ContainerControl7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
@@ -121,7 +134,7 @@
             this.guna2ContainerControl7.Controls.Add(this.label8);
             this.guna2ContainerControl7.Controls.Add(this.guna2PictureBox7);
             this.guna2ContainerControl7.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ContainerControl7.Location = new System.Drawing.Point(803, 15);
+            this.guna2ContainerControl7.Location = new System.Drawing.Point(358, 15);
             this.guna2ContainerControl7.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.guna2ContainerControl7.Name = "guna2ContainerControl7";
             this.guna2ContainerControl7.Size = new System.Drawing.Size(323, 141);
@@ -153,6 +166,19 @@
             this.label8.Text = "البحث عن موظف";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox7.BorderRadius = 20;
+            this.guna2PictureBox7.FillColor = System.Drawing.Color.Black;
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(20, 10);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(100, 100);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox7.TabIndex = 1;
+            this.guna2PictureBox7.TabStop = false;
+            // 
             // guna2ContainerControl3
             // 
             this.guna2ContainerControl3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
@@ -162,7 +188,7 @@
             this.guna2ContainerControl3.Controls.Add(this.label6);
             this.guna2ContainerControl3.Controls.Add(this.guna2PictureBox3);
             this.guna2ContainerControl3.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(460, 15);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(701, 15);
             this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
             this.guna2ContainerControl3.Size = new System.Drawing.Size(323, 141);
@@ -194,6 +220,19 @@
             this.label6.Text = "البحث عن مريض";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox3.BorderRadius = 20;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Black;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 10);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 1;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // guna2ContainerControl2
             // 
             this.guna2ContainerControl2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
@@ -203,7 +242,7 @@
             this.guna2ContainerControl2.Controls.Add(this.label4);
             this.guna2ContainerControl2.Controls.Add(this.guna2PictureBox2);
             this.guna2ContainerControl2.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(117, 15);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(1044, 15);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(323, 141);
@@ -235,48 +274,6 @@
             this.label4.Text = "إضافة موظف";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox1.BorderRadius = 20;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Black;
-            this.guna2PictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.icons8_add_64;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(20, 10);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox7.BorderRadius = 20;
-            this.guna2PictureBox7.FillColor = System.Drawing.Color.Black;
-            this.guna2PictureBox7.Image = global::CHS_FrontEnd.Properties.Resources.talent_management;
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(20, 10);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(100, 100);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox7.TabIndex = 1;
-            this.guna2PictureBox7.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox3.BorderRadius = 20;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.Black;
-            this.guna2PictureBox3.Image = global::CHS_FrontEnd.Properties.Resources.participant;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 10);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 1;
-            this.guna2PictureBox3.TabStop = false;
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.BackColor = System.Drawing.Color.White;
@@ -301,12 +298,12 @@
             this.Load += new System.EventHandler(this.MainService_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2ContainerControl1.ResumeLayout(false);
-            this.guna2ContainerControl7.ResumeLayout(false);
-            this.guna2ContainerControl3.ResumeLayout(false);
-            this.guna2ContainerControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2ContainerControl7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            this.guna2ContainerControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.guna2ContainerControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 

@@ -152,10 +152,15 @@ namespace CHS_FrontEnd
             {
                 hideSub();
                 subMenu.Visible = true;
+               
+
+
+
             }
             else
             {
                 subMenu.Visible = false;
+                patientManagementSubBtn.Image = Properties.Resources.icons8_expand_arrow_64__2_;
 
             }
 
@@ -192,13 +197,15 @@ namespace CHS_FrontEnd
         private void patientAddFrmBtn_Click(object sender, EventArgs e)
         {
             OpenForm(new addingPatientFrm(dockPanel));
-            hideSub();
+            patientManagementSubBtn.Image = Properties.Resources.icons8_expand_arrow_64__2_;
+            
+
         }
 
         private void PatientSearchFrmBtn_Click(object sender, EventArgs e)
         {
             OpenForm(new searchPatientFrm(dockPanel));
-            hideSub();
+         
 
         }
 
@@ -289,13 +296,13 @@ namespace CHS_FrontEnd
         private void EmployessAddBtn_Click(object sender, EventArgs e)
         {
             OpenForm(new employeeAddFrm(dockPanel));
-            hideSub();
+           
         }
 
         private void EmployessSearchBtn_Click(object sender, EventArgs e)
         {
             OpenForm(new employeeSearchFrm(dockPanel));
-            hideSub();
+           
         }
 
         private void PharmacyDepBtn_Click(object sender, EventArgs e)
@@ -414,7 +421,7 @@ namespace CHS_FrontEnd
 
         private void SearchPatientFileBtn_Click(object sender, EventArgs e)
         {
-            searchPatientFrm fr = new searchPatientFrm(dockPanel);
+            searchPatient_praivte_cs fr = new searchPatient_praivte_cs(dockPanel);
             OpenForm(fr);
         }
 
@@ -426,6 +433,17 @@ namespace CHS_FrontEnd
         private void LabDepSearchBtn_Click(object sender, EventArgs e)
         {
             OpenForm(new LIMBsFrm(dockPanel));
+        }
+
+        private void patientManagementSubBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton12_Click(object sender, EventArgs e)
+        {
+            searchEmployees_praivte_ fr = new searchEmployees_praivte_(dockPanel);
+            OpenForm(fr);
         }
     }
 }

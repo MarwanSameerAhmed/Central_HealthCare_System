@@ -103,7 +103,7 @@
             this.label10.Location = new System.Drawing.Point(679, 6);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(202, 53);
+            this.label10.Size = new System.Drawing.Size(197, 52);
             this.label10.TabIndex = 0;
             this.label10.Text = "إضافة موظف جديد";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
