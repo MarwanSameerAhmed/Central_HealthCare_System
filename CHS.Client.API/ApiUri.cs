@@ -1,25 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CHS.Client.API
 {
+    public enum RequestMethod
+    {
+        Get = 1,
+        Post = 2
+    }
+
     [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
     public class ApiUri : Attribute
     {
-        public string Uri { get; }
-
-        public ApiUri(string uri)
-        {
-            Uri = uri;
+        private string _Uri;
+        public string Uri { 
+            get
+            {
+                return "http://localhost:44332/api/" + _Uri;
+            }
         }
 
-        public static string GetApiUri<T>()
+        public RequestMethod Method { get; }
+
+        public ApiUri(string uri, RequestMethod method = RequestMethod.Post)
         {
-            ApiUri attribute = (ApiUri)Attribute.GetCustomAttribute(typeof(T), typeof(ApiUri));
-            return attribute?.Uri;
+            _Uri = uri;
+            Method = method;
         }
     }
 }
