@@ -58,7 +58,7 @@ namespace CHS_FrontEnd
         private void OnKeyDownHandler(object sender, KeyEventArgs e, string type)
         {
             var textBox = sender as Guna2TextBox;
-            Label errorLabel = null; // ليبل خاص بالخطأ
+            Label errorLabel = null; 
 
             
             switch (type)
@@ -254,7 +254,7 @@ namespace CHS_FrontEnd
                 else
                 {
                     errorLabel.Visible = false;
-                    comboBox.BorderColor = Color.FromArgb(1, 87, 155); // اللون الافتراضي
+                    comboBox.BorderColor = Color.FromArgb(1, 87, 155); 
                 }
             }
 
@@ -362,25 +362,21 @@ namespace CHS_FrontEnd
             comuintystateCombo.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
         }
 
-        private void diseasesTxt_TextChanged(object sender, EventArgs e)
+       
+
+        private void diseasesTxt_TextChanged_1(object sender, EventArgs e)
         {
             label17.Visible = true;
-           
         }
 
-        private void sensitivitiesTxt_TextChanged(object sender, EventArgs e)
+        private void sensitivitiesTxt_TextChanged_1(object sender, EventArgs e)
         {
             label20.Visible = true;
         }
 
-        private void medicinesTxt_TextChanged(object sender, EventArgs e)
+        private void medicinesTxt_TextChanged_1(object sender, EventArgs e)
         {
             label21.Visible = true;
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
         }
     }
     }

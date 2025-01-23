@@ -74,10 +74,10 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl1.Controls.Add(this.midSearchtxt);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(104, 74);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(14, 74);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(1393, 121);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(1570, 121);
             this.guna2ContainerControl1.TabIndex = 0;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             this.guna2ContainerControl1.Click += new System.EventHandler(this.guna2ContainerControl1_Click);
@@ -94,15 +94,16 @@ namespace CHS_FrontEnd
             this.nationalSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.nationalSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.nationalSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nationalSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nationalSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.nationalSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nationalSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
             this.nationalSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nationalSearchtxt.Location = new System.Drawing.Point(175, 50);
+            this.nationalSearchtxt.Location = new System.Drawing.Point(352, 50);
             this.nationalSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.nationalSearchtxt.Name = "nationalSearchtxt";
             this.nationalSearchtxt.PasswordChar = '\0';
             this.nationalSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.nationalSearchtxt.PlaceholderText = "رقم الهوية";
+            this.nationalSearchtxt.PlaceholderText = "الرقم الطبي";
             this.nationalSearchtxt.SelectedText = "";
             this.nationalSearchtxt.Size = new System.Drawing.Size(363, 40);
             this.nationalSearchtxt.TabIndex = 5;
@@ -115,7 +116,7 @@ namespace CHS_FrontEnd
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label3.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(552, 63);
+            this.label3.Location = new System.Drawing.Point(729, 63);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 27);
@@ -134,10 +135,11 @@ namespace CHS_FrontEnd
             this.phoneSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.phoneSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.phoneSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.phoneSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.phoneSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
             this.phoneSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.phoneSearchtxt.Location = new System.Drawing.Point(592, 50);
+            this.phoneSearchtxt.Location = new System.Drawing.Point(769, 50);
             this.phoneSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.phoneSearchtxt.Name = "phoneSearchtxt";
             this.phoneSearchtxt.PasswordChar = '\0';
@@ -155,7 +157,7 @@ namespace CHS_FrontEnd
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(971, 62);
+            this.label2.Location = new System.Drawing.Point(1148, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 27);
@@ -174,14 +176,15 @@ namespace CHS_FrontEnd
             this.midSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.midSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.midSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.midSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.midSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.midSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.midSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.midSearchtxt.Location = new System.Drawing.Point(1013, 50);
+            this.midSearchtxt.Location = new System.Drawing.Point(1190, 50);
             this.midSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.midSearchtxt.Name = "midSearchtxt";
             this.midSearchtxt.PasswordChar = '\0';
             this.midSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.midSearchtxt.PlaceholderText = "الرقم الطبي";
+            this.midSearchtxt.PlaceholderText = "أسم المريض";
             this.midSearchtxt.SelectedText = "";
             this.midSearchtxt.Size = new System.Drawing.Size(363, 40);
             this.midSearchtxt.TabIndex = 1;
@@ -191,11 +194,10 @@ namespace CHS_FrontEnd
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label1.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.label1.Location = new System.Drawing.Point(1237, -5);
+            this.label1.Location = new System.Drawing.Point(1426, -8);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(17, 15, 17, 15);
@@ -211,10 +213,10 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl2.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl2.Controls.Add(this.searchPatientView);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(104, 206);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(14, 206);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(1393, 423);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(1570, 558);
             this.guna2ContainerControl2.TabIndex = 4;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -222,12 +224,12 @@ namespace CHS_FrontEnd
             // 
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1357, 58);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1536, 58);
             this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2VScrollBar1.Maximum = 99;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 21;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(21, 345);
+            this.guna2VScrollBar1.ScrollbarSize = 15;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(15, 482);
             this.guna2VScrollBar1.TabIndex = 6;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.DarkGray;
             this.guna2VScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2VScrollBar1_Scroll);
@@ -266,7 +268,7 @@ namespace CHS_FrontEnd
             this.searchPatientView.DefaultCellStyle = dataGridViewCellStyle8;
             this.searchPatientView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.searchPatientView.GridColor = System.Drawing.Color.Gray;
-            this.searchPatientView.Location = new System.Drawing.Point(18, 18);
+            this.searchPatientView.Location = new System.Drawing.Point(19, 18);
             this.searchPatientView.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.searchPatientView.Name = "searchPatientView";
             this.searchPatientView.ReadOnly = true;
@@ -282,7 +284,7 @@ namespace CHS_FrontEnd
             this.searchPatientView.RowHeadersWidth = 51;
             this.searchPatientView.RowTemplate.Height = 40;
             this.searchPatientView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.searchPatientView.Size = new System.Drawing.Size(1359, 385);
+            this.searchPatientView.Size = new System.Drawing.Size(1532, 522);
             this.searchPatientView.TabIndex = 0;
             this.searchPatientView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.searchPatientView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -358,10 +360,10 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(104, 6);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(14, 6);
             this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1393, 58);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1570, 58);
             this.guna2ContainerControl3.TabIndex = 5;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -372,7 +374,7 @@ namespace CHS_FrontEnd
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(633, 4);
+            this.label10.Location = new System.Drawing.Point(722, 4);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(211, 52);
@@ -386,7 +388,7 @@ namespace CHS_FrontEnd
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1598, 736);
+            this.ClientSize = new System.Drawing.Size(1598, 802);
             this.Controls.Add(this.guna2ContainerControl3);
             this.Controls.Add(this.guna2ContainerControl2);
             this.Controls.Add(this.guna2ContainerControl1);

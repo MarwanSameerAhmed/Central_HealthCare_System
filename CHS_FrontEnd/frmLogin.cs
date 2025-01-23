@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CHS.Client.API.Models.Facilities;
 
 namespace CHS_FrontEnd
 {
@@ -106,7 +107,7 @@ namespace CHS_FrontEnd
             }
             try
             {
-                LoginResponse response = RequestSender.Login(UserNametxt.Text, passwordtxt.Text);
+                LoginResponse response = RequestSender.Login(UserNametxt.Text, passwordtxt.Text, facilityTxt.Text);
                 if (!(response is null) && !string.IsNullOrEmpty(response.Token))
                 {
                     DialogResult = DialogResult.OK;

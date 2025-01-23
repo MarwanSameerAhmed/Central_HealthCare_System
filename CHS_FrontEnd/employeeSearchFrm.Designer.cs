@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -60,10 +60,10 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(17, 11);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(24, 11);
             this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1220, 52);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1343, 56);
             this.guna2ContainerControl3.TabIndex = 6;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -74,7 +74,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(527, 1);
+            this.label10.Location = new System.Drawing.Point(588, 1);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(186, 52);
             this.label10.TabIndex = 0;
@@ -93,10 +93,10 @@
             this.guna2ContainerControl1.Controls.Add(this.empIDSearchtxt);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(17, 74);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(22, 76);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(1220, 121);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(1344, 121);
             this.guna2ContainerControl1.TabIndex = 7;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
@@ -112,17 +112,18 @@
             this.empNationalSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empNationalSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empNationalSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empNationalSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empNationalSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.empNationalSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empNationalSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
             this.empNationalSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empNationalSearchtxt.Location = new System.Drawing.Point(152, 50);
+            this.empNationalSearchtxt.Location = new System.Drawing.Point(213, 61);
             this.empNationalSearchtxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.empNationalSearchtxt.Name = "empNationalSearchtxt";
             this.empNationalSearchtxt.PasswordChar = '\0';
             this.empNationalSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.empNationalSearchtxt.PlaceholderText = "رقم الهوية";
             this.empNationalSearchtxt.SelectedText = "";
-            this.empNationalSearchtxt.Size = new System.Drawing.Size(319, 40);
+            this.empNationalSearchtxt.Size = new System.Drawing.Size(344, 40);
             this.empNationalSearchtxt.TabIndex = 5;
             this.empNationalSearchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -133,7 +134,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label3.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(483, 62);
+            this.label3.Location = new System.Drawing.Point(565, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 36);
             this.label3.TabIndex = 4;
@@ -151,17 +152,18 @@
             this.empPhoneSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empPhoneSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empPhoneSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empPhoneSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empPhoneSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.empPhoneSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empPhoneSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
             this.empPhoneSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empPhoneSearchtxt.Location = new System.Drawing.Point(518, 50);
+            this.empPhoneSearchtxt.Location = new System.Drawing.Point(599, 61);
             this.empPhoneSearchtxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.empPhoneSearchtxt.Name = "empPhoneSearchtxt";
             this.empPhoneSearchtxt.PasswordChar = '\0';
             this.empPhoneSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.empPhoneSearchtxt.PlaceholderText = "رقم الهاتف";
             this.empPhoneSearchtxt.SelectedText = "";
-            this.empPhoneSearchtxt.Size = new System.Drawing.Size(319, 40);
+            this.empPhoneSearchtxt.Size = new System.Drawing.Size(344, 40);
             this.empPhoneSearchtxt.TabIndex = 3;
             this.empPhoneSearchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -172,7 +174,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(851, 62);
+            this.label2.Location = new System.Drawing.Point(951, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 36);
             this.label2.TabIndex = 2;
@@ -190,16 +192,17 @@
             this.empIDSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empIDSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.empIDSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empIDSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empIDSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.empIDSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empIDSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empIDSearchtxt.Location = new System.Drawing.Point(885, 50);
+            this.empIDSearchtxt.Location = new System.Drawing.Point(985, 61);
             this.empIDSearchtxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.empIDSearchtxt.Name = "empIDSearchtxt";
             this.empIDSearchtxt.PasswordChar = '\0';
             this.empIDSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.empIDSearchtxt.PlaceholderText = "الرقم المميز";
             this.empIDSearchtxt.SelectedText = "";
-            this.empIDSearchtxt.Size = new System.Drawing.Size(319, 40);
+            this.empIDSearchtxt.Size = new System.Drawing.Size(344, 40);
             this.empIDSearchtxt.TabIndex = 1;
             this.empIDSearchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -207,11 +210,10 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label1.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.label1.Location = new System.Drawing.Point(1081, 0);
+            this.label1.Location = new System.Drawing.Point(1196, -4);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(16, 14, 16, 14);
             this.label1.Size = new System.Drawing.Size(151, 64);
@@ -226,10 +228,10 @@
             this.guna2ContainerControl2.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl2.Controls.Add(this.searchEmpView);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(17, 214);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(22, 208);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(1220, 423);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(1346, 559);
             this.guna2ContainerControl2.TabIndex = 8;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -237,12 +239,12 @@
             // 
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1187, 58);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1315, 52);
             this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2VScrollBar1.Maximum = 99;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 17;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(17, 346);
+            this.guna2VScrollBar1.ScrollbarSize = 15;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(15, 489);
             this.guna2VScrollBar1.TabIndex = 6;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.DarkGray;
             // 
@@ -250,36 +252,36 @@
             // 
             this.searchEmpView.AllowUserToAddRows = false;
             this.searchEmpView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.searchEmpView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Black;
+            this.searchEmpView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
             this.searchEmpView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Snap ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchEmpView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Snap ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchEmpView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.searchEmpView.ColumnHeadersHeight = 40;
             this.searchEmpView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.empName,
             this.empType,
             this.empNumber,
             this.empIDNumber});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.searchEmpView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchEmpView.DefaultCellStyle = dataGridViewCellStyle39;
             this.searchEmpView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.searchEmpView.GridColor = System.Drawing.Color.Gray;
             this.searchEmpView.Location = new System.Drawing.Point(16, 18);
@@ -287,19 +289,19 @@
             this.searchEmpView.Name = "searchEmpView";
             this.searchEmpView.ReadOnly = true;
             this.searchEmpView.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchEmpView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchEmpView.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.searchEmpView.RowHeadersVisible = false;
             this.searchEmpView.RowHeadersWidth = 51;
             this.searchEmpView.RowTemplate.Height = 40;
             this.searchEmpView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.searchEmpView.Size = new System.Drawing.Size(1188, 386);
+            this.searchEmpView.Size = new System.Drawing.Size(1314, 522);
             this.searchEmpView.TabIndex = 0;
             this.searchEmpView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.searchEmpView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -356,7 +358,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1338, 742);
+            this.ClientSize = new System.Drawing.Size(1478, 832);
             this.Controls.Add(this.guna2ContainerControl2);
             this.Controls.Add(this.guna2ContainerControl1);
             this.Controls.Add(this.guna2ContainerControl3);

@@ -201,7 +201,7 @@
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.label31.Location = new System.Drawing.Point(1421, 0);
             this.label31.Name = "label31";
-            this.label31.Padding = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.label31.Padding = new System.Windows.Forms.Padding(17);
             this.label31.Size = new System.Drawing.Size(192, 70);
             this.label31.TabIndex = 6;
             this.label31.Text = "معلومات رخصة المزاولة";
@@ -431,7 +431,7 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.label20.Location = new System.Drawing.Point(1396, 0);
             this.label20.Name = "label20";
-            this.label20.Padding = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.label20.Padding = new System.Windows.Forms.Padding(17);
             this.label20.Size = new System.Drawing.Size(217, 70);
             this.label20.TabIndex = 6;
             this.label20.Text = "معلومات الطبيب الاكاديمية";
@@ -809,9 +809,9 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
             this.label4.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label4.Location = new System.Drawing.Point(1359, 0);
+            this.label4.Location = new System.Drawing.Point(1387, 0);
             this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.label4.Padding = new System.Windows.Forms.Padding(17);
             this.label4.Size = new System.Drawing.Size(226, 70);
             this.label4.TabIndex = 6;
             this.label4.Text = "المعلومات الشخصية للطبيب";

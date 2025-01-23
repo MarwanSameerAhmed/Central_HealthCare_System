@@ -147,7 +147,7 @@
             this.pharmacysunbtn.ForeColor = System.Drawing.Color.White;
             this.pharmacysunbtn.Image = ((System.Drawing.Image)(resources.GetObject("pharmacysunbtn.Image")));
             this.pharmacysunbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.pharmacysunbtn.Location = new System.Drawing.Point(56, 774);
+            this.pharmacysunbtn.Location = new System.Drawing.Point(56, 784);
             this.pharmacysunbtn.Name = "pharmacysunbtn";
             this.pharmacysunbtn.Size = new System.Drawing.Size(180, 45);
             this.pharmacysunbtn.TabIndex = 2;
@@ -165,7 +165,7 @@
             this.facilitySubBtn.ForeColor = System.Drawing.Color.White;
             this.facilitySubBtn.Image = ((System.Drawing.Image)(resources.GetObject("facilitySubBtn.Image")));
             this.facilitySubBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.facilitySubBtn.Location = new System.Drawing.Point(56, 986);
+            this.facilitySubBtn.Location = new System.Drawing.Point(56, 996);
             this.facilitySubBtn.Name = "facilitySubBtn";
             this.facilitySubBtn.Size = new System.Drawing.Size(180, 45);
             this.facilitySubBtn.TabIndex = 2;
@@ -183,7 +183,7 @@
             this.doctorsSubBtn.ForeColor = System.Drawing.Color.White;
             this.doctorsSubBtn.Image = ((System.Drawing.Image)(resources.GetObject("doctorsSubBtn.Image")));
             this.doctorsSubBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.doctorsSubBtn.Location = new System.Drawing.Point(56, 1140);
+            this.doctorsSubBtn.Location = new System.Drawing.Point(56, 1150);
             this.doctorsSubBtn.Name = "doctorsSubBtn";
             this.doctorsSubBtn.Size = new System.Drawing.Size(180, 45);
             this.doctorsSubBtn.TabIndex = 2;
@@ -201,7 +201,7 @@
             this.Patientman2SubBtn.ForeColor = System.Drawing.Color.White;
             this.Patientman2SubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_1;
             this.Patientman2SubBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Patientman2SubBtn.Location = new System.Drawing.Point(56, 1295);
+            this.Patientman2SubBtn.Location = new System.Drawing.Point(56, 1305);
             this.Patientman2SubBtn.Name = "Patientman2SubBtn";
             this.Patientman2SubBtn.Size = new System.Drawing.Size(180, 45);
             this.Patientman2SubBtn.TabIndex = 2;
@@ -219,7 +219,7 @@
             this.emergrncysubBtn.ForeColor = System.Drawing.Color.White;
             this.emergrncysubBtn.Image = ((System.Drawing.Image)(resources.GetObject("emergrncysubBtn.Image")));
             this.emergrncysubBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.emergrncysubBtn.Location = new System.Drawing.Point(56, 880);
+            this.emergrncysubBtn.Location = new System.Drawing.Point(56, 890);
             this.emergrncysubBtn.Name = "emergrncysubBtn";
             this.emergrncysubBtn.Size = new System.Drawing.Size(180, 45);
             this.emergrncysubBtn.TabIndex = 2;
@@ -237,7 +237,7 @@
             this.LabSubBtn.ForeColor = System.Drawing.Color.White;
             this.LabSubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_1;
             this.LabSubBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.LabSubBtn.Location = new System.Drawing.Point(56, 667);
+            this.LabSubBtn.Location = new System.Drawing.Point(56, 677);
             this.LabSubBtn.Name = "LabSubBtn";
             this.LabSubBtn.Size = new System.Drawing.Size(180, 45);
             this.LabSubBtn.TabIndex = 2;
@@ -311,7 +311,7 @@
             this.SettingBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SettingBtn.IconSize = 40;
             this.SettingBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SettingBtn.Location = new System.Drawing.Point(0, 1445);
+            this.SettingBtn.Location = new System.Drawing.Point(0, 1455);
             this.SettingBtn.Name = "SettingBtn";
             this.SettingBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.SettingBtn.Size = new System.Drawing.Size(244, 55);
@@ -331,7 +331,7 @@
             this.LogOutBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LogOutBtn.IconSize = 40;
             this.LogOutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogOutBtn.Location = new System.Drawing.Point(0, 1500);
+            this.LogOutBtn.Location = new System.Drawing.Point(0, 1510);
             this.LogOutBtn.Name = "LogOutBtn";
             this.LogOutBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.LogOutBtn.Size = new System.Drawing.Size(244, 55);
@@ -345,7 +345,7 @@
             this.PatientManagment2SubMenu.Controls.Add(this.iconButton12);
             this.PatientManagment2SubMenu.Controls.Add(this.SearchPatientFileBtn);
             this.PatientManagment2SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PatientManagment2SubMenu.Location = new System.Drawing.Point(0, 1345);
+            this.PatientManagment2SubMenu.Location = new System.Drawing.Point(0, 1355);
             this.PatientManagment2SubMenu.Name = "PatientManagment2SubMenu";
             this.PatientManagment2SubMenu.Size = new System.Drawing.Size(244, 100);
             this.PatientManagment2SubMenu.TabIndex = 19;
@@ -406,7 +406,7 @@
             this.PatientFileManagementBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.PatientFileManagementBtn.IconSize = 40;
             this.PatientFileManagementBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PatientFileManagementBtn.Location = new System.Drawing.Point(0, 1290);
+            this.PatientFileManagementBtn.Location = new System.Drawing.Point(0, 1300);
             this.PatientFileManagementBtn.Name = "PatientFileManagementBtn";
             this.PatientFileManagementBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.PatientFileManagementBtn.Size = new System.Drawing.Size(244, 55);
@@ -420,7 +420,7 @@
             this.DoctorsDepSubMenu.Controls.Add(this.SearchDoctorBtn);
             this.DoctorsDepSubMenu.Controls.Add(this.AddNewDoctorBtn);
             this.DoctorsDepSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DoctorsDepSubMenu.Location = new System.Drawing.Point(0, 1190);
+            this.DoctorsDepSubMenu.Location = new System.Drawing.Point(0, 1200);
             this.DoctorsDepSubMenu.Name = "DoctorsDepSubMenu";
             this.DoctorsDepSubMenu.Size = new System.Drawing.Size(244, 100);
             this.DoctorsDepSubMenu.TabIndex = 17;
@@ -481,7 +481,7 @@
             this.DoctorsDepBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.DoctorsDepBtn.IconSize = 40;
             this.DoctorsDepBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DoctorsDepBtn.Location = new System.Drawing.Point(0, 1135);
+            this.DoctorsDepBtn.Location = new System.Drawing.Point(0, 1145);
             this.DoctorsDepBtn.Name = "DoctorsDepBtn";
             this.DoctorsDepBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.DoctorsDepBtn.Size = new System.Drawing.Size(244, 55);
@@ -495,7 +495,7 @@
             this.FacilitySubMenu.Controls.Add(this.SearchFacilityBtn);
             this.FacilitySubMenu.Controls.Add(this.AddNewFacilityBtn);
             this.FacilitySubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FacilitySubMenu.Location = new System.Drawing.Point(0, 1035);
+            this.FacilitySubMenu.Location = new System.Drawing.Point(0, 1045);
             this.FacilitySubMenu.Name = "FacilitySubMenu";
             this.FacilitySubMenu.Size = new System.Drawing.Size(244, 100);
             this.FacilitySubMenu.TabIndex = 15;
@@ -556,7 +556,7 @@
             this.FacilityManagementBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.FacilityManagementBtn.IconSize = 40;
             this.FacilityManagementBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FacilityManagementBtn.Location = new System.Drawing.Point(0, 980);
+            this.FacilityManagementBtn.Location = new System.Drawing.Point(0, 990);
             this.FacilityManagementBtn.Name = "FacilityManagementBtn";
             this.FacilityManagementBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.FacilityManagementBtn.Size = new System.Drawing.Size(244, 55);
@@ -570,7 +570,7 @@
             this.EmergncySubMenu.Controls.Add(this.EmergncyBedBtn);
             this.EmergncySubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.EmergncySubMenu.ForeColor = System.Drawing.Color.Black;
-            this.EmergncySubMenu.Location = new System.Drawing.Point(0, 930);
+            this.EmergncySubMenu.Location = new System.Drawing.Point(0, 940);
             this.EmergncySubMenu.Name = "EmergncySubMenu";
             this.EmergncySubMenu.Size = new System.Drawing.Size(244, 50);
             this.EmergncySubMenu.TabIndex = 13;
@@ -607,7 +607,7 @@
             this.EmergncyDepBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.EmergncyDepBtn.IconSize = 40;
             this.EmergncyDepBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EmergncyDepBtn.Location = new System.Drawing.Point(0, 875);
+            this.EmergncyDepBtn.Location = new System.Drawing.Point(0, 885);
             this.EmergncyDepBtn.Name = "EmergncyDepBtn";
             this.EmergncyDepBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.EmergncyDepBtn.Size = new System.Drawing.Size(244, 55);
@@ -621,7 +621,7 @@
             this.PharmacySubmenu.Controls.Add(this.searchParmacyBtn);
             this.PharmacySubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.PharmacySubmenu.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PharmacySubmenu.Location = new System.Drawing.Point(0, 825);
+            this.PharmacySubmenu.Location = new System.Drawing.Point(0, 835);
             this.PharmacySubmenu.Name = "PharmacySubmenu";
             this.PharmacySubmenu.Size = new System.Drawing.Size(244, 50);
             this.PharmacySubmenu.TabIndex = 11;
@@ -658,7 +658,7 @@
             this.PharmacyDepBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.PharmacyDepBtn.IconSize = 40;
             this.PharmacyDepBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PharmacyDepBtn.Location = new System.Drawing.Point(0, 770);
+            this.PharmacyDepBtn.Location = new System.Drawing.Point(0, 780);
             this.PharmacyDepBtn.Name = "PharmacyDepBtn";
             this.PharmacyDepBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.PharmacyDepBtn.Size = new System.Drawing.Size(244, 55);
@@ -673,7 +673,7 @@
             this.LabDepSubMenu.Controls.Add(this.LabDepSearchBtn);
             this.LabDepSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.LabDepSubMenu.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabDepSubMenu.Location = new System.Drawing.Point(0, 717);
+            this.LabDepSubMenu.Location = new System.Drawing.Point(0, 727);
             this.LabDepSubMenu.Name = "LabDepSubMenu";
             this.LabDepSubMenu.Size = new System.Drawing.Size(244, 53);
             this.LabDepSubMenu.TabIndex = 9;
@@ -712,7 +712,7 @@
             this.LabDepBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LabDepBtn.IconSize = 40;
             this.LabDepBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LabDepBtn.Location = new System.Drawing.Point(0, 662);
+            this.LabDepBtn.Location = new System.Drawing.Point(0, 672);
             this.LabDepBtn.Name = "LabDepBtn";
             this.LabDepBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.LabDepBtn.Size = new System.Drawing.Size(244, 55);
@@ -730,7 +730,7 @@
             this.EmployeesSubMenu.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeesSubMenu.Location = new System.Drawing.Point(0, 572);
             this.EmployeesSubMenu.Name = "EmployeesSubMenu";
-            this.EmployeesSubMenu.Size = new System.Drawing.Size(244, 90);
+            this.EmployeesSubMenu.Size = new System.Drawing.Size(244, 100);
             this.EmployeesSubMenu.TabIndex = 5;
             // 
             // EmployessSearchBtn
@@ -910,9 +910,9 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.HEATHCARE_0١__2_1;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-60, -29);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-82, -31);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(400, 271);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(430, 298);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;

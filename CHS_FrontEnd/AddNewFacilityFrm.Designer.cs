@@ -47,22 +47,19 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.HosptialNametxt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.gendertxt = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtFacilityName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbFacilityType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.gendererrorlbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFacilityEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFacilityPhones = new Guna.UI2.WinForms.Guna2TextBox();
             this.bloodlbl = new System.Windows.Forms.Label();
             this.countryErrorLabel = new System.Windows.Forms.Label();
-            this.nationallblerror = new System.Windows.Forms.Label();
             this.errorlblage = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
-            this.nationalIDtxt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.agetxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFacilityAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -90,6 +87,7 @@
             this.createBtn.Size = new System.Drawing.Size(451, 47);
             this.createBtn.TabIndex = 37;
             this.createBtn.Text = "إنشاء";
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // guna2ContainerControl2
             // 
@@ -189,7 +187,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label9.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(733, 96);
+            this.label9.Location = new System.Drawing.Point(728, 96);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(22, 27);
             this.label9.TabIndex = 43;
@@ -385,22 +383,19 @@
             // 
             this.guna2ContainerControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl1.BorderRadius = 15;
-            this.guna2ContainerControl1.Controls.Add(this.HosptialNametxt);
-            this.guna2ContainerControl1.Controls.Add(this.gendertxt);
+            this.guna2ContainerControl1.Controls.Add(this.txtFacilityName);
+            this.guna2ContainerControl1.Controls.Add(this.cmbFacilityType);
             this.guna2ContainerControl1.Controls.Add(this.gendererrorlbl);
             this.guna2ContainerControl1.Controls.Add(this.label5);
-            this.guna2ContainerControl1.Controls.Add(this.guna2TextBox2);
-            this.guna2ContainerControl1.Controls.Add(this.guna2TextBox1);
+            this.guna2ContainerControl1.Controls.Add(this.txtFacilityEmail);
+            this.guna2ContainerControl1.Controls.Add(this.txtFacilityPhones);
             this.guna2ContainerControl1.Controls.Add(this.bloodlbl);
             this.guna2ContainerControl1.Controls.Add(this.countryErrorLabel);
-            this.guna2ContainerControl1.Controls.Add(this.nationallblerror);
             this.guna2ContainerControl1.Controls.Add(this.errorlblage);
             this.guna2ContainerControl1.Controls.Add(this.labelError);
-            this.guna2ContainerControl1.Controls.Add(this.nationalIDtxt);
-            this.guna2ContainerControl1.Controls.Add(this.label7);
             this.guna2ContainerControl1.Controls.Add(this.label6);
             this.guna2ContainerControl1.Controls.Add(this.label3);
-            this.guna2ContainerControl1.Controls.Add(this.agetxt);
+            this.guna2ContainerControl1.Controls.Add(this.txtFacilityAddress);
             this.guna2ContainerControl1.Controls.Add(this.label2);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.Controls.Add(this.label4);
@@ -412,48 +407,48 @@
             this.guna2ContainerControl1.TabIndex = 35;
             this.guna2ContainerControl1.Text = "الاسم الكامل ";
             // 
-            // HosptialNametxt
+            // txtFacilityName
             // 
-            this.HosptialNametxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.HosptialNametxt.BorderRadius = 10;
-            this.HosptialNametxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.HosptialNametxt.DefaultText = "";
-            this.HosptialNametxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.HosptialNametxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.HosptialNametxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.HosptialNametxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.HosptialNametxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.HosptialNametxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HosptialNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.HosptialNametxt.Location = new System.Drawing.Point(1231, 124);
-            this.HosptialNametxt.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.HosptialNametxt.Name = "HosptialNametxt";
-            this.HosptialNametxt.PasswordChar = '\0';
-            this.HosptialNametxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.HosptialNametxt.PlaceholderText = "ادخل الاسم كاملا";
-            this.HosptialNametxt.SelectedText = "";
-            this.HosptialNametxt.Size = new System.Drawing.Size(365, 41);
-            this.HosptialNametxt.TabIndex = 53;
-            this.HosptialNametxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtFacilityName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.txtFacilityName.BorderRadius = 10;
+            this.txtFacilityName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFacilityName.DefaultText = "";
+            this.txtFacilityName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFacilityName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFacilityName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFacilityName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFacilityName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFacilityName.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFacilityName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFacilityName.Location = new System.Drawing.Point(1231, 124);
+            this.txtFacilityName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtFacilityName.Name = "txtFacilityName";
+            this.txtFacilityName.PasswordChar = '\0';
+            this.txtFacilityName.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtFacilityName.PlaceholderText = "ادخل الاسم كاملا";
+            this.txtFacilityName.SelectedText = "";
+            this.txtFacilityName.Size = new System.Drawing.Size(365, 41);
+            this.txtFacilityName.TabIndex = 53;
+            this.txtFacilityName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // gendertxt
+            // cmbFacilityType
             // 
-            this.gendertxt.BackColor = System.Drawing.Color.Transparent;
-            this.gendertxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.gendertxt.BorderRadius = 10;
-            this.gendertxt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gendertxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gendertxt.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gendertxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.gendertxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gendertxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.gendertxt.ItemHeight = 30;
-            this.gendertxt.Location = new System.Drawing.Point(475, 230);
-            this.gendertxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gendertxt.Name = "gendertxt";
-            this.gendertxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gendertxt.Size = new System.Drawing.Size(371, 36);
-            this.gendertxt.TabIndex = 51;
+            this.cmbFacilityType.BackColor = System.Drawing.Color.Transparent;
+            this.cmbFacilityType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.cmbFacilityType.BorderRadius = 10;
+            this.cmbFacilityType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFacilityType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFacilityType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFacilityType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFacilityType.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFacilityType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbFacilityType.ItemHeight = 30;
+            this.cmbFacilityType.Location = new System.Drawing.Point(475, 126);
+            this.cmbFacilityType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbFacilityType.Name = "cmbFacilityType";
+            this.cmbFacilityType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbFacilityType.Size = new System.Drawing.Size(371, 36);
+            this.cmbFacilityType.TabIndex = 51;
             // 
             // gendererrorlbl
             // 
@@ -461,7 +456,7 @@
             this.gendererrorlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.gendererrorlbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gendererrorlbl.ForeColor = System.Drawing.Color.Red;
-            this.gendererrorlbl.Location = new System.Drawing.Point(508, 196);
+            this.gendererrorlbl.Location = new System.Drawing.Point(508, 92);
             this.gendererrorlbl.Name = "gendererrorlbl";
             this.gendererrorlbl.Size = new System.Drawing.Size(22, 27);
             this.gendererrorlbl.TabIndex = 52;
@@ -473,62 +468,62 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label5.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(724, 191);
+            this.label5.Location = new System.Drawing.Point(724, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 39);
             this.label5.TabIndex = 50;
             this.label5.Text = "نوع المنشأة";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // guna2TextBox2
+            // txtFacilityEmail
             // 
-            this.guna2TextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.guna2TextBox2.BorderRadius = 10;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(856, 227);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox2.PlaceholderText = "ادخل البريد الالكتروني للمنشأة";
-            this.guna2TextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(365, 41);
-            this.guna2TextBox2.TabIndex = 49;
+            this.txtFacilityEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.txtFacilityEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.txtFacilityEmail.BorderRadius = 10;
+            this.txtFacilityEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFacilityEmail.DefaultText = "";
+            this.txtFacilityEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFacilityEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFacilityEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFacilityEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFacilityEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFacilityEmail.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFacilityEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFacilityEmail.Location = new System.Drawing.Point(856, 227);
+            this.txtFacilityEmail.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtFacilityEmail.Name = "txtFacilityEmail";
+            this.txtFacilityEmail.PasswordChar = '\0';
+            this.txtFacilityEmail.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtFacilityEmail.PlaceholderText = "ادخل البريد الالكتروني للمنشأة";
+            this.txtFacilityEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtFacilityEmail.SelectedText = "";
+            this.txtFacilityEmail.Size = new System.Drawing.Size(365, 41);
+            this.txtFacilityEmail.TabIndex = 49;
             // 
-            // guna2TextBox1
+            // txtFacilityPhones
             // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(856, 124);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox1.PlaceholderText = "ادخل رقم هاتف المنشأة";
-            this.guna2TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(365, 41);
-            this.guna2TextBox1.TabIndex = 48;
+            this.txtFacilityPhones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.txtFacilityPhones.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.txtFacilityPhones.BorderRadius = 10;
+            this.txtFacilityPhones.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFacilityPhones.DefaultText = "";
+            this.txtFacilityPhones.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFacilityPhones.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFacilityPhones.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFacilityPhones.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFacilityPhones.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFacilityPhones.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFacilityPhones.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFacilityPhones.Location = new System.Drawing.Point(856, 124);
+            this.txtFacilityPhones.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtFacilityPhones.Name = "txtFacilityPhones";
+            this.txtFacilityPhones.PasswordChar = '\0';
+            this.txtFacilityPhones.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtFacilityPhones.PlaceholderText = "ادخل رقم هاتف المنشأة";
+            this.txtFacilityPhones.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtFacilityPhones.SelectedText = "";
+            this.txtFacilityPhones.Size = new System.Drawing.Size(365, 41);
+            this.txtFacilityPhones.TabIndex = 48;
             // 
             // bloodlbl
             // 
@@ -556,19 +551,6 @@
             this.countryErrorLabel.Text = "\"\"";
             this.countryErrorLabel.Visible = false;
             // 
-            // nationallblerror
-            // 
-            this.nationallblerror.AutoSize = true;
-            this.nationallblerror.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.nationallblerror.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nationallblerror.ForeColor = System.Drawing.Color.Red;
-            this.nationallblerror.Location = new System.Drawing.Point(506, 85);
-            this.nationallblerror.Name = "nationallblerror";
-            this.nationallblerror.Size = new System.Drawing.Size(22, 27);
-            this.nationallblerror.TabIndex = 45;
-            this.nationallblerror.Text = "\"\"";
-            this.nationallblerror.Visible = false;
-            // 
             // errorlblage
             // 
             this.errorlblage.AutoSize = true;
@@ -595,43 +577,6 @@
             this.labelError.Text = "\"\"";
             this.labelError.Visible = false;
             // 
-            // nationalIDtxt
-            // 
-            this.nationalIDtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.nationalIDtxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.nationalIDtxt.BorderRadius = 10;
-            this.nationalIDtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nationalIDtxt.DefaultText = "";
-            this.nationalIDtxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nationalIDtxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nationalIDtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nationalIDtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nationalIDtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nationalIDtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nationalIDtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nationalIDtxt.Location = new System.Drawing.Point(475, 124);
-            this.nationalIDtxt.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.nationalIDtxt.Name = "nationalIDtxt";
-            this.nationalIDtxt.PasswordChar = '\0';
-            this.nationalIDtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.nationalIDtxt.PlaceholderText = "ادخل رقم الترخيص";
-            this.nationalIDtxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.nationalIDtxt.SelectedText = "";
-            this.nationalIDtxt.Size = new System.Drawing.Size(371, 41);
-            this.nationalIDtxt.TabIndex = 41;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label7.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(741, 91);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 32);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "رقم الترخيص";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
@@ -656,30 +601,30 @@
             this.label3.Text = "رقم الهاتف المنشأة";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // agetxt
+            // txtFacilityAddress
             // 
-            this.agetxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.agetxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.agetxt.BorderRadius = 10;
-            this.agetxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.agetxt.DefaultText = "";
-            this.agetxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.agetxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.agetxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.agetxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.agetxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.agetxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agetxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.agetxt.Location = new System.Drawing.Point(1231, 227);
-            this.agetxt.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.agetxt.Name = "agetxt";
-            this.agetxt.PasswordChar = '\0';
-            this.agetxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.agetxt.PlaceholderText = "ادخل العنوان للمنشأة";
-            this.agetxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.agetxt.SelectedText = "";
-            this.agetxt.Size = new System.Drawing.Size(365, 41);
-            this.agetxt.TabIndex = 35;
+            this.txtFacilityAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.txtFacilityAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.txtFacilityAddress.BorderRadius = 10;
+            this.txtFacilityAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFacilityAddress.DefaultText = "";
+            this.txtFacilityAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFacilityAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFacilityAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFacilityAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFacilityAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFacilityAddress.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFacilityAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFacilityAddress.Location = new System.Drawing.Point(1231, 227);
+            this.txtFacilityAddress.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtFacilityAddress.Name = "txtFacilityAddress";
+            this.txtFacilityAddress.PasswordChar = '\0';
+            this.txtFacilityAddress.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtFacilityAddress.PlaceholderText = "ادخل العنوان للمنشأة";
+            this.txtFacilityAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtFacilityAddress.SelectedText = "";
+            this.txtFacilityAddress.Size = new System.Drawing.Size(365, 41);
+            this.txtFacilityAddress.TabIndex = 35;
             // 
             // label2
             // 
@@ -781,18 +726,15 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl3;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtFacilityEmail;
+        private Guna.UI2.WinForms.Guna2TextBox txtFacilityPhones;
         private System.Windows.Forms.Label bloodlbl;
         private System.Windows.Forms.Label countryErrorLabel;
-        private System.Windows.Forms.Label nationallblerror;
         private System.Windows.Forms.Label errorlblage;
         private System.Windows.Forms.Label labelError;
-        private Guna.UI2.WinForms.Guna2TextBox nationalIDtxt;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox agetxt;
+        private Guna.UI2.WinForms.Guna2TextBox txtFacilityAddress;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
@@ -810,10 +752,10 @@
         private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
         private System.Windows.Forms.Label label21;
-        private Guna.UI2.WinForms.Guna2ComboBox gendertxt;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbFacilityType;
         private System.Windows.Forms.Label gendererrorlbl;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox HosptialNametxt;
+        private Guna.UI2.WinForms.Guna2TextBox txtFacilityName;
     }
 }
 
