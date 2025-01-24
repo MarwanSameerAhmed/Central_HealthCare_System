@@ -50,6 +50,8 @@ namespace CHS_FrontEnd
             {
                 MessageBox.Show($"حدث خطأ أثناء استرجاع أنواع المنشآت: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            adminGender.Items.Add("ذكر");
+            adminGender.Items.Add("أنثى");
         }
 
         private void guna2TextBox4_TextChanged(object sender, EventArgs e)
@@ -61,24 +63,45 @@ namespace CHS_FrontEnd
         {
             try
             {
-                // جمع البيانات من الحقول
+               
                 string facilityName = txtFacilityName.Text;
                 string facilityAddress = txtFacilityAddress.Text;
-                string facilityPhones = txtFacilityPhones.Text; // افصل الأرقام بفاصلة
+                string facilityPhones = txtFacilityPhones.Text; 
                 string facilityEmail = txtFacilityEmail.Text;
-                int facilityType = (int)cmbFacilityType.SelectedValue; // الحصول على النوع المحدد
+                int facilityType = (int)cmbFacilityType.SelectedValue; 
+                string dminName = adminName.Text;
+                string AdminPhoneNumber = adminPhoneNumber.Text;
+                string AdminEmail = adminEmail.Text;
+                string AdminJobTile = adminTileJob.Text;
+                string AdminBirthDate = AdminbirthDate.Text;
+                string AdminEmployeementDate = adminEmployeementDate.Text;
+                string AdminUserName = adminUserName.Text;
+                string AdminPassword = adminPassword.Text;
+                string AdminIDCard = adminNationalIDcard.Text;
+                bool AdminGender = adminGender.SelectedItem?.ToString() =="";
 
-                // إعداد الطلب
                 var request = new CreateFacilityRequest
                 {
+                    RequestID =  Guid.NewGuid().ToString(),
                     FacilityName = facilityName,
                     FacilityAddress = facilityAddress,
                     FacilityPhones = facilityPhones.Split(',').ToList(),
                     FacilityEmail = facilityEmail,
-                    FacilityType = facilityType
+                    FacilityType = facilityType,
+                    AdminName =  dminName,
+                    AdminIDCardNumber = AdminPhoneNumber,
+                    AdminPhoneNumber = AdminPhoneNumber,
+                    AdminBirthData = AdminBirthDate,
+                    AdminIsMale = AdminGender,
+                    AdminEmail = AdminEmail,
+                    AdminEmployementDate = AdminEmployeementDate,
+                    AdminUserName = AdminUserName,
+                    AdminPassword = AdminPassword,
+                    AdminJobTitle = AdminJobTile,
+
                 };
 
-                // إرسال الطلب باستخدام RequestSender
+               
                 var response = RequestSender.SendRequest<CreateFacilityRequest, CHSResponse>(request);
 
                 if (response.ResponseCode == "1")

@@ -54,18 +54,18 @@
             this.addresslblerror = new System.Windows.Forms.Label();
             this.empAddressTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.emaillbl = new System.Windows.Forms.Label();
             this.empPhoneNumbertxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.empEmailTxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2ContainerControl4 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.empDegreeCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.employmentDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.emptypelbl = new System.Windows.Forms.Label();
-            this.emaillbl = new System.Windows.Forms.Label();
             this.degreelbl = new System.Windows.Forms.Label();
-            this.empEmailTxt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.empTypeCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -534,6 +534,20 @@
             this.label11.Text = "العنوان";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // emaillbl
+            // 
+            this.emaillbl.AutoSize = true;
+            this.emaillbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.emaillbl.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emaillbl.ForeColor = System.Drawing.Color.Red;
+            this.emaillbl.Location = new System.Drawing.Point(181, 248);
+            this.emaillbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emaillbl.Name = "emaillbl";
+            this.emaillbl.Size = new System.Drawing.Size(18, 17);
+            this.emaillbl.TabIndex = 20;
+            this.emaillbl.Text = "\"\"";
+            this.emaillbl.Visible = false;
+            // 
             // empPhoneNumbertxt
             // 
             this.empPhoneNumbertxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -575,6 +589,48 @@
             this.label8.Size = new System.Drawing.Size(209, 66);
             this.label8.TabIndex = 0;
             this.label8.Text = "معلومات الاتصال بالموظف";
+            // 
+            // empEmailTxt
+            // 
+            this.empEmailTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.empEmailTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.empEmailTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.empEmailTxt.BorderRadius = 10;
+            this.empEmailTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.empEmailTxt.DefaultText = "";
+            this.empEmailTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.empEmailTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.empEmailTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empEmailTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empEmailTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empEmailTxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.empEmailTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empEmailTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empEmailTxt.Location = new System.Drawing.Point(22, 282);
+            this.empEmailTxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.empEmailTxt.Name = "empEmailTxt";
+            this.empEmailTxt.PasswordChar = '\0';
+            this.empEmailTxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.empEmailTxt.PlaceholderText = "ادخل البريد الالكتروني للموظف";
+            this.empEmailTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.empEmailTxt.SelectedText = "";
+            this.empEmailTxt.Size = new System.Drawing.Size(430, 41);
+            this.empEmailTxt.TabIndex = 25;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label17.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label17.Location = new System.Drawing.Point(366, 248);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(86, 27);
+            this.label17.TabIndex = 24;
+            this.label17.Text = "البريد الالكتروني";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label9
             // 
@@ -681,20 +737,6 @@
             this.emptypelbl.Text = "\"\"";
             this.emptypelbl.Visible = false;
             // 
-            // emaillbl
-            // 
-            this.emaillbl.AutoSize = true;
-            this.emaillbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.emaillbl.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emaillbl.ForeColor = System.Drawing.Color.Red;
-            this.emaillbl.Location = new System.Drawing.Point(181, 248);
-            this.emaillbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.emaillbl.Name = "emaillbl";
-            this.emaillbl.Size = new System.Drawing.Size(18, 17);
-            this.emaillbl.TabIndex = 20;
-            this.emaillbl.Text = "\"\"";
-            this.emaillbl.Visible = false;
-            // 
             // degreelbl
             // 
             this.degreelbl.AutoSize = true;
@@ -708,48 +750,6 @@
             this.degreelbl.TabIndex = 20;
             this.degreelbl.Text = "\"\"";
             this.degreelbl.Visible = false;
-            // 
-            // empEmailTxt
-            // 
-            this.empEmailTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.empEmailTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.empEmailTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.empEmailTxt.BorderRadius = 10;
-            this.empEmailTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.empEmailTxt.DefaultText = "";
-            this.empEmailTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.empEmailTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.empEmailTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empEmailTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empEmailTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empEmailTxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.empEmailTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empEmailTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empEmailTxt.Location = new System.Drawing.Point(22, 282);
-            this.empEmailTxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.empEmailTxt.Name = "empEmailTxt";
-            this.empEmailTxt.PasswordChar = '\0';
-            this.empEmailTxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.empEmailTxt.PlaceholderText = "ادخل البريد الالكتروني للموظف";
-            this.empEmailTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.empEmailTxt.SelectedText = "";
-            this.empEmailTxt.Size = new System.Drawing.Size(430, 41);
-            this.empEmailTxt.TabIndex = 25;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label17.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(366, 248);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(86, 27);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "البريد الالكتروني";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // empTypeCombo
             // 

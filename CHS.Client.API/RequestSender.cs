@@ -41,7 +41,11 @@ namespace CHS.Client.API
         
         public static TResponse SendRequest<TRequest, TResponse>(TRequest request) where TRequest : CHSRequest where TResponse : CHSResponse
         {
+
             ApiUri attribute = (ApiUri)Attribute.GetCustomAttribute(typeof(TResponse), typeof(ApiUri));
+            if (attribute is null)
+                attribute = (ApiUri)Attribute.GetCustomAttribute(typeof(TRequest), typeof(ApiUri));
+
             using (HttpClient client = new HttpClient())
             {
                 client.Timeout = TimeSpan.FromSeconds(30);
