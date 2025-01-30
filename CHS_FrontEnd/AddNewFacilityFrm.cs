@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 using System.Security.Principal;
 using CHS.Client.API.Models.Facilities;
+using Guna.UI2.WinForms;
 
 namespace CHS_FrontEnd
 {
@@ -26,20 +27,38 @@ namespace CHS_FrontEnd
         {
 
         }
+        private void ApplyEventsToTextBoxes(Control parentControl)
+        {
+            foreach (Control control in parentControl.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    textBox.Enter += Guna2TextBox_Enter;
+                    textBox.Leave += Guna2TextBox_Leave;
+                }
+                else if (control.HasChildren)
+                {
+                    
+                    ApplyEventsToTextBoxes(control);
+                }
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ApplyEventsToTextBoxes(guna2ContainerControl1);
+            ApplyEventsToTextBoxes(guna2ContainerControl2);
             try
             {
-                // استدعاء API لاسترجاع أنواع المنشآت
+               
                 var response = RequestSender.SendRequest<CHSRequest, GetFacilitiesTypesResponse>(new CHSRequest());
 
                 if (response.ResponseCode == "1")
                 {
-                    // ملء ComboBox بالأنواع المسترجعة
+                   
                     cmbFacilityType.DataSource = response.facilityTypes;
-                    cmbFacilityType.DisplayMember = "Name"; // الحقل الذي يحتوي على اسم النوع
-                    cmbFacilityType.ValueMember = "ID";   // الحقل الذي يحتوي على معرف النوع
+                    cmbFacilityType.DisplayMember = "Name"; 
+                    cmbFacilityType.ValueMember = "ID";   
                 }
                 else
                 {
@@ -52,43 +71,73 @@ namespace CHS_FrontEnd
             }
             adminGender.Items.Add("ذكر");
             adminGender.Items.Add("أنثى");
-        }
 
-        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
-        {
+            
+            }
 
-        }
+        
 
         private async void createBtn_Click(object sender, EventArgs e)
         {
+
+
+  
+    List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)> textFields = new List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)>
+    {
+        (txtFacilityName, FacilityNameError, "يرجى إدخال أسم المنشأة*"),
+        (txtFacilityPhones, PhoneFacilityErrorLabel, "يرجى إدخال رقم الهاتف*"),
+        (txtFacilityEmail, EmailErrorlbl, "يرجى إدخال البريد الالكتروني*"),
+        (txtFacilityAddress, errorlblAddress, "يرجى تحديد موقع المنشأة*"),
+        (adminName, adminNameError, "يرجى إدخال الاسم*"),
+        (adminPhoneNumber, adminPhoneError, "يرجى إدخال رقم الهاتف *"),
+        (adminNationalIDcard, NationalNumberErorr, "يرجى إدخال رقم الهوية *"),
+        (adminUserName, adminUserError, "يرجى إدخال أسم المستخدم *"),
+        (adminPassword, adminPasswordError, "يرجى إدخال  كلمة المرور *"),
+        (adminEmail, adminEmailErorr, "يرجى إدخال البريد الالكتروني  *"),
+    };
+
+    List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)> comboFields = new List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)>
+    {
+        (cmbFacilityType, facilityTypeErrorCmp, "يرجى اختيار نوع المنشأة*"),
+        (adminGender, gendererrorCmp, "يرجى اختيار الجنس*"),
+    };
+
+    
+    if (!ValidateFields(textFields, comboFields))
+    {
+        MessageBox.Show("يرجى ملء جميع الحقول المطلوبة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        return;
+    }
+
+
             try
             {
-               
+
                 string facilityName = txtFacilityName.Text;
                 string facilityAddress = txtFacilityAddress.Text;
-                string facilityPhones = txtFacilityPhones.Text; 
+                string facilityPhones = txtFacilityPhones.Text;
                 string facilityEmail = txtFacilityEmail.Text;
-                int facilityType = (int)cmbFacilityType.SelectedValue; 
+                int facilityType = (int)cmbFacilityType.SelectedValue;
                 string dminName = adminName.Text;
                 string AdminPhoneNumber = adminPhoneNumber.Text;
                 string AdminEmail = adminEmail.Text;
                 string AdminJobTile = adminTileJob.Text;
-                string AdminBirthDate = AdminbirthDate.Text;
-                string AdminEmployeementDate = adminEmployeementDate.Text;
+                string AdminBirthDate = AdminbirthDate.Value.ToString("yyyy-MM-dd");
+                string AdminEmployeementDate = adminEmployeementDate.Value.ToString("yyyy-MM-dd");
                 string AdminUserName = adminUserName.Text;
                 string AdminPassword = adminPassword.Text;
                 string AdminIDCard = adminNationalIDcard.Text;
-                bool AdminGender = adminGender.SelectedItem?.ToString() =="";
+                bool AdminGender = adminGender.SelectedItem?.ToString() == "";
 
                 var request = new CreateFacilityRequest
                 {
-                    RequestID =  Guid.NewGuid().ToString(),
+                    RequestID = Guid.NewGuid().ToString(),
                     FacilityName = facilityName,
                     FacilityAddress = facilityAddress,
                     FacilityPhones = facilityPhones.Split(',').ToList(),
                     FacilityEmail = facilityEmail,
                     FacilityType = facilityType,
-                    AdminName =  dminName,
+                    AdminName = dminName,
                     AdminIDCardNumber = AdminPhoneNumber,
                     AdminPhoneNumber = AdminPhoneNumber,
                     AdminBirthData = AdminBirthDate,
@@ -101,24 +150,113 @@ namespace CHS_FrontEnd
 
                 };
 
-               
-                var response = RequestSender.SendRequest<CreateFacilityRequest, CHSResponse>(request);
 
-                if (response.ResponseCode == "1")
+                var response = await Task.Run(() => RequestSender.SendRequest<CreateFacilityRequest, CHSResponse>(request));
+
+        if (response.ResponseCode == "1")
+        {
+            MessageBox.Show(response.MessageDescription, "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        else
+        {
+            MessageBox.Show("فشل في إضافة المنشأة: " + response.MessageDescription, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show($"حدث خطأ أثناء إنشاء المنشأة: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+}
+        
+        private bool ValidateFields(
+            List<(Guna.UI2.WinForms.Guna2TextBox TextBox, Label ErrorLabel, string ErrorMessage)> textFields,
+             List<(Guna.UI2.WinForms.Guna2ComboBox ComboBox, Label ErrorLabel, string ErrorMessage)> comboFields)
+        {
+            bool isValid = true;
+
+            foreach (var field in textFields)
+            {
+                var textBox = field.TextBox;
+                var errorLabel = field.ErrorLabel;
+                var errorMessage = field.ErrorMessage;
+
+                if (string.IsNullOrWhiteSpace(textBox.Text))
                 {
-                    MessageBox.Show(response.MessageDescription, "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    errorLabel.Text = errorMessage;
+                    errorLabel.Visible = true;
+                    textBox.BorderColor = Color.Red;
+                    isValid = false;
                 }
                 else
                 {
-                    MessageBox.Show("فشل في إضافة المنشأة: " + response.MessageDescription, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    errorLabel.Visible = false;
+                    textBox.BorderColor = Color.FromArgb(1, 87, 155);
                 }
             }
-            catch (Exception ex)
+
+
+            foreach (var field in comboFields)
             {
-                MessageBox.Show($"حدث خطأ أثناء إنشاء المنشأة: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var comboBox = field.ComboBox;
+                var errorLabel = field.ErrorLabel;
+                var errorMessage = field.ErrorMessage;
+
+                if (comboBox.SelectedIndex == -1)
+                {
+                    errorLabel.Text = errorMessage;
+                    errorLabel.Visible = true;
+                    comboBox.BorderColor = Color.Red;
+                    isValid = false;
+                }
+                else
+                {
+                    errorLabel.Visible = false;
+                    comboBox.BorderColor = Color.FromArgb(1, 87, 155);
+                }
+            }
+
+            return isValid;
+        }
+
+        private void AdminbirthDate_TextChanged(object sender, EventArgs e)
+        {
+            dateerror.Visible = true;
+        }
+
+        private void adminEmployeementDate_TextChanged(object sender, EventArgs e)
+        {
+            label8.Visible = true;
+        }
+
+        private void adminTileJob_TextChanged(object sender, EventArgs e)
+        {
+            label9.Visible = true;
+        }
+    
+        private Font normalFont = new Font("Traditional Arabic", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+        
+        private Font largeFont = new Font("Traditional Arabic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+     
+        private void Guna2TextBox_Enter(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = largeFont;
             }
         }
 
+      
+        private void Guna2TextBox_Leave(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = normalFont;
+            }
+        }
     }
     }
 

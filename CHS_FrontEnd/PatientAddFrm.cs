@@ -1,4 +1,8 @@
-﻿using Guna.UI2.WinForms;
+﻿using CHS.Client.API.Models;
+using CHS.Client.API;
+using CHS.Client.API.Models.Facilities;
+using CHS.Client.API.Models.Patients;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -207,7 +211,13 @@ namespace CHS_FrontEnd
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+            string[] bloodTypes = { "AB+", "AB-", "A+", "A-", "B+", "B-", "O+", "O-" };
+            bloodtxt.Items.AddRange(bloodTypes);
+            gendertxt.Items.Add("ذكر");
+            gendertxt.Items.Add("أنثى");
+            ApplyEventsToTextBoxes(guna2ContainerControl1);
+            ApplyEventsToTextBoxes(guna2ContainerControl2);
+            ApplyEventsToTextBoxes(guna2ContainerControl3);
         }
 
 
@@ -265,7 +275,7 @@ namespace CHS_FrontEnd
 
 
 
-        private void createBtn_Click(object sender, EventArgs e)
+        private async void createBtn_Click(object sender, EventArgs e)
         {
             List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)> textFields = new List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)>
 {
@@ -286,18 +296,103 @@ namespace CHS_FrontEnd
       (comuintystateCombo, cumintystatelblerror, "يرجى اختيار الحالة الاجتماعية*"),
 };
 
-            if (ValidateFields(textFields,comboFields))
+            if (!ValidateFields(textFields, comboFields))
             {
-                MessageBox.Show("تم ملء جميع الحقول بنجاح!", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
+
                 MessageBox.Show("يرجى ملء جميع الحقول المطلوبة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+              
+            }
+
+            try
+            {
+
+                string patientName = fullNametxt.Text;
+              
+                var patientPhones = PhoneNumbertxt.Text.Trim().Split(',').ToList();
+                string patientIDcard = nationalIDtxt.Text;
+                string patientBirthdate = birthdaytxt.Value.ToString("yyyy-MM-dd");
+                bool patientIsMale = gendertxt.SelectedItem?.ToString() == "";
+                string patientAddress = addresstxt.Text;
+                string bloodtype = bloodtxt.Text;
+
+                var request = new CreatePatientFileRequest
+                {
+                    RequestID = Guid.NewGuid().ToString(),
+                   PatientName = patientName,
+                   PatientAddress = patientAddress,
+                   PatientPhones = patientPhones,
+                   IDCardNumber = patientIDcard,
+                   IsMale = patientIsMale,
+                   BirthDate = patientBirthdate,
+                   BloodType = bloodtype,
+
+
+
+                };
+
+                var response = await Task.Run(() => RequestSender.SendRequest<CreatePatientFileRequest, CHSResponse>(request));
+
+                if (response.ResponseCode == "1")
+                {
+                    MessageBox.Show(response.MessageDescription, "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("فشل في إضافة المنشأة: " + response.MessageDescription, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"حدث خطأ أثناء إنشاء المنشأة: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-   
+        private void ApplyEventsToTextBoxes(Control parentControl)
+        {
+            foreach (Control control in parentControl.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    textBox.Enter += Guna2TextBox_Enter;
+                    textBox.Leave += Guna2TextBox_Leave;
+                }
+                else if (control.HasChildren)
+                {
+
+                    ApplyEventsToTextBoxes(control);
+                }
+            }
+        }
+
+
+
+        private Font normalFont = new Font("Traditional Arabic", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+        private Font largeFont = new Font("Traditional Arabic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+        private void Guna2TextBox_Enter(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = largeFont;
+            }
+        }
+
+
+        private void Guna2TextBox_Leave(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = normalFont;
+            }
+        }
+
 
 
         private void fullNametxt_TextChanged(object sender, EventArgs e)

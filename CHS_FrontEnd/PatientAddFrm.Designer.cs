@@ -89,6 +89,7 @@ namespace CHS_FrontEnd
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.createBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             this.guna2ContainerControl3.SuspendLayout();
@@ -1084,6 +1085,15 @@ namespace CHS_FrontEnd
             this.createBtn.Text = "إنشاء";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog1.Caption = null;
+            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.guna2MessageDialog1.Parent = null;
+            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.guna2MessageDialog1.Text = null;
+            // 
             // addingPatientFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1177,5 +1187,6 @@ namespace CHS_FrontEnd
         private Label label18;
         private Guna.UI2.WinForms.Guna2TextBox diseasesTxt;
         private Label label14;
+        private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
     }
 }
