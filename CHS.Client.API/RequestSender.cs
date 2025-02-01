@@ -14,7 +14,7 @@ namespace CHS.Client.API
     {
         private static string token = "";
 
-        public static LoginResponse Login(string username, string password, string facilityName = "وزارة الصحة والسكان")
+        public static LoginResponse Login(string username, string password, string facilityName, string otp)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -22,6 +22,7 @@ namespace CHS.Client.API
                 string credentials = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{username}:{password}"));
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", credentials);
                 client.DefaultRequestHeaders.Add("FacilityName", Convert.ToBase64String(Encoding.UTF8.GetBytes(facilityName)));
+                client.DefaultRequestHeaders.Add("OTP", otp);
                 HttpResponseMessage response = client.GetAsync("http://localhost:44332/api/Login").Result;
                 string responseBody = response.Content.ReadAsStringAsync().Result;
                 if (response.IsSuccessStatusCode)

@@ -175,6 +175,12 @@
       <HintPath>..\libs\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
+    <Reference Include="zxing">
+      <HintPath>..\libs\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\libs\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddEDRoomFrm.cs">
@@ -254,6 +260,12 @@
     </Compile>
     <Compile Include="PatientFileViewrFrm.Designer.cs">
       <DependentUpon>PatientFileViewrFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QrFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QrFrm.Designer.cs">
+      <DependentUpon>QrFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="searchDoctorFrm.cs">
       <SubType>Form</SubType>
@@ -396,6 +408,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QrFrm.resx">
+      <DependentUpon>QrFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="searchDoctorFrm.resx">
       <DependentUpon>searchDoctorFrm.cs</DependentUpon>
     </EmbeddedResource>

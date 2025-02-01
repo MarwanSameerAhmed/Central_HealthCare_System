@@ -66,6 +66,7 @@ namespace CHS_FrontEnd
         private void Form1_Load_1(object sender, EventArgs e)
         {
             UserNametxt.Focus();
+            facilityTxt.Text = Properties.Settings.Default.FacilityName;
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -105,26 +106,47 @@ namespace CHS_FrontEnd
                 labelError.Visible = true;       
                 return; 
             }
+            string otp = validationsCodeTxt.Text;
+            if (!string.IsNullOrEmpty(otp) && (otp.Length != 6 || !int.TryParse(otp, out _)))
+            {
+                labelError.Text = "يجب أن يتكون رمز التحقق من 6 ارقام";
+                labelError.ForeColor = Color.Red;
+                labelError.Visible = true;
+                return;
+            }
             try
             {
-                LoginResponse response = RequestSender.Login(UserNametxt.Text, passwordtxt.Text, facilityTxt.Text);
-                if (!(response is null) && !string.IsNullOrEmpty(response.Token))
+                LoginResponse response = RequestSender.Login(UserNametxt.Text, passwordtxt.Text, facilityTxt.Text, validationsCodeTxt.Text);
+                if (!(response is null) && response.ResponseCode == "1")
                 {
+                    Properties.Settings.Default.FacilityName = facilityTxt.Text;
+                    Properties.Settings.Default.Save();
                     DialogResult = DialogResult.OK;
                     return;
                 }
-                labelError.Visible=false;
+                else if (!(response is null) && response.ResponseCode == "2")
+                {
+                    ShowTwoFactorAuthenticationQr(response.TwoFactorAuthenticationUrl);
+                    return;
+                }
+                labelError.Visible = false;
                 label2.Text = "حصل خطأ أثناء تسجيل الدخول";
-                label2.ForeColor = Color.Red; 
-                label2.Visible = true;       
+                label2.ForeColor = Color.Red;
+                label2.Visible = true;
             }
             catch (Exception ex)
             {
                 labelError.Visible = false;
                 label2.Text = ex.InnerException is null ? ex.Message : ex.InnerException.Message;
-                label2.ForeColor = Color.Red; 
-                label2.Visible = true;       
+                label2.ForeColor = Color.Red;
+                label2.Visible = true;
             }
+        }
+
+        private void ShowTwoFactorAuthenticationQr(string twoFactorAuthenticationUrl)
+        {
+            QrFrm frm = new QrFrm(twoFactorAuthenticationUrl);
+            frm.ShowDialog();
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)

@@ -22,5 +22,17 @@ namespace CHS_FrontEnd.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FacilityName {
+            get {
+                return ((string)(this["FacilityName"]));
+            }
+            set {
+                this["FacilityName"] = value;
+            }
+        }
     }
 }

@@ -50,6 +50,7 @@
     <Compile Include="Models\CHSRequest.cs" />
     <Compile Include="Models\CHSResponse.cs" />
     <Compile Include="Models\Facilities\CreateFacilityRequest.cs" />
+    <Compile Include="Models\Facilities\CreateFacilityResponse.cs" />
     <Compile Include="Models\Facilities\GetFacilitiesTypesResponse.cs" />
     <Compile Include="Models\LoginResponse.cs" />
     <Compile Include="Models\Patients\CreatePatientFileRequest.cs" />

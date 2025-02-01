@@ -9,5 +9,7 @@ namespace CHS.Client.API.Models
     {
         public string Token { get; set; }
 
+        public string TwoFactorAuthenticationUrl { get; set; }
+
     }
 }
