@@ -174,7 +174,7 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Traditional Arabic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(114, 187);
+            this.label2.Location = new System.Drawing.Point(71, 187);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 26);
@@ -219,7 +219,7 @@
             this.labelError.Cursor = System.Windows.Forms.Cursors.Default;
             this.labelError.Font = new System.Drawing.Font("Traditional Arabic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(100, 187);
+            this.labelError.Location = new System.Drawing.Point(89, 187);
             this.labelError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(22, 26);
@@ -323,7 +323,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Traditional Arabic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(148, 83);
+            this.label1.Location = new System.Drawing.Point(148, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 57);
             this.label1.TabIndex = 3;
@@ -334,7 +334,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Traditional Arabic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label4.Location = new System.Drawing.Point(58, 132);
+            this.label4.Location = new System.Drawing.Point(58, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(290, 57);
             this.label4.TabIndex = 3;
