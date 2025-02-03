@@ -151,7 +151,7 @@ namespace CHS_FrontEnd
                 textBox.Font = normalFont;
             }
         }
-
+        bool hasError = false;  
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -162,7 +162,8 @@ namespace CHS_FrontEnd
                 labelError.Visible = true;
                 UserNametxt.BorderColor = Color.Red;
                 passwordtxt.BorderColor = Color.Red;
-                return; 
+                return;
+              
             }
             if (string.IsNullOrWhiteSpace(facilityTxt.Text))
             {
@@ -170,7 +171,10 @@ namespace CHS_FrontEnd
                 label5.ForeColor = Color.Red;
                 label5.Visible = true;
                 facilityTxt.BorderColor = Color.Red;
-                return;
+                return ;
+             
+
+
             }
             string otp = validationsCodeTxt.Text;
             if (!string.IsNullOrEmpty(otp) && (otp.Length != 6 || !int.TryParse(otp, out _)))
@@ -180,7 +184,11 @@ namespace CHS_FrontEnd
                 label3.Visible = true;
                 validationsCodeTxt.BorderColor = Color.Red;
                 return;
+            
+
+
             }
+          
             try
             {
                 LoginResponse response = RequestSender.Login(UserNametxt.Text, passwordtxt.Text, facilityTxt.Text, validationsCodeTxt.Text);

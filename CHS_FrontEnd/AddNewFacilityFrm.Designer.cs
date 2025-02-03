@@ -260,6 +260,7 @@
             this.adminPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminPassword.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.adminPassword.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminPassword.ForeColor = System.Drawing.Color.Black;
             this.adminPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminPassword.Location = new System.Drawing.Point(442, 236);
             this.adminPassword.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -286,6 +287,7 @@
             this.adminEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminEmail.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.adminEmail.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminEmail.ForeColor = System.Drawing.Color.Black;
             this.adminEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminEmail.Location = new System.Drawing.Point(828, 236);
             this.adminEmail.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -312,6 +314,7 @@
             this.adminUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminUserName.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.adminUserName.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminUserName.ForeColor = System.Drawing.Color.Black;
             this.adminUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminUserName.Location = new System.Drawing.Point(442, 128);
             this.adminUserName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -338,6 +341,7 @@
             this.adminPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminPhoneNumber.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.adminPhoneNumber.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.adminPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminPhoneNumber.Location = new System.Drawing.Point(828, 128);
             this.adminPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -568,6 +572,7 @@
             this.adminNationalIDcard.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminNationalIDcard.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.adminNationalIDcard.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminNationalIDcard.ForeColor = System.Drawing.Color.Black;
             this.adminNationalIDcard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminNationalIDcard.Location = new System.Drawing.Point(1214, 236);
             this.adminNationalIDcard.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -607,6 +612,7 @@
             this.adminName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminName.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.adminName.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminName.ForeColor = System.Drawing.Color.Black;
             this.adminName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.adminName.Location = new System.Drawing.Point(1214, 126);
             this.adminName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -667,6 +673,7 @@
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.Controls.Add(this.label4);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.guna2ContainerControl1.ForeColor = System.Drawing.Color.Black;
             this.guna2ContainerControl1.Location = new System.Drawing.Point(18, 76);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
@@ -687,6 +694,7 @@
             this.txtFacilityName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFacilityName.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtFacilityName.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFacilityName.ForeColor = System.Drawing.Color.Black;
             this.txtFacilityName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFacilityName.Location = new System.Drawing.Point(1231, 124);
             this.txtFacilityName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -757,6 +765,7 @@
             this.txtFacilityEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFacilityEmail.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtFacilityEmail.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFacilityEmail.ForeColor = System.Drawing.Color.Black;
             this.txtFacilityEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFacilityEmail.Location = new System.Drawing.Point(856, 227);
             this.txtFacilityEmail.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -783,6 +792,7 @@
             this.txtFacilityPhones.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFacilityPhones.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtFacilityPhones.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFacilityPhones.ForeColor = System.Drawing.Color.Black;
             this.txtFacilityPhones.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFacilityPhones.Location = new System.Drawing.Point(856, 124);
             this.txtFacilityPhones.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -885,6 +895,7 @@
             this.txtFacilityAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFacilityAddress.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtFacilityAddress.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFacilityAddress.ForeColor = System.Drawing.Color.Black;
             this.txtFacilityAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFacilityAddress.Location = new System.Drawing.Point(1231, 227);
             this.txtFacilityAddress.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
