@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CHS.Client.API.Models.Facilities;
+using Guna.UI2.WinForms;
 
 namespace CHS_FrontEnd
 {
@@ -61,17 +62,49 @@ namespace CHS_FrontEnd
             passwordtxt .UseSystemPasswordChar = true;
         }
 
-       
+
+        private void BindEventsToChildTextBoxes(Control container)
+        {
+            foreach (Control child in container.Controls)
+            {
+                if (child is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    textBox.Enter += Guna2TextBox_Enter;
+                    textBox.Leave += Guna2TextBox_Leave;
+                }
+                else if (child.HasChildren)
+                {
+                    BindEventsToChildTextBoxes(child);
+                }
+            }
+        }
+
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            UserNametxt.Focus();
+            //  UserNametxt.Focus();
             facilityTxt.Text = Properties.Settings.Default.FacilityName;
+            foreach (Control control in this.Controls)
+            {
+                // التحقق إذا كان الحقل من النوع TextBox
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    textBox.Enter += Guna2TextBox_Enter;
+                    textBox.Leave += Guna2TextBox_Leave;
+                }
+                // التحقق من الحاويات الداخلية
+                else if (control is Panel || control is GroupBox || control is FlowLayoutPanel)
+                {
+                    BindEventsToChildTextBoxes(control);
+                }
+
+
+            }
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            UserNametxt.Focus();
+            //UserNametxt.Focus();
         }
 
         private void validationsCodeTxt_KeyPress(object sender, KeyPressEventArgs e)
@@ -94,24 +127,58 @@ namespace CHS_FrontEnd
         }
 
 
+        private Font normalFont = new Font("Traditional Arabic", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
+
+        private Font largeFont = new Font("Traditional Arabic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+        private void Guna2TextBox_Enter(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = largeFont;
+            }
+        }
+
+
+        private void Guna2TextBox_Leave(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = normalFont;
+            }
+        }
 
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(UserNametxt.Text) || string.IsNullOrWhiteSpace(passwordtxt.Text))
             {
-                labelError.Text = "يرجى إدخال اسم المستخدم وكلمة المرور.";
+                labelError.Text = "يرجى إدخال اسم المستخدم وكلمة المرور";
                 labelError.ForeColor = Color.Red; 
-                labelError.Visible = true;       
+                labelError.Visible = true;
+                UserNametxt.BorderColor = Color.Red;
+                passwordtxt.BorderColor = Color.Red;
                 return; 
+            }
+            if (string.IsNullOrWhiteSpace(facilityTxt.Text))
+            {
+                label5.Text = "يرجى إدخال اسم المنشأة";
+                label5.ForeColor = Color.Red;
+                label5.Visible = true;
+                facilityTxt.BorderColor = Color.Red;
+                return;
             }
             string otp = validationsCodeTxt.Text;
             if (!string.IsNullOrEmpty(otp) && (otp.Length != 6 || !int.TryParse(otp, out _)))
             {
-                labelError.Text = "يجب أن يتكون رمز التحقق من 6 ارقام";
-                labelError.ForeColor = Color.Red;
-                labelError.Visible = true;
+                label3.Text = "يجب أن يكون الرمز من 6 ارقام";
+                label3.ForeColor = Color.Red;
+                label3.Visible = true;
+                validationsCodeTxt.BorderColor = Color.Red;
                 return;
             }
             try
@@ -152,6 +219,31 @@ namespace CHS_FrontEnd
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void UserNametxt_TextChanged(object sender, EventArgs e)
+        {
+            labelError.Visible = false;
+            UserNametxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void passwordtxt_TextChanged(object sender, EventArgs e)
+        {
+            labelError.Visible = false;
+            passwordtxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void validationsCodeTxt_TextChanged_1(object sender, EventArgs e)
+        {
+
+            label3.Visible = false;
+            validationsCodeTxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void facilityTxt_TextChanged(object sender, EventArgs e)
+        {
+            label5.Visible = false;
+            facilityTxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
         }
     }
 }
