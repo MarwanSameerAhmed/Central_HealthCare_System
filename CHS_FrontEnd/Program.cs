@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CHS.Client.API.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,12 +15,13 @@ namespace CHS_FrontEnd
         [STAThread]
         static void Main()
         {
+          
 
             frmLogin frm = new frmLogin();   
             if (frm.ShowDialog() != DialogResult.OK) return;
 
 
-            Application.Run(new Mainfrm());
+            Application.Run(new Mainfrm(frm.LoggedInUsername));
         }
     }
 }

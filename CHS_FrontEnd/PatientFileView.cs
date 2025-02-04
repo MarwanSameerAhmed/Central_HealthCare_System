@@ -15,11 +15,23 @@ namespace CHS_FrontEnd
     public partial class PatientFileView : Form
     {
         private DockPanel dockPanel;
-        public PatientFileView(DockPanel dockPanel)
+        public PatientFileView(DockPanel dockPanel , string fullName, int age, string phoneNumber, long medicalNumber,
+                              string idCardNumber, string birthDate, bool isMale,
+                              string patientAddress, string bloodType)
         {
             InitializeComponent();
             this.dockPanel = dockPanel;
 
+            medicalNum.Text = medicalNumber.ToString();
+            veiwtNamelbl.Text = fullName;
+            viewAgelbl.Text = age.ToString();
+            veiwBirthDaylbl.Text = birthDate;
+            viewStatelbl.Text = "";
+            viewCumlbl.Text = "maritalStatus";
+            viewPhonelbl.Text = phoneNumber;
+            viewbloodlbl.Text = bloodType;
+            typeLbl.Text =  isMale ? "ذكر" : "أنثى";
+            addresslbl.Text = patientAddress;
 
 
 
@@ -29,22 +41,7 @@ namespace CHS_FrontEnd
         private void PopulatePatientCardData()
         {
 
-            string fullName = "علي محمد علي صالح المرجاني";
-            string age = "35";
-            string birthDate = "1989-04-25";
-            string city = "ذمار";
-            string maritalStatus = "متزوج";
-            string phoneNumber = "01234567890";
-            string bloodType = "O+";
 
-
-            veiwtNamelbl.Text = fullName;
-            viewAgelbl.Text = age;
-            veiwBirthDaylbl.Text = birthDate;
-            viewStatelbl.Text = city;
-            viewCumlbl.Text = maritalStatus;
-            viewPhonelbl.Text = phoneNumber;
-            viewbloodlbl.Text = bloodType;
 
             string allergies = "غبار, فول سوداني, سمك";
             alg.Text = allergies;

@@ -25,7 +25,7 @@ namespace CHS_FrontEnd
 
 
 
-        public Mainfrm()
+        public Mainfrm(string username)
         {
             InitializeComponent();
 
@@ -38,9 +38,8 @@ namespace CHS_FrontEnd
             this.Controls.Add(dockPanel);
             dockPanel.BringToFront();
 
+            labUserName.Text =  $"{username}";
 
-
-        
 
         }
 

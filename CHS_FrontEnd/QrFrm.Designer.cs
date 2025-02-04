@@ -37,19 +37,21 @@ namespace CHS_FrontEnd
             // 
             this.pcb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcb.Location = new System.Drawing.Point(0, 0);
+            this.pcb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcb.Name = "pcb";
-            this.pcb.Size = new System.Drawing.Size(343, 285);
+            this.pcb.Size = new System.Drawing.Size(400, 351);
             this.pcb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcb.TabIndex = 0;
             this.pcb.TabStop = false;
             // 
             // QrFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 285);
+            this.ClientSize = new System.Drawing.Size(400, 351);
             this.Controls.Add(this.pcb);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "QrFrm";

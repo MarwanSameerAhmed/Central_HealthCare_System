@@ -44,7 +44,7 @@
             this.viewStatelbl = new System.Windows.Forms.Label();
             this.veiwBirthDaylbl = new System.Windows.Forms.Label();
             this.viewAgelbl = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.medicalNum = new System.Windows.Forms.Label();
             this.veiwtNamelbl = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -70,6 +70,10 @@
             this.diagnosisDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.typeLbl = new System.Windows.Forms.Label();
+            this.addresslbl = new System.Windows.Forms.Label();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl3.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
@@ -83,16 +87,20 @@
             // 
             this.guna2ContainerControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl1.BorderRadius = 15;
+            this.guna2ContainerControl1.Controls.Add(this.label9);
+            this.guna2ContainerControl1.Controls.Add(this.label7);
             this.guna2ContainerControl1.Controls.Add(this.label5);
             this.guna2ContainerControl1.Controls.Add(this.label8);
             this.guna2ContainerControl1.Controls.Add(this.label19);
             this.guna2ContainerControl1.Controls.Add(this.viewPhonelbl);
             this.guna2ContainerControl1.Controls.Add(this.viewCumlbl);
+            this.guna2ContainerControl1.Controls.Add(this.addresslbl);
+            this.guna2ContainerControl1.Controls.Add(this.typeLbl);
             this.guna2ContainerControl1.Controls.Add(this.viewbloodlbl);
             this.guna2ContainerControl1.Controls.Add(this.viewStatelbl);
             this.guna2ContainerControl1.Controls.Add(this.veiwBirthDaylbl);
             this.guna2ContainerControl1.Controls.Add(this.viewAgelbl);
-            this.guna2ContainerControl1.Controls.Add(this.label7);
+            this.guna2ContainerControl1.Controls.Add(this.medicalNum);
             this.guna2ContainerControl1.Controls.Add(this.veiwtNamelbl);
             this.guna2ContainerControl1.Controls.Add(this.label13);
             this.guna2ContainerControl1.Controls.Add(this.label6);
@@ -103,7 +111,7 @@
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl1.Location = new System.Drawing.Point(812, 67);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(770, 352);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(770, 419);
             this.guna2ContainerControl1.TabIndex = 1;
             this.guna2ContainerControl1.Text = "الاسم الكامل ";
             // 
@@ -112,7 +120,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label5.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(675, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 33);
@@ -125,7 +133,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label8.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(675, 309);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 27);
@@ -138,7 +146,7 @@
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label19.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label19.Location = new System.Drawing.Point(635, 272);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(112, 27);
@@ -218,17 +226,17 @@
             this.viewAgelbl.TabIndex = 31;
             this.viewAgelbl.Text = "\"\"";
             // 
-            // label7
+            // medicalNum
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label7.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(134, 52);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 27);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "\"\"";
+            this.medicalNum.AutoSize = true;
+            this.medicalNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.medicalNum.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicalNum.ForeColor = System.Drawing.Color.Black;
+            this.medicalNum.Location = new System.Drawing.Point(134, 52);
+            this.medicalNum.Name = "medicalNum";
+            this.medicalNum.Size = new System.Drawing.Size(22, 27);
+            this.medicalNum.TabIndex = 32;
+            this.medicalNum.Text = "\"\"";
             // 
             // veiwtNamelbl
             // 
@@ -247,7 +255,7 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label13.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label13.Location = new System.Drawing.Point(654, 236);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(93, 27);
@@ -260,7 +268,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label6.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(688, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 27);
@@ -273,7 +281,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label3.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(677, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 27);
@@ -286,7 +294,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(693, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 27);
@@ -299,7 +307,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label1.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(672, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 27);
@@ -356,7 +364,7 @@
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl2.Location = new System.Drawing.Point(32, 72);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(770, 107);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(770, 132);
             this.guna2ContainerControl2.TabIndex = 4;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -395,9 +403,9 @@
             this.guna2ContainerControl4.Controls.Add(this.alg);
             this.guna2ContainerControl4.Controls.Add(this.label17);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(32, 192);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(32, 212);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(770, 107);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(770, 136);
             this.guna2ContainerControl4.TabIndex = 5;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
             // 
@@ -436,9 +444,9 @@
             this.guna2ContainerControl5.Controls.Add(this.medlbl);
             this.guna2ContainerControl5.Controls.Add(this.label22);
             this.guna2ContainerControl5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl5.Location = new System.Drawing.Point(32, 309);
+            this.guna2ContainerControl5.Location = new System.Drawing.Point(32, 358);
             this.guna2ContainerControl5.Name = "guna2ContainerControl5";
-            this.guna2ContainerControl5.Size = new System.Drawing.Size(770, 110);
+            this.guna2ContainerControl5.Size = new System.Drawing.Size(770, 128);
             this.guna2ContainerControl5.TabIndex = 5;
             this.guna2ContainerControl5.Text = "guna2ContainerControl4";
             // 
@@ -477,7 +485,7 @@
             this.guna2ContainerControl6.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl6.Controls.Add(this.Viewdaig);
             this.guna2ContainerControl6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl6.Location = new System.Drawing.Point(29, 437);
+            this.guna2ContainerControl6.Location = new System.Drawing.Point(29, 505);
             this.guna2ContainerControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ContainerControl6.Name = "guna2ContainerControl6";
             this.guna2ContainerControl6.Size = new System.Drawing.Size(1555, 274);
@@ -508,7 +516,7 @@
             this.Viewdaig.Anchor = System.Windows.Forms.AnchorStyles.Top;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -611,7 +619,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2Button1.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(568, 731);
+            this.guna2Button1.Location = new System.Drawing.Point(568, 799);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.DarkBlue;
             this.guna2Button1.Size = new System.Drawing.Size(459, 51);
@@ -619,13 +627,63 @@
             this.guna2Button1.Text = "إضافة تشخيص جديد";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label7.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(675, 342);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 27);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "الجنس";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label9.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(675, 375);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 27);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "العنوان";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // typeLbl
+            // 
+            this.typeLbl.AutoSize = true;
+            this.typeLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.typeLbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeLbl.ForeColor = System.Drawing.Color.Black;
+            this.typeLbl.Location = new System.Drawing.Point(134, 342);
+            this.typeLbl.Name = "typeLbl";
+            this.typeLbl.Size = new System.Drawing.Size(22, 27);
+            this.typeLbl.TabIndex = 25;
+            this.typeLbl.Text = "\"\"";
+            // 
+            // addresslbl
+            // 
+            this.addresslbl.AutoSize = true;
+            this.addresslbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.addresslbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addresslbl.ForeColor = System.Drawing.Color.Black;
+            this.addresslbl.Location = new System.Drawing.Point(134, 375);
+            this.addresslbl.Name = "addresslbl";
+            this.addresslbl.Size = new System.Drawing.Size(22, 27);
+            this.addresslbl.TabIndex = 25;
+            this.addresslbl.Text = "\"\"";
+            // 
             // PatientFileView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1595, 820);
+            this.ClientSize = new System.Drawing.Size(1595, 937);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2ContainerControl6);
             this.Controls.Add(this.guna2ContainerControl5);
@@ -637,7 +695,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PatientFileView";
             this.RightToLeftLayout = true;
-            this.Text = "Form1";
+            this.Text = "ملف المريض الطبي";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.guna2ContainerControl1.ResumeLayout(false);
             this.guna2ContainerControl1.PerformLayout();
@@ -689,9 +747,13 @@
         private Guna.UI2.WinForms.Guna2DataGridView Viewdaig;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label medicalNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn diagnosisName;
         private System.Windows.Forms.DataGridViewTextBoxColumn diagnosisDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctorName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label addresslbl;
+        private System.Windows.Forms.Label typeLbl;
     }
 }

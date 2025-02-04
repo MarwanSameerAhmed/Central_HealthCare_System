@@ -16,6 +16,7 @@ namespace CHS_FrontEnd
 {
     public partial class frmLogin : Form
     {
+        public string LoggedInUsername { get; private set; }
         public frmLogin()
         {
             InitializeComponent();
@@ -196,6 +197,8 @@ namespace CHS_FrontEnd
                 {
                     Properties.Settings.Default.FacilityName = facilityTxt.Text;
                     Properties.Settings.Default.Save();
+                    LoggedInUsername = response.Username;
+
                     DialogResult = DialogResult.OK;
                     return;
                 }

@@ -13,7 +13,7 @@ namespace CHS.Client.API
     public class RequestSender
     {
         private static string token = "";
-
+        public static string LoggedInUsername { get; private set; }
         public static LoginResponse Login(string username, string password, string facilityName, string otp)
         {
             using (HttpClient client = new HttpClient())
@@ -27,8 +27,10 @@ namespace CHS.Client.API
                 string responseBody = response.Content.ReadAsStringAsync().Result;
                 if (response.IsSuccessStatusCode)
                 {
+
                     LoginResponse loginResponse = JsonConvert.DeserializeObject<LoginResponse>(responseBody);
                     token = loginResponse.Token;
+                    LoggedInUsername = loginResponse.Username;
                     return loginResponse;
                 }
                 else if(response.StatusCode == HttpStatusCode.BadRequest || response.StatusCode == HttpStatusCode.Unauthorized)

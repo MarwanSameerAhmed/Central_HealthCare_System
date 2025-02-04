@@ -30,16 +30,18 @@ namespace CHS_FrontEnd
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.searchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.nationalSearchtxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.phoneSearchtxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -67,6 +69,7 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl1.BackColor = System.Drawing.Color.White;
             this.guna2ContainerControl1.BorderRadius = 15;
+            this.guna2ContainerControl1.Controls.Add(this.searchBtn);
             this.guna2ContainerControl1.Controls.Add(this.nationalSearchtxt);
             this.guna2ContainerControl1.Controls.Add(this.label3);
             this.guna2ContainerControl1.Controls.Add(this.phoneSearchtxt);
@@ -77,10 +80,29 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl1.Location = new System.Drawing.Point(14, 74);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(1570, 121);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(1567, 121);
             this.guna2ContainerControl1.TabIndex = 0;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             this.guna2ContainerControl1.Click += new System.EventHandler(this.guna2ContainerControl1_Click);
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchBtn.BorderRadius = 15;
+            this.searchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.searchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.searchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.searchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.searchBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.searchBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.ForeColor = System.Drawing.Color.White;
+            this.searchBtn.Location = new System.Drawing.Point(77, 50);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(174, 40);
+            this.searchBtn.TabIndex = 38;
+            this.searchBtn.Text = "بحث";
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // nationalSearchtxt
             // 
@@ -98,7 +120,7 @@ namespace CHS_FrontEnd
             this.nationalSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nationalSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
             this.nationalSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nationalSearchtxt.Location = new System.Drawing.Point(352, 50);
+            this.nationalSearchtxt.Location = new System.Drawing.Point(349, 50);
             this.nationalSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.nationalSearchtxt.Name = "nationalSearchtxt";
             this.nationalSearchtxt.PasswordChar = '\0';
@@ -116,7 +138,7 @@ namespace CHS_FrontEnd
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label3.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(729, 63);
+            this.label3.Location = new System.Drawing.Point(726, 63);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 27);
@@ -139,7 +161,7 @@ namespace CHS_FrontEnd
             this.phoneSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
             this.phoneSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.phoneSearchtxt.Location = new System.Drawing.Point(769, 50);
+            this.phoneSearchtxt.Location = new System.Drawing.Point(766, 50);
             this.phoneSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.phoneSearchtxt.Name = "phoneSearchtxt";
             this.phoneSearchtxt.PasswordChar = '\0';
@@ -157,7 +179,7 @@ namespace CHS_FrontEnd
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1148, 62);
+            this.label2.Location = new System.Drawing.Point(1145, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 27);
@@ -179,7 +201,7 @@ namespace CHS_FrontEnd
             this.midSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.midSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.midSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.midSearchtxt.Location = new System.Drawing.Point(1190, 50);
+            this.midSearchtxt.Location = new System.Drawing.Point(1187, 50);
             this.midSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.midSearchtxt.Name = "midSearchtxt";
             this.midSearchtxt.PasswordChar = '\0';
@@ -201,7 +223,7 @@ namespace CHS_FrontEnd
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(17, 15, 17, 15);
-            this.label1.Size = new System.Drawing.Size(149, 66);
+            this.label1.Size = new System.Drawing.Size(146, 66);
             this.label1.TabIndex = 0;
             this.label1.Text = "ابحث عن مريض";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -238,19 +260,22 @@ namespace CHS_FrontEnd
             // 
             this.searchPatientView.AllowUserToAddRows = false;
             this.searchPatientView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.searchPatientView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.searchPatientView.AllowUserToResizeColumns = false;
+            this.searchPatientView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.searchPatientView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.searchPatientView.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchPatientView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchPatientView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.searchPatientView.ColumnHeadersHeight = 40;
             this.searchPatientView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column_FullName,
@@ -258,30 +283,33 @@ namespace CHS_FrontEnd
             this.Column_Age,
             this.Column_State,
             this.Column_MedicalNumber});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.searchPatientView.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchPatientView.DefaultCellStyle = dataGridViewCellStyle18;
             this.searchPatientView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.searchPatientView.GridColor = System.Drawing.Color.Gray;
             this.searchPatientView.Location = new System.Drawing.Point(19, 18);
             this.searchPatientView.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.searchPatientView.MultiSelect = false;
             this.searchPatientView.Name = "searchPatientView";
             this.searchPatientView.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchPatientView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchPatientView.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.searchPatientView.RowHeadersVisible = false;
             this.searchPatientView.RowHeadersWidth = 51;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.searchPatientView.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.searchPatientView.RowTemplate.Height = 40;
             this.searchPatientView.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.searchPatientView.Size = new System.Drawing.Size(1532, 522);
@@ -311,8 +339,8 @@ namespace CHS_FrontEnd
             // 
             // Column_FullName
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_FullName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column_FullName.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column_FullName.HeaderText = "اسم المريض";
             this.Column_FullName.MinimumWidth = 10;
             this.Column_FullName.Name = "Column_FullName";
@@ -320,8 +348,8 @@ namespace CHS_FrontEnd
             // 
             // Column_PhoneNumber
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_PhoneNumber.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column_PhoneNumber.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column_PhoneNumber.HeaderText = "رقم الهاتف";
             this.Column_PhoneNumber.MinimumWidth = 6;
             this.Column_PhoneNumber.Name = "Column_PhoneNumber";
@@ -329,8 +357,8 @@ namespace CHS_FrontEnd
             // 
             // Column_Age
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_Age.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column_Age.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column_Age.HeaderText = "العمر";
             this.Column_Age.MinimumWidth = 6;
             this.Column_Age.Name = "Column_Age";
@@ -338,8 +366,8 @@ namespace CHS_FrontEnd
             // 
             // Column_State
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_State.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column_State.DefaultCellStyle = dataGridViewCellStyle16;
             this.Column_State.HeaderText = "المحافظة";
             this.Column_State.MinimumWidth = 6;
             this.Column_State.Name = "Column_State";
@@ -347,8 +375,8 @@ namespace CHS_FrontEnd
             // 
             // Column_MedicalNumber
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column_MedicalNumber.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column_MedicalNumber.DefaultCellStyle = dataGridViewCellStyle17;
             this.Column_MedicalNumber.HeaderText = "الرقم الطبي";
             this.Column_MedicalNumber.MinimumWidth = 6;
             this.Column_MedicalNumber.Name = "Column_MedicalNumber";
@@ -363,7 +391,7 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl3.Location = new System.Drawing.Point(14, 6);
             this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1570, 58);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1569, 58);
             this.guna2ContainerControl3.TabIndex = 5;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -374,7 +402,7 @@ namespace CHS_FrontEnd
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(722, 4);
+            this.label10.Location = new System.Drawing.Point(721, 2);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(211, 52);
@@ -418,7 +446,6 @@ namespace CHS_FrontEnd
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox phoneSearchtxt;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
-        private Guna.UI2.WinForms.Guna2DataGridView searchPatientView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_PhoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Age;
@@ -427,5 +454,7 @@ namespace CHS_FrontEnd
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl3;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
+        private Guna2Button searchBtn;
+        internal Guna2DataGridView searchPatientView;
     }
 }

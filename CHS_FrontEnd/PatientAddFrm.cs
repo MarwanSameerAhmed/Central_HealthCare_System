@@ -277,32 +277,32 @@ namespace CHS_FrontEnd
 
         private async void createBtn_Click(object sender, EventArgs e)
         {
-            List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)> textFields = new List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)>
-{
-    (fullNametxt, labelError, "هذا الحقل مطلوب*"),
-    (PhoneNumbertxt, labelerrorPhone, "يرجى إدخال رقم الهاتف*"),
-    (agetxt, errorlblage, "يرجى إدخال العمر*"),
+//            List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)> textFields = new List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)>
+//{
+//    (fullNametxt, labelError, "هذا الحقل مطلوب*"),
+//    (PhoneNumbertxt, labelerrorPhone, "يرجى إدخال رقم الهاتف*"),
+//    (agetxt, errorlblage, "يرجى إدخال العمر*"),
    
-    (nationalIDtxt, nationallblerror, "يرجى إدخال رقم الهوية*"),
-     (addresstxt, addresslblerror, "يرجى إدخال العنوان للمريض*"),
-      (parenttxt, parentlblerror, "يرجى إدخال اسم ولي الامر *")
-};
+//    (nationalIDtxt, nationallblerror, "يرجى إدخال رقم الهوية*"),
+//     (addresstxt, addresslblerror, "يرجى إدخال العنوان للمريض*"),
+//      (parenttxt, parentlblerror, "يرجى إدخال اسم ولي الامر *")
+//};
 
-            List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)> comboFields = new List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)>
-{
-    (gendertxt, gendererrorlbl, "يرجى اختيار الجنس*"),
-    (statetxt, countryErrorLabel, "يرجى اختيار المحافظة*"),
-     (bloodtxt, bloodlbl, "يرجى اختيار فصيلة الدم*"),
-      (comuintystateCombo, cumintystatelblerror, "يرجى اختيار الحالة الاجتماعية*"),
-};
+//            List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)> comboFields = new List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)>
+//{
+//    (gendertxt, gendererrorlbl, "يرجى اختيار الجنس*"),
+//    (statetxt, countryErrorLabel, "يرجى اختيار المحافظة*"),
+//     (bloodtxt, bloodlbl, "يرجى اختيار فصيلة الدم*"),
+//      (comuintystateCombo, cumintystatelblerror, "يرجى اختيار الحالة الاجتماعية*"),
+//};
 
-            if (!ValidateFields(textFields, comboFields))
-            {
+//            if (!ValidateFields(textFields, comboFields))
+//            {
 
-                MessageBox.Show("يرجى ملء جميع الحقول المطلوبة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+//                MessageBox.Show("يرجى ملء جميع الحقول المطلوبة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+//                return;
               
-            }
+//            }
 
             try
             {

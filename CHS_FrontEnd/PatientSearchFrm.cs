@@ -1,4 +1,6 @@
-﻿using Guna.UI2.WinForms;
+﻿using CHS.Client.API;
+using CHS.Client.API.Models.Patients;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,22 +62,11 @@ namespace CHS_FrontEnd
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            searchPatientView.MouseWheel += searchPatientView_MouseWheel;
-            searchPatientView.Rows.Add("أحمد صالح", "771234567", 35, "صنعاء", "1001");
-            searchPatientView.Rows.Add("سعاد محمد", "772345678", 28, "عدن", "1002");
-            searchPatientView.Rows.Add("خالد عبد الله", "733456789", 42, "تعز", "1003");
-            searchPatientView.Rows.Add("مريم أحمد", "774567890", 30, "إب", "1004");
-            searchPatientView.Rows.Add("يوسف علي", "711234890", 50, "حضرموت", "1005");
-            searchPatientView.Rows.Add("فاطمة سعيد", "733890123", 25, "الحديدة", "1006");
-            searchPatientView.Rows.Add("عبد الرحمن عبد", "712345678", 39, "ذمار", "1007");
-            searchPatientView.Rows.Add("ليلى جمال", "733567890", 33, "البيضاء", "1008");
-            searchPatientView.Rows.Add("حسين عادل", "711567432", 47, "عمران", "1009");
-            searchPatientView.Rows.Add("نور الهدى عمر", "774321789", 22, "المهرة", "1010");
-            searchPatientView.Rows.Add("عبد الرحمن عبد", "712345678", 39, "ذمار", "1007");
-            searchPatientView.Rows.Add("ليلى جمال", "733567890", 33, "البيضاء", "1008");
-            searchPatientView.Rows.Add("حسين عادل", "711567432", 47, "عمران", "1009");
-            searchPatientView.Rows.Add("نور الهدى عمر", "774321789", 22, "المهرة", "1010");
+           
             UpdateScrollBar();
+            nationalSearchtxt.TextChanged += SearchFields_TextChanged;
+            midSearchtxt.TextChanged += SearchFields_TextChanged;
+            phoneSearchtxt.TextChanged += SearchFields_TextChanged;
 
 
         }
@@ -97,7 +88,7 @@ namespace CHS_FrontEnd
                 guna2VScrollBar1.LargeChange = searchPatientView.DisplayedRowCount(false);
                 guna2VScrollBar1.SmallChange = 1;
 
-                
+
                 if (guna2VScrollBar1.Value > guna2VScrollBar1.Maximum)
                 {
                     guna2VScrollBar1.Value = guna2VScrollBar1.Maximum;
@@ -124,7 +115,7 @@ namespace CHS_FrontEnd
         {
             if (searchPatientView.RowCount > 0)
             {
-                int scrollAmount = e.Delta > 0 ? -1 : 1; 
+                int scrollAmount = e.Delta > 0 ? -1 : 1;
                 int newValue = guna2VScrollBar1.Value + scrollAmount;
 
                 if (newValue >= guna2VScrollBar1.Minimum && newValue <= guna2VScrollBar1.Maximum)
@@ -135,18 +126,152 @@ namespace CHS_FrontEnd
             }
         }
 
-       
+
 
         private void searchPatientView_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-           
-            if (e.RowIndex >= 0)
+
+            if (e.RowIndex >= 0) 
             {
                
-                PatientFileView fr = new PatientFileView(dockPanel);
-                OpenForm(fr);
+                DataGridViewRow selectedRow = searchPatientView.Rows[e.RowIndex];
+              
+                var patientData = selectedRow.Tag as dynamic;
+                if (patientData != null)
+                {
+                    
+                    var patientDetailsPage = new PatientFileView(
+                        dockPanel,
+                        patientData.FullName,
+                        patientData.Age,
+                        patientData.PhoneNumber,
+                        patientData.MedicalNumber,
+                        patientData.IDCardNumber,
+                        patientData.BirthDate,
+                        patientData.IsMale,
+                        patientData.PatientAddress,
+                        patientData.BloodType
+                        
 
+                    );
+                    OpenForm(patientDetailsPage);
+                }
             }
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string patientNumber = nationalSearchtxt.Text.Trim();
+                string patientName = midSearchtxt.Text.Trim();
+                string phoneNumber = phoneSearchtxt.Text.Trim();
+
+
+                int searchType;
+                string searchValue;
+
+                if (!string.IsNullOrWhiteSpace(patientNumber))
+                {
+                    searchType = (int)SearchPatientsFilesType.PatientNumber;
+                    searchValue = patientNumber;
+                }
+                else if (!string.IsNullOrWhiteSpace(patientName))
+                {
+                    searchType = (int)SearchPatientsFilesType.PatientName;
+                    searchValue = patientName;
+                }
+                else if (!string.IsNullOrWhiteSpace(phoneNumber))
+                {
+                    searchType = (int)SearchPatientsFilesType.PatientPhone;
+                    searchValue = phoneNumber;
+                }
+                else
+                {
+                    MessageBox.Show("يرجى إدخال قيمة البحث!", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+                SearchPatientsFilesRequest request = new SearchPatientsFilesRequest
+                {
+                    SearchType = searchType,
+                    SearchValue = searchValue,
+                    RequestID = Guid.NewGuid().ToString()
+                };
+
+
+                SearchPatientsFilesResponse response = RequestSender.SendRequest<SearchPatientsFilesRequest, SearchPatientsFilesResponse>(request);
+
+                if (response.PaitientsFiles != null && response.PaitientsFiles.Count > 0)
+                {
+                    var formattedData = response.PaitientsFiles.Select(p => new
+                    {
+                        FullName = p.PatientName,
+                        Age = CalculateAge(p.BirthDate),
+                        PhoneNumber = string.Join(", ", p.PatientPhones),
+                        MedicalNumber = p.PatientNumber,
+
+                     
+                        IDCardNumber = p.IDCardNumber,
+                        BirthDate = p.BirthDate,
+                        IsMale = p.IsMale,
+                        PatientAddress = p.PatientAddress,
+                        BloodType = p.BloodType
+                    }).ToList();
+
+                   
+                    searchPatientView.Rows.Clear();
+
+                    foreach (var item in formattedData)
+                    {
+                        int rowIndex = searchPatientView.Rows.Add();
+                        searchPatientView.Rows[rowIndex].Cells["Column_FullName"].Value = item.FullName;
+                        searchPatientView.Rows[rowIndex].Cells["Column_Age"].Value = item.Age;
+                        searchPatientView.Rows[rowIndex].Cells["Column_PhoneNumber"].Value = item.PhoneNumber;
+                        searchPatientView.Rows[rowIndex].Cells["Column_MedicalNumber"].Value = item.MedicalNumber;
+
+                      
+                        searchPatientView.Rows[rowIndex].Tag = item;
+                    }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("لم يتم العثور على أي مريض.", "نتيجة البحث", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    searchPatientView.DataSource = null;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"خطأ أثناء البحث: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void SearchFields_TextChanged(object sender, EventArgs e)
+        {
+            // التحقق مما إذا كانت جميع الحقول فارغة
+            if (string.IsNullOrWhiteSpace(nationalSearchtxt.Text) &&
+                string.IsNullOrWhiteSpace(midSearchtxt.Text) &&
+                string.IsNullOrWhiteSpace(phoneSearchtxt.Text))
+            {
+                searchPatientView.Rows.Clear(); 
+            }
+        }
+
+        private int CalculateAge(string birthDateString)
+        {
+            if (DateTime.TryParse(birthDateString, out DateTime birthDate))
+            {
+                int age = DateTime.Today.Year - birthDate.Year;
+                if (birthDate > DateTime.Today.AddYears(-age)) age--; 
+                return age;
+            }
+            return 0;
         }
     }
 }
+
