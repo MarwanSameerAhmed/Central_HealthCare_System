@@ -49,6 +49,10 @@
     <Compile Include="ApiUri.cs" />
     <Compile Include="Models\CHSRequest.cs" />
     <Compile Include="Models\CHSResponse.cs" />
+    <Compile Include="Models\Employees\CreateDoctorRequest.cs" />
+    <Compile Include="Models\Employees\CreateDoctorResponse.cs" />
+    <Compile Include="Models\Employees\CreateEmployeeRequest.cs" />
+    <Compile Include="Models\Employees\CreateEmployeeResponse.cs" />
     <Compile Include="Models\Facilities\CreateFacilityRequest.cs" />
     <Compile Include="Models\Facilities\CreateFacilityResponse.cs" />
     <Compile Include="Models\Facilities\GetFacilitiesTypesResponse.cs" />
