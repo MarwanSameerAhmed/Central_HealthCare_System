@@ -21,7 +21,7 @@ namespace CHS_FrontEnd
             if (frm.ShowDialog() != DialogResult.OK) return;
 
 
-            Application.Run(new Mainfrm(frm.LoggedInUsername));
+            Application.Run(new Mainfrm());
         }
     }
 }

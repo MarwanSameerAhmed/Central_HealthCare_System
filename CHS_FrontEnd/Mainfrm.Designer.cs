@@ -78,7 +78,7 @@
             this.UserInfoPanel = new System.Windows.Forms.Panel();
             this.lebJobName = new System.Windows.Forms.Label();
             this.pictureBoxUserName = new System.Windows.Forms.PictureBox();
-            this.labUserName = new System.Windows.Forms.Label();
+            this.labEmployeeName = new System.Windows.Forms.Label();
             this.SideMenuPanel.SuspendLayout();
             this.PatientManagment2SubMenu.SuspendLayout();
             this.DoctorsDepSubMenu.SuspendLayout();
@@ -948,7 +948,7 @@
             this.UserInfoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.UserInfoPanel.Controls.Add(this.lebJobName);
             this.UserInfoPanel.Controls.Add(this.pictureBoxUserName);
-            this.UserInfoPanel.Controls.Add(this.labUserName);
+            this.UserInfoPanel.Controls.Add(this.labEmployeeName);
             this.UserInfoPanel.Location = new System.Drawing.Point(602, 3);
             this.UserInfoPanel.Name = "UserInfoPanel";
             this.UserInfoPanel.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
@@ -980,15 +980,15 @@
             // 
             // labUserName
             // 
-            this.labUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labUserName.AutoSize = true;
-            this.labUserName.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labUserName.ForeColor = System.Drawing.Color.White;
-            this.labUserName.Location = new System.Drawing.Point(48, 3);
-            this.labUserName.Name = "labUserName";
-            this.labUserName.Size = new System.Drawing.Size(77, 31);
-            this.labUserName.TabIndex = 2;
-            this.labUserName.Text = "علي مرجاني";
+            this.labEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labEmployeeName.AutoSize = true;
+            this.labEmployeeName.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEmployeeName.ForeColor = System.Drawing.Color.White;
+            this.labEmployeeName.Location = new System.Drawing.Point(48, 3);
+            this.labEmployeeName.Name = "labUserName";
+            this.labEmployeeName.Size = new System.Drawing.Size(77, 31);
+            this.labEmployeeName.TabIndex = 2;
+            this.labEmployeeName.Text = "علي مرجاني";
             // 
             // Mainfrm
             // 
@@ -1040,7 +1040,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel UserInfoPanel;
         private System.Windows.Forms.PictureBox pictureBoxUserName;
-        private System.Windows.Forms.Label labUserName;
+        private System.Windows.Forms.Label labEmployeeName;
         private System.Windows.Forms.Label lebJobName;
         private FontAwesome.Sharp.IconPictureBox HmbSizeBtn;
         private System.Windows.Forms.Panel LabDepSubMenu;

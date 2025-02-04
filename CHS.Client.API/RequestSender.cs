@@ -30,7 +30,6 @@ namespace CHS.Client.API
 
                     LoginResponse loginResponse = JsonConvert.DeserializeObject<LoginResponse>(responseBody);
                     token = loginResponse.Token;
-                    LoggedInUsername = loginResponse.Username;
                     return loginResponse;
                 }
                 else if(response.StatusCode == HttpStatusCode.BadRequest || response.StatusCode == HttpStatusCode.Unauthorized)
