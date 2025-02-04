@@ -20,5 +20,9 @@ namespace CHS.Client.API.Models.Employees
         public string DoctorJobTitle { get; set; }
         public string DoctorUserName { get; set; }
         public string DoctorPassword { get; set; }
+        public string DoctorLicenseNumber { get; set; }
+        public string LicenseReleaseDate { get; set; }
+        public string LicenseExpiryDate { get; set; }
+        public string MedicalSpecialization { get; set; }
     }
 }

@@ -25,6 +25,7 @@ namespace CHS.Client.API
                 client.DefaultRequestHeaders.Add("OTP", otp);
                 HttpResponseMessage response = client.GetAsync("http://localhost:44332/api/Login").Result;
                 string responseBody = response.Content.ReadAsStringAsync().Result;
+                CHSResponse chsResponse;
                 if (response.IsSuccessStatusCode)
                 {
 
@@ -32,9 +33,9 @@ namespace CHS.Client.API
                     token = loginResponse.Token;
                     return loginResponse;
                 }
-                else if(response.StatusCode == HttpStatusCode.BadRequest || response.StatusCode == HttpStatusCode.Unauthorized)
+                else if(CHSResponse.TryPars(responseBody, out chsResponse))
                 {
-                    CHSResponse chsResponse = JsonConvert.DeserializeObject<CHSResponse>(responseBody);
+                    
                     throw new Exception(chsResponse.MessageDescription);
                 }
                 else throw new Exception(responseBody);
@@ -59,14 +60,15 @@ namespace CHS.Client.API
                 else
                     response = client.PostAsync(attribute.Uri, content).Result;
                 string responseBody = response.Content.ReadAsStringAsync().Result;
+                CHSResponse chsResponse;
                 if (response.IsSuccessStatusCode)
                 {
                     TResponse responseObject = JsonConvert.DeserializeObject<TResponse>(responseBody);
                     return responseObject;
                 }
-                else if(response.StatusCode == HttpStatusCode.BadRequest || response.StatusCode == HttpStatusCode.Unauthorized)
+                else if (CHSResponse.TryPars(responseBody, out chsResponse))
                 {
-                    CHSResponse chsResponse = JsonConvert.DeserializeObject<CHSResponse>(responseBody);
+
                     throw new Exception(chsResponse.MessageDescription);
                 }
                 else throw new Exception(responseBody);
