@@ -253,7 +253,7 @@ namespace CHS_FrontEnd
         }
         private void SearchFields_TextChanged(object sender, EventArgs e)
         {
-            // التحقق مما إذا كانت جميع الحقول فارغة
+           
             if (string.IsNullOrWhiteSpace(nationalSearchtxt.Text) &&
                 string.IsNullOrWhiteSpace(midSearchtxt.Text) &&
                 string.IsNullOrWhiteSpace(phoneSearchtxt.Text))

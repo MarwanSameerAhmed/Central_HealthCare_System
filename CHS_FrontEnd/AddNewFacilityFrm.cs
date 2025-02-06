@@ -69,13 +69,35 @@ namespace CHS_FrontEnd
             {
                 MessageBox.Show($"حدث خطأ أثناء استرجاع أنواع المنشآت: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            adminGender.Items.Add("ذكر");
+           
             adminGender.Items.Add("أنثى");
+            adminGender.Items.Add("ذكر");
 
-            
-            }
 
-        
+        }
+
+        private void ClearFields()
+        {
+            txtFacilityName.Text = string.Empty;
+            txtFacilityPhones.Text = string.Empty;
+            adminGender.SelectedIndex = -1;
+            cmbFacilityType.SelectedIndex = -1;
+            adminNationalIDcard.Text = string.Empty;
+            txtFacilityAddress.Text = string.Empty;
+            AdminbirthDate.Value = DateTime.Today;
+            adminPassword.Text = string.Empty;
+            adminUserName.Text = string.Empty;
+            adminTileJob.Text = string.Empty;
+            adminPhoneNumber.Text = string.Empty;
+            adminName.Text = string.Empty;
+            txtFacilityEmail.Text = string.Empty;
+            adminEmail.Text = string.Empty;
+            adminEmployeementDate.Value = DateTime.Today;
+
+
+        }
+
+
 
         private async void createBtn_Click(object sender, EventArgs e)
         {
@@ -151,11 +173,14 @@ namespace CHS_FrontEnd
                 };
 
 
-                var response = await Task.Run(() => RequestSender.SendRequest<CreateFacilityRequest, CHSResponse>(request));
+                var response = await Task.Run(() => RequestSender.SendRequest < CreateFacilityRequest, CreateFacilityResponse>(request));
+
 
         if (response.ResponseCode == "1")
         {
+                    adminUserName.Text = response.AdminUserName;
             MessageBox.Show(response.MessageDescription, "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearFields();
         }
         else
         {

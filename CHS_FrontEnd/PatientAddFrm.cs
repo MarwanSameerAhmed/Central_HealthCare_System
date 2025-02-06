@@ -271,7 +271,18 @@ namespace CHS_FrontEnd
             return isValid;
         }
 
+        private void ClearFields()
+        {
+            fullNametxt.Text = string.Empty;
+            PhoneNumbertxt.Text = string.Empty;
+            gendertxt.SelectedIndex = -1; 
+            nationalIDtxt.Text = string.Empty;
+            addresstxt.Text = string.Empty;
+            bloodtxt.SelectedIndex = -1;
+            birthdaytxt.Value = DateTime.Today;
 
+
+        }
 
 
 
@@ -308,7 +319,6 @@ namespace CHS_FrontEnd
             {
 
                 string patientName = fullNametxt.Text;
-              
                 var patientPhones = PhoneNumbertxt.Text.Trim().Split(',').ToList();
                 string patientIDcard = nationalIDtxt.Text;
                 string patientBirthdate = birthdaytxt.Value.ToString("yyyy-MM-dd");
@@ -336,6 +346,7 @@ namespace CHS_FrontEnd
                 if (response.ResponseCode == "1")
                 {
                     MessageBox.Show(response.MessageDescription, "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearFields();
                 }
                 else
                 {
@@ -368,7 +379,7 @@ namespace CHS_FrontEnd
 
 
 
-        private Font normalFont = new Font("Traditional Arabic", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        private Font normalFont = new Font("Traditional Arabic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
 
         private Font largeFont = new Font("Traditional Arabic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -401,11 +412,7 @@ namespace CHS_FrontEnd
             fullNametxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
         }
 
-        private void agetxt_TextChanged(object sender, EventArgs e)
-        {
-            errorlblage.Visible = false;
-            agetxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
-        }
+       
 
        
 
@@ -472,6 +479,11 @@ namespace CHS_FrontEnd
         private void medicinesTxt_TextChanged_1(object sender, EventArgs e)
         {
             label21.Visible = true;
+        }
+
+        private void guna2ContainerControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }
