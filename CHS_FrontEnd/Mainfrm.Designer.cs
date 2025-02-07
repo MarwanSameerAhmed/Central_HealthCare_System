@@ -978,15 +978,14 @@
             this.pictureBoxUserName.TabIndex = 0;
             this.pictureBoxUserName.TabStop = false;
             // 
-            // labUserName
+            // labEmployeeName
             // 
             this.labEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labEmployeeName.AutoSize = true;
             this.labEmployeeName.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labEmployeeName.ForeColor = System.Drawing.Color.White;
-            this.labEmployeeName.Location = new System.Drawing.Point(48, 3);
-            this.labEmployeeName.Name = "labUserName";
-            this.labEmployeeName.Size = new System.Drawing.Size(77, 31);
+            this.labEmployeeName.Location = new System.Drawing.Point(46, 3);
+            this.labEmployeeName.Name = "labEmployeeName";
+            this.labEmployeeName.Size = new System.Drawing.Size(79, 31);
             this.labEmployeeName.TabIndex = 2;
             this.labEmployeeName.Text = "علي مرجاني";
             // 

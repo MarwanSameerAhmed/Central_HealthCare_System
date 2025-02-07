@@ -69,11 +69,22 @@ namespace CHS_FrontEnd
             {
                 MessageBox.Show($"حدث خطأ أثناء استرجاع أنواع المنشآت: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
-            adminGender.Items.Add("أنثى");
-            adminGender.Items.Add("ذكر");
 
+            ConfigureComboBox();
 
+        }
+
+        private void ConfigureComboBox()
+        {
+            var genderList = new List<KeyValuePair<string, int>>
+{
+               new KeyValuePair<string, int>("ذكر", 1),
+              new KeyValuePair<string, int>("أنثى", 0)
+};
+
+            adminGender.DataSource = genderList;
+            adminGender.DisplayMember = "Key";
+            adminGender.ValueMember = "Value";
         }
 
         private void ClearFields()
@@ -149,7 +160,7 @@ namespace CHS_FrontEnd
                 string AdminUserName = adminUserName.Text;
                 string AdminPassword = adminPassword.Text;
                 string AdminIDCard = adminNationalIDcard.Text;
-                bool AdminGender = adminGender.SelectedItem?.ToString() == "";
+                bool AdminGender = adminGender.SelectedItem?.ToString() == "1";
 
                 var request = new CreateFacilityRequest
                 {

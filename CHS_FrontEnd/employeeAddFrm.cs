@@ -35,10 +35,21 @@ namespace CHS_FrontEnd
             ApplyEventsToTextBoxes(guna2ContainerControl2);
             ApplyEventsToTextBoxes(guna2ContainerControl4);
             ApplyEventsToTextBoxes(guna2ContainerControl1);
-            empGendertxt.Items.Add("ذكر");
-            empGendertxt.Items.Add("أنثى");
             empTypeCombo.Items.Add("شاقي");
+            ConfigureComboBox();
 
+        }
+        private void ConfigureComboBox()
+        {
+            var genderList = new List<KeyValuePair<string, int>>
+{
+               new KeyValuePair<string, int>("ذكر", 1),
+              new KeyValuePair<string, int>("أنثى", 0)
+};
+
+            empGendertxt.DataSource = genderList;
+            empGendertxt.DisplayMember = "Key";
+            empGendertxt.ValueMember = "Value";
         }
 
         private void empAgetxt_KeyPress(object sender, KeyPressEventArgs e)
@@ -205,10 +216,12 @@ namespace CHS_FrontEnd
                 };
 
 
-                var response = await Task.Run(() => RequestSender.SendRequest<CreateEmployeeRequest, CHSResponse>(request));
+                var response = await Task.Run(() => RequestSender.SendRequest<CreateEmployeeRequest, CreateEmployeeResponse>(request));
 
                 if (response.ResponseCode == "1")
+
                 {
+                    userNametxt.Text = response.EmployeeUserName;
                     MessageBox.Show(response.MessageDescription, "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else

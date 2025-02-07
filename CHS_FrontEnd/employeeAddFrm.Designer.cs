@@ -263,12 +263,12 @@
             this.empBirthdaytxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empBirthdaytxt.ForeColor = System.Drawing.Color.Black;
             this.empBirthdaytxt.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.empBirthdaytxt.Location = new System.Drawing.Point(613, 194);
+            this.empBirthdaytxt.Location = new System.Drawing.Point(613, 193);
             this.empBirthdaytxt.Margin = new System.Windows.Forms.Padding(2);
             this.empBirthdaytxt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.empBirthdaytxt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.empBirthdaytxt.Name = "empBirthdaytxt";
-            this.empBirthdaytxt.Size = new System.Drawing.Size(506, 36);
+            this.empBirthdaytxt.Size = new System.Drawing.Size(506, 37);
             this.empBirthdaytxt.TabIndex = 9;
             this.empBirthdaytxt.Value = new System.DateTime(2024, 12, 14, 21, 13, 20, 682);
             // 

@@ -35,7 +35,9 @@ namespace CHS_FrontEnd
             this.countryErrorLabel = new System.Windows.Forms.Label();
             this.nationallblerror = new System.Windows.Forms.Label();
             this.gendererrorlbl = new System.Windows.Forms.Label();
+            this.comuintystateCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.bloodtxt = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
             this.nationalIDtxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,8 +51,6 @@ namespace CHS_FrontEnd
             this.label4 = new System.Windows.Forms.Label();
             this.fullNametxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comuintystateCombo = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.cumintystatelblerror = new System.Windows.Forms.Label();
             this.parentlblerror = new System.Windows.Forms.Label();
@@ -180,6 +180,26 @@ namespace CHS_FrontEnd
             this.gendererrorlbl.Text = "\"\"";
             this.gendererrorlbl.Visible = false;
             // 
+            // comuintystateCombo
+            // 
+            this.comuintystateCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.comuintystateCombo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.comuintystateCombo.BorderRadius = 10;
+            this.comuintystateCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comuintystateCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comuintystateCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comuintystateCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comuintystateCombo.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comuintystateCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comuintystateCombo.ItemHeight = 30;
+            this.comuintystateCombo.Location = new System.Drawing.Point(20, 371);
+            this.comuintystateCombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comuintystateCombo.Name = "comuintystateCombo";
+            this.comuintystateCombo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comuintystateCombo.Size = new System.Drawing.Size(453, 36);
+            this.comuintystateCombo.TabIndex = 19;
+            this.comuintystateCombo.TextChanged += new System.EventHandler(this.comuintystateCombo_TextChanged);
+            // 
             // bloodtxt
             // 
             this.bloodtxt.BackColor = System.Drawing.Color.Transparent;
@@ -199,6 +219,19 @@ namespace CHS_FrontEnd
             this.bloodtxt.Size = new System.Drawing.Size(482, 36);
             this.bloodtxt.TabIndex = 24;
             this.bloodtxt.TextChanged += new System.EventHandler(this.bloodtxt_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label13.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label13.Location = new System.Drawing.Point(380, 341);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(92, 27);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "الحالة الاجتماعية";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // labelError
             // 
@@ -425,39 +458,6 @@ namespace CHS_FrontEnd
             this.label1.Text = "الاسم الكامل";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // comuintystateCombo
-            // 
-            this.comuintystateCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.comuintystateCombo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.comuintystateCombo.BorderRadius = 10;
-            this.comuintystateCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comuintystateCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comuintystateCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comuintystateCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comuintystateCombo.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comuintystateCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comuintystateCombo.ItemHeight = 30;
-            this.comuintystateCombo.Location = new System.Drawing.Point(20, 371);
-            this.comuintystateCombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comuintystateCombo.Name = "comuintystateCombo";
-            this.comuintystateCombo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comuintystateCombo.Size = new System.Drawing.Size(453, 36);
-            this.comuintystateCombo.TabIndex = 19;
-            this.comuintystateCombo.TextChanged += new System.EventHandler(this.comuintystateCombo_TextChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label13.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(380, 341);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 27);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "الحالة الاجتماعية";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // guna2ContainerControl2
             // 
             this.guna2ContainerControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -680,7 +680,7 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl3.Location = new System.Drawing.Point(0, 6);
             this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1608, 61);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1608, 55);
             this.guna2ContainerControl3.TabIndex = 2;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -691,7 +691,7 @@ namespace CHS_FrontEnd
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(687, 5);
+            this.label10.Location = new System.Drawing.Point(687, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(218, 52);
             this.label10.TabIndex = 0;

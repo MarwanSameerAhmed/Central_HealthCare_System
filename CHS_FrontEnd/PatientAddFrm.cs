@@ -213,8 +213,7 @@ namespace CHS_FrontEnd
         {
             string[] bloodTypes = { "AB+", "AB-", "A+", "A-", "B+", "B-", "O+", "O-" };
             bloodtxt.Items.AddRange(bloodTypes);
-            gendertxt.Items.Add("ذكر");
-            gendertxt.Items.Add("أنثى");
+            ConfigureComboBox();
             ApplyEventsToTextBoxes(guna2ContainerControl1);
             ApplyEventsToTextBoxes(guna2ContainerControl2);
             ApplyEventsToTextBoxes(guna2ContainerControl3);
@@ -285,6 +284,20 @@ namespace CHS_FrontEnd
         }
 
 
+        private void ConfigureComboBox()
+        {
+            var genderList = new List<KeyValuePair<string, int>>
+{
+               new KeyValuePair<string, int>("ذكر", 1),
+              new KeyValuePair<string, int>("أنثى", 0)
+};
+
+            gendertxt.DataSource = genderList;
+            gendertxt.DisplayMember = "Key";
+            gendertxt.ValueMember = "Value";
+        }
+
+
 
         private async void createBtn_Click(object sender, EventArgs e)
         {
@@ -322,7 +335,7 @@ namespace CHS_FrontEnd
                 var patientPhones = PhoneNumbertxt.Text.Trim().Split(',').ToList();
                 string patientIDcard = nationalIDtxt.Text;
                 string patientBirthdate = birthdaytxt.Value.ToString("yyyy-MM-dd");
-                bool patientIsMale = gendertxt.SelectedItem?.ToString() == "";
+                bool patientIsMale = gendertxt.SelectedItem?.ToString() == "1";
                 string patientAddress = addresstxt.Text;
                 string bloodtype = bloodtxt.Text;
 
