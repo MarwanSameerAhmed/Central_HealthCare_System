@@ -7,17 +7,15 @@ namespace CHS_FrontEnd
 {
     public partial class EDBedsManagement : Form
     {
-        private DockPanel dockPanel;
 
         // Dictionary to store bed types and their associated controls
         private Dictionary<string, (Guna.UI2.WinForms.Guna2TextBox total, Guna.UI2.WinForms.Guna2TextBox available,
                                      Guna.UI2.WinForms.Guna2Button incTotal, Guna.UI2.WinForms.Guna2Button decTotal,
                                      Guna.UI2.WinForms.Guna2Button incAvailable, Guna.UI2.WinForms.Guna2Button decAvailable)> bedTypes;
 
-        public EDBedsManagement(DockPanel dockPanel)
+        public EDBedsManagement()
         {
             InitializeComponent();
-            this.dockPanel = dockPanel;
             InitializeControls();
         }
 

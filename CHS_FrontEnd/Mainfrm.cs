@@ -426,7 +426,7 @@ namespace CHS_FrontEnd
 
         private void demoButton_Click(object sender, EventArgs e)
         {
-            OpenForm(new LocalEDManagementFrm(dockPanel));
+            //OpenForm(new LocalEDManagementFrm(dockPanel));
         }
 
         private void LabDepSearchBtn_Click(object sender, EventArgs e)
@@ -443,6 +443,11 @@ namespace CHS_FrontEnd
         {
             searchEmployees_praivte_ fr = new searchEmployees_praivte_(dockPanel);
             OpenForm(fr);
+        }
+
+        private void EmergncyBedBtn_Click(object sender, EventArgs e)
+        {
+            OpenForm(new EDBedsManagement());
         }
     }
 }

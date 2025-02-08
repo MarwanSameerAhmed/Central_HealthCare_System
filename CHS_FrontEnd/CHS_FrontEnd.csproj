@@ -40,7 +40,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>0</WarningLevel>
-    <DocumentationFile>bin\Debug\CHS_FrontEnd.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -183,82 +184,76 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEDRoomFrm.cs">
+    <Compile Include="Daignosises\AddNewDaignosisesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEDRoomFrm.Designer.cs">
-      <DependentUpon>AddEDRoomFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddNewDaignosisesFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddNewDaignosisesFrm.Designer.cs">
+    <Compile Include="Daignosises\AddNewDaignosisesFrm.Designer.cs">
       <DependentUpon>AddNewDaignosisesFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewDoctorFrm.cs">
+    <Compile Include="Employees\AddNewDoctorFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewDoctorFrm.Designer.cs">
+    <Compile Include="Employees\AddNewDoctorFrm.Designer.cs">
       <DependentUpon>AddNewDoctorFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewFacilityFrm.cs">
+    <Compile Include="Facilities\AddNewFacilityFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewFacilityFrm.Designer.cs">
+    <Compile Include="Facilities\AddNewFacilityFrm.Designer.cs">
       <DependentUpon>AddNewFacilityFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DaignosisesViewFrm.cs">
+    <Compile Include="Daignosises\DaignosisesViewFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DaignosisesViewFrm.Designer.cs">
+    <Compile Include="Daignosises\DaignosisesViewFrm.Designer.cs">
       <DependentUpon>DaignosisesViewFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoctorViewrFrmcs.cs">
+    <Compile Include="Employees\DoctorViewrFrmcs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoctorViewrFrmcs.Designer.cs">
+    <Compile Include="Employees\DoctorViewrFrmcs.Designer.cs">
       <DependentUpon>DoctorViewrFrmcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="employeeAddFrm.cs">
+    <Compile Include="Labs &amp; ED\EDBedsManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="employeeAddFrm.Designer.cs">
+    <Compile Include="Labs &amp; ED\EDBedsManagement.Designer.cs">
+      <DependentUpon>EDBedsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\employeeAddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\employeeAddFrm.Designer.cs">
       <DependentUpon>employeeAddFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="employeeSearchFrm.cs">
+    <Compile Include="Employees\employeeSearchFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="employeeSearchFrm.Designer.cs">
+    <Compile Include="Employees\employeeSearchFrm.Designer.cs">
       <DependentUpon>employeeSearchFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeViwerFrm.cs">
+    <Compile Include="Employees\EmployeeViwerFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeViwerFrm.Designer.cs">
+    <Compile Include="Employees\EmployeeViwerFrm.Designer.cs">
       <DependentUpon>EmployeeViwerFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacilityViewrFrm.cs">
+    <Compile Include="Facilities\FacilityViewrFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacilityViewrFrm.Designer.cs">
+    <Compile Include="Facilities\FacilityViewrFrm.Designer.cs">
       <DependentUpon>FacilityViewrFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LIMBsFrm.cs">
+    <Compile Include="Labs &amp; ED\LIMBsFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LIMBsFrm.Designer.cs">
+    <Compile Include="Labs &amp; ED\LIMBsFrm.Designer.cs">
       <DependentUpon>LIMBsFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LocalEDManagementFrm.cs">
+    <Compile Include="Patients\PatientFileViewrFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LocalEDManagementFrm.Designer.cs">
-      <DependentUpon>LocalEDManagementFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PatientFileViewrFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PatientFileViewrFrm.Designer.cs">
+    <Compile Include="Patients\PatientFileViewrFrm.Designer.cs">
       <DependentUpon>PatientFileViewrFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="QrFrm.cs">
@@ -267,22 +262,22 @@
     <Compile Include="QrFrm.Designer.cs">
       <DependentUpon>QrFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="searchDoctorFrm.cs">
+    <Compile Include="Employees\searchDoctorFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="searchDoctorFrm.Designer.cs">
+    <Compile Include="Employees\searchDoctorFrm.Designer.cs">
       <DependentUpon>searchDoctorFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="searchEmployees%28praivte%29.cs">
+    <Compile Include="Employees\searchEmployees%28praivte%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="searchEmployees%28praivte%29.Designer.cs">
+    <Compile Include="Employees\searchEmployees%28praivte%29.Designer.cs">
       <DependentUpon>searchEmployees%28praivte%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="searchFacilityFrm.cs">
+    <Compile Include="Facilities\searchFacilityFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="searchFacilityFrm.Designer.cs">
+    <Compile Include="Facilities\searchFacilityFrm.Designer.cs">
       <DependentUpon>searchFacilityFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainService.cs">
@@ -291,28 +286,28 @@
     <Compile Include="MainService.Designer.cs">
       <DependentUpon>MainService.cs</DependentUpon>
     </Compile>
-    <Compile Include="newTestPopupFrm.cs">
+    <Compile Include="Labs &amp; ED\newTestPopupFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newTestPopupFrm.Designer.cs">
+    <Compile Include="Labs &amp; ED\newTestPopupFrm.Designer.cs">
       <DependentUpon>newTestPopupFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatientAddFrm.cs">
+    <Compile Include="Patients\PatientAddFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatientAddFrm.Designer.cs">
+    <Compile Include="Patients\PatientAddFrm.Designer.cs">
       <DependentUpon>PatientAddFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatientFileView.cs">
+    <Compile Include="Patients\PatientFileView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatientFileView.Designer.cs">
+    <Compile Include="Patients\PatientFileView.Designer.cs">
       <DependentUpon>PatientFileView.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatientSearchFrm.cs">
+    <Compile Include="Patients\PatientSearchFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatientSearchFrm.Designer.cs">
+    <Compile Include="Patients\PatientSearchFrm.Designer.cs">
       <DependentUpon>PatientSearchFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Mainfrm.cs">
@@ -329,67 +324,64 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="searchPatient%28praivte%29cs.cs">
+    <Compile Include="Patients\searchPatient%28praivte%29cs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="searchPatient%28praivte%29cs.Designer.cs">
+    <Compile Include="Patients\searchPatient%28praivte%29cs.Designer.cs">
       <DependentUpon>searchPatient%28praivte%29cs.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddEDRoomFrm.resx">
-      <DependentUpon>AddEDRoomFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddNewDaignosisesFrm.resx">
+    <EmbeddedResource Include="Daignosises\AddNewDaignosisesFrm.resx">
       <DependentUpon>AddNewDaignosisesFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewDoctorFrm.resx">
+    <EmbeddedResource Include="Employees\AddNewDoctorFrm.resx">
       <DependentUpon>AddNewDoctorFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewFacilityFrm.resx">
+    <EmbeddedResource Include="Facilities\AddNewFacilityFrm.resx">
       <DependentUpon>AddNewFacilityFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DaignosisesViewFrm.resx">
+    <EmbeddedResource Include="Daignosises\DaignosisesViewFrm.resx">
       <DependentUpon>DaignosisesViewFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoctorViewrFrmcs.resx">
+    <EmbeddedResource Include="Employees\DoctorViewrFrmcs.resx">
       <DependentUpon>DoctorViewrFrmcs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="employeeAddFrm.resx">
+    <EmbeddedResource Include="Labs &amp; ED\EDBedsManagement.resx">
+      <DependentUpon>EDBedsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\employeeAddFrm.resx">
       <DependentUpon>employeeAddFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="employeeSearchFrm.resx">
+    <EmbeddedResource Include="Employees\employeeSearchFrm.resx">
       <DependentUpon>employeeSearchFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeViwerFrm.resx">
+    <EmbeddedResource Include="Employees\EmployeeViwerFrm.resx">
       <DependentUpon>EmployeeViwerFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacilityViewrFrm.resx">
+    <EmbeddedResource Include="Facilities\FacilityViewrFrm.resx">
       <DependentUpon>FacilityViewrFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LIMBsFrm.resx">
+    <EmbeddedResource Include="Labs &amp; ED\LIMBsFrm.resx">
       <DependentUpon>LIMBsFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LocalEDManagementFrm.resx">
-      <DependentUpon>LocalEDManagementFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainService.resx">
       <DependentUpon>MainService.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newTestPopupFrm.resx">
+    <EmbeddedResource Include="Labs &amp; ED\newTestPopupFrm.resx">
       <DependentUpon>newTestPopupFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientAddFrm.resx">
+    <EmbeddedResource Include="Patients\PatientAddFrm.resx">
       <DependentUpon>PatientAddFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientFileView.resx">
+    <EmbeddedResource Include="Patients\PatientFileView.resx">
       <DependentUpon>PatientFileView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientFileViewrFrm.resx">
+    <EmbeddedResource Include="Patients\PatientFileViewrFrm.resx">
       <DependentUpon>PatientFileViewrFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientSearchFrm.resx">
+    <EmbeddedResource Include="Patients\PatientSearchFrm.resx">
       <DependentUpon>PatientSearchFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mainfrm.resx">
@@ -411,16 +403,16 @@
     <EmbeddedResource Include="QrFrm.resx">
       <DependentUpon>QrFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="searchDoctorFrm.resx">
+    <EmbeddedResource Include="Employees\searchDoctorFrm.resx">
       <DependentUpon>searchDoctorFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="searchEmployees%28praivte%29.resx">
+    <EmbeddedResource Include="Employees\searchEmployees%28praivte%29.resx">
       <DependentUpon>searchEmployees%28praivte%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="searchFacilityFrm.resx">
+    <EmbeddedResource Include="Facilities\searchFacilityFrm.resx">
       <DependentUpon>searchFacilityFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="searchPatient%28praivte%29cs.resx">
+    <EmbeddedResource Include="Patients\searchPatient%28praivte%29cs.resx">
       <DependentUpon>searchPatient%28praivte%29cs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="OpenTK.dll.config" />
