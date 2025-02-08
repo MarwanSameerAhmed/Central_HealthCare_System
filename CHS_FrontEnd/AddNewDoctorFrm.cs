@@ -116,7 +116,7 @@ namespace CHS_FrontEnd
                     DoctorLicenseNumber = DoctorLicenec,
                     DoctorUserName = DoctorUserName,
                     DoctorPassword = DoctorPassword,
-                    DoctorPhoneNumber = DoctorPassword,
+                    DoctorPhoneNumber = DoctorPhones,
                     LicenseExpiryDate = DoctorLicencExp,    
                     LicenseReleaseDate = DoctorLicencGev,
                     MedicalSpecialization = DoctorMedicalSp,

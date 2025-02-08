@@ -19,7 +19,7 @@ namespace CHS_FrontEnd
         public static string EmployeeName { get; private set; }
         public static string FacilityName { get; private set; }
         public string JobTitle { get; private set; }
-        public int UserRole { get; private set; }
+        public static int UserRole { get; private set; }
 
 
         public frmLogin()
