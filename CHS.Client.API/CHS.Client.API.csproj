@@ -53,6 +53,12 @@
     <Compile Include="Models\Employees\CreateDoctorResponse.cs" />
     <Compile Include="Models\Employees\CreateEmployeeRequest.cs" />
     <Compile Include="Models\Employees\CreateEmployeeResponse.cs" />
+    <Compile Include="Models\Employees\DoctorFile.cs" />
+    <Compile Include="Models\Employees\EmployeeFile.cs" />
+    <Compile Include="Models\Employees\SearchDoctorFilesResponse.cs" />
+    <Compile Include="Models\Employees\SearchDoctorsFilesRequest.cs" />
+    <Compile Include="Models\Employees\SearchEmployeesFilesRequest.cs" />
+    <Compile Include="Models\Employees\SearchEmployeesFilesResponse.cs" />
     <Compile Include="Models\Facilities\CreateFacilityRequest.cs" />
     <Compile Include="Models\Facilities\CreateFacilityResponse.cs" />
     <Compile Include="Models\Facilities\GetFacilitiesTypesResponse.cs" />

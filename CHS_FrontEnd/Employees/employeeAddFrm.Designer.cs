@@ -80,7 +80,7 @@
             this.guna2ContainerControl3.Location = new System.Drawing.Point(51, 6);
             this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1610, 65);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1610, 59);
             this.guna2ContainerControl3.TabIndex = 3;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -91,7 +91,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(685, 6);
+            this.label10.Location = new System.Drawing.Point(685, 3);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(197, 52);
@@ -116,7 +116,7 @@
             this.guna2ContainerControl1.Controls.Add(this.empFullNametxt);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(525, 80);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(525, 75);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1131, 315);
@@ -339,7 +339,7 @@
             this.guna2ContainerControl2.Controls.Add(this.label17);
             this.guna2ContainerControl2.Controls.Add(this.label9);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(51, 85);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(51, 79);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(465, 310);
@@ -415,7 +415,7 @@
             this.label8.Padding = new System.Windows.Forms.Padding(14, 15, 14, 15);
             this.label8.Size = new System.Drawing.Size(209, 66);
             this.label8.TabIndex = 0;
-            this.label8.Text = "معلومات الاتصال بالموظف";
+            this.label8.Text = "معلومات الإتصال بالموظف";
             // 
             // empEmailTxt
             // 
@@ -492,7 +492,7 @@
             this.guna2ContainerControl4.Controls.Add(this.label16);
             this.guna2ContainerControl4.Controls.Add(this.label15);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(525, 408);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(525, 399);
             this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
             this.guna2ContainerControl4.Size = new System.Drawing.Size(1131, 308);
@@ -698,13 +698,13 @@
             this.label15.Dock = System.Windows.Forms.DockStyle.Right;
             this.label15.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label15.Location = new System.Drawing.Point(982, 0);
+            this.label15.Location = new System.Drawing.Point(934, 0);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Padding = new System.Windows.Forms.Padding(14, 15, 14, 15);
-            this.label15.Size = new System.Drawing.Size(149, 66);
+            this.label15.Size = new System.Drawing.Size(197, 66);
             this.label15.TabIndex = 22;
-            this.label15.Text = "معلومات الموظف";
+            this.label15.Text = "معلومات الموظف العملية";
             // 
             // createBtn
             // 

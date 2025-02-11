@@ -34,6 +34,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.passswordErorr = new System.Windows.Forms.Label();
             this.txtDoctorPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDoctorTitle = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.userErorr = new System.Windows.Forms.Label();
             this.txtDoctorUserName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,7 +49,6 @@
             this.txtMedicalSpecialization = new Guna.UI2.WinForms.Guna2TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtDoctorTitle = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.txtDoctorName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -116,7 +116,7 @@
             this.guna2ContainerControl2.Controls.Add(this.label21);
             this.guna2ContainerControl2.Controls.Add(this.label20);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(120, 481);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(120, 464);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(1411, 250);
             this.guna2ContainerControl2.TabIndex = 39;
@@ -151,7 +151,7 @@
             this.txtDoctorEmail.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorEmail.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorEmail.Location = new System.Drawing.Point(279, 167);
+            this.txtDoctorEmail.Location = new System.Drawing.Point(284, 167);
             this.txtDoctorEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDoctorEmail.Name = "txtDoctorEmail";
             this.txtDoctorEmail.PasswordChar = '\0';
@@ -168,7 +168,7 @@
             this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label24.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label24.Location = new System.Drawing.Point(465, 138);
+            this.label24.Location = new System.Drawing.Point(468, 138);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(186, 25);
             this.label24.TabIndex = 63;
@@ -204,7 +204,7 @@
             this.txtDoctorPassword.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorPassword.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorPassword.Location = new System.Drawing.Point(279, 88);
+            this.txtDoctorPassword.Location = new System.Drawing.Point(287, 88);
             this.txtDoctorPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDoctorPassword.Name = "txtDoctorPassword";
             this.txtDoctorPassword.PasswordChar = '\0';
@@ -215,13 +215,34 @@
             this.txtDoctorPassword.Size = new System.Drawing.Size(368, 33);
             this.txtDoctorPassword.TabIndex = 61;
             // 
+            // txtDoctorTitle
+            // 
+            this.txtDoctorTitle.BackColor = System.Drawing.Color.Transparent;
+            this.txtDoctorTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.txtDoctorTitle.BorderRadius = 10;
+            this.txtDoctorTitle.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtDoctorTitle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtDoctorTitle.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoctorTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoctorTitle.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorTitle.ForeColor = System.Drawing.Color.Black;
+            this.txtDoctorTitle.ItemHeight = 30;
+            this.txtDoctorTitle.Location = new System.Drawing.Point(659, 170);
+            this.txtDoctorTitle.Name = "txtDoctorTitle";
+            this.txtDoctorTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDoctorTitle.Size = new System.Drawing.Size(363, 36);
+            this.txtDoctorTitle.TabIndex = 56;
+            this.txtDoctorTitle.SelectedIndexChanged += new System.EventHandler(this.txtDoctorTitle_SelectedIndexChanged);
+            this.txtDoctorTitle.SelectedValueChanged += new System.EventHandler(this.txtDoctorTitle_SelectedValueChanged);
+            this.txtDoctorTitle.Leave += new System.EventHandler(this.txtDoctorTitle_Leave);
+            // 
             // label22
             // 
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label22.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(462, 59);
+            this.label22.Location = new System.Drawing.Point(464, 59);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(186, 25);
             this.label22.TabIndex = 60;
@@ -257,7 +278,7 @@
             this.txtDoctorUserName.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorUserName.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorUserName.Location = new System.Drawing.Point(656, 88);
+            this.txtDoctorUserName.Location = new System.Drawing.Point(660, 88);
             this.txtDoctorUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDoctorUserName.Name = "txtDoctorUserName";
             this.txtDoctorUserName.PasswordChar = '\0';
@@ -283,6 +304,7 @@
             // 
             // txtDoctorEmpDate
             // 
+            this.txtDoctorEmpDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.txtDoctorEmpDate.BorderRadius = 10;
             this.txtDoctorEmpDate.Checked = true;
             this.txtDoctorEmpDate.FillColor = System.Drawing.Color.WhiteSmoke;
@@ -303,7 +325,7 @@
             this.jobErorr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.jobErorr.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jobErorr.ForeColor = System.Drawing.Color.Red;
-            this.jobErorr.Location = new System.Drawing.Point(718, 132);
+            this.jobErorr.Location = new System.Drawing.Point(718, 139);
             this.jobErorr.Name = "jobErorr";
             this.jobErorr.Size = new System.Drawing.Size(22, 27);
             this.jobErorr.TabIndex = 44;
@@ -341,7 +363,7 @@
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label17.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(833, 134);
+            this.label17.Location = new System.Drawing.Point(833, 138);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(190, 25);
             this.label17.TabIndex = 36;
@@ -353,7 +375,7 @@
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label18.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(1252, 135);
+            this.label18.Location = new System.Drawing.Point(1241, 135);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(154, 25);
             this.label18.TabIndex = 37;
@@ -421,31 +443,10 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.label20.Location = new System.Drawing.Point(1212, 0);
             this.label20.Name = "label20";
-            this.label20.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.label20.Padding = new System.Windows.Forms.Padding(15);
             this.label20.Size = new System.Drawing.Size(199, 66);
             this.label20.TabIndex = 6;
             this.label20.Text = "معلومات الطبيب العملية";
-            // 
-            // txtDoctorTitle
-            // 
-            this.txtDoctorTitle.BackColor = System.Drawing.Color.Transparent;
-            this.txtDoctorTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.txtDoctorTitle.BorderRadius = 10;
-            this.txtDoctorTitle.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtDoctorTitle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtDoctorTitle.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorTitle.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorTitle.ForeColor = System.Drawing.Color.Black;
-            this.txtDoctorTitle.ItemHeight = 30;
-            this.txtDoctorTitle.Location = new System.Drawing.Point(657, 165);
-            this.txtDoctorTitle.Name = "txtDoctorTitle";
-            this.txtDoctorTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtDoctorTitle.Size = new System.Drawing.Size(363, 36);
-            this.txtDoctorTitle.TabIndex = 56;
-            this.txtDoctorTitle.SelectedIndexChanged += new System.EventHandler(this.txtDoctorTitle_SelectedIndexChanged);
-            this.txtDoctorTitle.SelectedValueChanged += new System.EventHandler(this.txtDoctorTitle_SelectedValueChanged);
-            this.txtDoctorTitle.Leave += new System.EventHandler(this.txtDoctorTitle_Leave);
             // 
             // guna2ContainerControl1
             // 
@@ -506,22 +507,25 @@
             this.txtDoctorName.SelectedText = "";
             this.txtDoctorName.Size = new System.Drawing.Size(367, 35);
             this.txtDoctorName.TabIndex = 55;
+            this.txtDoctorName.TextChanged += new System.EventHandler(this.txtDoctorName_TextChanged);
             // 
             // txtBirthDate
             // 
+            this.txtBirthDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.txtBirthDate.BorderRadius = 10;
             this.txtBirthDate.Checked = true;
             this.txtBirthDate.FillColor = System.Drawing.Color.WhiteSmoke;
             this.txtBirthDate.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirthDate.ForeColor = System.Drawing.Color.Black;
             this.txtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtBirthDate.Location = new System.Drawing.Point(276, 90);
+            this.txtBirthDate.Location = new System.Drawing.Point(280, 90);
             this.txtBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtBirthDate.Name = "txtBirthDate";
             this.txtBirthDate.Size = new System.Drawing.Size(371, 33);
             this.txtBirthDate.TabIndex = 54;
             this.txtBirthDate.Value = new System.DateTime(2025, 1, 9, 23, 12, 56, 828);
+            this.txtBirthDate.TextChanged += new System.EventHandler(this.txtBirthDate_TextChanged);
             // 
             // HosptialNametxt
             // 
@@ -559,11 +563,12 @@
             this.gendertxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gendertxt.ForeColor = System.Drawing.Color.Black;
             this.gendertxt.ItemHeight = 30;
-            this.gendertxt.Location = new System.Drawing.Point(276, 160);
+            this.gendertxt.Location = new System.Drawing.Point(280, 159);
             this.gendertxt.Name = "gendertxt";
             this.gendertxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gendertxt.Size = new System.Drawing.Size(371, 36);
             this.gendertxt.TabIndex = 51;
+            this.gendertxt.TextChanged += new System.EventHandler(this.gendertxt_TextChanged);
             // 
             // gendererrorlbl
             // 
@@ -616,6 +621,7 @@
             this.txtDoctorAddress.SelectedText = "";
             this.txtDoctorAddress.Size = new System.Drawing.Size(367, 33);
             this.txtDoctorAddress.TabIndex = 49;
+            this.txtDoctorAddress.TextChanged += new System.EventHandler(this.txtDoctorAddress_TextChanged);
             // 
             // txtDoctorIDcard
             // 
@@ -643,6 +649,7 @@
             this.txtDoctorIDcard.SelectedText = "";
             this.txtDoctorIDcard.Size = new System.Drawing.Size(367, 33);
             this.txtDoctorIDcard.TabIndex = 49;
+            this.txtDoctorIDcard.TextChanged += new System.EventHandler(this.txtDoctorIDcard_TextChanged);
             // 
             // txtDoctorPhoneNumber
             // 
@@ -670,6 +677,7 @@
             this.txtDoctorPhoneNumber.SelectedText = "";
             this.txtDoctorPhoneNumber.Size = new System.Drawing.Size(367, 33);
             this.txtDoctorPhoneNumber.TabIndex = 48;
+            this.txtDoctorPhoneNumber.TextChanged += new System.EventHandler(this.txtDoctorPhoneNumber_TextChanged);
             // 
             // IdError
             // 
@@ -765,11 +773,11 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label3.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(927, 60);
+            this.label3.Location = new System.Drawing.Point(931, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 25);
             this.label3.TabIndex = 36;
-            this.label3.Text = "رقم الهاتف المستشفى";
+            this.label3.Text = "رقم الهاتف ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // agetxt
@@ -830,7 +838,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.label4.Location = new System.Drawing.Point(1189, 0);
             this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.label4.Padding = new System.Windows.Forms.Padding(15);
             this.label4.Size = new System.Drawing.Size(222, 66);
             this.label4.TabIndex = 6;
             this.label4.Text = "المعلومات الشخصية للطبيب";
@@ -854,7 +862,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(601, 2);
+            this.label10.Location = new System.Drawing.Point(601, 1);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(246, 47);
             this.label10.TabIndex = 0;
@@ -876,7 +884,7 @@
             this.guna2ContainerControl4.Controls.Add(this.licenceExpErorr);
             this.guna2ContainerControl4.Controls.Add(this.licenesErorrgev);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(120, 313);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(120, 304);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
             this.guna2ContainerControl4.Size = new System.Drawing.Size(1411, 152);
             this.guna2ContainerControl4.TabIndex = 40;
@@ -884,13 +892,14 @@
             // 
             // txtDateLcinesExp
             // 
+            this.txtDateLcinesExp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.txtDateLcinesExp.BorderRadius = 10;
             this.txtDateLcinesExp.Checked = true;
             this.txtDateLcinesExp.FillColor = System.Drawing.Color.WhiteSmoke;
             this.txtDateLcinesExp.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateLcinesExp.ForeColor = System.Drawing.Color.Black;
             this.txtDateLcinesExp.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtDateLcinesExp.Location = new System.Drawing.Point(276, 89);
+            this.txtDateLcinesExp.Location = new System.Drawing.Point(289, 89);
             this.txtDateLcinesExp.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDateLcinesExp.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtDateLcinesExp.Name = "txtDateLcinesExp";
@@ -900,13 +909,14 @@
             // 
             // txtDateLiceinsgiven
             // 
+            this.txtDateLiceinsgiven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.txtDateLiceinsgiven.BorderRadius = 10;
             this.txtDateLiceinsgiven.Checked = true;
             this.txtDateLiceinsgiven.FillColor = System.Drawing.Color.WhiteSmoke;
             this.txtDateLiceinsgiven.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateLiceinsgiven.ForeColor = System.Drawing.Color.Black;
             this.txtDateLiceinsgiven.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtDateLiceinsgiven.Location = new System.Drawing.Point(645, 89);
+            this.txtDateLiceinsgiven.Location = new System.Drawing.Point(651, 89);
             this.txtDateLiceinsgiven.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDateLiceinsgiven.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtDateLiceinsgiven.Name = "txtDateLiceinsgiven";
@@ -916,6 +926,7 @@
             // 
             // txtLicenc
             // 
+            this.txtLicenc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.txtLicenc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.txtLicenc.BorderRadius = 10;
             this.txtLicenc.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -945,7 +956,7 @@
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label13.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(508, 60);
+            this.label13.Location = new System.Drawing.Point(520, 60);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(125, 30);
             this.label13.TabIndex = 32;
@@ -985,7 +996,7 @@
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.label31.Location = new System.Drawing.Point(1223, 0);
             this.label31.Name = "label31";
-            this.label31.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.label31.Padding = new System.Windows.Forms.Padding(15);
             this.label31.Size = new System.Drawing.Size(188, 66);
             this.label31.TabIndex = 6;
             this.label31.Text = "معلومات رخصة المزاولة";
@@ -1040,8 +1051,8 @@
             this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.createBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(648, 767);
-            this.createBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.createBtn.Location = new System.Drawing.Point(594, 767);
+            this.createBtn.Margin = new System.Windows.Forms.Padding(2);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(451, 47);
             this.createBtn.TabIndex = 41;
@@ -1061,7 +1072,7 @@
             this.Controls.Add(this.guna2ContainerControl3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddNewDoctorFrm";
-            this.Text = "Form2";
+            this.Text = "إضافة طبيب جديد";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.guna2ContainerControl2.ResumeLayout(false);
             this.guna2ContainerControl2.PerformLayout();

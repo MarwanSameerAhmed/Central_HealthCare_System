@@ -56,7 +56,7 @@ namespace CHS_FrontEnd
         (txtDoctorPassword, passswordErorr, "يرجى إدخال كلمة السر *"),
         (txtDoctorIDcard, IdError, "يرجى إدخال رقم الهوية *"),
         (txtMedicalSpecialization, MedicalSpecializationErorr, "يرجى إدخال أسم التخصص الطبي *"),
-        (txtLicenc, licenesErorrgev, "يرجى إدخال  كلمة المرور *"),
+        (txtLicenc, label8, "يرجى إدخال رخصة المزاولة *"),
        
     };
 
@@ -76,7 +76,7 @@ namespace CHS_FrontEnd
     };
 
 
-            if (!ValidateFields(textFields, comboFields))
+            if (!ValidateFields(textFields, comboFields,dateFields))
             {
                 MessageBox.Show("يرجى ملء جميع الحقول المطلوبة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -144,15 +144,17 @@ namespace CHS_FrontEnd
                 MessageBox.Show($"حدث خطأ أثناء إنشاء مستخدم للطبيب: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
+
 
 
         private bool ValidateFields(
-             List<(Guna.UI2.WinForms.Guna2TextBox TextBox, Label ErrorLabel, string ErrorMessage)> textFields,
-              List<(Guna.UI2.WinForms.Guna2ComboBox ComboBox, Label ErrorLabel, string ErrorMessage)> comboFields)
+     List<(Guna.UI2.WinForms.Guna2TextBox TextBox, Label ErrorLabel, string ErrorMessage)> textFields,
+     List<(Guna.UI2.WinForms.Guna2ComboBox ComboBox, Label ErrorLabel, string ErrorMessage)> comboFields,
+     List<(Guna.UI2.WinForms.Guna2DateTimePicker DataTime, Label ErrorLabel, string ErrorMessage)> dateFields)
         {
             bool isValid = true;
 
+            // التحقق من الحقول النصية
             foreach (var field in textFields)
             {
                 var textBox = field.TextBox;
@@ -173,7 +175,7 @@ namespace CHS_FrontEnd
                 }
             }
 
-
+            // التحقق من القوائم المنسدلة
             foreach (var field in comboFields)
             {
                 var comboBox = field.ComboBox;
@@ -194,8 +196,31 @@ namespace CHS_FrontEnd
                 }
             }
 
+            // التحقق من حقول التاريخ
+            foreach (var field in dateFields)
+            {
+                var dateTimePicker = field.DataTime;
+                var errorLabel = field.ErrorLabel;
+                var errorMessage = field.ErrorMessage;
+
+                // التحقق مما إذا كان التاريخ لم يتم تغييره من القيمة الافتراضية
+                if (dateTimePicker.Value == dateTimePicker.MinDate)
+                {
+                    errorLabel.Text = errorMessage;
+                    errorLabel.Visible = true;
+                    dateTimePicker.BorderColor = Color.Red;
+                    isValid = false;
+                }
+                else
+                {
+                    errorLabel.Visible = false;
+                    dateTimePicker.BorderColor = Color.FromArgb(1, 87, 155);
+                }
+            }
+
             return isValid;
         }
+
         private readonly List<string> doctorTitles = new List<string>
         {
             "طبيب عام",
@@ -319,6 +344,42 @@ namespace CHS_FrontEnd
             {
                 textBox.Font = normalFont;
             }
+        }
+
+        private void txtDoctorName_TextChanged(object sender, EventArgs e)
+        {
+            nameerror.Visible = false;
+            txtDoctorName.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDoctorPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            phoneError.Visible = false;
+            txtDoctorPhoneNumber.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDoctorIDcard_TextChanged(object sender, EventArgs e)
+        {
+            IdError.Visible = false;
+            txtDoctorIDcard.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDoctorAddress_TextChanged(object sender, EventArgs e)
+        {
+            addressErorr.Visible = false;
+            txtDoctorAddress.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void gendertxt_TextChanged(object sender, EventArgs e)
+        {
+            gendererrorlbl.Visible = false;
+            gendertxt.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtBirthDate_TextChanged(object sender, EventArgs e)
+        {
+            nationallblerror.Visible = false;
+            txtBirthDate.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
         }
     }
 

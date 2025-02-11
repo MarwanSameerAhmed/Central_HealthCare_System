@@ -1,4 +1,6 @@
-﻿using Guna.UI2.WinForms;
+﻿using CHS.Client.API.Models.Employees;
+using CHS.Client.API;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,35 +21,7 @@ namespace CHS_FrontEnd
             InitializeComponent();
         }
 
-        private void LoadDemoData()
-        {
-            
-            // إضافة البيانات (ديمو)
-            searchDoctorView.Rows.Add("د. أحمد عبد الله", "0551234567", "طبيب قلب", "01/01/2020");
-            searchDoctorView.Rows.Add("د. سارة علي", "0569876543", "طبيبة أطفال", "15/03/2021");
-            searchDoctorView.Rows.Add("د. خالد محمد", "0542233445", "جراح عام", "10/07/2018");
-            searchDoctorView.Rows.Add("د. ليلى إبراهيم", "0501122334", "أمراض جلدية", "22/09/2019");
-            searchDoctorView.Rows.Add("د. يوسف العبد", "0533322110", "جراحة عظام", "05/11/2022");
-            searchDoctorView.Rows.Add("د. يوسف العبد", "0533322110", "جراحة عظام", "05/11/2022");
-            searchDoctorView.Rows.Add("د. ليلى إبراهيم", "0501122334", "أمراض جلدية", "22/09/2019");
-            searchDoctorView.Rows.Add("د. أحمد عبد الله", "0551234567", "طبيب قلب", "01/01/2020");
-            searchDoctorView.Rows.Add("د. أحمد عبد الله", "0551234567", "طبيب قلب", "01/01/2020");
-            searchDoctorView.Rows.Add("د. سارة علي", "0569876543", "طبيبة أطفال", "15/03/2021");
-            searchDoctorView.Rows.Add("د. خالد محمد", "0542233445", "جراح عام", "10/07/2018");
-            searchDoctorView.Rows.Add("د. ليلى إبراهيم", "0501122334", "أمراض جلدية", "22/09/2019");
-            searchDoctorView.Rows.Add("د. يوسف العبد", "0533322110", "جراحة عظام", "05/11/2022");
-            searchDoctorView.Rows.Add("د. يوسف العبد", "0533322110", "جراحة عظام", "05/11/2022");
-            searchDoctorView.Rows.Add("د. ليلى إبراهيم", "0501122334", "أمراض جلدية", "22/09/2019");
-            searchDoctorView.Rows.Add("د. أحمد عبد الله", "0551234567", "طبيب قلب", "01/01/2020");
-            searchDoctorView.Rows.Add("د. أحمد عبد الله", "0551234567", "طبيب قلب", "01/01/2020");
-            searchDoctorView.Rows.Add("د. سارة علي", "0569876543", "طبيبة أطفال", "15/03/2021");
-            searchDoctorView.Rows.Add("د. خالد محمد", "0542233445", "جراح عام", "10/07/2018");
-            searchDoctorView.Rows.Add("د. ليلى إبراهيم", "0501122334", "أمراض جلدية", "22/09/2019");
-            searchDoctorView.Rows.Add("د. يوسف العبد", "0533322110", "جراحة عظام", "05/11/2022");
-            searchDoctorView.Rows.Add("د. يوسف العبد", "0533322110", "جراحة عظام", "05/11/2022");
-            searchDoctorView.Rows.Add("د. ليلى إبراهيم", "0501122334", "أمراض جلدية", "22/09/2019");
-            searchDoctorView.Rows.Add("د. أحمد عبد الله", "0551234567", "طبيب قلب", "01/01/2020");
-        }
+       
 
         private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
@@ -61,7 +35,9 @@ namespace CHS_FrontEnd
             guna2VScrollBar1.Minimum = 0;
             guna2VScrollBar1.Value = 0;
             searchDoctorView.MouseWheel += searchDoctorView_MouseWheel;
-            LoadDemoData();
+            ApplyEventsToTextBoxes(guna2ContainerControl1);
+
+
             UpdateScrollBar();
 
         }
@@ -123,6 +99,157 @@ namespace CHS_FrontEnd
 
                 DoctorViewrFrmcs detailsForm = new DoctorViewrFrmcs();
                 detailsForm.Show();
+            }
+
+
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string DoctorNumber = IdNumber.Text.Trim();
+                string DoctorName = NameSearchtxt.Text.Trim();
+                string Doctorphone = phoneSearchtxt.Text.Trim();
+
+
+                int searchType;
+                string searchValue;
+
+                if (!string.IsNullOrWhiteSpace(DoctorNumber))
+                {
+                    searchType = (int)SearchDoctorsFilesType.DoctorNumber;
+                    searchValue = DoctorNumber;
+                }
+                else if (!string.IsNullOrWhiteSpace(DoctorName))
+                {
+                    searchType = (int)SearchDoctorsFilesType.DoctorName;
+                    searchValue = DoctorName;
+                }
+                else if (!string.IsNullOrWhiteSpace(Doctorphone))
+                {
+                    searchType = (int)SearchDoctorsFilesType.DoctorPhone;
+                    searchValue = Doctorphone;
+                }
+                else
+                {
+                    MessageBox.Show("يرجى إدخال قيمة البحث!", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+                SearchDoctorsFilesRequest request = new SearchDoctorsFilesRequest
+                {
+                    SearchType = searchType,
+                    SearchValue = searchValue,
+                    RequestID = Guid.NewGuid().ToString()
+                };
+
+
+                SearchDoctorFilesResponse response = RequestSender.SendRequest<SearchDoctorsFilesRequest, SearchDoctorFilesResponse>(request);
+
+                if (response.DoctorFiles != null && response.DoctorFiles.Count > 0)
+                {
+                    var formattedData = response.DoctorFiles.Select(p => new
+                    {
+                        DoctorName = p.DoctorName,
+                        DoctorJobTitle = p.DoctorJobTitle,
+                        DoctorPhoneNumber = string.Join(", ", p.DoctorPhoneNumber),
+                        DoctorEmployementDate = p.DoctorEmployementDate,
+
+
+                        IDCardNumber = p.DoctorIDCardNumber,
+                        BirthDate = p.DoctorBirthData,
+                        IsMale = p.DoctorIsMale,
+                        DoctorNumber = p.DoctorNumber,
+                        DoctorEmails = p.DoctorEmail,
+                        DoctorLice = p.DoctorLicenseNumber,
+                        DoctorLiceExp = p.LicenseExpiryDate,
+                        DoctorLiceRele = p.LicenseReleaseDate,
+                        DoctorMedicalSep = p.MedicalSpecialization,
+
+
+                    }).ToList();
+
+
+                    searchDoctorView.Rows.Clear();
+
+                    foreach (var item in formattedData)
+                    {
+                        int rowIndex = searchDoctorView.Rows.Add();
+                        searchDoctorView.Rows[rowIndex].Cells["doctorName"].Value = item.DoctorName;
+                        searchDoctorView.Rows[rowIndex].Cells["doctorPhoneNumber"].Value = item.DoctorPhoneNumber;
+                        searchDoctorView.Rows[rowIndex].Cells["doctorMiagor"].Value = item.DoctorJobTitle;
+                        searchDoctorView.Rows[rowIndex].Cells["empIDNumber"].Value = item.DoctorNumber;
+
+
+                        searchDoctorView.Rows[rowIndex].Tag = item;
+                    }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("لم يتم العثور على أي مريض.", "نتيجة البحث", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    searchDoctorView.DataSource = null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"خطأ أثناء البحث: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void SearchFields_TextChanged(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(NameSearchtxt.Text) &&
+                string.IsNullOrWhiteSpace(IdNumber.Text) &&
+                string.IsNullOrWhiteSpace(phoneSearchtxt.Text))
+            {
+                searchDoctorView.Rows.Clear();
+            }
+        }
+        private void ApplyEventsToTextBoxes(Control parentControl)
+        {
+            foreach (Control control in parentControl.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    textBox.Enter += Guna2TextBox_Enter;
+                    textBox.Leave += Guna2TextBox_Leave;
+                }
+                else if (control.HasChildren)
+                {
+
+                    ApplyEventsToTextBoxes(control);
+                }
+            }
+        }
+
+        private Font normalFont = new Font("Traditional Arabic", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+        private Font largeFont = new Font("Traditional Arabic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+        private void Guna2TextBox_Enter(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = largeFont;
+            }
+        }
+
+
+        private void Guna2TextBox_Leave(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = normalFont;
             }
         }
     }

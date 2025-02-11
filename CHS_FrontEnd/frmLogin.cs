@@ -88,17 +88,17 @@ namespace CHS_FrontEnd
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            //  UserNametxt.Focus();
+         
             facilityTxt.Text = Properties.Settings.Default.FacilityName;
             foreach (Control control in this.Controls)
             {
-                // التحقق إذا كان الحقل من النوع TextBox
+                
                 if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
                 {
                     textBox.Enter += Guna2TextBox_Enter;
                     textBox.Leave += Guna2TextBox_Leave;
                 }
-                // التحقق من الحاويات الداخلية
+               
                 else if (control is Panel || control is GroupBox || control is FlowLayoutPanel)
                 {
                     BindEventsToChildTextBoxes(control);
@@ -115,10 +115,10 @@ namespace CHS_FrontEnd
 
         private void validationsCodeTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // السماح فقط للأرقام
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8) // (char)8 هو الكود الخاص بمفتاح Backspace
+           
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
             {
-                e.Handled = true; // إذا كانت الحرف ليس رقماً ولا مفتاح العودة، يتم منع الإدخال
+                e.Handled = true; 
             }
         }
 
@@ -164,12 +164,12 @@ namespace CHS_FrontEnd
             if (string.IsNullOrWhiteSpace(UserNametxt.Text) || string.IsNullOrWhiteSpace(passwordtxt.Text))
             {
                 labelError.Text = "يرجى إدخال اسم المستخدم وكلمة المرور";
-                labelError.ForeColor = Color.Red; 
+                labelError.ForeColor = Color.Red;
                 labelError.Visible = true;
                 UserNametxt.BorderColor = Color.Red;
                 passwordtxt.BorderColor = Color.Red;
                 return;
-              
+
             }
             if (string.IsNullOrWhiteSpace(facilityTxt.Text))
             {
@@ -177,8 +177,8 @@ namespace CHS_FrontEnd
                 label5.ForeColor = Color.Red;
                 label5.Visible = true;
                 facilityTxt.BorderColor = Color.Red;
-                return ;
-             
+                return;
+
 
 
             }
@@ -190,11 +190,11 @@ namespace CHS_FrontEnd
                 label3.Visible = true;
                 validationsCodeTxt.BorderColor = Color.Red;
                 return;
-            
+
 
 
             }
-          
+
             try
             {
                 LoginResponse response = RequestSender.Login(UserNametxt.Text, passwordtxt.Text, facilityTxt.Text, validationsCodeTxt.Text);
@@ -208,7 +208,7 @@ namespace CHS_FrontEnd
                     UserRole = response.UserRole;
 
                     DialogResult = DialogResult.OK;
-                    return;
+                return;
                 }
                 else if (!(response is null) && response.ResponseCode == "2")
                 {

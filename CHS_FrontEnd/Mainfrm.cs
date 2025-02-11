@@ -79,11 +79,6 @@ namespace CHS_FrontEnd
         private void OpenForm(Form childForm)
         {
 
-            if (currentForm != null && currentForm.GetType() == childForm.GetType())
-            {
-
-                return;
-            }
             currentForm = childForm;
 
 

@@ -99,7 +99,7 @@ namespace CHS_FrontEnd
             this.searchBtn.Location = new System.Drawing.Point(77, 50);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(174, 40);
+            this.searchBtn.Size = new System.Drawing.Size(197, 40);
             this.searchBtn.TabIndex = 38;
             this.searchBtn.Text = "بحث";
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
@@ -219,11 +219,11 @@ namespace CHS_FrontEnd
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label1.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.label1.Location = new System.Drawing.Point(1426, -8);
+            this.label1.Location = new System.Drawing.Point(1398, -12);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(17, 15, 17, 15);
-            this.label1.Size = new System.Drawing.Size(146, 66);
+            this.label1.Size = new System.Drawing.Size(174, 66);
             this.label1.TabIndex = 0;
             this.label1.Text = "ابحث عن مريض";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -238,7 +238,7 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl2.Location = new System.Drawing.Point(14, 206);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(1570, 558);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(1570, 484);
             this.guna2ContainerControl2.TabIndex = 4;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -246,12 +246,12 @@ namespace CHS_FrontEnd
             // 
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1536, 58);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1533, 58);
             this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2VScrollBar1.Maximum = 99;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 15;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(15, 482);
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 407);
             this.guna2VScrollBar1.TabIndex = 6;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.DarkGray;
             this.guna2VScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2VScrollBar1_Scroll);
@@ -270,7 +270,7 @@ namespace CHS_FrontEnd
             this.searchPatientView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -283,6 +283,7 @@ namespace CHS_FrontEnd
             this.Column_Age,
             this.Column_State,
             this.Column_MedicalNumber});
+            this.searchPatientView.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -300,7 +301,7 @@ namespace CHS_FrontEnd
             this.searchPatientView.ReadOnly = true;
             dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -312,7 +313,7 @@ namespace CHS_FrontEnd
             this.searchPatientView.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.searchPatientView.RowTemplate.Height = 40;
             this.searchPatientView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.searchPatientView.Size = new System.Drawing.Size(1532, 522);
+            this.searchPatientView.Size = new System.Drawing.Size(1532, 447);
             this.searchPatientView.TabIndex = 0;
             this.searchPatientView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.searchPatientView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

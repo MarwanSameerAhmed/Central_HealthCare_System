@@ -89,7 +89,7 @@
             this.nationalSearchtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.nationalSearchtxt.BorderRadius = 10;
             this.nationalSearchtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nationalSearchtxt.DefaultText = "رقم الهوية";
+            this.nationalSearchtxt.DefaultText = "الرقم الطبي";
             this.nationalSearchtxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.nationalSearchtxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.nationalSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -178,7 +178,7 @@
             this.midSearchtxt.Name = "midSearchtxt";
             this.midSearchtxt.PasswordChar = '\0';
             this.midSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.midSearchtxt.PlaceholderText = "الرقم الطبي";
+            this.midSearchtxt.PlaceholderText = "اسم المريض";
             this.midSearchtxt.SelectedText = "";
             this.midSearchtxt.Size = new System.Drawing.Size(318, 48);
             this.midSearchtxt.TabIndex = 1;
@@ -207,7 +207,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(587, 2);
+            this.label10.Location = new System.Drawing.Point(587, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(284, 52);
             this.label10.TabIndex = 0;
@@ -470,12 +470,12 @@
             this.label15.Dock = System.Windows.Forms.DockStyle.Right;
             this.label15.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label15.Location = new System.Drawing.Point(1279, 0);
+            this.label15.Location = new System.Drawing.Point(1263, 0);
             this.label15.Name = "label15";
             this.label15.Padding = new System.Windows.Forms.Padding(15, 22, 15, 22);
-            this.label15.Size = new System.Drawing.Size(131, 80);
+            this.label15.Size = new System.Drawing.Size(147, 80);
             this.label15.TabIndex = 6;
-            this.label15.Text = "بيانات المريض";
+            this.label15.Text = "معلومات المريض";
             // 
             // LIMBsFrm
             // 
