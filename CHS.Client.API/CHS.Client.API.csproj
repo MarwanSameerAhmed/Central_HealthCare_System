@@ -61,7 +61,10 @@
     <Compile Include="Models\Employees\SearchEmployeesFilesResponse.cs" />
     <Compile Include="Models\Facilities\CreateFacilityRequest.cs" />
     <Compile Include="Models\Facilities\CreateFacilityResponse.cs" />
+    <Compile Include="Models\Facilities\FacilitiesFile.cs" />
     <Compile Include="Models\Facilities\GetFacilitiesTypesResponse.cs" />
+    <Compile Include="Models\Facilities\SearchFacilitiesFileResponse.cs" />
+    <Compile Include="Models\Facilities\SearchFacilitiesFilesRequest.cs" />
     <Compile Include="Models\LoginResponse.cs" />
     <Compile Include="Models\Patients\CreatePatientFileRequest.cs" />
     <Compile Include="Models\Patients\PaitientFile.cs" />
