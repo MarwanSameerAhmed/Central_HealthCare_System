@@ -66,6 +66,13 @@
     <Compile Include="Models\Facilities\SearchFacilitiesFileResponse.cs" />
     <Compile Include="Models\Facilities\SearchFacilitiesFilesRequest.cs" />
     <Compile Include="Models\LoginResponse.cs" />
+    <Compile Include="Models\PatientsDiagnosis\AddMedicalConditionRequest.cs" />
+    <Compile Include="Models\PatientsDiagnosis\AddSymptomsRequest.cs" />
+    <Compile Include="Models\PatientsDiagnosis\CreatePatientDiagnosisRequest.cs" />
+    <Compile Include="Models\PatientsDiagnosis\CreatePatientDiagnosisResponse.cs" />
+    <Compile Include="Models\PatientsDiagnosis\PatientsDiagnosisFile.cs" />
+    <Compile Include="Models\PatientsDiagnosis\SearchPatientDiagnosisRequest.cs" />
+    <Compile Include="Models\PatientsDiagnosis\SearchPatientDiagnosisResponse.cs" />
     <Compile Include="Models\Patients\CreatePatientFileRequest.cs" />
     <Compile Include="Models\Patients\PaitientFile.cs" />
     <Compile Include="Models\Patients\SearchPatientsFilesRequest.cs" />
