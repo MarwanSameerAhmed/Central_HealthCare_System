@@ -52,7 +52,6 @@ namespace CHS_FrontEnd
             this.fullNametxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.cumintystatelblerror = new System.Windows.Forms.Label();
             this.parentlblerror = new System.Windows.Forms.Label();
             this.addresslblerror = new System.Windows.Forms.Label();
             this.labelerrorPhone = new System.Windows.Forms.Label();
@@ -86,6 +85,7 @@ namespace CHS_FrontEnd
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.createBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.Agetxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             this.guna2ContainerControl3.SuspendLayout();
@@ -99,6 +99,7 @@ namespace CHS_FrontEnd
             // 
             this.guna2ContainerControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl1.BorderRadius = 15;
+            this.guna2ContainerControl1.Controls.Add(this.Agetxt);
             this.guna2ContainerControl1.Controls.Add(this.bloodlbl);
             this.guna2ContainerControl1.Controls.Add(this.countryErrorLabel);
             this.guna2ContainerControl1.Controls.Add(this.nationallblerror);
@@ -393,14 +394,15 @@ namespace CHS_FrontEnd
             this.birthdaytxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthdaytxt.ForeColor = System.Drawing.Color.Black;
             this.birthdaytxt.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.birthdaytxt.Location = new System.Drawing.Point(20, 200);
+            this.birthdaytxt.Location = new System.Drawing.Point(185, 200);
             this.birthdaytxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.birthdaytxt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.birthdaytxt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.birthdaytxt.Name = "birthdaytxt";
-            this.birthdaytxt.Size = new System.Drawing.Size(453, 36);
+            this.birthdaytxt.Size = new System.Drawing.Size(288, 36);
             this.birthdaytxt.TabIndex = 9;
             this.birthdaytxt.Value = new System.DateTime(2024, 12, 14, 21, 13, 20, 682);
+            this.birthdaytxt.ValueChanged += new System.EventHandler(this.birthdaytxt_ValueChanged);
             // 
             // label4
             // 
@@ -462,7 +464,6 @@ namespace CHS_FrontEnd
             // 
             this.guna2ContainerControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl2.BorderRadius = 15;
-            this.guna2ContainerControl2.Controls.Add(this.cumintystatelblerror);
             this.guna2ContainerControl2.Controls.Add(this.parentlblerror);
             this.guna2ContainerControl2.Controls.Add(this.addresslblerror);
             this.guna2ContainerControl2.Controls.Add(this.labelerrorPhone);
@@ -480,19 +481,6 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl2.Size = new System.Drawing.Size(622, 439);
             this.guna2ContainerControl2.TabIndex = 1;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
-            // 
-            // cumintystatelblerror
-            // 
-            this.cumintystatelblerror.AutoSize = true;
-            this.cumintystatelblerror.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.cumintystatelblerror.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cumintystatelblerror.ForeColor = System.Drawing.Color.Red;
-            this.cumintystatelblerror.Location = new System.Drawing.Point(274, 341);
-            this.cumintystatelblerror.Name = "cumintystatelblerror";
-            this.cumintystatelblerror.Size = new System.Drawing.Size(22, 27);
-            this.cumintystatelblerror.TabIndex = 21;
-            this.cumintystatelblerror.Text = "\"\"";
-            this.cumintystatelblerror.Visible = false;
             // 
             // parentlblerror
             // 
@@ -1030,6 +1018,34 @@ namespace CHS_FrontEnd
             this.createBtn.Text = "إنشاء";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
+            // Agetxt
+            // 
+            this.Agetxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.Agetxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.Agetxt.BorderRadius = 10;
+            this.Agetxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Agetxt.DefaultText = "";
+            this.Agetxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Agetxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Agetxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Agetxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Agetxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Agetxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.Agetxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Agetxt.ForeColor = System.Drawing.Color.Black;
+            this.Agetxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Agetxt.Location = new System.Drawing.Point(20, 200);
+            this.Agetxt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Agetxt.Name = "Agetxt";
+            this.Agetxt.PasswordChar = '\0';
+            this.Agetxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.Agetxt.PlaceholderText = "العمر الفعلي";
+            this.Agetxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Agetxt.SelectedText = "";
+            this.Agetxt.Size = new System.Drawing.Size(159, 36);
+            this.Agetxt.TabIndex = 22;
+            this.Agetxt.TextChanged += new System.EventHandler(this.Agetxt_TextChanged);
+            // 
             // addingPatientFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1099,7 +1115,6 @@ namespace CHS_FrontEnd
         private Label gendererrorlbl;
         private Label bloodlbl;
         private Label countryErrorLabel;
-        private Label cumintystatelblerror;
         private Label parentlblerror;
         private Label addresslblerror;
         private Label label21;
@@ -1120,5 +1135,6 @@ namespace CHS_FrontEnd
         private Label label18;
         private Guna.UI2.WinForms.Guna2TextBox diseasesTxt;
         private Label label14;
+        private Guna.UI2.WinForms.Guna2TextBox Agetxt;
     }
 }

@@ -13,6 +13,7 @@ using WeifenLuo.WinFormsUI.Docking;
 using System.Security.Principal;
 using CHS.Client.API.Models.Facilities;
 using Guna.UI2.WinForms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CHS_FrontEnd
 {
@@ -21,12 +22,10 @@ namespace CHS_FrontEnd
         public AddNewFacilityFrm(DockPanel dockPanel)
         {
             InitializeComponent();
+            SetupEmailAutocomplete();
         }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
+      
         private void ApplyEventsToTextBoxes(Control parentControl)
         {
             foreach (Control control in parentControl.Controls)
@@ -43,6 +42,44 @@ namespace CHS_FrontEnd
                 }
             }
         }
+
+        private void SetupEmailAutocomplete()
+        {
+            AutoCompleteStringCollection emailSuggestions = new AutoCompleteStringCollection();
+            emailSuggestions.AddRange(new string[]
+            {
+  "@gmail.com",
+  "@yahoo.com",
+  "@outlook.com",
+  "@hotmail.com",
+  "@icloud.com"
+            });
+
+            txtFacilityEmail.AutoCompleteCustomSource = emailSuggestions;
+            txtFacilityEmail.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtFacilityEmail.AutoCompleteSource = AutoCompleteSource.CustomSource;
+           
+        }
+        private void SetupEmailAutocompleteAdmin()
+        {
+            AutoCompleteStringCollection emailSuggestions = new AutoCompleteStringCollection();
+            emailSuggestions.AddRange(new string[]
+            {
+  "@gmail.com",
+  "@yahoo.com",
+  "@outlook.com",
+  "@hotmail.com",
+  "@icloud.com"
+            });
+
+            adminEmail.AutoCompleteCustomSource = emailSuggestions;
+            adminEmail.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            adminEmail.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+        }
+
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -291,6 +328,33 @@ namespace CHS_FrontEnd
             if (textBox != null)
             {
                 textBox.Font = normalFont;
+            }
+        }
+
+        private void txtFacilityEmail_TextChanged(object sender, EventArgs e)
+        {
+
+            string text = txtFacilityEmail.Text;
+            if (!text.Contains("@") && text.Length > 1)
+            {
+                txtFacilityEmail.AutoCompleteCustomSource.Clear();
+                txtFacilityEmail.AutoCompleteCustomSource.Add(text + "@gmail.com");
+                txtFacilityEmail.AutoCompleteCustomSource.Add(text + "@yahoo.com");
+                txtFacilityEmail.AutoCompleteCustomSource.Add(text + "@outlook.com");
+                txtFacilityEmail.AutoCompleteCustomSource.Add(text + "@hotmail.com");
+            }
+        }
+
+        private void adminEmail_TextChanged(object sender, EventArgs e)
+        {
+            string text = adminEmail.Text;
+            if (!text.Contains("@") && text.Length > 1)
+            {
+                adminEmail.AutoCompleteCustomSource.Clear();
+                adminEmail.AutoCompleteCustomSource.Add(text + "@gmail.com");
+                adminEmail.AutoCompleteCustomSource.Add(text + "@yahoo.com");
+                adminEmail.AutoCompleteCustomSource.Add(text + "@outlook.com");
+                adminEmail.AutoCompleteCustomSource.Add(text + "@hotmail.com");
             }
         }
     }

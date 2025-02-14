@@ -22,6 +22,7 @@ namespace CHS_FrontEnd
             InitializeComponent();
             ConfigureComboBox();
             ConfigureComboBoxTile();
+            SetupEmailAutocomplete();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -29,7 +30,26 @@ namespace CHS_FrontEnd
             ApplyEventsToTextBoxes(guna2ContainerControl2);
             ApplyEventsToTextBoxes(guna2ContainerControl4);
             ApplyEventsToTextBoxes(guna2ContainerControl1);
+         
         }
+
+        private void SetupEmailAutocomplete()
+        {
+            AutoCompleteStringCollection emailSuggestions = new AutoCompleteStringCollection();
+            emailSuggestions.AddRange(new string[]
+            {
+        "@gmail.com",
+        "@yahoo.com",
+        "@outlook.com",
+        "@hotmail.com",
+        "@icloud.com"
+            });
+
+            txtDoctorEmail.AutoCompleteCustomSource = emailSuggestions;
+            txtDoctorEmail.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtDoctorEmail.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
 
         private void ConfigureComboBox()
         {
@@ -380,6 +400,19 @@ namespace CHS_FrontEnd
         {
             nationallblerror.Visible = false;
             txtBirthDate.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDoctorEmail_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtDoctorEmail.Text;
+            if (!text.Contains("@") && text.Length > 1)
+            {
+                txtDoctorEmail.AutoCompleteCustomSource.Clear();
+                txtDoctorEmail.AutoCompleteCustomSource.Add(text + "@gmail.com");
+                txtDoctorEmail.AutoCompleteCustomSource.Add(text + "@yahoo.com");
+                txtDoctorEmail.AutoCompleteCustomSource.Add(text + "@outlook.com");
+                txtDoctorEmail.AutoCompleteCustomSource.Add(text + "@hotmail.com");
+            }
         }
     }
 

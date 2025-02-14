@@ -25,6 +25,7 @@ namespace CHS_FrontEnd
         {
             InitializeComponent();
             this.dockPanel = dockPanel;
+            SetupEmailAutocomplete();
 
         }
 
@@ -233,6 +234,40 @@ namespace CHS_FrontEnd
             {
                 MessageBox.Show($"حدث خطأ أثناء إنشاء المنشأة: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void empEmailTxt_TextChanged(object sender, EventArgs e)
+        {
+            string text = empEmailTxt.Text;
+            if (!text.Contains("@") && text.Length > 1)
+            {
+                empEmailTxt.AutoCompleteCustomSource.Clear();
+                empEmailTxt.AutoCompleteCustomSource.Add(text + "@gmail.com");
+                empEmailTxt.AutoCompleteCustomSource.Add(text + "@yahoo.com");
+                empEmailTxt.AutoCompleteCustomSource.Add(text + "@outlook.com");
+                empEmailTxt.AutoCompleteCustomSource.Add(text + "@hotmail.com");
+            }
+        }
+        private void SetupEmailAutocomplete()
+        {
+            AutoCompleteStringCollection emailSuggestions = new AutoCompleteStringCollection();
+            emailSuggestions.AddRange(new string[]
+            {
+ "@gmail.com",
+ "@yahoo.com",
+ "@outlook.com",
+ "@hotmail.com",
+ "@icloud.com"
+            });
+
+            empEmailTxt.AutoCompleteCustomSource = emailSuggestions;
+            empEmailTxt.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            empEmailTxt.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
+        private void guna2ContainerControl2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

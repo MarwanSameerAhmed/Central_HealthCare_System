@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.searchDoctorView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.doctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorMiagor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.searchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.IdNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.phoneSearchtxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,11 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label10 = new System.Windows.Forms.Label();
-            this.searchBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.doctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doctorPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doctorMiagor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doctorNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchDoctorView)).BeginInit();
             this.guna2ContainerControl1.SuspendLayout();
@@ -63,7 +63,7 @@
             this.guna2ContainerControl2.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl2.Controls.Add(this.searchDoctorView);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(66, 204);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(72, 204);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(1594, 470);
@@ -90,51 +90,51 @@
             this.searchDoctorView.AllowUserToDeleteRows = false;
             this.searchDoctorView.AllowUserToResizeColumns = false;
             this.searchDoctorView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.searchDoctorView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.searchDoctorView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.searchDoctorView.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchDoctorView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchDoctorView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.searchDoctorView.ColumnHeadersHeight = 40;
             this.searchDoctorView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.doctorName,
             this.doctorPhoneNumber,
             this.doctorMiagor,
             this.doctorNumber});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.searchDoctorView.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchDoctorView.DefaultCellStyle = dataGridViewCellStyle3;
             this.searchDoctorView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.searchDoctorView.GridColor = System.Drawing.Color.Gray;
             this.searchDoctorView.Location = new System.Drawing.Point(17, 18);
             this.searchDoctorView.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.searchDoctorView.Name = "searchDoctorView";
             this.searchDoctorView.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.searchDoctorView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.searchDoctorView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.searchDoctorView.RowHeadersVisible = false;
             this.searchDoctorView.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.searchDoctorView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.searchDoctorView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.searchDoctorView.RowTemplate.Height = 40;
             this.searchDoctorView.RowTemplate.ReadOnly = true;
             this.searchDoctorView.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -163,6 +163,34 @@
             this.searchDoctorView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.searchDoctorView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchDoctorView_CellDoubleClick);
             // 
+            // doctorName
+            // 
+            this.doctorName.HeaderText = "أسم الطبيب";
+            this.doctorName.MinimumWidth = 6;
+            this.doctorName.Name = "doctorName";
+            this.doctorName.ReadOnly = true;
+            // 
+            // doctorPhoneNumber
+            // 
+            this.doctorPhoneNumber.HeaderText = "رقم الهاتف";
+            this.doctorPhoneNumber.MinimumWidth = 6;
+            this.doctorPhoneNumber.Name = "doctorPhoneNumber";
+            this.doctorPhoneNumber.ReadOnly = true;
+            // 
+            // doctorMiagor
+            // 
+            this.doctorMiagor.HeaderText = "المسمى الوظيفي";
+            this.doctorMiagor.MinimumWidth = 6;
+            this.doctorMiagor.Name = "doctorMiagor";
+            this.doctorMiagor.ReadOnly = true;
+            // 
+            // doctorNumber
+            // 
+            this.doctorNumber.HeaderText = "الرقم الوظيفي";
+            this.doctorNumber.MinimumWidth = 6;
+            this.doctorNumber.Name = "doctorNumber";
+            this.doctorNumber.ReadOnly = true;
+            // 
             // guna2ContainerControl1
             // 
             this.guna2ContainerControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -176,12 +204,31 @@
             this.guna2ContainerControl1.Controls.Add(this.NameSearchtxt);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(66, 71);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(72, 71);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1594, 121);
             this.guna2ContainerControl1.TabIndex = 39;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchBtn.BorderRadius = 15;
+            this.searchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.searchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.searchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.searchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.searchBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.searchBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.ForeColor = System.Drawing.Color.White;
+            this.searchBtn.Location = new System.Drawing.Point(106, 64);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(199, 40);
+            this.searchBtn.TabIndex = 40;
+            this.searchBtn.Text = "بحث";
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // IdNumber
             // 
@@ -195,11 +242,12 @@
             this.IdNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.IdNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.IdNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.IdNumber.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.IdNumber.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdNumber.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.IdNumber.ForeColor = System.Drawing.Color.Black;
             this.IdNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.IdNumber.Location = new System.Drawing.Point(386, 64);
-            this.IdNumber.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.IdNumber.Margin = new System.Windows.Forms.Padding(5);
             this.IdNumber.Name = "IdNumber";
             this.IdNumber.PasswordChar = '\0';
             this.IdNumber.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -208,6 +256,7 @@
             this.IdNumber.Size = new System.Drawing.Size(374, 40);
             this.IdNumber.TabIndex = 5;
             this.IdNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.IdNumber.TextChanged += new System.EventHandler(this.IdNumber_TextChanged);
             // 
             // label3
             // 
@@ -235,11 +284,12 @@
             this.phoneSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.phoneSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.phoneSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.phoneSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.phoneSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.phoneSearchtxt.ForeColor = System.Drawing.Color.Black;
             this.phoneSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.phoneSearchtxt.Location = new System.Drawing.Point(794, 64);
-            this.phoneSearchtxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.phoneSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.phoneSearchtxt.Name = "phoneSearchtxt";
             this.phoneSearchtxt.PasswordChar = '\0';
             this.phoneSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -275,10 +325,12 @@
             this.NameSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.NameSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.NameSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NameSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.NameSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameSearchtxt.ForeColor = System.Drawing.Color.Black;
             this.NameSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.NameSearchtxt.Location = new System.Drawing.Point(1204, 64);
-            this.NameSearchtxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.NameSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.NameSearchtxt.Name = "NameSearchtxt";
             this.NameSearchtxt.PasswordChar = '\0';
             this.NameSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -311,7 +363,7 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(66, 5);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(72, 5);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
             this.guna2ContainerControl3.Size = new System.Drawing.Size(1594, 53);
             this.guna2ContainerControl3.TabIndex = 38;
@@ -331,53 +383,6 @@
             this.label10.Text = "البحث عن طبيب";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // searchBtn
-            // 
-            this.searchBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.searchBtn.BorderRadius = 15;
-            this.searchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.searchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.searchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.searchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.searchBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.searchBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBtn.ForeColor = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(106, 64);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(199, 40);
-            this.searchBtn.TabIndex = 40;
-            this.searchBtn.Text = "بحث";
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
-            // 
-            // doctorName
-            // 
-            this.doctorName.HeaderText = "أسم الطبيب";
-            this.doctorName.MinimumWidth = 6;
-            this.doctorName.Name = "doctorName";
-            this.doctorName.ReadOnly = true;
-            // 
-            // doctorPhoneNumber
-            // 
-            this.doctorPhoneNumber.HeaderText = "رقم الهاتف";
-            this.doctorPhoneNumber.MinimumWidth = 6;
-            this.doctorPhoneNumber.Name = "doctorPhoneNumber";
-            this.doctorPhoneNumber.ReadOnly = true;
-            // 
-            // doctorMiagor
-            // 
-            this.doctorMiagor.HeaderText = "المسمى الوظيفي";
-            this.doctorMiagor.MinimumWidth = 6;
-            this.doctorMiagor.Name = "doctorMiagor";
-            this.doctorMiagor.ReadOnly = true;
-            // 
-            // doctorNumber
-            // 
-            this.doctorNumber.HeaderText = "الرقم الوظيفي";
-            this.doctorNumber.MinimumWidth = 6;
-            this.doctorNumber.Name = "doctorNumber";
-            this.doctorNumber.ReadOnly = true;
-            // 
             // searchDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -390,7 +395,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "searchDoctor";
-            this.Text = "Form4";
+            this.Text = "البحث عن معلومات طبيب";
             this.Load += new System.EventHandler(this.searchDoctor_Load);
             this.guna2ContainerControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchDoctorView)).EndInit();

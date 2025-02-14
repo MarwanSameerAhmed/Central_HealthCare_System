@@ -42,11 +42,11 @@
             this.FacilityAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FacilityEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.searchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.phoneSearchtxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.midSearchtxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.searchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ContainerControl3.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchFacilityView)).BeginInit();
@@ -59,9 +59,9 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(17, 4);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(62, 4);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1489, 53);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1603, 53);
             this.guna2ContainerControl3.TabIndex = 35;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -72,7 +72,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(692, 0);
+            this.label10.Location = new System.Drawing.Point(710, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(186, 52);
             this.label10.TabIndex = 0;
@@ -86,10 +86,10 @@
             this.guna2ContainerControl2.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl2.Controls.Add(this.searchFacilityView);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(17, 198);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(62, 198);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(1489, 423);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(1603, 423);
             this.guna2ContainerControl2.TabIndex = 37;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -97,7 +97,7 @@
             // 
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1454, 58);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1565, 58);
             this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2VScrollBar1.Maximum = 99;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
@@ -142,7 +142,7 @@
             this.searchFacilityView.DefaultCellStyle = dataGridViewCellStyle3;
             this.searchFacilityView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.searchFacilityView.GridColor = System.Drawing.Color.Gray;
-            this.searchFacilityView.Location = new System.Drawing.Point(17, 18);
+            this.searchFacilityView.Location = new System.Drawing.Point(19, 18);
             this.searchFacilityView.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.searchFacilityView.Name = "searchFacilityView";
             this.searchFacilityView.ReadOnly = true;
@@ -158,7 +158,7 @@
             this.searchFacilityView.RowHeadersWidth = 51;
             this.searchFacilityView.RowTemplate.Height = 40;
             this.searchFacilityView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.searchFacilityView.Size = new System.Drawing.Size(1455, 385);
+            this.searchFacilityView.Size = new System.Drawing.Size(1564, 385);
             this.searchFacilityView.TabIndex = 0;
             this.searchFacilityView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.searchFacilityView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,12 +222,31 @@
             this.guna2ContainerControl1.Controls.Add(this.midSearchtxt);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(17, 65);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(62, 65);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(1489, 121);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(1601, 121);
             this.guna2ContainerControl1.TabIndex = 36;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchBtn.BorderRadius = 15;
+            this.searchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.searchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.searchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.searchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.searchBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.searchBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.ForeColor = System.Drawing.Color.White;
+            this.searchBtn.Location = new System.Drawing.Point(137, 64);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(199, 40);
+            this.searchBtn.TabIndex = 41;
+            this.searchBtn.Text = "بحث";
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // phoneSearchtxt
             // 
@@ -241,11 +260,12 @@
             this.phoneSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.phoneSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.phoneSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.phoneSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.phoneSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneSearchtxt.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.phoneSearchtxt.ForeColor = System.Drawing.Color.Black;
             this.phoneSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.phoneSearchtxt.Location = new System.Drawing.Point(332, 64);
-            this.phoneSearchtxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.phoneSearchtxt.Location = new System.Drawing.Point(444, 64);
+            this.phoneSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.phoneSearchtxt.Name = "phoneSearchtxt";
             this.phoneSearchtxt.PasswordChar = '\0';
             this.phoneSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -262,7 +282,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(889, 73);
+            this.label2.Location = new System.Drawing.Point(1001, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 27);
@@ -281,10 +301,12 @@
             this.midSearchtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.midSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.midSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.midSearchtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.midSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.midSearchtxt.ForeColor = System.Drawing.Color.Black;
             this.midSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.midSearchtxt.Location = new System.Drawing.Point(922, 64);
-            this.midSearchtxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.midSearchtxt.Location = new System.Drawing.Point(1034, 64);
+            this.midSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.midSearchtxt.Name = "midSearchtxt";
             this.midSearchtxt.PasswordChar = '\0';
             this.midSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -302,7 +324,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label1.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.label1.Location = new System.Drawing.Point(1237, 0);
+            this.label1.Location = new System.Drawing.Point(1455, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(17, 15, 17, 15);
@@ -311,38 +333,19 @@
             this.label1.Text = "ابحث عن منشأة";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // searchBtn
-            // 
-            this.searchBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.searchBtn.BorderRadius = 15;
-            this.searchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.searchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.searchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.searchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.searchBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.searchBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBtn.ForeColor = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(81, 64);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(199, 40);
-            this.searchBtn.TabIndex = 41;
-            this.searchBtn.Text = "بحث";
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
-            // 
             // searchPlacemenet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1539, 745);
+            this.ClientSize = new System.Drawing.Size(1726, 745);
             this.Controls.Add(this.guna2ContainerControl2);
             this.Controls.Add(this.guna2ContainerControl1);
             this.Controls.Add(this.guna2ContainerControl3);
             this.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "searchPlacemenet";
-            this.Text = "Form3";
+            this.Text = "البحث عن معلومات منشأة";
             this.guna2ContainerControl3.ResumeLayout(false);
             this.guna2ContainerControl3.PerformLayout();
             this.guna2ContainerControl2.ResumeLayout(false);

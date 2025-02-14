@@ -252,6 +252,11 @@ namespace CHS_FrontEnd
                 textBox.Font = normalFont;
             }
         }
+
+        private void IdNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

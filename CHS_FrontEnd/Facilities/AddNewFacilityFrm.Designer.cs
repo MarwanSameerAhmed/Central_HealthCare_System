@@ -299,6 +299,7 @@
             this.adminEmail.SelectedText = "";
             this.adminEmail.Size = new System.Drawing.Size(380, 41);
             this.adminEmail.TabIndex = 46;
+            this.adminEmail.TextChanged += new System.EventHandler(this.adminEmail_TextChanged);
             // 
             // adminUserName
             // 
@@ -777,6 +778,7 @@
             this.txtFacilityEmail.SelectedText = "";
             this.txtFacilityEmail.Size = new System.Drawing.Size(365, 41);
             this.txtFacilityEmail.TabIndex = 49;
+            this.txtFacilityEmail.TextChanged += new System.EventHandler(this.txtFacilityEmail_TextChanged);
             // 
             // txtFacilityPhones
             // 
@@ -966,7 +968,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(701, 5);
+            this.label10.Location = new System.Drawing.Point(679, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(269, 52);
             this.label10.TabIndex = 0;

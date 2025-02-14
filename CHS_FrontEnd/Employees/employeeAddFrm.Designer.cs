@@ -345,6 +345,7 @@
             this.guna2ContainerControl2.Size = new System.Drawing.Size(465, 310);
             this.guna2ContainerControl2.TabIndex = 5;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
+            this.guna2ContainerControl2.Click += new System.EventHandler(this.guna2ContainerControl2_Click);
             // 
             // labelerrorPhone
             // 
@@ -352,7 +353,7 @@
             this.labelerrorPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.labelerrorPhone.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelerrorPhone.ForeColor = System.Drawing.Color.Red;
-            this.labelerrorPhone.Location = new System.Drawing.Point(179, 64);
+            this.labelerrorPhone.Location = new System.Drawing.Point(179, 66);
             this.labelerrorPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelerrorPhone.Name = "labelerrorPhone";
             this.labelerrorPhone.Size = new System.Drawing.Size(22, 27);
@@ -366,7 +367,7 @@
             this.emaillbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.emaillbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emaillbl.ForeColor = System.Drawing.Color.Red;
-            this.emaillbl.Location = new System.Drawing.Point(177, 149);
+            this.emaillbl.Location = new System.Drawing.Point(177, 152);
             this.emaillbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emaillbl.Name = "emaillbl";
             this.emaillbl.Size = new System.Drawing.Size(22, 27);
@@ -444,6 +445,7 @@
             this.empEmailTxt.SelectedText = "";
             this.empEmailTxt.Size = new System.Drawing.Size(430, 41);
             this.empEmailTxt.TabIndex = 25;
+            this.empEmailTxt.TextChanged += new System.EventHandler(this.empEmailTxt_TextChanged);
             // 
             // label17
             // 

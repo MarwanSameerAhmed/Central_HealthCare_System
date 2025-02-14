@@ -128,7 +128,7 @@
             this.emailErorr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.emailErorr.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailErorr.ForeColor = System.Drawing.Color.Red;
-            this.emailErorr.Location = new System.Drawing.Point(349, 137);
+            this.emailErorr.Location = new System.Drawing.Point(349, 146);
             this.emailErorr.Name = "emailErorr";
             this.emailErorr.Size = new System.Drawing.Size(22, 27);
             this.emailErorr.TabIndex = 65;
@@ -151,7 +151,7 @@
             this.txtDoctorEmail.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorEmail.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorEmail.Location = new System.Drawing.Point(284, 167);
+            this.txtDoctorEmail.Location = new System.Drawing.Point(284, 176);
             this.txtDoctorEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDoctorEmail.Name = "txtDoctorEmail";
             this.txtDoctorEmail.PasswordChar = '\0';
@@ -161,6 +161,7 @@
             this.txtDoctorEmail.SelectedText = "";
             this.txtDoctorEmail.Size = new System.Drawing.Size(370, 33);
             this.txtDoctorEmail.TabIndex = 64;
+            this.txtDoctorEmail.TextChanged += new System.EventHandler(this.txtDoctorEmail_TextChanged);
             // 
             // label24
             // 
@@ -168,7 +169,7 @@
             this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label24.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label24.Location = new System.Drawing.Point(468, 138);
+            this.label24.Location = new System.Drawing.Point(468, 144);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(186, 25);
             this.label24.TabIndex = 63;
@@ -227,7 +228,7 @@
             this.txtDoctorTitle.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorTitle.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorTitle.ItemHeight = 30;
-            this.txtDoctorTitle.Location = new System.Drawing.Point(659, 170);
+            this.txtDoctorTitle.Location = new System.Drawing.Point(659, 179);
             this.txtDoctorTitle.Name = "txtDoctorTitle";
             this.txtDoctorTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDoctorTitle.Size = new System.Drawing.Size(363, 36);
@@ -242,7 +243,7 @@
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label22.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(464, 59);
+            this.label22.Location = new System.Drawing.Point(464, 56);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(186, 25);
             this.label22.TabIndex = 60;
@@ -295,7 +296,7 @@
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label15.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label15.Location = new System.Drawing.Point(834, 58);
+            this.label15.Location = new System.Drawing.Point(834, 55);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(186, 25);
             this.label15.TabIndex = 57;
@@ -311,7 +312,7 @@
             this.txtDoctorEmpDate.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorEmpDate.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorEmpDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtDoctorEmpDate.Location = new System.Drawing.Point(1026, 165);
+            this.txtDoctorEmpDate.Location = new System.Drawing.Point(1026, 174);
             this.txtDoctorEmpDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDoctorEmpDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtDoctorEmpDate.Name = "txtDoctorEmpDate";
@@ -325,7 +326,7 @@
             this.jobErorr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.jobErorr.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jobErorr.ForeColor = System.Drawing.Color.Red;
-            this.jobErorr.Location = new System.Drawing.Point(718, 139);
+            this.jobErorr.Location = new System.Drawing.Point(718, 148);
             this.jobErorr.Name = "jobErorr";
             this.jobErorr.Size = new System.Drawing.Size(22, 27);
             this.jobErorr.TabIndex = 44;
@@ -338,7 +339,7 @@
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label12.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(1095, 134);
+            this.label12.Location = new System.Drawing.Point(1095, 143);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(22, 27);
             this.label12.TabIndex = 41;
@@ -363,7 +364,7 @@
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label17.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(833, 138);
+            this.label17.Location = new System.Drawing.Point(833, 144);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(190, 25);
             this.label17.TabIndex = 36;
@@ -375,7 +376,7 @@
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label18.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(1241, 135);
+            this.label18.Location = new System.Drawing.Point(1241, 142);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(154, 25);
             this.label18.TabIndex = 37;
@@ -388,7 +389,7 @@
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label19.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label19.Location = new System.Drawing.Point(1276, 138);
+            this.label19.Location = new System.Drawing.Point(1276, 147);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(121, 23);
             this.label19.TabIndex = 34;
@@ -427,7 +428,7 @@
             this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label21.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label21.Location = new System.Drawing.Point(1211, 58);
+            this.label21.Location = new System.Drawing.Point(1211, 55);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(186, 25);
             this.label21.TabIndex = 32;
@@ -563,7 +564,7 @@
             this.gendertxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gendertxt.ForeColor = System.Drawing.Color.Black;
             this.gendertxt.ItemHeight = 30;
-            this.gendertxt.Location = new System.Drawing.Point(280, 159);
+            this.gendertxt.Location = new System.Drawing.Point(280, 170);
             this.gendertxt.Name = "gendertxt";
             this.gendertxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gendertxt.Size = new System.Drawing.Size(371, 36);
@@ -576,7 +577,7 @@
             this.gendererrorlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.gendererrorlbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gendererrorlbl.ForeColor = System.Drawing.Color.Red;
-            this.gendererrorlbl.Location = new System.Drawing.Point(308, 131);
+            this.gendererrorlbl.Location = new System.Drawing.Point(308, 142);
             this.gendererrorlbl.Name = "gendererrorlbl";
             this.gendererrorlbl.Size = new System.Drawing.Size(22, 27);
             this.gendererrorlbl.TabIndex = 52;
@@ -588,7 +589,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label5.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(524, 133);
+            this.label5.Location = new System.Drawing.Point(524, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 24);
             this.label5.TabIndex = 50;
@@ -611,7 +612,7 @@
             this.txtDoctorAddress.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorAddress.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorAddress.Location = new System.Drawing.Point(1028, 160);
+            this.txtDoctorAddress.Location = new System.Drawing.Point(1028, 171);
             this.txtDoctorAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDoctorAddress.Name = "txtDoctorAddress";
             this.txtDoctorAddress.PasswordChar = '\0';
@@ -639,7 +640,7 @@
             this.txtDoctorIDcard.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorIDcard.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorIDcard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorIDcard.Location = new System.Drawing.Point(656, 160);
+            this.txtDoctorIDcard.Location = new System.Drawing.Point(656, 171);
             this.txtDoctorIDcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDoctorIDcard.Name = "txtDoctorIDcard";
             this.txtDoctorIDcard.PasswordChar = '\0';
@@ -685,7 +686,7 @@
             this.IdError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.IdError.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdError.ForeColor = System.Drawing.Color.Red;
-            this.IdError.Location = new System.Drawing.Point(679, 131);
+            this.IdError.Location = new System.Drawing.Point(679, 142);
             this.IdError.Name = "IdError";
             this.IdError.Size = new System.Drawing.Size(22, 27);
             this.IdError.TabIndex = 47;
@@ -724,7 +725,7 @@
             this.addressErorr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.addressErorr.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressErorr.ForeColor = System.Drawing.Color.Red;
-            this.addressErorr.Location = new System.Drawing.Point(1095, 130);
+            this.addressErorr.Location = new System.Drawing.Point(1095, 141);
             this.addressErorr.Name = "addressErorr";
             this.addressErorr.Size = new System.Drawing.Size(22, 27);
             this.addressErorr.TabIndex = 44;
@@ -749,7 +750,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label7.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(544, 63);
+            this.label7.Location = new System.Drawing.Point(544, 59);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 22);
             this.label7.TabIndex = 40;
@@ -761,7 +762,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label6.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(901, 132);
+            this.label6.Location = new System.Drawing.Point(901, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 25);
             this.label6.TabIndex = 37;
@@ -773,7 +774,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label3.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(931, 60);
+            this.label3.Location = new System.Drawing.Point(931, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 25);
             this.label3.TabIndex = 36;
@@ -810,7 +811,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(1309, 132);
+            this.label2.Location = new System.Drawing.Point(1309, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 23);
             this.label2.TabIndex = 34;
@@ -822,7 +823,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label1.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(1270, 60);
+            this.label1.Location = new System.Drawing.Point(1270, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 25);
             this.label1.TabIndex = 32;
@@ -956,7 +957,7 @@
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label13.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(520, 60);
+            this.label13.Location = new System.Drawing.Point(520, 57);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(125, 30);
             this.label13.TabIndex = 32;
@@ -968,7 +969,7 @@
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label11.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(898, 60);
+            this.label11.Location = new System.Drawing.Point(898, 57);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(125, 30);
             this.label11.TabIndex = 32;
@@ -980,7 +981,7 @@
             this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label30.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(1270, 60);
+            this.label30.Location = new System.Drawing.Point(1270, 57);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(125, 25);
             this.label30.TabIndex = 32;
