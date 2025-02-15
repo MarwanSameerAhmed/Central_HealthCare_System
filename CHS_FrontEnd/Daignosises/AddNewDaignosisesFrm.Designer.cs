@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ContainerControl4 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.createBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label18 = new System.Windows.Forms.Label();
             this.employmentDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.symptomsTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -92,6 +94,7 @@
             this.guna2ContainerControl4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl4.BackColor = System.Drawing.Color.White;
             this.guna2ContainerControl4.BorderRadius = 15;
+            this.guna2ContainerControl4.Controls.Add(this.createBtn);
             this.guna2ContainerControl4.Controls.Add(this.label18);
             this.guna2ContainerControl4.Controls.Add(this.employmentDate);
             this.guna2ContainerControl4.Controls.Add(this.label15);
@@ -99,12 +102,30 @@
             this.guna2ContainerControl4.Controls.Add(this.label14);
             this.guna2ContainerControl4.Controls.Add(this.symptomsTxt);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(610, 84);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(614, 85);
             this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(573, 495);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(573, 405);
             this.guna2ContainerControl4.TabIndex = 7;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
+            // 
+            // createBtn
+            // 
+            this.createBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.createBtn.BorderRadius = 15;
+            this.createBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.createBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.createBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.createBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.createBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createBtn.ForeColor = System.Drawing.Color.White;
+            this.createBtn.Location = new System.Drawing.Point(17, 112);
+            this.createBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.createBtn.Name = "createBtn";
+            this.createBtn.Size = new System.Drawing.Size(171, 47);
+            this.createBtn.TabIndex = 42;
+            this.createBtn.Text = "إضافة";
             // 
             // label18
             // 
@@ -112,7 +133,7 @@
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label18.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(321, 387);
+            this.label18.Location = new System.Drawing.Point(321, 299);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(240, 39);
@@ -131,12 +152,12 @@
             this.employmentDate.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employmentDate.ForeColor = System.Drawing.Color.Black;
             this.employmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.employmentDate.Location = new System.Drawing.Point(42, 429);
+            this.employmentDate.Location = new System.Drawing.Point(17, 343);
             this.employmentDate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.employmentDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.employmentDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.employmentDate.Name = "employmentDate";
-            this.employmentDate.Size = new System.Drawing.Size(511, 47);
+            this.employmentDate.Size = new System.Drawing.Size(536, 47);
             this.employmentDate.TabIndex = 26;
             this.employmentDate.Value = new System.DateTime(2024, 12, 14, 21, 13, 20, 682);
             // 
@@ -162,20 +183,20 @@
             this.diseasesContainer.BorderRadius = 15;
             this.diseasesContainer.Controls.Add(this.flowLayoutPanel3);
             this.diseasesContainer.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diseasesContainer.Location = new System.Drawing.Point(17, 169);
+            this.diseasesContainer.Location = new System.Drawing.Point(17, 170);
             this.diseasesContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.diseasesContainer.Name = "diseasesContainer";
-            this.diseasesContainer.Size = new System.Drawing.Size(536, 203);
+            this.diseasesContainer.Size = new System.Drawing.Size(536, 114);
             this.diseasesContainer.TabIndex = 39;
             this.diseasesContainer.Text = "guna2ContainerControl6";
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(18, 4);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(8, 4);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(504, 196);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(519, 101);
             this.flowLayoutPanel3.TabIndex = 1;
             // 
             // label14
@@ -184,7 +205,7 @@
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label14.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(324, 70);
+            this.label14.Location = new System.Drawing.Point(318, 70);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(237, 40);
             this.label14.TabIndex = 35;
@@ -205,7 +226,7 @@
             this.symptomsTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.symptomsTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.symptomsTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.symptomsTxt.Location = new System.Drawing.Point(17, 112);
+            this.symptomsTxt.Location = new System.Drawing.Point(193, 112);
             this.symptomsTxt.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.symptomsTxt.Name = "symptomsTxt";
             this.symptomsTxt.PasswordChar = '\0';
@@ -213,7 +234,7 @@
             this.symptomsTxt.PlaceholderText = "ادخل الاعراض للمريض";
             this.symptomsTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.symptomsTxt.SelectedText = "";
-            this.symptomsTxt.Size = new System.Drawing.Size(536, 47);
+            this.symptomsTxt.Size = new System.Drawing.Size(360, 47);
             this.symptomsTxt.TabIndex = 36;
             // 
             // guna2ContainerControl1
@@ -221,6 +242,7 @@
             this.guna2ContainerControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl1.BackColor = System.Drawing.Color.White;
             this.guna2ContainerControl1.BorderRadius = 15;
+            this.guna2ContainerControl1.Controls.Add(this.guna2Button4);
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.Controls.Add(this.guna2DateTimePicker1);
             this.guna2ContainerControl1.Controls.Add(this.label2);
@@ -228,12 +250,30 @@
             this.guna2ContainerControl1.Controls.Add(this.label3);
             this.guna2ContainerControl1.Controls.Add(this.testsTxt);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(17, 84);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(21, 85);
             this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(573, 495);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(573, 405);
             this.guna2ContainerControl1.TabIndex = 40;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Button4.BorderRadius = 15;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Location = new System.Drawing.Point(25, 111);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(173, 47);
+            this.guna2Button4.TabIndex = 43;
+            this.guna2Button4.Text = "إضافة";
             // 
             // label1
             // 
@@ -241,7 +281,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label1.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(347, 385);
+            this.label1.Location = new System.Drawing.Point(347, 299);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(214, 39);
@@ -260,12 +300,12 @@
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.Black;
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(43, 429);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(25, 343);
             this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(511, 47);
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(529, 47);
             this.guna2DateTimePicker1.TabIndex = 26;
             this.guna2DateTimePicker1.Value = new System.DateTime(2024, 12, 14, 21, 13, 20, 682);
             // 
@@ -294,7 +334,7 @@
             this.guna2ContainerControl2.Location = new System.Drawing.Point(25, 167);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(528, 203);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(528, 116);
             this.guna2ContainerControl2.TabIndex = 39;
             this.guna2ContainerControl2.Text = "guna2ContainerControl6";
             // 
@@ -304,7 +344,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 4);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(490, 196);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(490, 104);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label3
@@ -334,7 +374,7 @@
             this.testsTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.testsTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testsTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.testsTxt.Location = new System.Drawing.Point(25, 110);
+            this.testsTxt.Location = new System.Drawing.Point(203, 111);
             this.testsTxt.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.testsTxt.Name = "testsTxt";
             this.testsTxt.PasswordChar = '\0';
@@ -342,7 +382,7 @@
             this.testsTxt.PlaceholderText = "اضف الفحوصات للمريض";
             this.testsTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.testsTxt.SelectedText = "";
-            this.testsTxt.Size = new System.Drawing.Size(528, 47);
+            this.testsTxt.Size = new System.Drawing.Size(350, 47);
             this.testsTxt.TabIndex = 36;
             // 
             // guna2ContainerControl6
@@ -363,10 +403,10 @@
             this.guna2ContainerControl6.Controls.Add(this.guna2ContainerControl5);
             this.guna2ContainerControl6.Controls.Add(this.label5);
             this.guna2ContainerControl6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl6.Location = new System.Drawing.Point(17, 590);
+            this.guna2ContainerControl6.Location = new System.Drawing.Point(21, 502);
             this.guna2ContainerControl6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2ContainerControl6.Name = "guna2ContainerControl6";
-            this.guna2ContainerControl6.Size = new System.Drawing.Size(1166, 491);
+            this.guna2ContainerControl6.Size = new System.Drawing.Size(1166, 492);
             this.guna2ContainerControl6.TabIndex = 42;
             this.guna2ContainerControl6.Text = "guna2ContainerControl6";
             // 
@@ -380,7 +420,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Green;
             this.guna2Button2.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(171, 113);
+            this.guna2Button2.Location = new System.Drawing.Point(171, 114);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(102, 49);
@@ -398,10 +438,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2Button1.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(25, 111);
+            this.guna2Button1.Location = new System.Drawing.Point(25, 114);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(140, 50);
+            this.guna2Button1.Size = new System.Drawing.Size(140, 47);
             this.guna2Button1.TabIndex = 43;
             this.guna2Button1.Text = "إضافة";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -504,7 +544,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label8.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(278, 67);
+            this.label8.Location = new System.Drawing.Point(278, 68);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(240, 39);
@@ -518,7 +558,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label7.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(730, 67);
+            this.label7.Location = new System.Drawing.Point(730, 68);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(206, 39);
@@ -532,7 +572,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label6.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(486, 67);
+            this.label6.Location = new System.Drawing.Point(486, 68);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(240, 39);
@@ -546,7 +586,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label4.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(906, 67);
+            this.label4.Location = new System.Drawing.Point(906, 68);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(240, 39);
@@ -585,19 +625,19 @@
             // 
             this.gunaDataGridView1.AllowUserToAddRows = false;
             this.gunaDataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gunaDataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gunaDataGridView1.ColumnHeadersHeight = 25;
             this.gunaDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gunaDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -605,28 +645,28 @@
             this.medDOS,
             this.MedTime,
             this.midDra});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.gunaDataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gunaDataGridView1.GridColor = System.Drawing.Color.Gray;
             this.gunaDataGridView1.Location = new System.Drawing.Point(18, 27);
             this.gunaDataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gunaDataGridView1.Name = "gunaDataGridView1";
             this.gunaDataGridView1.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Traditional Arabic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gunaDataGridView1.RowHeadersVisible = false;
             this.gunaDataGridView1.RowHeadersWidth = 51;
             this.gunaDataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -710,7 +750,7 @@
             this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2Button3.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(456, 158);
+            this.guna2Button3.Location = new System.Drawing.Point(456, 171);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(280, 50);
@@ -730,13 +770,12 @@
             this.guna2ContainerControl7.Controls.Add(this.label12);
             this.guna2ContainerControl7.Controls.Add(this.guna2TextBox1);
             this.guna2ContainerControl7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl7.Location = new System.Drawing.Point(17, 1094);
+            this.guna2ContainerControl7.Location = new System.Drawing.Point(21, 1001);
             this.guna2ContainerControl7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2ContainerControl7.Name = "guna2ContainerControl7";
             this.guna2ContainerControl7.Size = new System.Drawing.Size(1166, 237);
             this.guna2ContainerControl7.TabIndex = 40;
             this.guna2ContainerControl7.Text = "guna2ContainerControl7";
-            this.guna2ContainerControl7.Click += new System.EventHandler(this.guna2ContainerControl7_Click);
             // 
             // label9
             // 
@@ -744,7 +783,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label9.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(333, 70);
+            this.label9.Location = new System.Drawing.Point(347, 71);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(240, 30);
@@ -763,15 +802,14 @@
             this.guna2DateTimePicker2.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePicker2.ForeColor = System.Drawing.Color.Black;
             this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(15, 103);
+            this.guna2DateTimePicker2.Location = new System.Drawing.Point(15, 113);
             this.guna2DateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(574, 38);
+            this.guna2DateTimePicker2.Size = new System.Drawing.Size(574, 37);
             this.guna2DateTimePicker2.TabIndex = 26;
             this.guna2DateTimePicker2.Value = new System.DateTime(2024, 12, 14, 21, 13, 20, 682);
-            this.guna2DateTimePicker2.ValueChanged += new System.EventHandler(this.guna2DateTimePicker2_ValueChanged);
             // 
             // label11
             // 
@@ -794,7 +832,7 @@
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label12.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(917, 72);
+            this.label12.Location = new System.Drawing.Point(910, 71);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(237, 26);
             this.label12.TabIndex = 35;
@@ -815,7 +853,7 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(594, 101);
+            this.guna2TextBox1.Location = new System.Drawing.Point(594, 113);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
@@ -823,7 +861,7 @@
             this.guna2TextBox1.PlaceholderText = "ادخل الاعراض للمريض";
             this.guna2TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(552, 38);
+            this.guna2TextBox1.Size = new System.Drawing.Size(552, 37);
             this.guna2TextBox1.TabIndex = 36;
             // 
             // guna2ContainerControl9
@@ -832,7 +870,7 @@
             this.guna2ContainerControl9.BorderRadius = 15;
             this.guna2ContainerControl9.Controls.Add(this.label16);
             this.guna2ContainerControl9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl9.Location = new System.Drawing.Point(17, 12);
+            this.guna2ContainerControl9.Location = new System.Drawing.Point(21, 20);
             this.guna2ContainerControl9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2ContainerControl9.Name = "guna2ContainerControl9";
             this.guna2ContainerControl9.Size = new System.Drawing.Size(1166, 55);
@@ -846,7 +884,7 @@
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label16.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(485, -3);
+            this.label16.Location = new System.Drawing.Point(485, -1);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(215, 52);
@@ -938,5 +976,7 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl9;
         private System.Windows.Forms.Label label16;
+        private Guna.UI2.WinForms.Guna2Button createBtn;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
     }
 }

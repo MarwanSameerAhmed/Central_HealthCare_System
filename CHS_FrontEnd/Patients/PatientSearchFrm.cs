@@ -155,6 +155,8 @@ namespace CHS_FrontEnd
                         
 
                     );
+
+
                     OpenForm(patientDetailsPage);
                 }
             }

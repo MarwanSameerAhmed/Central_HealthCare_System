@@ -295,26 +295,6 @@ namespace CHS_FrontEnd
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void guna2ContainerControl7_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-
-        }
-
-        private void guna2ContainerControl8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2DateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
 
         }
     }

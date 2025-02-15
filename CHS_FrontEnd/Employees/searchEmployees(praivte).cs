@@ -114,8 +114,8 @@ namespace CHS_FrontEnd
         {
             if (e.RowIndex >= 0)
             {
-                EmployeeViwerFrm fr = new EmployeeViwerFrm();
-                fr.Show();
+               // EmployeeViwerFrm fr = new EmployeeViwerFrm();
+              //  fr.Show();
             }
         }
     }

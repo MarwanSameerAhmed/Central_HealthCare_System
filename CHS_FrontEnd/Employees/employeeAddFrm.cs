@@ -166,7 +166,8 @@ namespace CHS_FrontEnd
     (passwordtxt, label13, "يرجى إدخال كلمة المرور *"),
  
      (empEmailTxt, emaillbl, "يرجى إدخال الايميل للموظف*"),
-     
+      (empNationalIDtxt, nationallblerror, "يرجى إدخال رقم الهوية للموظف*")
+
 
 };
 

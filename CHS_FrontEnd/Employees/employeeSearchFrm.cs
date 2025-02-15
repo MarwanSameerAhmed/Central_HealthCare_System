@@ -37,8 +37,10 @@ namespace CHS_FrontEnd
             empPhoneSearchtxt.TextChanged += SearchFields_TextChanged;
             ApplyEventsToTextBoxes(guna2ContainerControl1);
             UpdateScrollBar();
+           
+
         }
-      
+
 
         private void searchEmpView_ValueChanged(object sender, EventArgs e)
         {
@@ -91,23 +93,15 @@ namespace CHS_FrontEnd
             }
         }
 
-        private void searchEmpView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
 
-            }
-        }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
             try
             {
-
                 string EmployeeNumber = empEmployeeIDtxt.Text.Trim();
                 string EmployeeName = empNametxt.Text.Trim();
                 string Employeephone = empPhoneSearchtxt.Text.Trim();
-
 
                 int searchType;
                 string searchValue;
@@ -133,7 +127,6 @@ namespace CHS_FrontEnd
                     return;
                 }
 
-
                 SearchEmployeesFilesRequest request = new SearchEmployeesFilesRequest
                 {
                     SearchType = searchType,
@@ -141,58 +134,36 @@ namespace CHS_FrontEnd
                     RequestID = Guid.NewGuid().ToString()
                 };
 
-
                 SearchEmployeesFilesResponse response = RequestSender.SendRequest<SearchEmployeesFilesRequest, SearchEmployeesFilesResponse>(request);
 
                 if (response.EmployeeFiles != null && response.EmployeeFiles.Count > 0)
                 {
-                    var formattedData = response.EmployeeFiles.Select(p => new
-                    {
-                        empName = p.EmployeeName,
-                        EmployeeJobTitle = p.EmployeeJobTitle,
-                        EmployeePhoneNumber = string.Join(", ", p.EmployeePhoneNumber),
-                        EmployementDate = p.EmployeeEmployementDate,
-
-
-                        IDCardNumber = p.EmployeeIDCardNumber,
-                        BirthDate = p.EmployeeBirthData,
-                        IsMale = p.EmployeeIsMale,
-                        EmployeeNumber = p.EmployeeNumber,
-                        EmployeeEmails = p.EmployeeEmail,
-
-                        
-                    }).ToList();
-
-
                     searchEmpView.Rows.Clear();
 
-                    foreach (var item in formattedData)
+                    foreach (var employee in response.EmployeeFiles)
                     {
                         int rowIndex = searchEmpView.Rows.Add();
-                        searchEmpView.Rows[rowIndex].Cells["empName"].Value = item.empName;
-                        searchEmpView.Rows[rowIndex].Cells["empType"].Value = item.EmployeeJobTitle;
-                        searchEmpView.Rows[rowIndex].Cells["empNumber"].Value = item.EmployeePhoneNumber;
-                        searchEmpView.Rows[rowIndex].Cells["empIDNumber"].Value = item.EmployeeNumber;
+                        searchEmpView.Rows[rowIndex].Cells["empName"].Value = employee.EmployeeName;
+                        searchEmpView.Rows[rowIndex].Cells["empType"].Value = employee.EmployeeJobTitle;
+                        searchEmpView.Rows[rowIndex].Cells["empNumber"].Value = string.Join(", ", employee.EmployeePhoneNumber);
+                        searchEmpView.Rows[rowIndex].Cells["empIDNumber"].Value = employee.EmployeeNumber;
 
-
-                        searchEmpView.Rows[rowIndex].Tag = item;
+                        // ✅ تخزين بيانات الموظف بالكامل في Tag
+                        searchEmpView.Rows[rowIndex].Tag = employee;
                     }
-
                 }
-
                 else
                 {
-                    MessageBox.Show("لم يتم العثور على أي مريض.", "نتيجة البحث", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    searchEmpView.DataSource = null;
+                    MessageBox.Show("لم يتم العثور على أي موظف.", "نتيجة البحث", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    searchEmpView.Rows.Clear();
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"خطأ أثناء البحث: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
         private void SearchFields_TextChanged(object sender, EventArgs e)
         {
 
@@ -236,6 +207,8 @@ namespace CHS_FrontEnd
         }
 
 
+
+
         private void Guna2TextBox_Leave(object sender, EventArgs e)
         {
             Guna2TextBox textBox = sender as Guna2TextBox;
@@ -245,9 +218,24 @@ namespace CHS_FrontEnd
             }
         }
 
-        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
 
+        private EmployeeViwerFrm editForm;
+        private void searchEmpView_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && searchEmpView.Rows[e.RowIndex].Tag is EmployeeFile employee)
+            {
+                if (editForm == null || editForm.IsDisposed)
+                {
+                    editForm = new EmployeeViwerFrm();
+                    editForm.LoadEmployeeData(employee);
+                    editForm.Show();
+                }
+                else
+                {
+                    editForm.Focus();
+                }
+            }
         }
     }
-}
+    }
+

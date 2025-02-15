@@ -208,7 +208,7 @@ namespace CHS_FrontEnd
                     UserRole = response.UserRole;
 
                     DialogResult = DialogResult.OK;
-                return;
+                    return;
                 }
                 else if (!(response is null) && response.ResponseCode == "2")
                 {

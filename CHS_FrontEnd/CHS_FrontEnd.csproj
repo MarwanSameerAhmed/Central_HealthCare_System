@@ -184,6 +184,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomMassages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMassages.Designer.cs">
+      <DependentUpon>CustomMassages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Daignosises\AddNewDaignosisesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -514,6 +520,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\sub1.sql" />
+    <None Include="Resources\Animation - 1739555645304.gif" />
+    <None Include="Resources\Animation - 1739555522635.gif" />
+    <None Include="Resources\Animation - 1739555180638.gif" />
+    <None Include="Resources\icons8-email-100.png" />
+    <None Include="Resources\icons8-phone-number-100.png" />
+    <None Include="Resources\icons8-username-80.png" />
+    <None Include="Resources\icons8-password-58.png" />
+    <None Include="Resources\icons8-username-96.png" />
+    <None Include="Resources\icons8-username-100.png" />
+    <None Include="Resources\icons8-id-card-96.png" />
+    <None Include="Resources\icons8-id-card-64.png" />
+    <None Include="Resources\icons8-name-80.png" />
+    <None Include="Resources\icons8-name.gif" />
+    <None Include="Resources\Animation - 1739551541283.gif" />
     <None Include="Resources\icons8-expand-arrow-64 %281%29.png" />
     <None Include="Resources\icons8-expand-arrow-64 %282%29.png" />
   </ItemGroup>
