@@ -262,6 +262,12 @@
     <Compile Include="Patients\PatientFileViewrFrm.Designer.cs">
       <DependentUpon>PatientFileViewrFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pharmacy\PharmacyMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pharmacy\PharmacyMainFrm.Designer.cs">
+      <DependentUpon>PharmacyMainFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="QrFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -395,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pharmacy\PharmacyMainFrm.resx">
+      <DependentUpon>PharmacyMainFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,9 +1,16 @@
-﻿using Guna.UI2.WinForms;
+﻿//using CHS_FrontEnd.Translation;
+using Guna.UI2.WinForms;
 using Guna.UI2.WinForms.Enums;
 using System;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
+using CHS_FrontEnd.Properties;
+using System.ComponentModel;
+using CHS_FrontEnd;
 
 namespace CHS.Client
 {
@@ -14,15 +21,13 @@ namespace CHS.Client
         public LIMBsFrm(DockPanel dockPanel)
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
             this.dockPanel = dockPanel;
-
             guna2VScrollBar1.Scroll += Guna2VScrollBar1_Scroll;
+            setTranslation();
         }
 
         private void LIMBsFrm_Load(object sender, EventArgs e)
         {
-      
             SyncScrollbar();
             PopulateData();
             testsGridView.MouseWheel += testsGridView_MouseWheel;
@@ -51,35 +56,35 @@ namespace CHS.Client
             testsGridView.Rows.Add("3", "Urine", "Creatinine");
             testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
             testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            testsGridView.Rows.Add("2", "Skin", "Melanin");
-            testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            testsGridView.Rows.Add("2", "Skin", "Melanin");
-            testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            testsGridView.Rows.Add("2", "Skin", "Melanin");
-            testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            testsGridView.Rows.Add("2", "Skin", "Melanin");
-            testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            testsGridView.Rows.Add("2", "Skin", "Melanin");
-            testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            testsGridView.Rows.Add("2", "Skin", "Melanin");
-            testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
+            //testsGridView.Rows.Add("2", "Skin", "Melanin");
+            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
+            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
+            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
+            //testsGridView.Rows.Add("2", "Skin", "Melanin");
+            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
+            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
+            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
+            //testsGridView.Rows.Add("2", "Skin", "Melanin");
+            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
+            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
+            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
+            //testsGridView.Rows.Add("2", "Skin", "Melanin");
+            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
+            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
+            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
+            //testsGridView.Rows.Add("2", "Skin", "Melanin");
+            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
+            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
+            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
+            //testsGridView.Rows.Add("2", "Skin", "Melanin");
+            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
+            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
 
             // Sync scrollbar after data update
             SyncScrollbar();
         }
 
-       
+
 
         private void testsGridView_MouseWheel(object sender, MouseEventArgs e)
         {
@@ -99,10 +104,10 @@ namespace CHS.Client
             if (totalRows > 0 && displayedRows > 0)
             {
                 guna2VScrollBar1.Minimum = 0;
-                guna2VScrollBar1.Maximum = totalRows - 1; 
+                guna2VScrollBar1.Maximum = totalRows - 1;
                 guna2VScrollBar1.LargeChange = displayedRows; // Number of rows visible at once
                 guna2VScrollBar1.SmallChange = 1; // Scroll one row at a time
-                guna2VScrollBar1.Enabled = totalRows > displayedRows; 
+                guna2VScrollBar1.Enabled = totalRows > displayedRows;
             }
             else
             {
@@ -135,5 +140,31 @@ namespace CHS.Client
         {
 
         }
+
+        private void setTranslation()
+        {
+            //limbsHeader.Text = Resource.limbsHeader;
+            //searchForpatientLabel.Text = Resource.searchForpatientLabel;
+            //midSearchtxt.PlaceholderText = Resource.medicalNumber;
+            //phoneSearchtxt.PlaceholderText = Resource.phoneNumber;
+            //nationalSearchtxt.PlaceholderText = Resource.idNumber;
+            //orLabel.Text = Resource.or;
+            //orLabel2.Text = Resource.or;
+            //patientDataLabel.Text = Resource.patientData;
+            //patientNameLabel.Text = Resource.patientName;
+            //patientGenderLabel.Text = Resource.gender;
+            //patientAgeLabel.Text = Resource.age;
+            //newTestButton.Text = Resource.addNewTest;
+
+            //// grid view columns
+            //testsGridView.Columns["testNum"].HeaderText = Resource.testNum;
+            //testsGridView.Columns["category"].HeaderText = Resource.category;
+            //testsGridView.Columns["testName"].HeaderText = Resource.testName;
+            //testsGridView.Columns["testResults"].HeaderText = Resource.testResults;
+
+        }
+
+        
     }
+
 }
