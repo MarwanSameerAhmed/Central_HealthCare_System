@@ -262,6 +262,11 @@
     <Compile Include="Patients\PatientFileViewrFrm.Designer.cs">
       <DependentUpon>PatientFileViewrFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="QrFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,14 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="QrFrm.resx">
       <DependentUpon>QrFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -433,54 +433,50 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\Animation - 1739551541283.gif" />
+    <None Include="Resources\Animation - 1739555180638.gif" />
+    <None Include="Resources\Animation - 1739555522635.gif" />
+    <None Include="Resources\Animation - 1739555645304.gif" />
+    <None Include="Resources\applicant-employee.png" />
+    <None Include="Resources\doctor-consultation.png" />
+    <None Include="Resources\doctor-consultation1.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\employees.png" />
+    <None Include="Resources\employees1.png" />
+    <None Include="Resources\HEATHCARE-0١ %282%29.jpg" />
+    <None Include="Resources\HEATHCARE-0١.png" />
+    <None Include="Resources\home %281%29.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\icons8-add-64.png" />
+    <None Include="Resources\icons8-email-100.png" />
+    <None Include="Resources\icons8-expand-arrow-64 %281%29.png" />
+    <None Include="Resources\icons8-expand-arrow-64 %282%29.png" />
+    <None Include="Resources\icons8-id-card-64.png" />
+    <None Include="Resources\icons8-id-card-96.png" />
+    <None Include="Resources\icons8-name-80.png" />
+    <None Include="Resources\icons8-name.gif" />
+    <None Include="Resources\icons8-password-58.png" />
+    <None Include="Resources\icons8-phone-number-100.png" />
+    <None Include="Resources\icons8-username-100.png" />
+    <None Include="Resources\icons8-username-80.png" />
+    <None Include="Resources\icons8-username-96.png" />
+    <None Include="Resources\job-search.png" />
     <None Include="Resources\Leonardo_Phoenix_A_modern_minimalist_logo_design_for_the_Centr_3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\medical1.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\padlock %281%29.png" />
+    <None Include="Resources\padlock %281%291.png" />
+    <None Include="Resources\padlock.png" />
     <None Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\padlock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\padlock %281%29.png" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\padlock %281%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\medical1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doctor-consultation.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\employees.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doctor-consultation1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\employees1.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -495,24 +491,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-add-64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\job-search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\employee.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\applicant-employee.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HEATHCARE-0١ %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HEATHCARE-0١.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CHS.Client.API\CHS.Client.API.csproj">
       <Project>{fe50c20f-457b-4696-b0a6-5cad951ae294}</Project>
       <Name>CHS.Client.API</Name>
@@ -520,22 +498,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\sub1.sql" />
-    <None Include="Resources\Animation - 1739555645304.gif" />
-    <None Include="Resources\Animation - 1739555522635.gif" />
-    <None Include="Resources\Animation - 1739555180638.gif" />
-    <None Include="Resources\icons8-email-100.png" />
-    <None Include="Resources\icons8-phone-number-100.png" />
-    <None Include="Resources\icons8-username-80.png" />
-    <None Include="Resources\icons8-password-58.png" />
-    <None Include="Resources\icons8-username-96.png" />
-    <None Include="Resources\icons8-username-100.png" />
-    <None Include="Resources\icons8-id-card-96.png" />
-    <None Include="Resources\icons8-id-card-64.png" />
-    <None Include="Resources\icons8-name-80.png" />
-    <None Include="Resources\icons8-name.gif" />
-    <None Include="Resources\Animation - 1739551541283.gif" />
-    <None Include="Resources\icons8-expand-arrow-64 %281%29.png" />
-    <None Include="Resources\icons8-expand-arrow-64 %282%29.png" />
+    <Content Include="Resources\add-user.png" />
+    <Content Include="Resources\arrow.png" />
+    <Content Include="Resources\business.png" />
+    <Content Include="Resources\Decrease_Icon.png" />
+    <Content Include="Resources\HEATHCARE-0١ %281%29.jpg" />
+    <Content Include="Resources\HEATHCARE-0١ %281%29.png" />
+    <Content Include="Resources\HEATHCARE-0١.jpg" />
+    <None Include="Resources\icons8-address-100.png" />
+    <Content Include="Resources\icons8-chevron-down-80.png" />
+    <Content Include="Resources\icons8-expand-arrow-64.png" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\icons8-id-card-50.png" />
+    <None Include="Resources\icons8-phone-80.png" />
+    <None Include="Resources\icons8-guardian-100.png" />
+    <Content Include="Resources\Increase_Icon.png" />
+    <Content Include="Resources\medical.png" />
+    <Content Include="Resources\ooooooooooooooooooooooooooooooooooo.png" />
+    <Content Include="Resources\participant.png" />
+    <Content Include="Resources\pin-code.png" />
+    <Content Include="Resources\talent-management.png" />
+    <Content Include="Resources\welfare.png" />
+    <Content Include="Resources\yemen_political_map.png.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

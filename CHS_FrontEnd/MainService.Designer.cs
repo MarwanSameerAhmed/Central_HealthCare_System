@@ -47,7 +47,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.HEATHCARE_0١__2_2;
+            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.HEATHCARE_0١__2_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1226, 668);

@@ -451,7 +451,6 @@
             this.empPhoneNumbertxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empPhoneNumbertxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empPhoneNumbertxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empPhoneNumbertxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_phone_number_1001;
             this.empPhoneNumbertxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.empPhoneNumbertxt.IconRightSize = new System.Drawing.Size(30, 30);
             this.empPhoneNumbertxt.Location = new System.Drawing.Point(37, 108);
@@ -480,7 +479,7 @@
             this.empEmailTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empEmailTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empEmailTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empEmailTxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_email_1001;
+            this.empEmailTxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_email_100;
             this.empEmailTxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.empEmailTxt.IconRightSize = new System.Drawing.Size(30, 30);
             this.empEmailTxt.Location = new System.Drawing.Point(35, 303);
@@ -621,7 +620,7 @@
             this.empNationalIDtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empNationalIDtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empNationalIDtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empNationalIDtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_id_card_961;
+            this.empNationalIDtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_add_64;
             this.empNationalIDtxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.empNationalIDtxt.IconRightSize = new System.Drawing.Size(25, 25);
             this.empNationalIDtxt.Location = new System.Drawing.Point(64, 209);
@@ -762,7 +761,7 @@
             this.empFullNametxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.empFullNametxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empFullNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empFullNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_name_801;
+            this.empFullNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_name_80;
             this.empFullNametxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.empFullNametxt.IconRightSize = new System.Drawing.Size(25, 25);
             this.empFullNametxt.Location = new System.Drawing.Point(64, 111);

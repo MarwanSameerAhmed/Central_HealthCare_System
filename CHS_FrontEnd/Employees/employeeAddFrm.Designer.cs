@@ -1,4 +1,6 @@
-﻿namespace CHS_FrontEnd
+﻿using CHS_FrontEnd.Properties;
+
+namespace CHS_FrontEnd
 {
     partial class employeeAddFrm
     {
@@ -196,7 +198,7 @@
             this.empNationalIDtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empNationalIDtxt.ForeColor = System.Drawing.Color.Black;
             this.empNationalIDtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empNationalIDtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_id_card_96;
+            this.empNationalIDtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_add_64;
             this.empNationalIDtxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.empNationalIDtxt.IconRightSize = new System.Drawing.Size(25, 25);
             this.empNationalIDtxt.Location = new System.Drawing.Point(102, 100);
@@ -412,7 +414,6 @@
             this.empPhoneNumbertxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empPhoneNumbertxt.ForeColor = System.Drawing.Color.Black;
             this.empPhoneNumbertxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empPhoneNumbertxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_phone_number_100;
             this.empPhoneNumbertxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.empPhoneNumbertxt.IconRightSize = new System.Drawing.Size(35, 35);
             this.empPhoneNumbertxt.Location = new System.Drawing.Point(23, 99);

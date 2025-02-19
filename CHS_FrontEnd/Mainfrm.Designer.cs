@@ -199,7 +199,7 @@
             this.Patientman2SubBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(117)))), ((int)(((byte)(186)))));
             this.Patientman2SubBtn.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Patientman2SubBtn.ForeColor = System.Drawing.Color.White;
-            this.Patientman2SubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_1;
+            this.Patientman2SubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_;
             this.Patientman2SubBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Patientman2SubBtn.Location = new System.Drawing.Point(56, 1305);
             this.Patientman2SubBtn.Name = "Patientman2SubBtn";
@@ -235,7 +235,7 @@
             this.LabSubBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(117)))), ((int)(((byte)(186)))));
             this.LabSubBtn.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabSubBtn.ForeColor = System.Drawing.Color.White;
-            this.LabSubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_1;
+            this.LabSubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_;
             this.LabSubBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.LabSubBtn.Location = new System.Drawing.Point(56, 677);
             this.LabSubBtn.Name = "LabSubBtn";
@@ -253,7 +253,7 @@
             this.EmployeeSubBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(117)))), ((int)(((byte)(186)))));
             this.EmployeeSubBtn.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeSubBtn.ForeColor = System.Drawing.Color.White;
-            this.EmployeeSubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_1;
+            this.EmployeeSubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_;
             this.EmployeeSubBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.EmployeeSubBtn.Location = new System.Drawing.Point(56, 522);
             this.EmployeeSubBtn.Name = "EmployeeSubBtn";
@@ -271,7 +271,7 @@
             this.patientManagementSubBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(117)))), ((int)(((byte)(186)))));
             this.patientManagementSubBtn.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientManagementSubBtn.ForeColor = System.Drawing.Color.White;
-            this.patientManagementSubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_1;
+            this.patientManagementSubBtn.Image = global::CHS_FrontEnd.Properties.Resources.icons8_expand_arrow_64__1_;
             this.patientManagementSubBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.patientManagementSubBtn.Location = new System.Drawing.Point(56, 365);
             this.patientManagementSubBtn.Name = "patientManagementSubBtn";
@@ -909,7 +909,7 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.HEATHCARE_0١__2_1;
+            this.guna2PictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.HEATHCARE_0١__2_;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(-82, -31);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
