@@ -528,7 +528,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\sub1.sql" />
+    <Content Include="Database\GenerateTables.sql" />
     <None Include="Resources\Animation - 1739555645304.gif" />
     <None Include="Resources\Animation - 1739555522635.gif" />
     <None Include="Resources\Animation - 1739555180638.gif" />
