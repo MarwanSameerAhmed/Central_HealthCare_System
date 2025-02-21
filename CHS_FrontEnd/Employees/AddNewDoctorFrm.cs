@@ -23,6 +23,7 @@ namespace CHS_FrontEnd
             ConfigureComboBox();
             ConfigureComboBoxTile();
             SetupEmailAutocomplete();
+            ConfigureComboBoxTileMedSpe();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace CHS_FrontEnd
             ApplyEventsToTextBoxes(guna2ContainerControl2);
             ApplyEventsToTextBoxes(guna2ContainerControl4);
             ApplyEventsToTextBoxes(guna2ContainerControl1);
-         
+
         }
 
         private void SetupEmailAutocomplete()
@@ -60,8 +61,8 @@ namespace CHS_FrontEnd
 };
 
             gendertxt.DataSource = genderList;
-            gendertxt.DisplayMember = "Key"; 
-            gendertxt.ValueMember = "Value";  
+            gendertxt.DisplayMember = "Key";
+            gendertxt.ValueMember = "Value";
         }
 
         private async void createBtn_Click(object sender, EventArgs e)
@@ -75,15 +76,16 @@ namespace CHS_FrontEnd
         (txtDoctorUserName, userErorr, "يرجى إدخال اسم المستخدم*"),
         (txtDoctorPassword, passswordErorr, "يرجى إدخال كلمة السر *"),
         (txtDoctorIDcard, IdError, "يرجى إدخال رقم الهوية *"),
-        (txtMedicalSpecialization, MedicalSpecializationErorr, "يرجى إدخال أسم التخصص الطبي *"),
+
         (txtLicenc, label8, "يرجى إدخال رخصة المزاولة *"),
-       
+
     };
 
             List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)> comboFields = new List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)>
     {
         (gendertxt, gendererrorlbl, "يرجى تحديد الجنس*"),
         (txtDoctorTitle, jobErorr, "يرجى تحديد المسمى الوظيفي*"),
+          (medicalSpeCom, MedicalSpecializationErorr, "يرجى إدخال أسم التخصص الطبي *"),
     };
 
             List<(Guna.UI2.WinForms.Guna2DateTimePicker, Label, string)> dateFields = new List<(Guna.UI2.WinForms.Guna2DateTimePicker, Label, string)>
@@ -96,9 +98,9 @@ namespace CHS_FrontEnd
     };
 
 
-            if (!ValidateFields(textFields, comboFields,dateFields))
+            if (!ValidateFields(textFields, comboFields, dateFields))
             {
-                MessageBox.Show("يرجى ملء جميع الحقول المطلوبة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CustomMessageBox.Show(CustomMessageBox.MessageType.Warning, "تحذير!", "يرجى التحقق من إدخال البيانات قبل المتابعة.");
                 return;
             }
 
@@ -117,7 +119,7 @@ namespace CHS_FrontEnd
                 bool DoctorIsMalee = gendertxt.SelectedItem?.ToString() == "1";
                 string DoctorUserName = txtDoctorUserName.Text;
                 string DoctorPassword = txtDoctorPassword.Text;
-                string DoctorMedicalSp = txtMedicalSpecialization.Text;
+                string DoctorMedicalSp = medicalSpeCom.Text;
                 string DoctorLicenec = txtLicenc.Text;
                 string DoctorLicencExp = txtDateLcinesExp.Value.ToString("yyyy-MM-dd");
                 string DoctorLicencGev = txtDateLiceinsgiven.Value.ToString("yyyy-MM-dd");
@@ -137,7 +139,7 @@ namespace CHS_FrontEnd
                     DoctorUserName = DoctorUserName,
                     DoctorPassword = DoctorPassword,
                     DoctorPhoneNumber = DoctorPhones,
-                    LicenseExpiryDate = DoctorLicencExp,    
+                    LicenseExpiryDate = DoctorLicencExp,
                     LicenseReleaseDate = DoctorLicencGev,
                     MedicalSpecialization = DoctorMedicalSp,
                     DoctorIsMale = DoctorIsMalee,
@@ -151,17 +153,19 @@ namespace CHS_FrontEnd
 
                 if (response.ResponseCode == "1")
                 {
-                  txtDoctorUserName.Text = response.DoctorUserName;
-                    MessageBox.Show(response.MessageDescription, "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtDoctorUserName.Text = response.DoctorUserName;
+                  CustomMessageBox.Show(CustomMessageBox.MessageType.Success, "نجاح!", response.MessageDescription);
+
                 }
                 else
                 {
-                    MessageBox.Show("فشل في إضافة الطبيب: " + response.MessageDescription, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CustomMessageBox.Show(CustomMessageBox.MessageType.Error, "!خطأ", "فشل في إضافة الطبيب: " + response.MessageDescription);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"حدث خطأ أثناء إنشاء مستخدم للطبيب: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CustomMessageBox.Show(CustomMessageBox.MessageType.Error, "خطأ!", $"حدث خطأ أثناء إنشاء مستخدم للطبيب: {ex.Message}");
+
             }
         }
 
@@ -174,7 +178,7 @@ namespace CHS_FrontEnd
         {
             bool isValid = true;
 
-            // التحقق من الحقول النصية
+
             foreach (var field in textFields)
             {
                 var textBox = field.TextBox;
@@ -195,7 +199,7 @@ namespace CHS_FrontEnd
                 }
             }
 
-            // التحقق من القوائم المنسدلة
+
             foreach (var field in comboFields)
             {
                 var comboBox = field.ComboBox;
@@ -216,14 +220,14 @@ namespace CHS_FrontEnd
                 }
             }
 
-            // التحقق من حقول التاريخ
+
             foreach (var field in dateFields)
             {
                 var dateTimePicker = field.DataTime;
                 var errorLabel = field.ErrorLabel;
                 var errorMessage = field.ErrorMessage;
 
-                // التحقق مما إذا كان التاريخ لم يتم تغييره من القيمة الافتراضية
+
                 if (dateTimePicker.Value == dateTimePicker.MinDate)
                 {
                     errorLabel.Text = errorMessage;
@@ -274,55 +278,34 @@ namespace CHS_FrontEnd
             "طبيب جراحة القلب والصدر",
             "طبيب الطب الطبيعي وإعادة التأهيل"
         };
+        private readonly List<string> doctorJobTitles = new List<string>
+        {
+            "طبيب",
+            " ممرض",
+            "صيدلي",
+            "فني مختبر",
+            " اخصائي علاج طبيعي",
+            "مسعف",
+
+
+        };
 
 
         private void ConfigureComboBoxTile()
         {
 
-            txtDoctorTitle.DataSource = doctorTitles;
+            txtDoctorTitle.DataSource = doctorJobTitles;
 
             txtDoctorTitle.DropDownStyle = ComboBoxStyle.DropDownList;
-            
-          
-
-            
-            txtDoctorTitle.SelectedIndexChanged += txtDoctorTitle_SelectedIndexChanged;
-            txtDoctorTitle.Leave += txtDoctorTitle_Leave;
-        }
 
 
 
-        private void txtDoctorTitle_Leave_1(object sender, EventArgs e)
-        {
-            if (!doctorTitles.Contains(txtDoctorTitle.Text))
-            {
-                MessageBox.Show("⚠️ الرجاء إدخال مسمى وظيفي صحيح من القائمة!", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtDoctorTitle.Focus();
-            }
-        }
-
-        private void txtDoctorTitle_SelectedValueChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void txtDoctorTitle_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ValidateDoctorTitle();
-        }
 
-        private void txtDoctorTitle_Leave(object sender, EventArgs e)
-        {
-            ValidateDoctorTitle();
-        }
-        private void ValidateDoctorTitle()
-        {
-            if (!doctorTitles.Contains(txtDoctorTitle.Text))
-            {
-                MessageBox.Show("⚠️ الرجاء اختيار مسمى وظيفي صحيح من القائمة!", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtDoctorTitle.Focus();
-            }
-        }
+
+
 
         private void ApplyEventsToTextBoxes(Control parentControl)
         {
@@ -414,7 +397,88 @@ namespace CHS_FrontEnd
                 txtDoctorEmail.AutoCompleteCustomSource.Add(text + "@hotmail.com");
             }
         }
-    }
+        private void ConfigureComboBoxTileMedSpe()
+        {
 
+            medicalSpeCom.DataSource = doctorTitles;
+
+            medicalSpeCom.DropDownStyle = ComboBoxStyle.DropDownList;
+
+
+
+
+
+        }
+        private void ClearFields()
+        {
+            txtDoctorName.Text = string.Empty;
+            txtDoctorIDcard.Text = string.Empty;
+            gendertxt.SelectedIndex = -1;
+            txtDoctorTitle.SelectedIndex = -1;
+            medicalSpeCom.SelectedIndex = -1;
+            txtDoctorPassword.Text = string.Empty;
+            txtDoctorUserName.Text = string.Empty;
+            txtDoctorEmpDate.Value = DateTime.Today;
+            txtDoctorAddress.Text = string.Empty;
+            txtDoctorPhoneNumber.Text = string.Empty;
+            txtDoctorEmail.Text = string.Empty;
+            txtLicenc.Text = string.Empty;
+            txtDateLcinesExp.Value = DateTime.Today;
+            txtDateLiceinsgiven.Value = DateTime.Today;
+            txtBirthDate.Value = DateTime.Today;
+
+
+
+
+        }
+
+        private void txtLicenc_TextChanged(object sender, EventArgs e)
+        {
+            label8.Visible = false;
+            txtLicenc.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDateLiceinsgiven_TextChanged(object sender, EventArgs e)
+        {
+            licenesErorrgev.Visible = false;
+            txtDateLiceinsgiven.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDateLcinesExp_TextChanged(object sender, EventArgs e)
+        {
+            licenceExpErorr.Visible = false;
+            txtDateLcinesExp.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void medicalSpeCom_TextChanged(object sender, EventArgs e)
+        {
+            MedicalSpecializationErorr.Visible = false;
+            medicalSpeCom.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDoctorUserName_TextChanged(object sender, EventArgs e)
+        {
+            userErorr.Visible = false;
+            txtDoctorUserName.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDoctorPassword_TextChanged(object sender, EventArgs e)
+        {
+            passswordErorr.Visible = false;
+            txtDoctorPassword.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDoctorEmpDate_TextChanged(object sender, EventArgs e)
+        {
+            label12.Visible = false;
+            txtDoctorEmpDate.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtDoctorTitle_TextChanged(object sender, EventArgs e)
+        {
+            jobErorr.Visible = false;
+            txtDoctorTitle.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+    }
 }
 

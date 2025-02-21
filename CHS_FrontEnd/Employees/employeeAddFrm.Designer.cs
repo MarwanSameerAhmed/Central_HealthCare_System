@@ -31,35 +31,28 @@ namespace CHS_FrontEnd
         private void InitializeComponent()
         {
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.gendererrorlbl = new System.Windows.Forms.Label();
             this.nationallblerror = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
-            this.empNationalIDtxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.empGendertxt = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.empBirthdaytxt = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.empFullNametxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.labelerrorPhone = new System.Windows.Forms.Label();
             this.emaillbl = new System.Windows.Forms.Label();
-            this.empPhoneNumbertxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.empEmailTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2ContainerControl4 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label13 = new System.Windows.Forms.Label();
-            this.passwordtxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.userNametxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.employmentDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -68,11 +61,18 @@ namespace CHS_FrontEnd
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.createBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.passwordtxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.userNametxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.empPhoneNumbertxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.empEmailTxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.empNationalIDtxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.empFullNametxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ContainerControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             this.guna2ContainerControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ContainerControl3
@@ -88,17 +88,6 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl3.Size = new System.Drawing.Size(1610, 59);
             this.guna2ContainerControl3.TabIndex = 3;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.Animation___1739555645304;
-            this.pictureBox1.Location = new System.Drawing.Point(610, -8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label10
             // 
@@ -181,36 +170,6 @@ namespace CHS_FrontEnd
             this.labelError.TabIndex = 20;
             this.labelError.Text = "\"\"";
             this.labelError.Visible = false;
-            // 
-            // empNationalIDtxt
-            // 
-            this.empNationalIDtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.empNationalIDtxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.empNationalIDtxt.BorderRadius = 10;
-            this.empNationalIDtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.empNationalIDtxt.DefaultText = "";
-            this.empNationalIDtxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.empNationalIDtxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.empNationalIDtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empNationalIDtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empNationalIDtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empNationalIDtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.empNationalIDtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empNationalIDtxt.ForeColor = System.Drawing.Color.Black;
-            this.empNationalIDtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empNationalIDtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_id_card_642;
-            this.empNationalIDtxt.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.empNationalIDtxt.IconRightSize = new System.Drawing.Size(25, 25);
-            this.empNationalIDtxt.Location = new System.Drawing.Point(102, 100);
-            this.empNationalIDtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.empNationalIDtxt.Name = "empNationalIDtxt";
-            this.empNationalIDtxt.PasswordChar = '\0';
-            this.empNationalIDtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.empNationalIDtxt.PlaceholderText = "ادخل رقم الهوية الوطنية";
-            this.empNationalIDtxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.empNationalIDtxt.SelectedText = "";
-            this.empNationalIDtxt.Size = new System.Drawing.Size(505, 41);
-            this.empNationalIDtxt.TabIndex = 17;
             // 
             // label7
             // 
@@ -306,36 +265,6 @@ namespace CHS_FrontEnd
             this.label4.TabIndex = 6;
             this.label4.Text = "المعلومات الشخصية للموظف";
             // 
-            // empFullNametxt
-            // 
-            this.empFullNametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.empFullNametxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.empFullNametxt.BorderRadius = 10;
-            this.empFullNametxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.empFullNametxt.DefaultText = "";
-            this.empFullNametxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.empFullNametxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.empFullNametxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empFullNametxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empFullNametxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empFullNametxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.empFullNametxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empFullNametxt.ForeColor = System.Drawing.Color.Black;
-            this.empFullNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empFullNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.employee2;
-            this.empFullNametxt.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.empFullNametxt.IconRightSize = new System.Drawing.Size(25, 25);
-            this.empFullNametxt.Location = new System.Drawing.Point(613, 100);
-            this.empFullNametxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.empFullNametxt.Name = "empFullNametxt";
-            this.empFullNametxt.PasswordChar = '\0';
-            this.empFullNametxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.empFullNametxt.PlaceholderText = "ادخل الاسم كاملا";
-            this.empFullNametxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.empFullNametxt.SelectedText = "";
-            this.empFullNametxt.Size = new System.Drawing.Size(505, 41);
-            this.empFullNametxt.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
@@ -364,7 +293,7 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl2.Location = new System.Drawing.Point(48, 79);
             this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(465, 310);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(465, 311);
             this.guna2ContainerControl2.TabIndex = 5;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             this.guna2ContainerControl2.Click += new System.EventHandler(this.guna2ContainerControl2_Click);
@@ -397,37 +326,6 @@ namespace CHS_FrontEnd
             this.emaillbl.Text = "\"\"";
             this.emaillbl.Visible = false;
             // 
-            // empPhoneNumbertxt
-            // 
-            this.empPhoneNumbertxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.empPhoneNumbertxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.empPhoneNumbertxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.empPhoneNumbertxt.BorderRadius = 10;
-            this.empPhoneNumbertxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.empPhoneNumbertxt.DefaultText = "";
-            this.empPhoneNumbertxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.empPhoneNumbertxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.empPhoneNumbertxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empPhoneNumbertxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empPhoneNumbertxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empPhoneNumbertxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.empPhoneNumbertxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empPhoneNumbertxt.ForeColor = System.Drawing.Color.Black;
-            this.empPhoneNumbertxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empPhoneNumbertxt.IconRight = global::CHS_FrontEnd.Properties.Resources.ALI;
-            this.empPhoneNumbertxt.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.empPhoneNumbertxt.IconRightSize = new System.Drawing.Size(25, 25);
-            this.empPhoneNumbertxt.Location = new System.Drawing.Point(23, 99);
-            this.empPhoneNumbertxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.empPhoneNumbertxt.Name = "empPhoneNumbertxt";
-            this.empPhoneNumbertxt.PasswordChar = '\0';
-            this.empPhoneNumbertxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.empPhoneNumbertxt.PlaceholderText = "ادخل رقم هاتف الموظف";
-            this.empPhoneNumbertxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.empPhoneNumbertxt.SelectedText = "";
-            this.empPhoneNumbertxt.Size = new System.Drawing.Size(429, 41);
-            this.empPhoneNumbertxt.TabIndex = 3;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -442,38 +340,6 @@ namespace CHS_FrontEnd
             this.label8.Size = new System.Drawing.Size(209, 66);
             this.label8.TabIndex = 0;
             this.label8.Text = "معلومات الإتصال بالموظف";
-            // 
-            // empEmailTxt
-            // 
-            this.empEmailTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.empEmailTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.empEmailTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.empEmailTxt.BorderRadius = 10;
-            this.empEmailTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.empEmailTxt.DefaultText = "";
-            this.empEmailTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.empEmailTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.empEmailTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empEmailTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.empEmailTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empEmailTxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.empEmailTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empEmailTxt.ForeColor = System.Drawing.Color.Black;
-            this.empEmailTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empEmailTxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_email_100___Copy2;
-            this.empEmailTxt.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.empEmailTxt.IconRightSize = new System.Drawing.Size(35, 35);
-            this.empEmailTxt.Location = new System.Drawing.Point(23, 184);
-            this.empEmailTxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.empEmailTxt.Name = "empEmailTxt";
-            this.empEmailTxt.PasswordChar = '\0';
-            this.empEmailTxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.empEmailTxt.PlaceholderText = "ادخل البريد الالكتروني للموظف";
-            this.empEmailTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.empEmailTxt.SelectedText = "";
-            this.empEmailTxt.Size = new System.Drawing.Size(430, 41);
-            this.empEmailTxt.TabIndex = 25;
-            this.empEmailTxt.TextChanged += new System.EventHandler(this.empEmailTxt_TextChanged);
             // 
             // label17
             // 
@@ -543,36 +409,6 @@ namespace CHS_FrontEnd
             this.label13.Text = "\"\"";
             this.label13.Visible = false;
             // 
-            // passwordtxt
-            // 
-            this.passwordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.passwordtxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.passwordtxt.BorderRadius = 10;
-            this.passwordtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passwordtxt.DefaultText = "";
-            this.passwordtxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.passwordtxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.passwordtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passwordtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passwordtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.passwordtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.passwordtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordtxt.ForeColor = System.Drawing.Color.Black;
-            this.passwordtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.passwordtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_password_58;
-            this.passwordtxt.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.passwordtxt.IconRightSize = new System.Drawing.Size(25, 25);
-            this.passwordtxt.Location = new System.Drawing.Point(107, 107);
-            this.passwordtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.PasswordChar = '\0';
-            this.passwordtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.passwordtxt.PlaceholderText = "ادخل كلمة السر للموظف";
-            this.passwordtxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.passwordtxt.SelectedText = "";
-            this.passwordtxt.Size = new System.Drawing.Size(501, 41);
-            this.passwordtxt.TabIndex = 32;
-            // 
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
@@ -599,37 +435,6 @@ namespace CHS_FrontEnd
             this.label11.TabIndex = 30;
             this.label11.Text = "\"\"";
             this.label11.Visible = false;
-            // 
-            // userNametxt
-            // 
-            this.userNametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.userNametxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.userNametxt.BorderRadius = 10;
-            this.userNametxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.userNametxt.DefaultText = "";
-            this.userNametxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.userNametxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.userNametxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.userNametxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.userNametxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userNametxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.userNametxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNametxt.ForeColor = System.Drawing.Color.Black;
-            this.userNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userNametxt.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.userNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.USERNAME;
-            this.userNametxt.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.userNametxt.IconRightSize = new System.Drawing.Size(30, 30);
-            this.userNametxt.Location = new System.Drawing.Point(614, 107);
-            this.userNametxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.userNametxt.Name = "userNametxt";
-            this.userNametxt.PasswordChar = '\0';
-            this.userNametxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.userNametxt.PlaceholderText = "ادخل أسم المستخدم للموظف";
-            this.userNametxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.userNametxt.SelectedText = "";
-            this.userNametxt.Size = new System.Drawing.Size(503, 41);
-            this.userNametxt.TabIndex = 29;
             // 
             // label12
             // 
@@ -754,13 +559,208 @@ namespace CHS_FrontEnd
             this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.createBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(658, 768);
+            this.createBtn.Location = new System.Drawing.Point(680, 768);
             this.createBtn.Margin = new System.Windows.Forms.Padding(2);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(297, 56);
             this.createBtn.TabIndex = 7;
             this.createBtn.Text = "إضافة";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
+            // 
+            // passwordtxt
+            // 
+            this.passwordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.passwordtxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.passwordtxt.BorderRadius = 10;
+            this.passwordtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.passwordtxt.DefaultText = "";
+            this.passwordtxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.passwordtxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.passwordtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.passwordtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.passwordtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.passwordtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.passwordtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordtxt.ForeColor = System.Drawing.Color.Black;
+            this.passwordtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.passwordtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_password_58;
+            this.passwordtxt.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.passwordtxt.IconRightSize = new System.Drawing.Size(25, 25);
+            this.passwordtxt.Location = new System.Drawing.Point(107, 107);
+            this.passwordtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.passwordtxt.Name = "passwordtxt";
+            this.passwordtxt.PasswordChar = '\0';
+            this.passwordtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.passwordtxt.PlaceholderText = "ادخل كلمة السر للموظف";
+            this.passwordtxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.passwordtxt.SelectedText = "";
+            this.passwordtxt.Size = new System.Drawing.Size(501, 41);
+            this.passwordtxt.TabIndex = 32;
+            // 
+            // userNametxt
+            // 
+            this.userNametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.userNametxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.userNametxt.BorderRadius = 10;
+            this.userNametxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.userNametxt.DefaultText = "";
+            this.userNametxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.userNametxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.userNametxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.userNametxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.userNametxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.userNametxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.userNametxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNametxt.ForeColor = System.Drawing.Color.Black;
+            this.userNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.userNametxt.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.userNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.USERNAME;
+            this.userNametxt.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.userNametxt.IconRightSize = new System.Drawing.Size(30, 30);
+            this.userNametxt.Location = new System.Drawing.Point(614, 107);
+            this.userNametxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.userNametxt.Name = "userNametxt";
+            this.userNametxt.PasswordChar = '\0';
+            this.userNametxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.userNametxt.PlaceholderText = "ادخل أسم المستخدم للموظف";
+            this.userNametxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userNametxt.SelectedText = "";
+            this.userNametxt.Size = new System.Drawing.Size(503, 41);
+            this.userNametxt.TabIndex = 29;
+            // 
+            // empPhoneNumbertxt
+            // 
+            this.empPhoneNumbertxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.empPhoneNumbertxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.empPhoneNumbertxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.empPhoneNumbertxt.BorderRadius = 10;
+            this.empPhoneNumbertxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.empPhoneNumbertxt.DefaultText = "";
+            this.empPhoneNumbertxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.empPhoneNumbertxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.empPhoneNumbertxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empPhoneNumbertxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empPhoneNumbertxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empPhoneNumbertxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.empPhoneNumbertxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empPhoneNumbertxt.ForeColor = System.Drawing.Color.Black;
+            this.empPhoneNumbertxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empPhoneNumbertxt.IconRight = global::CHS_FrontEnd.Properties.Resources.ALI;
+            this.empPhoneNumbertxt.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.empPhoneNumbertxt.IconRightSize = new System.Drawing.Size(25, 25);
+            this.empPhoneNumbertxt.Location = new System.Drawing.Point(23, 99);
+            this.empPhoneNumbertxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.empPhoneNumbertxt.Name = "empPhoneNumbertxt";
+            this.empPhoneNumbertxt.PasswordChar = '\0';
+            this.empPhoneNumbertxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.empPhoneNumbertxt.PlaceholderText = "ادخل رقم هاتف الموظف";
+            this.empPhoneNumbertxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.empPhoneNumbertxt.SelectedText = "";
+            this.empPhoneNumbertxt.Size = new System.Drawing.Size(429, 41);
+            this.empPhoneNumbertxt.TabIndex = 3;
+            // 
+            // empEmailTxt
+            // 
+            this.empEmailTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.empEmailTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.empEmailTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.empEmailTxt.BorderRadius = 10;
+            this.empEmailTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.empEmailTxt.DefaultText = "";
+            this.empEmailTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.empEmailTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.empEmailTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empEmailTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empEmailTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empEmailTxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.empEmailTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empEmailTxt.ForeColor = System.Drawing.Color.Black;
+            this.empEmailTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empEmailTxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_email_100___Copy2;
+            this.empEmailTxt.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.empEmailTxt.IconRightSize = new System.Drawing.Size(35, 35);
+            this.empEmailTxt.Location = new System.Drawing.Point(23, 184);
+            this.empEmailTxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.empEmailTxt.Name = "empEmailTxt";
+            this.empEmailTxt.PasswordChar = '\0';
+            this.empEmailTxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.empEmailTxt.PlaceholderText = "ادخل البريد الالكتروني للموظف";
+            this.empEmailTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.empEmailTxt.SelectedText = "";
+            this.empEmailTxt.Size = new System.Drawing.Size(430, 41);
+            this.empEmailTxt.TabIndex = 25;
+            this.empEmailTxt.TextChanged += new System.EventHandler(this.empEmailTxt_TextChanged);
+            // 
+            // empNationalIDtxt
+            // 
+            this.empNationalIDtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.empNationalIDtxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.empNationalIDtxt.BorderRadius = 10;
+            this.empNationalIDtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.empNationalIDtxt.DefaultText = "";
+            this.empNationalIDtxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.empNationalIDtxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.empNationalIDtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empNationalIDtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empNationalIDtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empNationalIDtxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.empNationalIDtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empNationalIDtxt.ForeColor = System.Drawing.Color.Black;
+            this.empNationalIDtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empNationalIDtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_id_card_642;
+            this.empNationalIDtxt.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.empNationalIDtxt.IconRightSize = new System.Drawing.Size(25, 25);
+            this.empNationalIDtxt.Location = new System.Drawing.Point(102, 100);
+            this.empNationalIDtxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.empNationalIDtxt.Name = "empNationalIDtxt";
+            this.empNationalIDtxt.PasswordChar = '\0';
+            this.empNationalIDtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.empNationalIDtxt.PlaceholderText = "ادخل رقم الهوية الوطنية";
+            this.empNationalIDtxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.empNationalIDtxt.SelectedText = "";
+            this.empNationalIDtxt.Size = new System.Drawing.Size(505, 41);
+            this.empNationalIDtxt.TabIndex = 17;
+            // 
+            // empFullNametxt
+            // 
+            this.empFullNametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.empFullNametxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.empFullNametxt.BorderRadius = 10;
+            this.empFullNametxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.empFullNametxt.DefaultText = "";
+            this.empFullNametxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.empFullNametxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.empFullNametxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empFullNametxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.empFullNametxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empFullNametxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.empFullNametxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empFullNametxt.ForeColor = System.Drawing.Color.Black;
+            this.empFullNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empFullNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.employee2;
+            this.empFullNametxt.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.empFullNametxt.IconRightSize = new System.Drawing.Size(25, 25);
+            this.empFullNametxt.Location = new System.Drawing.Point(613, 100);
+            this.empFullNametxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.empFullNametxt.Name = "empFullNametxt";
+            this.empFullNametxt.PasswordChar = '\0';
+            this.empFullNametxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.empFullNametxt.PlaceholderText = "ادخل الاسم كاملا";
+            this.empFullNametxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.empFullNametxt.SelectedText = "";
+            this.empFullNametxt.Size = new System.Drawing.Size(505, 41);
+            this.empFullNametxt.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.Animation___1739555645304;
+            this.pictureBox1.Location = new System.Drawing.Point(610, -8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // employeeAddFrm
             // 
@@ -781,13 +781,13 @@ namespace CHS_FrontEnd
             this.Load += new System.EventHandler(this.employeeAddFrm_Load);
             this.guna2ContainerControl3.ResumeLayout(false);
             this.guna2ContainerControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2ContainerControl1.ResumeLayout(false);
             this.guna2ContainerControl1.PerformLayout();
             this.guna2ContainerControl2.ResumeLayout(false);
             this.guna2ContainerControl2.PerformLayout();
             this.guna2ContainerControl4.ResumeLayout(false);
             this.guna2ContainerControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

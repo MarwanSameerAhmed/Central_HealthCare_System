@@ -143,6 +143,56 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Animation___17399823539511 {
+            get {
+                object obj = ResourceManager.GetObject("Animation - 17399823539511", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Animation___1740156272160 {
+            get {
+                object obj = ResourceManager.GetObject("Animation - 1740156272160", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Animation___1740157672616 {
+            get {
+                object obj = ResourceManager.GetObject("Animation - 1740157672616", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Animation___1740157992605 {
+            get {
+                object obj = ResourceManager.GetObject("Animation - 1740157992605", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Animation___1740158425835 {
+            get {
+                object obj = ResourceManager.GetObject("Animation - 1740158425835", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap applicant_employee {
             get {
                 object obj = ResourceManager.GetObject("applicant_employee", resourceCulture);

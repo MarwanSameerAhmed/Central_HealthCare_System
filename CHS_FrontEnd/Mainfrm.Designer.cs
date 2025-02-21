@@ -30,21 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainfrm));
             this.SideMenuPanel = new System.Windows.Forms.Panel();
-            this.PatientManagment2SubMenu = new System.Windows.Forms.Panel();
-            this.DoctorsDepSubMenu = new System.Windows.Forms.Panel();
-            this.FacilitySubMenu = new System.Windows.Forms.Panel();
-            this.EmergncySubMenu = new System.Windows.Forms.Panel();
-            this.PharmacySubmenu = new System.Windows.Forms.Panel();
-            this.LabDepSubMenu = new System.Windows.Forms.Panel();
-            this.EmployeesSubMenu = new System.Windows.Forms.Panel();
-            this.PatientsubMenuPanel = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.UserInfoPanel = new System.Windows.Forms.Panel();
-            this.lebJobName = new System.Windows.Forms.Label();
-            this.labEmployeeName = new System.Windows.Forms.Label();
-            this.HmbSizeBtn = new FontAwesome.Sharp.IconPictureBox();
-            this.pictureBoxUserName = new System.Windows.Forms.PictureBox();
             this.pharmacysunbtn = new Guna.UI2.WinForms.Guna2Button();
             this.facilitySubBtn = new Guna.UI2.WinForms.Guna2Button();
             this.doctorsSubBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -56,29 +41,44 @@
             this.MainPageSubBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingBtn = new FontAwesome.Sharp.IconButton();
             this.LogOutBtn = new FontAwesome.Sharp.IconButton();
+            this.PatientManagment2SubMenu = new System.Windows.Forms.Panel();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
             this.SearchPatientFileBtn = new FontAwesome.Sharp.IconButton();
             this.PatientFileManagementBtn = new FontAwesome.Sharp.IconButton();
+            this.DoctorsDepSubMenu = new System.Windows.Forms.Panel();
             this.SearchDoctorBtn = new FontAwesome.Sharp.IconButton();
             this.AddNewDoctorBtn = new FontAwesome.Sharp.IconButton();
             this.DoctorsDepBtn = new FontAwesome.Sharp.IconButton();
+            this.FacilitySubMenu = new System.Windows.Forms.Panel();
             this.SearchFacilityBtn = new FontAwesome.Sharp.IconButton();
             this.AddNewFacilityBtn = new FontAwesome.Sharp.IconButton();
             this.FacilityManagementBtn = new FontAwesome.Sharp.IconButton();
+            this.EmergncySubMenu = new System.Windows.Forms.Panel();
             this.EmergncyBedBtn = new FontAwesome.Sharp.IconButton();
             this.EmergncyDepBtn = new FontAwesome.Sharp.IconButton();
+            this.PharmacySubmenu = new System.Windows.Forms.Panel();
             this.searchParmacyBtn = new FontAwesome.Sharp.IconButton();
             this.PharmacyDepBtn = new FontAwesome.Sharp.IconButton();
+            this.LabDepSubMenu = new System.Windows.Forms.Panel();
             this.LabDepSearchBtn = new FontAwesome.Sharp.IconButton();
             this.LabDepBtn = new FontAwesome.Sharp.IconButton();
+            this.EmployeesSubMenu = new System.Windows.Forms.Panel();
             this.EmployessSearchBtn = new FontAwesome.Sharp.IconButton();
             this.EmployessAddBtn = new FontAwesome.Sharp.IconButton();
             this.EmployeesManagementBtn = new FontAwesome.Sharp.IconButton();
+            this.PatientsubMenuPanel = new System.Windows.Forms.Panel();
             this.PatientSearchFrmBtn = new FontAwesome.Sharp.IconButton();
             this.patientAddFrmBtn = new FontAwesome.Sharp.IconButton();
             this.PatientManagementBtn = new FontAwesome.Sharp.IconButton();
             this.MainPage = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.HmbSizeBtn = new FontAwesome.Sharp.IconPictureBox();
+            this.UserInfoPanel = new System.Windows.Forms.Panel();
+            this.lebJobName = new System.Windows.Forms.Label();
+            this.pictureBoxUserName = new System.Windows.Forms.PictureBox();
+            this.labEmployeeName = new System.Windows.Forms.Label();
             this.SideMenuPanel.SuspendLayout();
             this.PatientManagment2SubMenu.SuspendLayout();
             this.DoctorsDepSubMenu.SuspendLayout();
@@ -89,11 +89,11 @@
             this.EmployeesSubMenu.SuspendLayout();
             this.PatientsubMenuPanel.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.UserInfoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HmbSizeBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HmbSizeBtn)).BeginInit();
+            this.UserInfoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserName)).BeginInit();
             this.SuspendLayout();
             // 
             // SideMenuPanel
@@ -134,171 +134,6 @@
             this.SideMenuPanel.Name = "SideMenuPanel";
             this.SideMenuPanel.Size = new System.Drawing.Size(265, 1055);
             this.SideMenuPanel.TabIndex = 0;
-            // 
-            // PatientManagment2SubMenu
-            // 
-            this.PatientManagment2SubMenu.Controls.Add(this.iconButton12);
-            this.PatientManagment2SubMenu.Controls.Add(this.SearchPatientFileBtn);
-            this.PatientManagment2SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PatientManagment2SubMenu.Location = new System.Drawing.Point(0, 1355);
-            this.PatientManagment2SubMenu.Name = "PatientManagment2SubMenu";
-            this.PatientManagment2SubMenu.Size = new System.Drawing.Size(244, 100);
-            this.PatientManagment2SubMenu.TabIndex = 19;
-            // 
-            // DoctorsDepSubMenu
-            // 
-            this.DoctorsDepSubMenu.Controls.Add(this.SearchDoctorBtn);
-            this.DoctorsDepSubMenu.Controls.Add(this.AddNewDoctorBtn);
-            this.DoctorsDepSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DoctorsDepSubMenu.Location = new System.Drawing.Point(0, 1200);
-            this.DoctorsDepSubMenu.Name = "DoctorsDepSubMenu";
-            this.DoctorsDepSubMenu.Size = new System.Drawing.Size(244, 100);
-            this.DoctorsDepSubMenu.TabIndex = 17;
-            // 
-            // FacilitySubMenu
-            // 
-            this.FacilitySubMenu.Controls.Add(this.SearchFacilityBtn);
-            this.FacilitySubMenu.Controls.Add(this.AddNewFacilityBtn);
-            this.FacilitySubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FacilitySubMenu.Location = new System.Drawing.Point(0, 1045);
-            this.FacilitySubMenu.Name = "FacilitySubMenu";
-            this.FacilitySubMenu.Size = new System.Drawing.Size(244, 100);
-            this.FacilitySubMenu.TabIndex = 15;
-            // 
-            // EmergncySubMenu
-            // 
-            this.EmergncySubMenu.Controls.Add(this.EmergncyBedBtn);
-            this.EmergncySubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.EmergncySubMenu.ForeColor = System.Drawing.Color.Black;
-            this.EmergncySubMenu.Location = new System.Drawing.Point(0, 940);
-            this.EmergncySubMenu.Name = "EmergncySubMenu";
-            this.EmergncySubMenu.Size = new System.Drawing.Size(244, 50);
-            this.EmergncySubMenu.TabIndex = 13;
-            // 
-            // PharmacySubmenu
-            // 
-            this.PharmacySubmenu.Controls.Add(this.searchParmacyBtn);
-            this.PharmacySubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PharmacySubmenu.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PharmacySubmenu.Location = new System.Drawing.Point(0, 835);
-            this.PharmacySubmenu.Name = "PharmacySubmenu";
-            this.PharmacySubmenu.Size = new System.Drawing.Size(244, 50);
-            this.PharmacySubmenu.TabIndex = 11;
-            // 
-            // LabDepSubMenu
-            // 
-            this.LabDepSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.LabDepSubMenu.Controls.Add(this.LabDepSearchBtn);
-            this.LabDepSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LabDepSubMenu.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabDepSubMenu.Location = new System.Drawing.Point(0, 727);
-            this.LabDepSubMenu.Name = "LabDepSubMenu";
-            this.LabDepSubMenu.Size = new System.Drawing.Size(244, 53);
-            this.LabDepSubMenu.TabIndex = 9;
-            // 
-            // EmployeesSubMenu
-            // 
-            this.EmployeesSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.EmployeesSubMenu.Controls.Add(this.EmployessSearchBtn);
-            this.EmployeesSubMenu.Controls.Add(this.EmployessAddBtn);
-            this.EmployeesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.EmployeesSubMenu.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeesSubMenu.Location = new System.Drawing.Point(0, 572);
-            this.EmployeesSubMenu.Name = "EmployeesSubMenu";
-            this.EmployeesSubMenu.Size = new System.Drawing.Size(244, 100);
-            this.EmployeesSubMenu.TabIndex = 5;
-            // 
-            // PatientsubMenuPanel
-            // 
-            this.PatientsubMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.PatientsubMenuPanel.Controls.Add(this.PatientSearchFrmBtn);
-            this.PatientsubMenuPanel.Controls.Add(this.patientAddFrmBtn);
-            this.PatientsubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PatientsubMenuPanel.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientsubMenuPanel.Location = new System.Drawing.Point(0, 417);
-            this.PatientsubMenuPanel.Name = "PatientsubMenuPanel";
-            this.PatientsubMenuPanel.Size = new System.Drawing.Size(244, 100);
-            this.PatientsubMenuPanel.TabIndex = 3;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.guna2PictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(244, 307);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.panel1.Controls.Add(this.HmbSizeBtn);
-            this.panel1.Controls.Add(this.UserInfoPanel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(265, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(786, 60);
-            this.panel1.TabIndex = 1;
-            // 
-            // UserInfoPanel
-            // 
-            this.UserInfoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.UserInfoPanel.Controls.Add(this.lebJobName);
-            this.UserInfoPanel.Controls.Add(this.pictureBoxUserName);
-            this.UserInfoPanel.Controls.Add(this.labEmployeeName);
-            this.UserInfoPanel.Location = new System.Drawing.Point(602, 3);
-            this.UserInfoPanel.Name = "UserInfoPanel";
-            this.UserInfoPanel.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.UserInfoPanel.Size = new System.Drawing.Size(179, 57);
-            this.UserInfoPanel.TabIndex = 2;
-            // 
-            // lebJobName
-            // 
-            this.lebJobName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lebJobName.AutoSize = true;
-            this.lebJobName.Font = new System.Drawing.Font("Traditional Arabic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lebJobName.ForeColor = System.Drawing.Color.White;
-            this.lebJobName.Location = new System.Drawing.Point(85, 32);
-            this.lebJobName.Name = "lebJobName";
-            this.lebJobName.Size = new System.Drawing.Size(36, 23);
-            this.lebJobName.TabIndex = 3;
-            this.lebJobName.Text = "موظف";
-            // 
-            // labEmployeeName
-            // 
-            this.labEmployeeName.AutoSize = true;
-            this.labEmployeeName.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEmployeeName.ForeColor = System.Drawing.Color.White;
-            this.labEmployeeName.Location = new System.Drawing.Point(46, 3);
-            this.labEmployeeName.Name = "labEmployeeName";
-            this.labEmployeeName.Size = new System.Drawing.Size(77, 31);
-            this.labEmployeeName.TabIndex = 2;
-            this.labEmployeeName.Text = "علي مرجاني";
-            // 
-            // HmbSizeBtn
-            // 
-            this.HmbSizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.HmbSizeBtn.IconChar = FontAwesome.Sharp.IconChar.Navicon;
-            this.HmbSizeBtn.IconColor = System.Drawing.Color.White;
-            this.HmbSizeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.HmbSizeBtn.IconSize = 37;
-            this.HmbSizeBtn.Location = new System.Drawing.Point(2, 8);
-            this.HmbSizeBtn.Name = "HmbSizeBtn";
-            this.HmbSizeBtn.Size = new System.Drawing.Size(37, 43);
-            this.HmbSizeBtn.TabIndex = 2;
-            this.HmbSizeBtn.TabStop = false;
-            this.HmbSizeBtn.Click += new System.EventHandler(this.HmbSizeBtn_Click);
-            // 
-            // pictureBoxUserName
-            // 
-            this.pictureBoxUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxUserName.Image = global::CHS_FrontEnd.Properties.Resources.user;
-            this.pictureBoxUserName.Location = new System.Drawing.Point(131, 10);
-            this.pictureBoxUserName.Name = "pictureBoxUserName";
-            this.pictureBoxUserName.Size = new System.Drawing.Size(35, 35);
-            this.pictureBoxUserName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUserName.TabIndex = 0;
-            this.pictureBoxUserName.TabStop = false;
             // 
             // pharmacysunbtn
             // 
@@ -483,6 +318,7 @@
             this.SettingBtn.TabIndex = 21;
             this.SettingBtn.Text = "الاعدادات";
             this.SettingBtn.UseVisualStyleBackColor = true;
+            this.SettingBtn.Click += new System.EventHandler(this.SettingBtn_Click);
             // 
             // LogOutBtn
             // 
@@ -504,6 +340,16 @@
             this.LogOutBtn.Text = "تسجيل الخروج";
             this.LogOutBtn.UseVisualStyleBackColor = true;
             this.LogOutBtn.Click += new System.EventHandler(this.LogOutBtn_Click_1);
+            // 
+            // PatientManagment2SubMenu
+            // 
+            this.PatientManagment2SubMenu.Controls.Add(this.iconButton12);
+            this.PatientManagment2SubMenu.Controls.Add(this.SearchPatientFileBtn);
+            this.PatientManagment2SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PatientManagment2SubMenu.Location = new System.Drawing.Point(0, 1355);
+            this.PatientManagment2SubMenu.Name = "PatientManagment2SubMenu";
+            this.PatientManagment2SubMenu.Size = new System.Drawing.Size(244, 100);
+            this.PatientManagment2SubMenu.TabIndex = 19;
             // 
             // iconButton12
             // 
@@ -570,6 +416,16 @@
             this.PatientFileManagementBtn.UseVisualStyleBackColor = true;
             this.PatientFileManagementBtn.Click += new System.EventHandler(this.PatientFileManagementBtn_Click);
             // 
+            // DoctorsDepSubMenu
+            // 
+            this.DoctorsDepSubMenu.Controls.Add(this.SearchDoctorBtn);
+            this.DoctorsDepSubMenu.Controls.Add(this.AddNewDoctorBtn);
+            this.DoctorsDepSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DoctorsDepSubMenu.Location = new System.Drawing.Point(0, 1200);
+            this.DoctorsDepSubMenu.Name = "DoctorsDepSubMenu";
+            this.DoctorsDepSubMenu.Size = new System.Drawing.Size(244, 100);
+            this.DoctorsDepSubMenu.TabIndex = 17;
+            // 
             // SearchDoctorBtn
             // 
             this.SearchDoctorBtn.BackColor = System.Drawing.Color.White;
@@ -634,6 +490,16 @@
             this.DoctorsDepBtn.Text = "إدارة الاطباء";
             this.DoctorsDepBtn.UseVisualStyleBackColor = true;
             this.DoctorsDepBtn.Click += new System.EventHandler(this.DoctorsDepBtn_Click);
+            // 
+            // FacilitySubMenu
+            // 
+            this.FacilitySubMenu.Controls.Add(this.SearchFacilityBtn);
+            this.FacilitySubMenu.Controls.Add(this.AddNewFacilityBtn);
+            this.FacilitySubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FacilitySubMenu.Location = new System.Drawing.Point(0, 1045);
+            this.FacilitySubMenu.Name = "FacilitySubMenu";
+            this.FacilitySubMenu.Size = new System.Drawing.Size(244, 100);
+            this.FacilitySubMenu.TabIndex = 15;
             // 
             // SearchFacilityBtn
             // 
@@ -700,6 +566,16 @@
             this.FacilityManagementBtn.UseVisualStyleBackColor = true;
             this.FacilityManagementBtn.Click += new System.EventHandler(this.FacilityManagementBtn_Click);
             // 
+            // EmergncySubMenu
+            // 
+            this.EmergncySubMenu.Controls.Add(this.EmergncyBedBtn);
+            this.EmergncySubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EmergncySubMenu.ForeColor = System.Drawing.Color.Black;
+            this.EmergncySubMenu.Location = new System.Drawing.Point(0, 940);
+            this.EmergncySubMenu.Name = "EmergncySubMenu";
+            this.EmergncySubMenu.Size = new System.Drawing.Size(244, 50);
+            this.EmergncySubMenu.TabIndex = 13;
+            // 
             // EmergncyBedBtn
             // 
             this.EmergncyBedBtn.BackColor = System.Drawing.Color.White;
@@ -741,6 +617,16 @@
             this.EmergncyDepBtn.Text = "قسم الطوارئ";
             this.EmergncyDepBtn.UseVisualStyleBackColor = true;
             this.EmergncyDepBtn.Click += new System.EventHandler(this.EmergncyDepBtn_Click);
+            // 
+            // PharmacySubmenu
+            // 
+            this.PharmacySubmenu.Controls.Add(this.searchParmacyBtn);
+            this.PharmacySubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PharmacySubmenu.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PharmacySubmenu.Location = new System.Drawing.Point(0, 835);
+            this.PharmacySubmenu.Name = "PharmacySubmenu";
+            this.PharmacySubmenu.Size = new System.Drawing.Size(244, 50);
+            this.PharmacySubmenu.TabIndex = 11;
             // 
             // searchParmacyBtn
             // 
@@ -784,6 +670,17 @@
             this.PharmacyDepBtn.UseVisualStyleBackColor = true;
             this.PharmacyDepBtn.Click += new System.EventHandler(this.PharmacyDepBtn_Click);
             // 
+            // LabDepSubMenu
+            // 
+            this.LabDepSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.LabDepSubMenu.Controls.Add(this.LabDepSearchBtn);
+            this.LabDepSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LabDepSubMenu.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabDepSubMenu.Location = new System.Drawing.Point(0, 727);
+            this.LabDepSubMenu.Name = "LabDepSubMenu";
+            this.LabDepSubMenu.Size = new System.Drawing.Size(244, 53);
+            this.LabDepSubMenu.TabIndex = 9;
+            // 
             // LabDepSearchBtn
             // 
             this.LabDepSearchBtn.BackColor = System.Drawing.Color.White;
@@ -826,6 +723,18 @@
             this.LabDepBtn.Text = "قسم المختبرات";
             this.LabDepBtn.UseVisualStyleBackColor = true;
             this.LabDepBtn.Click += new System.EventHandler(this.LabDepBtn_Click);
+            // 
+            // EmployeesSubMenu
+            // 
+            this.EmployeesSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.EmployeesSubMenu.Controls.Add(this.EmployessSearchBtn);
+            this.EmployeesSubMenu.Controls.Add(this.EmployessAddBtn);
+            this.EmployeesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EmployeesSubMenu.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeesSubMenu.Location = new System.Drawing.Point(0, 572);
+            this.EmployeesSubMenu.Name = "EmployeesSubMenu";
+            this.EmployeesSubMenu.Size = new System.Drawing.Size(244, 100);
+            this.EmployeesSubMenu.TabIndex = 5;
             // 
             // EmployessSearchBtn
             // 
@@ -891,6 +800,18 @@
             this.EmployeesManagementBtn.Text = "إدارة الموظفين";
             this.EmployeesManagementBtn.UseVisualStyleBackColor = true;
             this.EmployeesManagementBtn.Click += new System.EventHandler(this.EmployeesManagementBtn_Click);
+            // 
+            // PatientsubMenuPanel
+            // 
+            this.PatientsubMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.PatientsubMenuPanel.Controls.Add(this.PatientSearchFrmBtn);
+            this.PatientsubMenuPanel.Controls.Add(this.patientAddFrmBtn);
+            this.PatientsubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PatientsubMenuPanel.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatientsubMenuPanel.Location = new System.Drawing.Point(0, 417);
+            this.PatientsubMenuPanel.Name = "PatientsubMenuPanel";
+            this.PatientsubMenuPanel.Size = new System.Drawing.Size(244, 100);
+            this.PatientsubMenuPanel.TabIndex = 3;
             // 
             // PatientSearchFrmBtn
             // 
@@ -978,6 +899,15 @@
             this.MainPage.UseVisualStyleBackColor = true;
             this.MainPage.Click += new System.EventHandler(this.MainPage_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.guna2PictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(244, 307);
+            this.panelLogo.TabIndex = 0;
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -990,6 +920,77 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.panel1.Controls.Add(this.HmbSizeBtn);
+            this.panel1.Controls.Add(this.UserInfoPanel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(265, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(786, 60);
+            this.panel1.TabIndex = 1;
+            // 
+            // HmbSizeBtn
+            // 
+            this.HmbSizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.HmbSizeBtn.IconChar = FontAwesome.Sharp.IconChar.Navicon;
+            this.HmbSizeBtn.IconColor = System.Drawing.Color.White;
+            this.HmbSizeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.HmbSizeBtn.IconSize = 37;
+            this.HmbSizeBtn.Location = new System.Drawing.Point(2, 8);
+            this.HmbSizeBtn.Name = "HmbSizeBtn";
+            this.HmbSizeBtn.Size = new System.Drawing.Size(37, 43);
+            this.HmbSizeBtn.TabIndex = 2;
+            this.HmbSizeBtn.TabStop = false;
+            this.HmbSizeBtn.Click += new System.EventHandler(this.HmbSizeBtn_Click);
+            // 
+            // UserInfoPanel
+            // 
+            this.UserInfoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UserInfoPanel.Controls.Add(this.lebJobName);
+            this.UserInfoPanel.Controls.Add(this.pictureBoxUserName);
+            this.UserInfoPanel.Controls.Add(this.labEmployeeName);
+            this.UserInfoPanel.Location = new System.Drawing.Point(602, 3);
+            this.UserInfoPanel.Name = "UserInfoPanel";
+            this.UserInfoPanel.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.UserInfoPanel.Size = new System.Drawing.Size(179, 57);
+            this.UserInfoPanel.TabIndex = 2;
+            // 
+            // lebJobName
+            // 
+            this.lebJobName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lebJobName.AutoSize = true;
+            this.lebJobName.Font = new System.Drawing.Font("Traditional Arabic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lebJobName.ForeColor = System.Drawing.Color.White;
+            this.lebJobName.Location = new System.Drawing.Point(85, 32);
+            this.lebJobName.Name = "lebJobName";
+            this.lebJobName.Size = new System.Drawing.Size(36, 23);
+            this.lebJobName.TabIndex = 3;
+            this.lebJobName.Text = "موظف";
+            // 
+            // pictureBoxUserName
+            // 
+            this.pictureBoxUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxUserName.Image = global::CHS_FrontEnd.Properties.Resources.user;
+            this.pictureBoxUserName.Location = new System.Drawing.Point(131, 10);
+            this.pictureBoxUserName.Name = "pictureBoxUserName";
+            this.pictureBoxUserName.Size = new System.Drawing.Size(35, 35);
+            this.pictureBoxUserName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUserName.TabIndex = 0;
+            this.pictureBoxUserName.TabStop = false;
+            // 
+            // labEmployeeName
+            // 
+            this.labEmployeeName.AutoSize = true;
+            this.labEmployeeName.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEmployeeName.ForeColor = System.Drawing.Color.White;
+            this.labEmployeeName.Location = new System.Drawing.Point(46, 3);
+            this.labEmployeeName.Name = "labEmployeeName";
+            this.labEmployeeName.Size = new System.Drawing.Size(77, 31);
+            this.labEmployeeName.TabIndex = 2;
+            this.labEmployeeName.Text = "علي مرجاني";
             // 
             // Mainfrm
             // 
@@ -1015,12 +1016,12 @@
             this.EmployeesSubMenu.ResumeLayout(false);
             this.PatientsubMenuPanel.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HmbSizeBtn)).EndInit();
             this.UserInfoPanel.ResumeLayout(false);
             this.UserInfoPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HmbSizeBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

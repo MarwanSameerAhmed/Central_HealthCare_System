@@ -80,9 +80,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ContainerControl2.SuspendLayout();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // createBtn
@@ -96,12 +98,12 @@
             this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.createBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(595, 868);
+            this.createBtn.Location = new System.Drawing.Point(695, 865);
             this.createBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(451, 47);
+            this.createBtn.Size = new System.Drawing.Size(297, 56);
             this.createBtn.TabIndex = 37;
-            this.createBtn.Text = "إنشاء";
+            this.createBtn.Text = "إضافة";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // guna2ContainerControl2
@@ -272,6 +274,7 @@
             this.adminPassword.SelectedText = "";
             this.adminPassword.Size = new System.Drawing.Size(380, 41);
             this.adminPassword.TabIndex = 46;
+            this.adminPassword.TextChanged += new System.EventHandler(this.adminPassword_TextChanged);
             // 
             // adminEmail
             // 
@@ -327,6 +330,7 @@
             this.adminUserName.SelectedText = "";
             this.adminUserName.Size = new System.Drawing.Size(380, 41);
             this.adminUserName.TabIndex = 45;
+            this.adminUserName.TextChanged += new System.EventHandler(this.adminUserName_TextChanged);
             // 
             // adminPhoneNumber
             // 
@@ -354,6 +358,7 @@
             this.adminPhoneNumber.SelectedText = "";
             this.adminPhoneNumber.Size = new System.Drawing.Size(380, 41);
             this.adminPhoneNumber.TabIndex = 45;
+            this.adminPhoneNumber.TextChanged += new System.EventHandler(this.adminPhoneNumber_TextChanged);
             // 
             // adminPasswordError
             // 
@@ -585,6 +590,7 @@
             this.adminNationalIDcard.SelectedText = "";
             this.adminNationalIDcard.Size = new System.Drawing.Size(380, 41);
             this.adminNationalIDcard.TabIndex = 35;
+            this.adminNationalIDcard.TextChanged += new System.EventHandler(this.adminNationalIDcard_TextChanged);
             // 
             // label19
             // 
@@ -625,6 +631,7 @@
             this.adminName.SelectedText = "";
             this.adminName.Size = new System.Drawing.Size(380, 41);
             this.adminName.TabIndex = 33;
+            this.adminName.TextChanged += new System.EventHandler(this.adminName_TextChanged);
             // 
             // label21
             // 
@@ -707,6 +714,7 @@
             this.txtFacilityName.Size = new System.Drawing.Size(365, 41);
             this.txtFacilityName.TabIndex = 53;
             this.txtFacilityName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtFacilityName.TextChanged += new System.EventHandler(this.txtFacilityName_TextChanged);
             // 
             // cmbFacilityType
             // 
@@ -806,6 +814,7 @@
             this.txtFacilityPhones.SelectedText = "";
             this.txtFacilityPhones.Size = new System.Drawing.Size(365, 41);
             this.txtFacilityPhones.TabIndex = 48;
+            this.txtFacilityPhones.TextChanged += new System.EventHandler(this.txtFacilityPhones_TextChanged);
             // 
             // EmailErrorlbl
             // 
@@ -909,6 +918,7 @@
             this.txtFacilityAddress.SelectedText = "";
             this.txtFacilityAddress.Size = new System.Drawing.Size(365, 41);
             this.txtFacilityAddress.TabIndex = 35;
+            this.txtFacilityAddress.TextChanged += new System.EventHandler(this.txtFacilityAddress_TextChanged);
             // 
             // label2
             // 
@@ -952,6 +962,7 @@
             // 
             this.guna2ContainerControl3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl3.BorderRadius = 15;
+            this.guna2ContainerControl3.Controls.Add(this.pictureBox1);
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2ContainerControl3.Location = new System.Drawing.Point(18, 4);
@@ -968,12 +979,24 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(679, 5);
+            this.label10.Location = new System.Drawing.Point(758, 5);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(269, 52);
+            this.label10.Size = new System.Drawing.Size(198, 52);
             this.label10.TabIndex = 0;
-            this.label10.Text = "انشاء مستخدم منشأة جديد";
+            this.label10.Text = "إضافة منشأة جديدة";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.Animation___1740157992605;
+            this.pictureBox1.Location = new System.Drawing.Point(691, -6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AddNewFacilityFrm
             // 
@@ -989,7 +1012,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddNewFacilityFrm";
-            this.Text = "Form1";
+            this.Text = "إضافة منشأة";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.guna2ContainerControl2.ResumeLayout(false);
             this.guna2ContainerControl2.PerformLayout();
@@ -997,6 +1020,7 @@
             this.guna2ContainerControl1.PerformLayout();
             this.guna2ContainerControl3.ResumeLayout(false);
             this.guna2ContainerControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1055,6 +1079,7 @@
         private System.Windows.Forms.Label الجنس;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

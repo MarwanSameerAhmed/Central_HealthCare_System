@@ -141,6 +141,7 @@ namespace CHS_FrontEnd
             txtFacilityEmail.Text = string.Empty;
             adminEmail.Text = string.Empty;
             adminEmployeementDate.Value = DateTime.Today;
+            
 
 
         }
@@ -217,6 +218,7 @@ namespace CHS_FrontEnd
                     AdminUserName = AdminUserName,
                     AdminPassword = AdminPassword,
                     AdminJobTitle = AdminJobTile,
+
 
                 };
 
@@ -308,7 +310,7 @@ namespace CHS_FrontEnd
     
         private Font normalFont = new Font("Traditional Arabic", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-        
+
         private Font largeFont = new Font("Traditional Arabic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
      
@@ -331,6 +333,7 @@ namespace CHS_FrontEnd
             }
         }
 
+     
         private void txtFacilityEmail_TextChanged(object sender, EventArgs e)
         {
 
@@ -356,6 +359,60 @@ namespace CHS_FrontEnd
                 adminEmail.AutoCompleteCustomSource.Add(text + "@outlook.com");
                 adminEmail.AutoCompleteCustomSource.Add(text + "@hotmail.com");
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFacilityName_TextChanged(object sender, EventArgs e)
+        {
+            FacilityNameError.Visible = false;
+            txtFacilityName.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+
+        }
+
+        private void txtFacilityPhones_TextChanged(object sender, EventArgs e)
+        {
+            PhoneFacilityErrorLabel.Visible = false;
+            txtFacilityPhones.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void txtFacilityAddress_TextChanged(object sender, EventArgs e)
+        {
+            errorlblAddress.Visible = false;
+            txtFacilityAddress.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void adminName_TextChanged(object sender, EventArgs e)
+        {
+            adminNameError.Visible = false;
+            adminName.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void adminPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            adminPhoneError.Visible = false;
+            adminPhoneNumber.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void adminUserName_TextChanged(object sender, EventArgs e)
+        {
+            adminUserError.Visible = false;
+            adminUserName.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void adminNationalIDcard_TextChanged(object sender, EventArgs e)
+        {
+            NationalNumberErorr.Visible = false;
+            adminNationalIDcard.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
+        }
+
+        private void adminPassword_TextChanged(object sender, EventArgs e)
+        {
+            adminPasswordError.Visible = false;
+            adminPassword.BorderColor = System.Drawing.Color.FromArgb(1, 87, 155);
         }
     }
     }

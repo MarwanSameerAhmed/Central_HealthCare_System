@@ -754,10 +754,10 @@ namespace CHS_FrontEnd
             this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.createBtn.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(582, 909);
+            this.createBtn.Location = new System.Drawing.Point(666, 905);
             this.createBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(456, 48);
+            this.createBtn.Size = new System.Drawing.Size(297, 56);
             this.createBtn.TabIndex = 4;
             this.createBtn.Text = "إنشاء";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.medicalSpeCom = new Guna.UI2.WinForms.Guna2ComboBox();
             this.emailErorr = new System.Windows.Forms.Label();
             this.txtDoctorEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.txtMedicalSpecialization = new Guna.UI2.WinForms.Guna2TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -97,6 +97,7 @@
             // 
             this.guna2ContainerControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl2.BorderRadius = 15;
+            this.guna2ContainerControl2.Controls.Add(this.medicalSpeCom);
             this.guna2ContainerControl2.Controls.Add(this.emailErorr);
             this.guna2ContainerControl2.Controls.Add(this.txtDoctorEmail);
             this.guna2ContainerControl2.Controls.Add(this.label24);
@@ -114,7 +115,6 @@
             this.guna2ContainerControl2.Controls.Add(this.label17);
             this.guna2ContainerControl2.Controls.Add(this.label18);
             this.guna2ContainerControl2.Controls.Add(this.label19);
-            this.guna2ContainerControl2.Controls.Add(this.txtMedicalSpecialization);
             this.guna2ContainerControl2.Controls.Add(this.label21);
             this.guna2ContainerControl2.Controls.Add(this.label20);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
@@ -123,6 +123,25 @@
             this.guna2ContainerControl2.Size = new System.Drawing.Size(1411, 250);
             this.guna2ContainerControl2.TabIndex = 39;
             this.guna2ContainerControl2.Text = "الاسم الكامل ";
+            // 
+            // medicalSpeCom
+            // 
+            this.medicalSpeCom.BackColor = System.Drawing.Color.Transparent;
+            this.medicalSpeCom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.medicalSpeCom.BorderRadius = 10;
+            this.medicalSpeCom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.medicalSpeCom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.medicalSpeCom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.medicalSpeCom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.medicalSpeCom.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicalSpeCom.ForeColor = System.Drawing.Color.Black;
+            this.medicalSpeCom.ItemHeight = 30;
+            this.medicalSpeCom.Location = new System.Drawing.Point(1032, 86);
+            this.medicalSpeCom.Name = "medicalSpeCom";
+            this.medicalSpeCom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.medicalSpeCom.Size = new System.Drawing.Size(363, 36);
+            this.medicalSpeCom.TabIndex = 66;
+            this.medicalSpeCom.TextChanged += new System.EventHandler(this.medicalSpeCom_TextChanged);
             // 
             // emailErorr
             // 
@@ -223,6 +242,7 @@
             this.txtDoctorPassword.SelectedText = "";
             this.txtDoctorPassword.Size = new System.Drawing.Size(368, 33);
             this.txtDoctorPassword.TabIndex = 61;
+            this.txtDoctorPassword.TextChanged += new System.EventHandler(this.txtDoctorPassword_TextChanged);
             // 
             // txtDoctorTitle
             // 
@@ -241,9 +261,7 @@
             this.txtDoctorTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDoctorTitle.Size = new System.Drawing.Size(363, 36);
             this.txtDoctorTitle.TabIndex = 56;
-            this.txtDoctorTitle.SelectedIndexChanged += new System.EventHandler(this.txtDoctorTitle_SelectedIndexChanged);
-            this.txtDoctorTitle.SelectedValueChanged += new System.EventHandler(this.txtDoctorTitle_SelectedValueChanged);
-            this.txtDoctorTitle.Leave += new System.EventHandler(this.txtDoctorTitle_Leave);
+            this.txtDoctorTitle.TextChanged += new System.EventHandler(this.txtDoctorTitle_TextChanged);
             // 
             // label22
             // 
@@ -300,6 +318,7 @@
             this.txtDoctorUserName.SelectedText = "";
             this.txtDoctorUserName.Size = new System.Drawing.Size(363, 33);
             this.txtDoctorUserName.TabIndex = 58;
+            this.txtDoctorUserName.TextChanged += new System.EventHandler(this.txtDoctorUserName_TextChanged);
             // 
             // label15
             // 
@@ -330,6 +349,7 @@
             this.txtDoctorEmpDate.Size = new System.Drawing.Size(369, 36);
             this.txtDoctorEmpDate.TabIndex = 55;
             this.txtDoctorEmpDate.Value = new System.DateTime(2025, 1, 9, 23, 12, 56, 828);
+            this.txtDoctorEmpDate.TextChanged += new System.EventHandler(this.txtDoctorEmpDate_TextChanged);
             // 
             // jobErorr
             // 
@@ -405,35 +425,6 @@
             this.label19.Size = new System.Drawing.Size(121, 23);
             this.label19.TabIndex = 34;
             this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtMedicalSpecialization
-            // 
-            this.txtMedicalSpecialization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.txtMedicalSpecialization.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.txtMedicalSpecialization.BorderRadius = 10;
-            this.txtMedicalSpecialization.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMedicalSpecialization.DefaultText = "";
-            this.txtMedicalSpecialization.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMedicalSpecialization.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMedicalSpecialization.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMedicalSpecialization.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMedicalSpecialization.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMedicalSpecialization.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtMedicalSpecialization.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMedicalSpecialization.ForeColor = System.Drawing.Color.Black;
-            this.txtMedicalSpecialization.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMedicalSpecialization.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_medical_file_96;
-            this.txtMedicalSpecialization.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.txtMedicalSpecialization.Location = new System.Drawing.Point(1028, 88);
-            this.txtMedicalSpecialization.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMedicalSpecialization.Name = "txtMedicalSpecialization";
-            this.txtMedicalSpecialization.PasswordChar = '\0';
-            this.txtMedicalSpecialization.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtMedicalSpecialization.PlaceholderText = "ادخل التخصص الطبي";
-            this.txtMedicalSpecialization.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtMedicalSpecialization.SelectedText = "";
-            this.txtMedicalSpecialization.Size = new System.Drawing.Size(368, 33);
-            this.txtMedicalSpecialization.TabIndex = 33;
             // 
             // label21
             // 
@@ -887,8 +878,8 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.Animation___1739982353951;
-            this.pictureBox1.Location = new System.Drawing.Point(549, 0);
+            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.Animation___17399823539511;
+            this.pictureBox1.Location = new System.Drawing.Point(595, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -902,11 +893,11 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(601, 9);
+            this.label10.Location = new System.Drawing.Point(646, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(246, 47);
+            this.label10.Size = new System.Drawing.Size(172, 47);
             this.label10.TabIndex = 0;
-            this.label10.Text = "انشاء مستخدم طبيب جديد";
+            this.label10.Text = "إضافة طبيب جديد";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2ContainerControl4
@@ -946,6 +937,7 @@
             this.txtDateLcinesExp.Size = new System.Drawing.Size(357, 33);
             this.txtDateLcinesExp.TabIndex = 55;
             this.txtDateLcinesExp.Value = new System.DateTime(2025, 1, 9, 23, 12, 56, 828);
+            this.txtDateLcinesExp.TextChanged += new System.EventHandler(this.txtDateLcinesExp_TextChanged);
             // 
             // txtDateLiceinsgiven
             // 
@@ -963,6 +955,7 @@
             this.txtDateLiceinsgiven.Size = new System.Drawing.Size(371, 33);
             this.txtDateLiceinsgiven.TabIndex = 55;
             this.txtDateLiceinsgiven.Value = new System.DateTime(2025, 1, 9, 23, 12, 56, 828);
+            this.txtDateLiceinsgiven.TextChanged += new System.EventHandler(this.txtDateLiceinsgiven_TextChanged);
             // 
             // txtLicenc
             // 
@@ -993,6 +986,7 @@
             this.txtLicenc.Size = new System.Drawing.Size(371, 33);
             this.txtLicenc.TabIndex = 55;
             this.txtLicenc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLicenc.TextChanged += new System.EventHandler(this.txtLicenc_TextChanged);
             // 
             // label13
             // 
@@ -1094,12 +1088,12 @@
             this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.createBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(686, 756);
+            this.createBtn.Location = new System.Drawing.Point(698, 743);
             this.createBtn.Margin = new System.Windows.Forms.Padding(2);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(337, 47);
+            this.createBtn.Size = new System.Drawing.Size(297, 50);
             this.createBtn.TabIndex = 41;
-            this.createBtn.Text = "إنشاء";
+            this.createBtn.Text = "إضافة";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // AddNewDoctorFrm
@@ -1139,7 +1133,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private Guna.UI2.WinForms.Guna2TextBox txtMedicalSpecialization;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
@@ -1190,5 +1183,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label licenceExpErorr;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox medicalSpeCom;
     }
 }

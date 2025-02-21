@@ -450,6 +450,11 @@ namespace CHS_FrontEnd
         {
             OpenForm(new PharmacyMainFrm(dockPanel));
         }
+
+        private void SettingBtn_Click(object sender, EventArgs e)
+        {
+            CustomMessageBox.Show(CustomMessageBox.MessageType.Error, "نجاح!", "تمت العملية بنجاح.");
+        }
     }
 }
 

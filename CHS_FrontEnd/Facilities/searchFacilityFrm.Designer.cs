@@ -47,16 +47,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.midSearchtxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ContainerControl3.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchFacilityView)).BeginInit();
             this.guna2ContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ContainerControl3
             // 
             this.guna2ContainerControl3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl3.BorderRadius = 15;
+            this.guna2ContainerControl3.Controls.Add(this.pictureBox1);
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2ContainerControl3.Location = new System.Drawing.Point(62, 4);
@@ -333,6 +336,17 @@
             this.label1.Text = "ابحث عن منشأة";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.Animation___1740156272160;
+            this.pictureBox1.Location = new System.Drawing.Point(636, -12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // searchPlacemenet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -352,6 +366,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.searchFacilityView)).EndInit();
             this.guna2ContainerControl1.ResumeLayout(false);
             this.guna2ContainerControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -373,5 +388,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FacilityAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn FacilityEmail;
         private Guna.UI2.WinForms.Guna2Button searchBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

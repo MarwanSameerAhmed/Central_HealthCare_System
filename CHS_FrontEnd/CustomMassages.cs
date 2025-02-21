@@ -11,101 +11,144 @@ using System.Windows.Forms;
 
 namespace CHS_FrontEnd
 {
-    public partial class CustomMassages : Form
+    public partial class CustomMessageBox : Form
     {
-        private Guna2Panel panel;
-        private Guna2PictureBox pictureBox;
-        private Guna2HtmlLabel titleLabel;
-        private Guna2HtmlLabel messageLabel;
-        private Guna2Button button1;
-        private Guna2Button button2;
+        private Guna2PictureBox iconPictureBox;
+        private Label mainTextLabel;
+        private Label subTextLabel;
+        private Guna2Button okButton;
+        private Guna2Panel borderPanel;
+        private Guna2BorderlessForm gunaBorderlessForm;
 
-        public CustomMassages(string title, string message, string button1Text, string button2Text, EventHandler button1Click = null, EventHandler button2Click = null, string imagePath = null)
+        public enum MessageType
         {
-            // إعدادات النموذج
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new System.Drawing.Size(350, 250);
-            this.BackColor = System.Drawing.Color.White;
-
-            // الحاوية الرئيسية
-            panel = new Guna2Panel
-            {
-                Dock = DockStyle.Fill,
-                BorderRadius = 10,
-                ShadowDecoration = { Parent = this }
-            };
-            this.Controls.Add(panel);
-
-            // PictureBox للصورة أو الأيقونة
-            pictureBox = new Guna2PictureBox
-            {
-                Size = new System.Drawing.Size(60, 60),
-                Location = new System.Drawing.Point(145, 10),
-                SizeMode = PictureBoxSizeMode.Zoom
-            };
-            if (!string.IsNullOrEmpty(imagePath))
-                pictureBox.Image = System.Drawing.Image.FromFile(imagePath);
-            panel.Controls.Add(pictureBox);
-
-            // عنوان الرسالة
-            titleLabel = new Guna2HtmlLabel
-            {
-                Text = title,
-                AutoSize = false,
-                Location = new System.Drawing.Point(20, 80),
-                Size = new System.Drawing.Size(310, 25),
-                TextAlignment = System.Drawing.ContentAlignment.MiddleCenter,
-                Font = new System.Drawing.Font("Arial", 12, System.Drawing.FontStyle.Bold)
-            };
-            panel.Controls.Add(titleLabel);
-
-            // النص الفرعي
-            messageLabel = new Guna2HtmlLabel
-            {
-                Text = message,
-                AutoSize = false,
-                Location = new System.Drawing.Point(20, 110),
-                Size = new System.Drawing.Size(310, 40),
-                TextAlignment = System.Drawing.ContentAlignment.MiddleCenter,
-                Font = new System.Drawing.Font("Arial", 10)
-            };
-            panel.Controls.Add(messageLabel);
-
-            // زر 1
-            button1 = new Guna2Button
-            {
-                Text = button1Text,
-                Size = new System.Drawing.Size(120, 35),
-                Location = new System.Drawing.Point(30, 180),
-                BorderRadius = 5,
-                DialogResult = DialogResult.OK
-            };
-            if (button1Click != null) button1.Click += button1Click;
-            button1.Click += (s, e) => this.Close();
-            panel.Controls.Add(button1);
-
-            // زر 2
-            button2 = new Guna2Button
-            {
-                Text = button2Text,
-                Size = new System.Drawing.Size(120, 35),
-                Location = new System.Drawing.Point(190, 180),
-                BorderRadius = 5,
-                DialogResult = DialogResult.Cancel
-            };
-            if (button2Click != null) button2.Click += button2Click;
-            button2.Click += (s, e) => this.Close();
-            panel.Controls.Add(button2);
+            Warning, // تحذير
+            Error,   // خطأ
+            Success  // نجاح
         }
 
-     
-        public static DialogResult Show(string title, string message, string button1Text = "OK", string button2Text = "Cancel", EventHandler button1Click = null, EventHandler button2Click = null, string imagePath = null)
+        public CustomMessageBox(MessageType type, string mainText, string subText)
         {
-            using (CustomMassages msgBox = new CustomMassages(title, message, button1Text, button2Text, button1Click, button2Click, imagePath))
+            // 🔹 إعدادات النافذة
+            this.Size = new Size(420, 260);
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.White;
+
+            // 🔹 تفعيل Guna2BorderlessForm
+            gunaBorderlessForm = new Guna2BorderlessForm
             {
-                return msgBox.ShowDialog();
+                ContainerControl = this,
+                BorderRadius = 20
+            };
+
+            // 🔹 إنشاء Panel كإطار خارجي
+            borderPanel = new Guna2Panel
+            {
+                Size = new Size(418, 258),
+                Location = new Point(1, 1),
+                BackColor = Color.White,
+              
+                BorderColor = Color.LightGray
+            };
+            this.Controls.Add(borderPanel); // 🟢 أضف Panel أولًا
+
+            // 🔹 اختيار الأيقونة
+            Image icon = GetIcon(type);
+
+            // 🔹 أيقونة الرسالة
+            iconPictureBox = new Guna2PictureBox
+            {
+                Image = icon,
+                SizeMode = PictureBoxSizeMode.Zoom,
+                Location = new Point(160, 20),
+                Size = new Size(100, 100),
+                BackColor = Color.Transparent
+            };
+            borderPanel.Controls.Add(iconPictureBox);
+
+            // 🔹 نص العنوان الرئيسي
+            mainTextLabel = new Label
+            {
+                Text = mainText,
+                Font = new Font("Traditional Arabic", 14, FontStyle.Bold),
+                ForeColor = Color.Black,
+                TextAlign = ContentAlignment.MiddleCenter,
+                AutoSize = false,
+                Location = new Point(20, 130),
+                Size = new Size(378, 30)
+            };
+            borderPanel.Controls.Add(mainTextLabel);
+
+            // 🔹 نص العنوان الفرعي
+            subTextLabel = new Label
+            {
+                Text = subText,
+                Font = new Font("Traditional Arabic", 12, FontStyle.Regular),
+                ForeColor = Color.Gray,
+                TextAlign = ContentAlignment.MiddleCenter,
+                AutoSize = false,
+                Location = new Point(20, 160),
+                Size = new Size(378, 30)
+            };
+            borderPanel.Controls.Add(subTextLabel);
+
+            // 🔹 زر "موافق"
+            okButton = new Guna2Button
+            {
+                Text = "موافق",
+                Font = new Font("Traditional Arabic", 12, FontStyle.Bold),
+                ForeColor = Color.White,
+                Location = new Point(160, 200),
+                Size = new Size(100, 35),
+                BorderRadius = 10
+            };
+
+            // 🔹 تغيير لون الزر حسب نوع الرسالة
+            switch (type)
+            {
+                case MessageType.Warning:
+                    okButton.FillColor = Color.Orange;
+                    break;
+                case MessageType.Error:
+                    okButton.FillColor = Color.Red;
+                    break;
+                case MessageType.Success:
+                    okButton.FillColor = Color.Green;
+                    break;
             }
+
+            okButton.Click += (s, e) => this.Close();
+            borderPanel.Controls.Add(okButton);
+        }
+
+        private Image GetIcon(MessageType type)
+        {
+            try
+            {
+                switch (type)
+                {
+                    case MessageType.Warning:
+                        return Image.FromFile("C:\\Users\\aa048\\source\\repos\\CHS_FrontEnd\\CHS_FrontEnd\\Resources\\Animation - 1740172800555.gif"); // استبدل بصورة التحذير
+                    case MessageType.Error:
+                        return Image.FromFile("C:\\Users\\aa048\\source\\repos\\CHS_FrontEnd\\CHS_FrontEnd\\Resources\\Animation - 1740170391295.gif");   // استبدل بصورة الخطأ
+                    case MessageType.Success:
+                        return Image.FromFile("C:\\Users\\aa048\\source\\repos\\CHS_FrontEnd\\CHS_FrontEnd\\Resources\\Animation - 1740170294033.gif"); // استبدل بصورة النجاح
+                    default:
+                        return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"خطأ في تحميل الأيقونة: {ex.Message}");
+                return null;
+            }
+        }
+
+        public static void Show(MessageType type, string mainText, string subText)
+        {
+            CustomMessageBox msgBox = new CustomMessageBox(type, mainText, subText);
+            msgBox.ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace CHS_FrontEnd
 {
-    partial class CustomMassages
+    partial class CustomMessageBox
     {
         /// <summary>
         /// Required designer variable.

@@ -58,10 +58,12 @@ namespace CHS_FrontEnd
             this.Column_MedicalNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchPatientView)).BeginInit();
             this.guna2ContainerControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ContainerControl1
@@ -387,6 +389,7 @@ namespace CHS_FrontEnd
             // 
             this.guna2ContainerControl3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl3.BorderRadius = 15;
+            this.guna2ContainerControl3.Controls.Add(this.pictureBox1);
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2ContainerControl3.Location = new System.Drawing.Point(14, 6);
@@ -403,7 +406,7 @@ namespace CHS_FrontEnd
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(721, 2);
+            this.label10.Location = new System.Drawing.Point(687, 2);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(211, 52);
@@ -411,6 +414,17 @@ namespace CHS_FrontEnd
             this.label10.Text = "البحث عن ملف طبي";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.Animation___1740156272160;
+            this.pictureBox1.Location = new System.Drawing.Point(611, -9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // searchPatientFrm
             // 
@@ -433,6 +447,7 @@ namespace CHS_FrontEnd
             ((System.ComponentModel.ISupportInitialize)(this.searchPatientView)).EndInit();
             this.guna2ContainerControl3.ResumeLayout(false);
             this.guna2ContainerControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,5 +472,6 @@ namespace CHS_FrontEnd
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna2Button searchBtn;
         internal Guna2DataGridView searchPatientView;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

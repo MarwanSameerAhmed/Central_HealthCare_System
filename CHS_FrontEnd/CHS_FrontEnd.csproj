@@ -506,11 +506,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\sub1.sql" />
     <Content Include="Resources\add-user.png" />
     <None Include="Resources\ALI.png" />
     <None Include="Resources\Animation - 1739981991963.gif" />
     <None Include="Resources\Animation - 1739982353951.gif" />
+    <None Include="Resources\Animation - 1740156272160.gif" />
+    <None Include="Resources\Animation - 1740157672616.gif" />
+    <None Include="Resources\Animation - 1740157992605.gif" />
+    <None Include="Resources\Animation - 1740158425835.gif" />
     <Content Include="Resources\arrow.png" />
     <Content Include="Resources\business.png" />
     <Content Include="Resources\Decrease_Icon.png" />

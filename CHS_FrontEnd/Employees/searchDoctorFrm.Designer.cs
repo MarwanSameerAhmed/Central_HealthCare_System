@@ -50,10 +50,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchDoctorView)).BeginInit();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ContainerControl2
@@ -361,6 +363,7 @@
             // 
             this.guna2ContainerControl3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl3.BorderRadius = 15;
+            this.guna2ContainerControl3.Controls.Add(this.pictureBox1);
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2ContainerControl3.Location = new System.Drawing.Point(72, 5);
@@ -383,6 +386,17 @@
             this.label10.Text = "البحث عن طبيب";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.Animation___1740156272160;
+            this.pictureBox1.Location = new System.Drawing.Point(632, -11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // searchDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -403,6 +417,7 @@
             this.guna2ContainerControl1.PerformLayout();
             this.guna2ContainerControl3.ResumeLayout(false);
             this.guna2ContainerControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,5 +441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn doctorPhoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctorMiagor;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctorNumber;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
