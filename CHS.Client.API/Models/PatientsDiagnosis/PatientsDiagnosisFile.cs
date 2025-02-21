@@ -14,5 +14,6 @@ namespace CHS.Client.API.Models.PatientsDiagnosis
         public List<string> MedicalConditions { get; set; }
         public string EnterTimeMedicalCondition { get; set; }
         public bool CreatedByCurrentDoctor { get; set; }
+        public bool IsChronic { get; set; }
     }
 }
