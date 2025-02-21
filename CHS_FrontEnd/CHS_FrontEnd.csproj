@@ -267,6 +267,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Pharmacy\PharmacyMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pharmacy\PharmacyMainFrm.Designer.cs">
+      <DependentUpon>PharmacyMainFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="QrFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,6 +407,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pharmacy\PharmacyMainFrm.resx">
+      <DependentUpon>PharmacyMainFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -520,6 +529,23 @@
     <Content Include="Resources\talent-management.png" />
     <Content Include="Resources\welfare.png" />
     <Content Include="Resources\yemen_political_map.png.gif" />
+    <Content Include="Database\GenerateTables.sql" />
+    <None Include="Resources\Animation - 1739555645304.gif" />
+    <None Include="Resources\Animation - 1739555522635.gif" />
+    <None Include="Resources\Animation - 1739555180638.gif" />
+    <None Include="Resources\icons8-email-100.png" />
+    <None Include="Resources\icons8-phone-number-100.png" />
+    <None Include="Resources\icons8-username-80.png" />
+    <None Include="Resources\icons8-password-58.png" />
+    <None Include="Resources\icons8-username-96.png" />
+    <None Include="Resources\icons8-username-100.png" />
+    <None Include="Resources\icons8-id-card-96.png" />
+    <None Include="Resources\icons8-id-card-64.png" />
+    <None Include="Resources\icons8-name-80.png" />
+    <None Include="Resources\icons8-name.gif" />
+    <None Include="Resources\Animation - 1739551541283.gif" />
+    <None Include="Resources\icons8-expand-arrow-64 %281%29.png" />
+    <None Include="Resources\icons8-expand-arrow-64 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

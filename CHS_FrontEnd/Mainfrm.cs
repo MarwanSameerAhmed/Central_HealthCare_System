@@ -1,4 +1,5 @@
 ﻿using CHS.Client;
+using CHS_FrontEnd.Pharmacy;
 using FontAwesome.Sharp;
 using Guna.UI2.WinForms;
 using System;
@@ -443,6 +444,11 @@ namespace CHS_FrontEnd
         private void EmergncyBedBtn_Click(object sender, EventArgs e)
         {
             OpenForm(new EDBedsManagement());
+        }
+
+        private void searchParmacyBtn_Click(object sender, EventArgs e)
+        {
+            OpenForm(new PharmacyMainFrm(dockPanel));
         }
     }
 }
