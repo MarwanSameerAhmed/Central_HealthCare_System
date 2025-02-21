@@ -17,7 +17,7 @@ namespace CHS_FrontEnd
         private DockPanel dockPanel;
         public PatientFileView(DockPanel dockPanel , string fullName, int age, string phoneNumber, long medicalNumber,
                               string idCardNumber, string birthDate, bool isMale,
-                              string patientAddress, string bloodType)
+                              string patientAddress, string bloodType , string maritalStatus , string companionName ,string birthPlace)
         {
             InitializeComponent();
             this.dockPanel = dockPanel;
@@ -26,12 +26,14 @@ namespace CHS_FrontEnd
             veiwtNamelbl.Text = fullName;
             viewAgelbl.Text = age.ToString();
             veiwBirthDaylbl.Text = birthDate;
-            viewStatelbl.Text = "";
-            viewCumlbl.Text = "maritalStatus";
+            viewStatelbl.Text = birthPlace;
+            viewCumlbl.Text = maritalStatus;
             viewPhonelbl.Text = phoneNumber;
             viewbloodlbl.Text = bloodType;
             typeLbl.Text =  isMale ? "ذكر" : "أنثى";
             addresslbl.Text = patientAddress;
+            fathlbl.Text = companionName; 
+
 
 
 
@@ -154,6 +156,16 @@ namespace CHS_FrontEnd
                 DaignosisesViewFrm detailsForm = new DaignosisesViewFrm();
                 detailsForm.Show();
             }
+        }
+
+        private void guna2ContainerControl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

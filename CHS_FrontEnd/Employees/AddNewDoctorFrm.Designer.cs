@@ -72,6 +72,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ContainerControl4 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.txtDateLcinesExp = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -88,6 +89,7 @@
             this.guna2ContainerControl2.SuspendLayout();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2ContainerControl4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,7 +118,7 @@
             this.guna2ContainerControl2.Controls.Add(this.label21);
             this.guna2ContainerControl2.Controls.Add(this.label20);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(120, 464);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(120, 467);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(1411, 250);
             this.guna2ContainerControl2.TabIndex = 39;
@@ -151,6 +153,9 @@
             this.txtDoctorEmail.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorEmail.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoctorEmail.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_email_100___Copy1;
+            this.txtDoctorEmail.IconRightOffset = new System.Drawing.Point(4, 0);
+            this.txtDoctorEmail.IconRightSize = new System.Drawing.Size(35, 25);
             this.txtDoctorEmail.Location = new System.Drawing.Point(284, 176);
             this.txtDoctorEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDoctorEmail.Name = "txtDoctorEmail";
@@ -205,6 +210,9 @@
             this.txtDoctorPassword.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorPassword.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoctorPassword.IconRight = global::CHS_FrontEnd.Properties.Resources.PASSWORD;
+            this.txtDoctorPassword.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtDoctorPassword.IconRightSize = new System.Drawing.Size(25, 25);
             this.txtDoctorPassword.Location = new System.Drawing.Point(287, 88);
             this.txtDoctorPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDoctorPassword.Name = "txtDoctorPassword";
@@ -228,7 +236,7 @@
             this.txtDoctorTitle.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorTitle.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorTitle.ItemHeight = 30;
-            this.txtDoctorTitle.Location = new System.Drawing.Point(659, 179);
+            this.txtDoctorTitle.Location = new System.Drawing.Point(659, 178);
             this.txtDoctorTitle.Name = "txtDoctorTitle";
             this.txtDoctorTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDoctorTitle.Size = new System.Drawing.Size(363, 36);
@@ -279,6 +287,9 @@
             this.txtDoctorUserName.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorUserName.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoctorUserName.IconRight = global::CHS_FrontEnd.Properties.Resources.USERNAME;
+            this.txtDoctorUserName.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtDoctorUserName.IconRightSize = new System.Drawing.Size(25, 25);
             this.txtDoctorUserName.Location = new System.Drawing.Point(660, 88);
             this.txtDoctorUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDoctorUserName.Name = "txtDoctorUserName";
@@ -411,6 +422,8 @@
             this.txtMedicalSpecialization.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedicalSpecialization.ForeColor = System.Drawing.Color.Black;
             this.txtMedicalSpecialization.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMedicalSpecialization.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_medical_file_96;
+            this.txtMedicalSpecialization.IconRightOffset = new System.Drawing.Point(10, 0);
             this.txtMedicalSpecialization.Location = new System.Drawing.Point(1028, 88);
             this.txtMedicalSpecialization.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMedicalSpecialization.Name = "txtMedicalSpecialization";
@@ -476,7 +489,7 @@
             this.guna2ContainerControl1.Controls.Add(this.label4);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl1.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(120, 68);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(120, 71);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1411, 230);
             this.guna2ContainerControl1.TabIndex = 38;
@@ -498,6 +511,9 @@
             this.txtDoctorName.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorName.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoctorName.IconRight = global::CHS_FrontEnd.Properties.Resources.employee3;
+            this.txtDoctorName.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtDoctorName.IconRightSize = new System.Drawing.Size(25, 25);
             this.txtDoctorName.Location = new System.Drawing.Point(1028, 90);
             this.txtDoctorName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtDoctorName.Name = "txtDoctorName";
@@ -612,6 +628,11 @@
             this.txtDoctorAddress.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorAddress.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoctorAddress.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtDoctorAddress.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtDoctorAddress.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_address_1001;
+            this.txtDoctorAddress.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtDoctorAddress.IconRightSize = new System.Drawing.Size(25, 25);
             this.txtDoctorAddress.Location = new System.Drawing.Point(1028, 171);
             this.txtDoctorAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDoctorAddress.Name = "txtDoctorAddress";
@@ -640,6 +661,9 @@
             this.txtDoctorIDcard.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorIDcard.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorIDcard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoctorIDcard.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_id_card_501;
+            this.txtDoctorIDcard.IconRightOffset = new System.Drawing.Point(8, 0);
+            this.txtDoctorIDcard.IconRightSize = new System.Drawing.Size(30, 30);
             this.txtDoctorIDcard.Location = new System.Drawing.Point(656, 171);
             this.txtDoctorIDcard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDoctorIDcard.Name = "txtDoctorIDcard";
@@ -668,6 +692,9 @@
             this.txtDoctorPhoneNumber.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoctorPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.txtDoctorPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoctorPhoneNumber.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_phone_801;
+            this.txtDoctorPhoneNumber.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtDoctorPhoneNumber.IconRightSize = new System.Drawing.Size(25, 25);
             this.txtDoctorPhoneNumber.Location = new System.Drawing.Point(656, 90);
             this.txtDoctorPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDoctorPhoneNumber.Name = "txtDoctorPhoneNumber";
@@ -848,13 +875,25 @@
             // 
             this.guna2ContainerControl3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl3.BorderRadius = 15;
+            this.guna2ContainerControl3.Controls.Add(this.pictureBox1);
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2ContainerControl3.Location = new System.Drawing.Point(120, 4);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1411, 52);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1411, 55);
             this.guna2ContainerControl3.TabIndex = 37;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CHS_FrontEnd.Properties.Resources.Animation___1739982353951;
+            this.pictureBox1.Location = new System.Drawing.Point(549, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
             // 
             // label10
             // 
@@ -863,7 +902,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(601, 1);
+            this.label10.Location = new System.Drawing.Point(601, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(246, 47);
             this.label10.TabIndex = 0;
@@ -885,7 +924,7 @@
             this.guna2ContainerControl4.Controls.Add(this.licenceExpErorr);
             this.guna2ContainerControl4.Controls.Add(this.licenesErorrgev);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(120, 304);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(120, 307);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
             this.guna2ContainerControl4.Size = new System.Drawing.Size(1411, 152);
             this.guna2ContainerControl4.TabIndex = 40;
@@ -941,6 +980,9 @@
             this.txtLicenc.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLicenc.ForeColor = System.Drawing.Color.Black;
             this.txtLicenc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLicenc.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_number_100;
+            this.txtLicenc.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtLicenc.IconRightSize = new System.Drawing.Size(25, 25);
             this.txtLicenc.Location = new System.Drawing.Point(1026, 89);
             this.txtLicenc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLicenc.Name = "txtLicenc";
@@ -1052,10 +1094,10 @@
             this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.createBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(594, 767);
+            this.createBtn.Location = new System.Drawing.Point(686, 756);
             this.createBtn.Margin = new System.Windows.Forms.Padding(2);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(451, 47);
+            this.createBtn.Size = new System.Drawing.Size(337, 47);
             this.createBtn.TabIndex = 41;
             this.createBtn.Text = "إنشاء";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
@@ -1081,6 +1123,7 @@
             this.guna2ContainerControl1.PerformLayout();
             this.guna2ContainerControl3.ResumeLayout(false);
             this.guna2ContainerControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2ContainerControl4.ResumeLayout(false);
             this.guna2ContainerControl4.PerformLayout();
             this.ResumeLayout(false);
@@ -1146,5 +1189,6 @@
         private System.Windows.Forms.Label licenesErorrgev;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label licenceExpErorr;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

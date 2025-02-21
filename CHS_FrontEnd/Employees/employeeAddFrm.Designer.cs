@@ -198,7 +198,7 @@ namespace CHS_FrontEnd
             this.empNationalIDtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empNationalIDtxt.ForeColor = System.Drawing.Color.Black;
             this.empNationalIDtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empNationalIDtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_add_64;
+            this.empNationalIDtxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_id_card_642;
             this.empNationalIDtxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.empNationalIDtxt.IconRightSize = new System.Drawing.Size(25, 25);
             this.empNationalIDtxt.Location = new System.Drawing.Point(102, 100);
@@ -322,7 +322,7 @@ namespace CHS_FrontEnd
             this.empFullNametxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empFullNametxt.ForeColor = System.Drawing.Color.Black;
             this.empFullNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empFullNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_name_80;
+            this.empFullNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.employee2;
             this.empFullNametxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.empFullNametxt.IconRightSize = new System.Drawing.Size(25, 25);
             this.empFullNametxt.Location = new System.Drawing.Point(613, 100);
@@ -414,8 +414,9 @@ namespace CHS_FrontEnd
             this.empPhoneNumbertxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empPhoneNumbertxt.ForeColor = System.Drawing.Color.Black;
             this.empPhoneNumbertxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.empPhoneNumbertxt.IconRight = global::CHS_FrontEnd.Properties.Resources.ALI;
             this.empPhoneNumbertxt.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.empPhoneNumbertxt.IconRightSize = new System.Drawing.Size(35, 35);
+            this.empPhoneNumbertxt.IconRightSize = new System.Drawing.Size(25, 25);
             this.empPhoneNumbertxt.Location = new System.Drawing.Point(23, 99);
             this.empPhoneNumbertxt.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.empPhoneNumbertxt.Name = "empPhoneNumbertxt";
@@ -459,7 +460,7 @@ namespace CHS_FrontEnd
             this.empEmailTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empEmailTxt.ForeColor = System.Drawing.Color.Black;
             this.empEmailTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.empEmailTxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_email_100;
+            this.empEmailTxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_email_100___Copy2;
             this.empEmailTxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.empEmailTxt.IconRightSize = new System.Drawing.Size(35, 35);
             this.empEmailTxt.Location = new System.Drawing.Point(23, 184);
@@ -616,7 +617,7 @@ namespace CHS_FrontEnd
             this.userNametxt.ForeColor = System.Drawing.Color.Black;
             this.userNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userNametxt.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.userNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.icons8_username_80;
+            this.userNametxt.IconRight = global::CHS_FrontEnd.Properties.Resources.USERNAME;
             this.userNametxt.IconRightOffset = new System.Drawing.Point(10, 0);
             this.userNametxt.IconRightSize = new System.Drawing.Size(30, 30);
             this.userNametxt.Location = new System.Drawing.Point(614, 107);

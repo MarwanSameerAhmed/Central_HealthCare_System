@@ -17,5 +17,8 @@ namespace CHS.Client.API.Models.Patients
         public bool IsMale { get; set; }
         public string PatientAddress { get; set; }
         public string BloodType { get; set; }
+        public string birthPlace { get; set; }
+        public string maritalStatus { get; set; }
+        public string companionName { get; set; }
     }
 }

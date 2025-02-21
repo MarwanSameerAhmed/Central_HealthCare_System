@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationRevision>19</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -508,6 +508,9 @@
   <ItemGroup>
     <Content Include="Database\sub1.sql" />
     <Content Include="Resources\add-user.png" />
+    <None Include="Resources\ALI.png" />
+    <None Include="Resources\Animation - 1739981991963.gif" />
+    <None Include="Resources\Animation - 1739982353951.gif" />
     <Content Include="Resources\arrow.png" />
     <Content Include="Resources\business.png" />
     <Content Include="Resources\Decrease_Icon.png" />
@@ -516,17 +519,23 @@
     <Content Include="Resources\HEATHCARE-0١.jpg" />
     <None Include="Resources\icons8-address-100.png" />
     <Content Include="Resources\icons8-chevron-down-80.png" />
+    <None Include="Resources\icons8-email-100 - Copy.png" />
     <Content Include="Resources\icons8-expand-arrow-64.png" />
     <None Include="Resources\Image1.bmp" />
     <None Include="Resources\icons8-id-card-50.png" />
     <None Include="Resources\icons8-phone-80.png" />
     <None Include="Resources\icons8-guardian-100.png" />
+    <None Include="Resources\icons8-hastag-100.png" />
+    <None Include="Resources\icons8-number-100.png" />
+    <None Include="Resources\icons8-medical-file-96.png" />
     <Content Include="Resources\Increase_Icon.png" />
     <Content Include="Resources\medical.png" />
     <Content Include="Resources\ooooooooooooooooooooooooooooooooooo.png" />
     <Content Include="Resources\participant.png" />
+    <None Include="Resources\PASSWORD.png" />
     <Content Include="Resources\pin-code.png" />
     <Content Include="Resources\talent-management.png" />
+    <None Include="Resources\USERNAME.png" />
     <Content Include="Resources\welfare.png" />
     <Content Include="Resources\yemen_political_map.png.gif" />
     <Content Include="Database\GenerateTables.sql" />

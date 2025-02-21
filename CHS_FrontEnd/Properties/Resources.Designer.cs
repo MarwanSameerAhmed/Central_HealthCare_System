@@ -73,6 +73,16 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ALI {
+            get {
+                object obj = ResourceManager.GetObject("ALI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Animation___1739551541283 {
             get {
                 object obj = ResourceManager.GetObject("Animation___1739551541283", resourceCulture);
@@ -106,6 +116,26 @@ namespace CHS_FrontEnd.Properties {
         internal static System.Drawing.Bitmap Animation___1739555645304 {
             get {
                 object obj = ResourceManager.GetObject("Animation___1739555645304", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Animation___1739981991963 {
+            get {
+                object obj = ResourceManager.GetObject("Animation - 1739981991963", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Animation___1739982353951 {
+            get {
+                object obj = ResourceManager.GetObject("Animation - 1739982353951", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +206,36 @@ namespace CHS_FrontEnd.Properties {
         internal static System.Drawing.Bitmap employee {
             get {
                 object obj = ResourceManager.GetObject("employee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee1 {
+            get {
+                object obj = ResourceManager.GetObject("employee1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee2 {
+            get {
+                object obj = ResourceManager.GetObject("employee2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee3 {
+            get {
+                object obj = ResourceManager.GetObject("employee3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,6 +353,16 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_address_1001 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-address-1001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_chevron_down_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8_chevron_down_80", resourceCulture);
@@ -303,9 +373,29 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_email_100 {
+        internal static System.Drawing.Bitmap icons8_email_100___Copy {
             get {
-                object obj = ResourceManager.GetObject("icons8_email_100", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-email-100 - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_email_100___Copy1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-email-100 - Copy1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_email_100___Copy2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-email-100 - Copy2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,9 +443,49 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_hastag_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-hastag-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_id_card_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-id-card-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_id_card_501 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-id-card-501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_id_card_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-id-card-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_id_card_642 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-id-card-642", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,6 +503,16 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_medical_file_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-medical-file-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_name {
             get {
                 object obj = ResourceManager.GetObject("icons8_name", resourceCulture);
@@ -383,9 +523,9 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_name_80 {
+        internal static System.Drawing.Bitmap icons8_number_100 {
             get {
-                object obj = ResourceManager.GetObject("icons8_name_80", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-number-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,9 +553,9 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_username_100 {
+        internal static System.Drawing.Bitmap icons8_phone_801 {
             get {
-                object obj = ResourceManager.GetObject("icons8_username_100", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-phone-801", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,9 +563,9 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_username_80 {
+        internal static System.Drawing.Bitmap icons8_username_100 {
             get {
-                object obj = ResourceManager.GetObject("icons8_username_80", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_username_100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -583,6 +723,16 @@ namespace CHS_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PASSWORD {
+            get {
+                object obj = ResourceManager.GetObject("PASSWORD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pin_code {
             get {
                 object obj = ResourceManager.GetObject("pin_code", resourceCulture);
@@ -606,6 +756,16 @@ namespace CHS_FrontEnd.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap USERNAME {
+            get {
+                object obj = ResourceManager.GetObject("USERNAME", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

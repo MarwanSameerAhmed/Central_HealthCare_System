@@ -213,6 +213,31 @@ namespace CHS_FrontEnd
         {
             string[] bloodTypes = { "AB+", "AB-", "A+", "A-", "B+", "B-", "O+", "O-" };
             bloodtxt.Items.AddRange(bloodTypes);
+            string[] maritalStatus = { "أعزب", "متزوج", "أرمل", "مطلق", "منفصل" };
+            comuintystateCombo.Items.AddRange(maritalStatus);
+            string[] yemenProvinces = 
+    {
+        "أمانة العاصمة",
+        "عدن",
+        "تعز",
+        "إب",
+        "حضرموت",
+        "مأرب",
+        "الحديدة",
+        "صعدة",
+        "البيضاء",
+        "شبوة",
+        "الضالع",
+        "لحج",
+        "عمران",
+        "الجوف",
+        "ذمار",
+        "المهرة",
+        "سقطرى",
+        "أبين",
+        "صنعاء"
+    };
+            statetxt.Items.AddRange(yemenProvinces);
             ConfigureComboBox();
             ApplyEventsToTextBoxes(guna2ContainerControl1);
             ApplyEventsToTextBoxes(guna2ContainerControl2);
@@ -279,6 +304,9 @@ namespace CHS_FrontEnd
             addresstxt.Text = string.Empty;
             bloodtxt.SelectedIndex = -1;
             birthdaytxt.Value = DateTime.Today;
+            statetxt.Text = string.Empty;
+            comuintystateCombo.SelectedIndex = -1;
+            parenttxt.Text = string.Empty;
 
 
         }
@@ -338,6 +366,9 @@ namespace CHS_FrontEnd
                 bool patientIsMale = gendertxt.SelectedItem?.ToString() == "1";
                 string patientAddress = addresstxt.Text;
                 string bloodtype = bloodtxt.Text;
+                string maritalStatus = comuintystateCombo.Text;
+                string birthPlace = statetxt.Text;
+                string companionName = parenttxt.Text;
 
                 var request = new CreatePatientFileRequest
                 {
@@ -349,6 +380,9 @@ namespace CHS_FrontEnd
                     IsMale = patientIsMale,
                     BirthDate = patientBirthdate,
                     BloodType = bloodtype,
+                    maritalStatus = maritalStatus,
+                    birthPlace = birthPlace,
+                    companionName = companionName,
 
 
 

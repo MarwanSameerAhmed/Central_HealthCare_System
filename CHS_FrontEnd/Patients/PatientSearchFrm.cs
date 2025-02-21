@@ -151,8 +151,12 @@ namespace CHS_FrontEnd
                         patientData.BirthDate,
                         patientData.IsMale,
                         patientData.PatientAddress,
-                        patientData.BloodType
-                        
+                        patientData.BloodType,
+                        patientData.maritalStatus,
+                        patientData.companionName,
+                        patientData.birthPlace
+
+
 
                     );
 
@@ -221,7 +225,11 @@ namespace CHS_FrontEnd
                         BirthDate = p.BirthDate,
                         IsMale = p.IsMale,
                         PatientAddress = p.PatientAddress,
-                        BloodType = p.BloodType
+                        BloodType = p.BloodType,
+                        maritalStatus = p.maritalStatus,
+                        birthPlace= p.birthPlace,
+                        companionName = p.companionName,
+
                     }).ToList();
 
                    
@@ -234,8 +242,11 @@ namespace CHS_FrontEnd
                         searchPatientView.Rows[rowIndex].Cells["Column_Age"].Value = item.Age;
                         searchPatientView.Rows[rowIndex].Cells["Column_PhoneNumber"].Value = item.PhoneNumber;
                         searchPatientView.Rows[rowIndex].Cells["Column_MedicalNumber"].Value = item.MedicalNumber;
+                        searchPatientView.Rows[rowIndex].Cells["Column_State"].Value = item.birthPlace;
 
-                      
+
+
+
                         searchPatientView.Rows[rowIndex].Tag = item;
                     }
 
