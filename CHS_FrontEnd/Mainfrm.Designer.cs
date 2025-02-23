@@ -952,10 +952,10 @@
             this.UserInfoPanel.Controls.Add(this.lebJobName);
             this.UserInfoPanel.Controls.Add(this.pictureBoxUserName);
             this.UserInfoPanel.Controls.Add(this.labEmployeeName);
-            this.UserInfoPanel.Location = new System.Drawing.Point(602, 3);
+            this.UserInfoPanel.Location = new System.Drawing.Point(534, 3);
             this.UserInfoPanel.Name = "UserInfoPanel";
             this.UserInfoPanel.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.UserInfoPanel.Size = new System.Drawing.Size(179, 57);
+            this.UserInfoPanel.Size = new System.Drawing.Size(247, 57);
             this.UserInfoPanel.TabIndex = 2;
             // 
             // lebJobName
@@ -964,7 +964,7 @@
             this.lebJobName.AutoSize = true;
             this.lebJobName.Font = new System.Drawing.Font("Traditional Arabic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lebJobName.ForeColor = System.Drawing.Color.White;
-            this.lebJobName.Location = new System.Drawing.Point(85, 32);
+            this.lebJobName.Location = new System.Drawing.Point(153, 32);
             this.lebJobName.Name = "lebJobName";
             this.lebJobName.Size = new System.Drawing.Size(36, 23);
             this.lebJobName.TabIndex = 3;
@@ -974,7 +974,7 @@
             // 
             this.pictureBoxUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxUserName.Image = global::CHS_FrontEnd.Properties.Resources.user;
-            this.pictureBoxUserName.Location = new System.Drawing.Point(131, 10);
+            this.pictureBoxUserName.Location = new System.Drawing.Point(199, 10);
             this.pictureBoxUserName.Name = "pictureBoxUserName";
             this.pictureBoxUserName.Size = new System.Drawing.Size(35, 35);
             this.pictureBoxUserName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -983,14 +983,14 @@
             // 
             // labEmployeeName
             // 
-            this.labEmployeeName.AutoSize = true;
             this.labEmployeeName.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labEmployeeName.ForeColor = System.Drawing.Color.White;
-            this.labEmployeeName.Location = new System.Drawing.Point(46, 3);
+            this.labEmployeeName.Location = new System.Drawing.Point(0, 3);
             this.labEmployeeName.Name = "labEmployeeName";
-            this.labEmployeeName.Size = new System.Drawing.Size(77, 31);
+            this.labEmployeeName.Size = new System.Drawing.Size(189, 31);
             this.labEmployeeName.TabIndex = 2;
             this.labEmployeeName.Text = "علي مرجاني";
+            this.labEmployeeName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Mainfrm
             // 

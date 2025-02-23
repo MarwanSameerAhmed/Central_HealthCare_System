@@ -73,8 +73,8 @@
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Viewdaig = new Guna.UI2.WinForms.Guna2DataGridView();
             this.diagnosisName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diagnosisDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.finalDiagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DaigonsisDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl3.SuspendLayout();
@@ -607,8 +607,8 @@
             this.Viewdaig.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Viewdaig.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.diagnosisName,
-            this.diagnosisDate,
-            this.doctorName});
+            this.finalDiagnosis,
+            this.DaigonsisDate});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -661,33 +661,35 @@
             this.Viewdaig.ThemeStyle.RowsStyle.Height = 50;
             this.Viewdaig.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Viewdaig.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Viewdaig.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Viewdaig_CellContentClick);
             this.Viewdaig.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Viewdaig_CellDoubleClick);
+            this.Viewdaig.DoubleClick += new System.EventHandler(this.Viewdaig_DoubleClick);
             // 
             // diagnosisName
             // 
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Traditional Arabic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diagnosisName.DefaultCellStyle = dataGridViewCellStyle3;
             this.diagnosisName.FillWeight = 112.2995F;
-            this.diagnosisName.HeaderText = "اسم الحالة المرضية";
+            this.diagnosisName.HeaderText = " الحالة المرضية";
             this.diagnosisName.MinimumWidth = 6;
             this.diagnosisName.Name = "diagnosisName";
             this.diagnosisName.ReadOnly = true;
             // 
-            // diagnosisDate
+            // finalDiagnosis
             // 
-            this.diagnosisDate.FillWeight = 107.5408F;
-            this.diagnosisDate.HeaderText = "تاريخ التشخيص";
-            this.diagnosisDate.MinimumWidth = 6;
-            this.diagnosisDate.Name = "diagnosisDate";
-            this.diagnosisDate.ReadOnly = true;
+            this.finalDiagnosis.FillWeight = 107.5408F;
+            this.finalDiagnosis.HeaderText = "التشخيص النهائي";
+            this.finalDiagnosis.MinimumWidth = 6;
+            this.finalDiagnosis.Name = "finalDiagnosis";
+            this.finalDiagnosis.ReadOnly = true;
             // 
-            // doctorName
+            // DaigonsisDate
             // 
-            this.doctorName.FillWeight = 107.5408F;
-            this.doctorName.HeaderText = "تشخيص الطبيب";
-            this.doctorName.MinimumWidth = 6;
-            this.doctorName.Name = "doctorName";
-            this.doctorName.ReadOnly = true;
+            this.DaigonsisDate.FillWeight = 107.5408F;
+            this.DaigonsisDate.HeaderText = "تاريخ إضافة التشخيص";
+            this.DaigonsisDate.MinimumWidth = 6;
+            this.DaigonsisDate.Name = "DaigonsisDate";
+            this.DaigonsisDate.ReadOnly = true;
             // 
             // guna2Button1
             // 
@@ -700,10 +702,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2Button1.Font = new System.Drawing.Font("Traditional Arabic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(568, 745);
+            this.guna2Button1.Location = new System.Drawing.Point(630, 745);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.DarkBlue;
-            this.guna2Button1.Size = new System.Drawing.Size(459, 51);
+            this.guna2Button1.Size = new System.Drawing.Size(308, 56);
             this.guna2Button1.TabIndex = 10;
             this.guna2Button1.Text = "إضافة تشخيص جديد";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -779,14 +781,14 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label medicalNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diagnosisName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diagnosisDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doctorName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label addresslbl;
         private System.Windows.Forms.Label typeLbl;
         private System.Windows.Forms.Label fathlbl;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diagnosisName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn finalDiagnosis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DaigonsisDate;
     }
 }

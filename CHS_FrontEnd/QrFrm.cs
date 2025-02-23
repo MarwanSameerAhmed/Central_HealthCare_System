@@ -35,5 +35,10 @@ namespace CHS_FrontEnd
             };
             pcb.Image = qr.Write(qrData);
         }
+
+        private void QrFrm_Deactivate(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

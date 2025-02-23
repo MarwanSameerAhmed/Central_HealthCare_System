@@ -8,6 +8,6 @@ namespace CHS.Client.API.Models.Employees
 {
     public class SearchDoctorFilesResponse : CHSResponse
     {
-        public List<DoctorFile> DoctorFiles { get; set; }
+        public List<DoctorFile> DoctorFile { get; set; }
     }
 }

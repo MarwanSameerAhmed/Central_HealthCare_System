@@ -149,9 +149,9 @@ namespace CHS_FrontEnd
 
                 SearchDoctorFilesResponse response = RequestSender.SendRequest<SearchDoctorsFilesRequest, SearchDoctorFilesResponse>(request);
 
-                if (response.DoctorFiles != null && response.DoctorFiles.Count > 0)
+                if (response.DoctorFile != null && response.DoctorFile.Count > 0)
                 {
-                    var formattedData = response.DoctorFiles.Select(p => new
+                    var formattedData = response.DoctorFile.Select(p => new
                     {
                         DoctorName = p.DoctorName,
                         DoctorJobTitle = p.DoctorJobTitle,
@@ -181,7 +181,7 @@ namespace CHS_FrontEnd
                         searchDoctorView.Rows[rowIndex].Cells["doctorName"].Value = item.DoctorName;
                         searchDoctorView.Rows[rowIndex].Cells["doctorPhoneNumber"].Value = item.DoctorPhoneNumber;
                         searchDoctorView.Rows[rowIndex].Cells["doctorMiagor"].Value = item.DoctorJobTitle;
-                        searchDoctorView.Rows[rowIndex].Cells["empIDNumber"].Value = item.DoctorNumber;
+                        searchDoctorView.Rows[rowIndex].Cells["doctorNumber"].Value = item.DoctorNumber;
 
 
                         searchDoctorView.Rows[rowIndex].Tag = item;

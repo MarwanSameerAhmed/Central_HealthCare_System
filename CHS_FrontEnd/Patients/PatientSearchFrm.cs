@@ -158,10 +158,14 @@ namespace CHS_FrontEnd
 
 
 
+
+
                     );
+                  
 
 
-                    OpenForm(patientDetailsPage);
+
+                 OpenForm(patientDetailsPage);
                 }
             }
         }
