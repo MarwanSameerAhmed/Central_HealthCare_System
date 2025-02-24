@@ -44,8 +44,9 @@
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.testsGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.testResults = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.testName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.newTestButton = new Guna.UI2.WinForms.Guna2Button();
@@ -84,9 +85,10 @@
             this.guna2ContainerControl1.Controls.Add(this.midSearchtxt);
             this.guna2ContainerControl1.Controls.Add(this.searchForpatientLabel);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(8, 52);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(9, 64);
+            this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(1209, 97);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(1410, 119);
             this.guna2ContainerControl1.TabIndex = 1;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
@@ -104,14 +106,14 @@
             this.nationalSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nationalSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.nationalSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nationalSearchtxt.Location = new System.Drawing.Point(295, 47);
-            this.nationalSearchtxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nationalSearchtxt.Location = new System.Drawing.Point(344, 58);
+            this.nationalSearchtxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.nationalSearchtxt.Name = "nationalSearchtxt";
             this.nationalSearchtxt.PasswordChar = '\0';
             this.nationalSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.nationalSearchtxt.PlaceholderText = "";
             this.nationalSearchtxt.SelectedText = "";
-            this.nationalSearchtxt.Size = new System.Drawing.Size(273, 39);
+            this.nationalSearchtxt.Size = new System.Drawing.Size(318, 48);
             this.nationalSearchtxt.TabIndex = 5;
             this.nationalSearchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -122,9 +124,10 @@
             this.orLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.orLabel2.Font = new System.Drawing.Font("Traditional Arabic", 12F);
             this.orLabel2.ForeColor = System.Drawing.Color.Black;
-            this.orLabel2.Location = new System.Drawing.Point(578, 57);
+            this.orLabel2.Location = new System.Drawing.Point(674, 70);
+            this.orLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orLabel2.Name = "orLabel2";
-            this.orLabel2.Size = new System.Drawing.Size(20, 26);
+            this.orLabel2.Size = new System.Drawing.Size(24, 32);
             this.orLabel2.TabIndex = 4;
             this.orLabel2.Text = "او";
             // 
@@ -142,14 +145,14 @@
             this.phoneSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.phoneSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.phoneSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.phoneSearchtxt.Location = new System.Drawing.Point(608, 47);
-            this.phoneSearchtxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.phoneSearchtxt.Location = new System.Drawing.Point(709, 58);
+            this.phoneSearchtxt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.phoneSearchtxt.Name = "phoneSearchtxt";
             this.phoneSearchtxt.PasswordChar = '\0';
             this.phoneSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.phoneSearchtxt.PlaceholderText = "";
             this.phoneSearchtxt.SelectedText = "";
-            this.phoneSearchtxt.Size = new System.Drawing.Size(273, 39);
+            this.phoneSearchtxt.Size = new System.Drawing.Size(318, 48);
             this.phoneSearchtxt.TabIndex = 3;
             this.phoneSearchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -160,9 +163,10 @@
             this.orLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.orLabel.Font = new System.Drawing.Font("Traditional Arabic", 12F);
             this.orLabel.ForeColor = System.Drawing.Color.Black;
-            this.orLabel.Location = new System.Drawing.Point(892, 55);
+            this.orLabel.Location = new System.Drawing.Point(1041, 68);
+            this.orLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orLabel.Name = "orLabel";
-            this.orLabel.Size = new System.Drawing.Size(20, 26);
+            this.orLabel.Size = new System.Drawing.Size(24, 32);
             this.orLabel.TabIndex = 2;
             this.orLabel.Text = "او";
             // 
@@ -180,14 +184,14 @@
             this.midSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.midSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.midSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.midSearchtxt.Location = new System.Drawing.Point(923, 47);
-            this.midSearchtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.midSearchtxt.Location = new System.Drawing.Point(1077, 58);
+            this.midSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.midSearchtxt.Name = "midSearchtxt";
             this.midSearchtxt.PasswordChar = '\0';
             this.midSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.midSearchtxt.PlaceholderText = "الرقم الطبي";
             this.midSearchtxt.SelectedText = "";
-            this.midSearchtxt.Size = new System.Drawing.Size(273, 39);
+            this.midSearchtxt.Size = new System.Drawing.Size(318, 48);
             this.midSearchtxt.TabIndex = 1;
             this.midSearchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -198,10 +202,11 @@
             this.searchForpatientLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.searchForpatientLabel.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold);
             this.searchForpatientLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.searchForpatientLabel.Location = new System.Drawing.Point(1087, 0);
+            this.searchForpatientLabel.Location = new System.Drawing.Point(1265, 0);
+            this.searchForpatientLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.searchForpatientLabel.Name = "searchForpatientLabel";
-            this.searchForpatientLabel.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.searchForpatientLabel.Size = new System.Drawing.Size(122, 53);
+            this.searchForpatientLabel.Padding = new System.Windows.Forms.Padding(15);
+            this.searchForpatientLabel.Size = new System.Drawing.Size(145, 66);
             this.searchForpatientLabel.TabIndex = 0;
             this.searchForpatientLabel.Text = "ابحث عن مريض";
             this.searchForpatientLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -213,9 +218,10 @@
             this.limbsHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.limbsHeader.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold);
             this.limbsHeader.ForeColor = System.Drawing.Color.White;
-            this.limbsHeader.Location = new System.Drawing.Point(503, 1);
+            this.limbsHeader.Location = new System.Drawing.Point(587, 1);
+            this.limbsHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.limbsHeader.Name = "limbsHeader";
-            this.limbsHeader.Size = new System.Drawing.Size(231, 42);
+            this.limbsHeader.Size = new System.Drawing.Size(284, 52);
             this.limbsHeader.TabIndex = 0;
             this.limbsHeader.Text = "البحث عن فحوصات مريض ";
             this.limbsHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -226,9 +232,10 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.limbsHeader);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(8, 3);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(9, 4);
+            this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1209, 42);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1410, 52);
             this.guna2ContainerControl3.TabIndex = 6;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -250,8 +257,9 @@
             this.testsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.testsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.testResults,
-            this.testName,
+            this.testDate,
             this.category,
+            this.testName,
             this.testNum});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -262,8 +270,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.testsGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.testsGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.testsGridView.Location = new System.Drawing.Point(15, 13);
-            this.testsGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.testsGridView.Location = new System.Drawing.Point(18, 16);
+            this.testsGridView.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.testsGridView.Name = "testsGridView";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -281,7 +289,7 @@
             this.testsGridView.RowTemplate.Height = 29;
             this.testsGridView.RowTemplate.ReadOnly = true;
             this.testsGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.testsGridView.Size = new System.Drawing.Size(1182, 299);
+            this.testsGridView.Size = new System.Drawing.Size(1379, 368);
             this.testsGridView.TabIndex = 7;
             this.testsGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.testsGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -314,17 +322,24 @@
             this.testResults.Text = "عرض";
             this.testResults.UseColumnTextForButtonValue = true;
             // 
-            // testName
+            // testDate
             // 
-            this.testName.HeaderText = "اسم الفحص";
-            this.testName.MinimumWidth = 8;
-            this.testName.Name = "testName";
+            this.testDate.HeaderText = "تاريخ عمل الفحص";
+            this.testDate.MinimumWidth = 6;
+            this.testDate.Name = "testDate";
+            this.testDate.ReadOnly = true;
             // 
             // category
             // 
             this.category.HeaderText = "Category";
             this.category.MinimumWidth = 8;
             this.category.Name = "category";
+            // 
+            // testName
+            // 
+            this.testName.HeaderText = "اسم الفحص";
+            this.testName.MinimumWidth = 8;
+            this.testName.Name = "testName";
             // 
             // testNum
             // 
@@ -336,11 +351,11 @@
             // 
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1183, 41);
-            this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1380, 50);
+            this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 14;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(14, 271);
+            this.guna2VScrollBar1.ScrollbarSize = 16;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(16, 334);
             this.guna2VScrollBar1.TabIndex = 8;
             // 
             // newTestButton
@@ -353,10 +368,10 @@
             this.newTestButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.newTestButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.newTestButton.ForeColor = System.Drawing.Color.White;
-            this.newTestButton.Location = new System.Drawing.Point(491, 610);
-            this.newTestButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.newTestButton.Location = new System.Drawing.Point(573, 751);
+            this.newTestButton.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.newTestButton.Name = "newTestButton";
-            this.newTestButton.Size = new System.Drawing.Size(214, 44);
+            this.newTestButton.Size = new System.Drawing.Size(250, 54);
             this.newTestButton.TabIndex = 9;
             this.newTestButton.Text = "إضافة فحص";
             this.newTestButton.Click += new System.EventHandler(this.newTestButton_Click);
@@ -368,9 +383,10 @@
             this.guna2ContainerControl4.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl4.Controls.Add(this.testsGridView);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(8, 281);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(9, 346);
+            this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(1210, 324);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(1412, 399);
             this.guna2ContainerControl4.TabIndex = 10;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
             // 
@@ -386,9 +402,10 @@
             this.guna2ContainerControl5.Controls.Add(this.label19);
             this.guna2ContainerControl5.Controls.Add(this.patientDataLabel);
             this.guna2ContainerControl5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl5.Location = new System.Drawing.Point(9, 155);
+            this.guna2ContainerControl5.Location = new System.Drawing.Point(10, 191);
+            this.guna2ContainerControl5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ContainerControl5.Name = "guna2ContainerControl5";
-            this.guna2ContainerControl5.Size = new System.Drawing.Size(1209, 120);
+            this.guna2ContainerControl5.Size = new System.Drawing.Size(1410, 148);
             this.guna2ContainerControl5.TabIndex = 36;
             this.guna2ContainerControl5.Text = "الاسم الكامل ";
             // 
@@ -398,9 +415,10 @@
             this.patientAgeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.patientAgeLabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.patientAgeLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.patientAgeLabel.Location = new System.Drawing.Point(1055, 88);
+            this.patientAgeLabel.Location = new System.Drawing.Point(1231, 108);
+            this.patientAgeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientAgeLabel.Name = "patientAgeLabel";
-            this.patientAgeLabel.Size = new System.Drawing.Size(134, 33);
+            this.patientAgeLabel.Size = new System.Drawing.Size(156, 41);
             this.patientAgeLabel.TabIndex = 37;
             this.patientAgeLabel.Text = "العمر";
             this.patientAgeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -411,9 +429,10 @@
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label17.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(114, 47);
+            this.label17.Location = new System.Drawing.Point(133, 58);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(18, 23);
+            this.label17.Size = new System.Drawing.Size(22, 27);
             this.label17.TabIndex = 36;
             this.label17.Text = "\"\"";
             // 
@@ -423,9 +442,10 @@
             this.patientGenderLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.patientGenderLabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.patientGenderLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.patientGenderLabel.Location = new System.Drawing.Point(450, 47);
+            this.patientGenderLabel.Location = new System.Drawing.Point(525, 58);
+            this.patientGenderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientGenderLabel.Name = "patientGenderLabel";
-            this.patientGenderLabel.Size = new System.Drawing.Size(129, 35);
+            this.patientGenderLabel.Size = new System.Drawing.Size(150, 43);
             this.patientGenderLabel.TabIndex = 35;
             this.patientGenderLabel.Text = "الجنس";
             this.patientGenderLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -437,9 +457,10 @@
             this.patientNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.patientNameLabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.patientNameLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.patientNameLabel.Location = new System.Drawing.Point(1067, 51);
+            this.patientNameLabel.Location = new System.Drawing.Point(1245, 63);
+            this.patientNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientNameLabel.Name = "patientNameLabel";
-            this.patientNameLabel.Size = new System.Drawing.Size(122, 27);
+            this.patientNameLabel.Size = new System.Drawing.Size(142, 33);
             this.patientNameLabel.TabIndex = 34;
             this.patientNameLabel.Text = "اسم المريض";
             this.patientNameLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -450,9 +471,10 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label4.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(759, 51);
+            this.label4.Location = new System.Drawing.Point(886, 63);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 23);
+            this.label4.Size = new System.Drawing.Size(22, 27);
             this.label4.TabIndex = 32;
             this.label4.Text = "\"\"";
             // 
@@ -462,9 +484,10 @@
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label19.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(759, 88);
+            this.label19.Location = new System.Drawing.Point(886, 108);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(18, 23);
+            this.label19.Size = new System.Drawing.Size(22, 27);
             this.label19.TabIndex = 32;
             this.label19.Text = "\"\"";
             // 
@@ -475,10 +498,11 @@
             this.patientDataLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.patientDataLabel.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold);
             this.patientDataLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.patientDataLabel.Location = new System.Drawing.Point(1098, 0);
+            this.patientDataLabel.Location = new System.Drawing.Point(1279, 0);
+            this.patientDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.patientDataLabel.Name = "patientDataLabel";
-            this.patientDataLabel.Padding = new System.Windows.Forms.Padding(13, 18, 13, 18);
-            this.patientDataLabel.Size = new System.Drawing.Size(111, 65);
+            this.patientDataLabel.Padding = new System.Windows.Forms.Padding(15, 22, 15, 22);
+            this.patientDataLabel.Size = new System.Drawing.Size(131, 80);
             this.patientDataLabel.TabIndex = 6;
             this.patientDataLabel.Text = "بيانات المريض";
             // 
@@ -595,17 +619,17 @@
             // 
             // LIMBsFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1293, 712);
+            this.ClientSize = new System.Drawing.Size(1508, 876);
             this.Controls.Add(this.guna2ContainerControl5);
             this.Controls.Add(this.newTestButton);
             this.Controls.Add(this.guna2ContainerControl3);
             this.Controls.Add(this.guna2ContainerControl1);
             this.Controls.Add(this.guna2ContainerControl4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "LIMBsFrm";
             this.Text = "LIMBsFrm";
             this.Load += new System.EventHandler(this.LIMBsFrm_Load);
@@ -635,10 +659,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView testsGridView;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2Button newTestButton;
-        private System.Windows.Forms.DataGridViewButtonColumn testResults;
-        private System.Windows.Forms.DataGridViewTextBoxColumn testName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn testNum;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl4;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl5;
         private System.Windows.Forms.Label label17;
@@ -655,5 +675,10 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewButtonColumn testResults;
+        private System.Windows.Forms.DataGridViewTextBoxColumn testDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn testName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn testNum;
     }
 }

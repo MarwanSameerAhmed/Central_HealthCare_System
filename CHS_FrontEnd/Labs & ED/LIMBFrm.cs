@@ -11,13 +11,14 @@ using WeifenLuo.WinFormsUI.Docking;
 using CHS_FrontEnd.Properties;
 using System.ComponentModel;
 using CHS_FrontEnd;
+using CHS_FrontEnd.Labs___ED;
 
 namespace CHS.Client
 {
     public partial class LIMBsFrm : Form
     {
         private DockPanel dockPanel;
-
+        private Form currentForm = null;
         public LIMBsFrm(DockPanel dockPanel)
         {
             InitializeComponent();
@@ -51,34 +52,29 @@ namespace CHS.Client
 
         private void PopulateData()
         {
-            testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            testsGridView.Rows.Add("2", "Skin", "Melanin");
-            testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            //testsGridView.Rows.Add("2", "Skin", "Melanin");
-            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            //testsGridView.Rows.Add("2", "Skin", "Melanin");
-            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            //testsGridView.Rows.Add("2", "Skin", "Melanin");
-            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            //testsGridView.Rows.Add("2", "Skin", "Melanin");
-            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            //testsGridView.Rows.Add("2", "Skin", "Melanin");
-            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
-            //testsGridView.Rows.Add("1", "Blood", "Hemoglobin");
-            //testsGridView.Rows.Add("2", "Skin", "Melanin");
-            //testsGridView.Rows.Add("3", "Urine", "Creatinine");
-            //testsGridView.Rows.Add("4", "Blood", "White Blood Cell Count");
+            testsGridView.Rows.Add(null, "20/1/2025", "Blood", "Hemoglobin", "1");
+            testsGridView.Rows.Add(null, "21/1/2025", "Urine", "Glucose", "2");
+            testsGridView.Rows.Add(null, "22/1/2025", "Blood", "WBC Count", "3");
+            testsGridView.Rows.Add(null, "23/1/2025", "Blood", "Platelet Count", "4");
+            testsGridView.Rows.Add(null, "24/1/2025", "Urine", "Protein", "5");
+            testsGridView.Rows.Add(null, "25/1/2025", "Blood", "Cholesterol", "6");
+            testsGridView.Rows.Add(null, "26/1/2025", "Urine", "Ketones", "7");
+            testsGridView.Rows.Add(null, "27/1/2025", "Blood", "RBC Count", "8");
+            testsGridView.Rows.Add(null, "28/1/2025", "Blood", "Triglycerides", "9");
+            testsGridView.Rows.Add(null, "29/1/2025", "Urine", "pH Level", "10");
+            testsGridView.Rows.Add(null, "30/1/2025", "Blood", "Creatinine", "11");
+            testsGridView.Rows.Add(null, "31/1/2025", "Blood", "Bilirubin", "12");
+            testsGridView.Rows.Add(null, "1/2/2025", "Urine", "Uric Acid", "13");
+            testsGridView.Rows.Add(null, "2/2/2025", "Blood", "Electrolytes", "14");
+            testsGridView.Rows.Add(null, "3/2/2025", "Blood", "Thyroid Function", "15");
+            testsGridView.Rows.Add(null, "4/2/2025", "Urine", "Specific Gravity", "16");
+            testsGridView.Rows.Add(null, "5/2/2025", "Blood", "Glucose Fasting", "17");
+            testsGridView.Rows.Add(null, "6/2/2025", "Urine", "Leukocytes", "18");
+            testsGridView.Rows.Add(null, "7/2/2025", "Blood", "Liver Function", "19");
+            testsGridView.Rows.Add(null, "8/2/2025", "Blood", "C-Reactive Protein", "20");
+
+
+
 
             // Sync scrollbar after data update
             SyncScrollbar();
@@ -132,8 +128,27 @@ namespace CHS.Client
         // open new test popup 
         private void newTestButton_Click(object sender, EventArgs e)
         {
-            var popup = new newTestPopupFrm();
-            popup.ShowDialog();
+            OpenForm(new AddNewTest(dockPanel));
+        }
+
+        private void OpenForm(Form childForm)
+        {
+
+            currentForm = childForm;
+
+
+            childForm.TopLevel = false;
+
+            var dockContent = new DockContent()
+            {
+                Text = childForm.Text
+            };
+
+            childForm.Dock = DockStyle.Fill;
+            dockContent.Controls.Add(childForm);
+            childForm.Show();
+            dockContent.Show(dockPanel);
+
         }
 
         private void label16_Click(object sender, EventArgs e)

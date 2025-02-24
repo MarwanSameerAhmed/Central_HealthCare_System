@@ -54,8 +54,10 @@
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.medicineStateGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.exchangeStatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.numberOfDoses = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderedQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activeIngredient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosageForm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medicineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medicineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ContainerControl3.SuspendLayout();
@@ -71,7 +73,8 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.pharmacyHeader);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(19, 12);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(14, 15);
+            this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
             this.guna2ContainerControl3.Size = new System.Drawing.Size(1411, 51);
             this.guna2ContainerControl3.TabIndex = 7;
@@ -101,8 +104,9 @@
             this.guna2ContainerControl5.Controls.Add(this.label4);
             this.guna2ContainerControl5.Controls.Add(this.label19);
             this.guna2ContainerControl5.Controls.Add(this.patientDataLabel);
-            this.guna2ContainerControl5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl5.Location = new System.Drawing.Point(16, 202);
+            this.guna2ContainerControl5.Location = new System.Drawing.Point(16, 200);
+            this.guna2ContainerControl5.Location = new System.Drawing.Point(20, 238);
+            this.guna2ContainerControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ContainerControl5.Name = "guna2ContainerControl5";
             this.guna2ContainerControl5.Size = new System.Drawing.Size(1411, 147);
             this.guna2ContainerControl5.TabIndex = 38;
@@ -336,9 +340,10 @@
             this.guna2ContainerControl4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl4.BorderRadius = 15;
             this.guna2ContainerControl4.Controls.Add(this.guna2VScrollBar1);
-            this.guna2ContainerControl4.Controls.Add(this.medicineStateGridView);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(16, 355);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(16, 358);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(20, 422);
+            this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
             this.guna2ContainerControl4.Size = new System.Drawing.Size(1412, 399);
             this.guna2ContainerControl4.TabIndex = 40;
@@ -373,8 +378,10 @@
             this.medicineStateGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.medicineStateGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.exchangeStatus,
-            this.numberOfDoses,
+            this.orderedQuantity,
             this.orderDate,
+            this.activeIngredient,
+            this.dosageForm,
             this.medicineName,
             this.medicineID});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -428,27 +435,41 @@
             this.medicineStateGridView.ThemeStyle.RowsStyle.Height = 29;
             this.medicineStateGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.medicineStateGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.medicineStateGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.medicineStateGridView_CellDoubleClick_1);
             // 
             // exchangeStatus
             // 
             this.exchangeStatus.HeaderText = "حالة الصرف";
-            this.exchangeStatus.MinimumWidth = 8;
+            this.exchangeStatus.MinimumWidth = 2;
             this.exchangeStatus.Name = "exchangeStatus";
             this.exchangeStatus.ReadOnly = true;
             // 
-            // numberOfDoses
+            // orderedQuantity
             // 
-            this.numberOfDoses.HeaderText = "عدد الجرع";
-            this.numberOfDoses.MinimumWidth = 8;
-            this.numberOfDoses.Name = "numberOfDoses";
-            this.numberOfDoses.ReadOnly = true;
+            this.orderedQuantity.HeaderText = "الكمية المطلوبة";
+            this.orderedQuantity.MinimumWidth = 8;
+            this.orderedQuantity.Name = "orderedQuantity";
+            this.orderedQuantity.ReadOnly = true;
             // 
             // orderDate
             // 
             this.orderDate.HeaderText = "تاريخ الطلب";
-            this.orderDate.MinimumWidth = 8;
+            this.orderDate.MinimumWidth = 6;
             this.orderDate.Name = "orderDate";
             this.orderDate.ReadOnly = true;
+            // 
+            // activeIngredient
+            // 
+            this.activeIngredient.HeaderText = "المادة الفعالة";
+            this.activeIngredient.MinimumWidth = 6;
+            this.activeIngredient.Name = "activeIngredient";
+            this.activeIngredient.ReadOnly = true;
+            // 
+            // dosageForm
+            // 
+            this.dosageForm.HeaderText = "شكل الجرعة";
+            this.dosageForm.MinimumWidth = 6;
+            this.dosageForm.Name = "dosageForm";
             // 
             // medicineName
             // 
@@ -460,7 +481,7 @@
             // medicineID
             // 
             this.medicineID.HeaderText = "رقم الدواء";
-            this.medicineID.MinimumWidth = 8;
+            this.medicineID.MinimumWidth = 4;
             this.medicineID.Name = "medicineID";
             // 
             // PharmacyMainFrm
@@ -513,8 +534,10 @@
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2DataGridView medicineStateGridView;
         private System.Windows.Forms.DataGridViewCheckBoxColumn exchangeStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfDoses;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderedQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activeIngredient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dosageForm;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicineName;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicineID;
     }

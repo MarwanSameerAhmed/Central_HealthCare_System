@@ -427,7 +427,7 @@ namespace CHS_FrontEnd
 
         private void LabDepSearchBtn_Click(object sender, EventArgs e)
         {
-            OpenForm(new LIMBsFrm(dockPanel));
+            OpenForm(new LIMSFrm(dockPanel));
         }
 
         private void patientManagementSubBtn_Click(object sender, EventArgs e)

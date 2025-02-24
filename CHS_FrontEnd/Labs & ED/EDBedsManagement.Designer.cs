@@ -54,7 +54,7 @@
             this.guna2ContainerControl5 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.increaseAvailablePediatricBedsNum = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.avialablePediatricBedsNumBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.availablePediatricBedsNumBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.decreaseAvailablePediatricBedsNum = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2ContainerControl6 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -131,8 +131,8 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(18, 16);
-            this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(18, 15);
+            this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
             this.guna2ContainerControl3.Size = new System.Drawing.Size(1814, 61);
             this.guna2ContainerControl3.TabIndex = 7;
@@ -145,7 +145,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(774, -3);
+            this.label10.Location = new System.Drawing.Point(774, -4);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(256, 69);
@@ -165,6 +165,7 @@
             this.guna2GroupBox1.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Location = new System.Drawing.Point(1266, 101);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.guna2GroupBox1.Size = new System.Drawing.Size(566, 365);
@@ -183,8 +184,9 @@
             this.guna2ContainerControl1.Controls.Add(this.totalGeneralBedsNumBox);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl1.Location = new System.Drawing.Point(15, 53);
+            this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl1.TabIndex = 6;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
@@ -194,7 +196,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(358, 45);
+            this.label2.Location = new System.Drawing.Point(357, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 37);
             this.label2.TabIndex = 0;
@@ -212,9 +214,10 @@
             this.increaseTotalGeneralBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("increaseTotalGeneralBedsNum.Image")));
             this.increaseTotalGeneralBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseTotalGeneralBedsNum.ImageSize = new System.Drawing.Size(32, 32);
-            this.increaseTotalGeneralBedsNum.Location = new System.Drawing.Point(50, 35);
+            this.increaseTotalGeneralBedsNum.Location = new System.Drawing.Point(50, 34);
+            this.increaseTotalGeneralBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseTotalGeneralBedsNum.Name = "increaseTotalGeneralBedsNum";
-            this.increaseTotalGeneralBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseTotalGeneralBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseTotalGeneralBedsNum.TabIndex = 4;
             // 
             // decreaseTotalGeneralBedsNum
@@ -229,9 +232,10 @@
             this.decreaseTotalGeneralBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("decreaseTotalGeneralBedsNum.Image")));
             this.decreaseTotalGeneralBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseTotalGeneralBedsNum.ImageSize = new System.Drawing.Size(30, 10);
-            this.decreaseTotalGeneralBedsNum.Location = new System.Drawing.Point(285, 35);
+            this.decreaseTotalGeneralBedsNum.Location = new System.Drawing.Point(285, 34);
+            this.decreaseTotalGeneralBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseTotalGeneralBedsNum.Name = "decreaseTotalGeneralBedsNum";
-            this.decreaseTotalGeneralBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseTotalGeneralBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseTotalGeneralBedsNum.TabIndex = 2;
             // 
             // totalGeneralBedsNumBox
@@ -265,11 +269,12 @@
             this.guna2Shapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2Shapes1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.guna2Shapes1.Location = new System.Drawing.Point(15, 197);
+            this.guna2Shapes1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Shapes1.Name = "guna2Shapes1";
             this.guna2Shapes1.PolygonSkip = 1;
             this.guna2Shapes1.Rotate = 0F;
             this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
-            this.guna2Shapes1.Size = new System.Drawing.Size(532, 9);
+            this.guna2Shapes1.Size = new System.Drawing.Size(532, 10);
             this.guna2Shapes1.TabIndex = 3;
             this.guna2Shapes1.Text = "guna2Shapes1";
             this.guna2Shapes1.UseTransparentBackground = true;
@@ -286,8 +291,9 @@
             this.guna2ContainerControl2.Controls.Add(this.deacreaseAvailableGeneralBedsNum);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl2.Location = new System.Drawing.Point(15, 209);
+            this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl2.TabIndex = 10;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -304,8 +310,9 @@
             this.increaseAvailableGeneralBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseAvailableGeneralBedsNum.ImageSize = new System.Drawing.Size(32, 32);
             this.increaseAvailableGeneralBedsNum.Location = new System.Drawing.Point(50, 45);
+            this.increaseAvailableGeneralBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseAvailableGeneralBedsNum.Name = "increaseAvailableGeneralBedsNum";
-            this.increaseAvailableGeneralBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseAvailableGeneralBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseAvailableGeneralBedsNum.TabIndex = 9;
             // 
             // label3
@@ -358,8 +365,9 @@
             this.deacreaseAvailableGeneralBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.deacreaseAvailableGeneralBedsNum.ImageSize = new System.Drawing.Size(30, 10);
             this.deacreaseAvailableGeneralBedsNum.Location = new System.Drawing.Point(285, 45);
+            this.deacreaseAvailableGeneralBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.deacreaseAvailableGeneralBedsNum.Name = "deacreaseAvailableGeneralBedsNum";
-            this.deacreaseAvailableGeneralBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.deacreaseAvailableGeneralBedsNum.Size = new System.Drawing.Size(63, 61);
             this.deacreaseAvailableGeneralBedsNum.TabIndex = 8;
             // 
             // confirmButton
@@ -373,7 +381,8 @@
             this.confirmButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmButton.ForeColor = System.Drawing.Color.White;
-            this.confirmButton.Location = new System.Drawing.Point(768, 903);
+            this.confirmButton.Location = new System.Drawing.Point(768, 902);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(321, 64);
             this.confirmButton.TabIndex = 10;
@@ -392,6 +401,7 @@
             this.guna2GroupBox2.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox2.Location = new System.Drawing.Point(645, 101);
+            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.guna2GroupBox2.Size = new System.Drawing.Size(566, 365);
@@ -410,8 +420,9 @@
             this.guna2ContainerControl4.Controls.Add(this.totalPediatricBedsNumBox);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl4.Location = new System.Drawing.Point(15, 53);
+            this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl4.TabIndex = 6;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
             // 
@@ -419,11 +430,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(381, 54);
+            this.label1.Location = new System.Drawing.Point(381, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 22);
+            this.label1.Size = new System.Drawing.Size(152, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "عدد الأسرّة الإجمالي:";
             // 
@@ -439,9 +450,10 @@
             this.increaseTotalPediatricBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("increaseTotalPediatricBedsNum.Image")));
             this.increaseTotalPediatricBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseTotalPediatricBedsNum.ImageSize = new System.Drawing.Size(32, 32);
-            this.increaseTotalPediatricBedsNum.Location = new System.Drawing.Point(50, 35);
+            this.increaseTotalPediatricBedsNum.Location = new System.Drawing.Point(50, 34);
+            this.increaseTotalPediatricBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseTotalPediatricBedsNum.Name = "increaseTotalPediatricBedsNum";
-            this.increaseTotalPediatricBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseTotalPediatricBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseTotalPediatricBedsNum.TabIndex = 4;
             // 
             // decreaseTotalPediatricBedsNum
@@ -456,9 +468,10 @@
             this.decreaseTotalPediatricBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("decreaseTotalPediatricBedsNum.Image")));
             this.decreaseTotalPediatricBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseTotalPediatricBedsNum.ImageSize = new System.Drawing.Size(30, 10);
-            this.decreaseTotalPediatricBedsNum.Location = new System.Drawing.Point(285, 35);
+            this.decreaseTotalPediatricBedsNum.Location = new System.Drawing.Point(285, 34);
+            this.decreaseTotalPediatricBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseTotalPediatricBedsNum.Name = "decreaseTotalPediatricBedsNum";
-            this.decreaseTotalPediatricBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseTotalPediatricBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseTotalPediatricBedsNum.TabIndex = 2;
             // 
             // totalPediatricBedsNumBox
@@ -492,11 +505,12 @@
             this.guna2Shapes2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2Shapes2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.guna2Shapes2.Location = new System.Drawing.Point(21, 197);
+            this.guna2Shapes2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Shapes2.Name = "guna2Shapes2";
             this.guna2Shapes2.PolygonSkip = 1;
             this.guna2Shapes2.Rotate = 0F;
             this.guna2Shapes2.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
-            this.guna2Shapes2.Size = new System.Drawing.Size(532, 9);
+            this.guna2Shapes2.Size = new System.Drawing.Size(532, 10);
             this.guna2Shapes2.TabIndex = 3;
             this.guna2Shapes2.Text = "guna2Shapes2";
             this.guna2Shapes2.UseTransparentBackground = true;
@@ -509,12 +523,13 @@
             this.guna2ContainerControl5.BorderRadius = 20;
             this.guna2ContainerControl5.Controls.Add(this.increaseAvailablePediatricBedsNum);
             this.guna2ContainerControl5.Controls.Add(this.label4);
-            this.guna2ContainerControl5.Controls.Add(this.avialablePediatricBedsNumBox);
+            this.guna2ContainerControl5.Controls.Add(this.availablePediatricBedsNumBox);
             this.guna2ContainerControl5.Controls.Add(this.decreaseAvailablePediatricBedsNum);
             this.guna2ContainerControl5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl5.Location = new System.Drawing.Point(15, 209);
+            this.guna2ContainerControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl5.Name = "guna2ContainerControl5";
-            this.guna2ContainerControl5.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl5.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl5.TabIndex = 10;
             this.guna2ContainerControl5.Text = "guna2ContainerControl5";
             // 
@@ -531,46 +546,47 @@
             this.increaseAvailablePediatricBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseAvailablePediatricBedsNum.ImageSize = new System.Drawing.Size(32, 32);
             this.increaseAvailablePediatricBedsNum.Location = new System.Drawing.Point(50, 45);
+            this.increaseAvailablePediatricBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseAvailablePediatricBedsNum.Name = "increaseAvailablePediatricBedsNum";
-            this.increaseAvailablePediatricBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseAvailablePediatricBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseAvailablePediatricBedsNum.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label4.Location = new System.Drawing.Point(392, 63);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 22);
+            this.label4.Size = new System.Drawing.Size(136, 37);
             this.label4.TabIndex = 0;
             this.label4.Text = "عدد الأسّرة المتاح:";
             // 
-            // avialablePediatricBedsNumBox
+            // availablePediatricBedsNumBox
             // 
-            this.avialablePediatricBedsNumBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.avialablePediatricBedsNumBox.BorderRadius = 20;
-            this.avialablePediatricBedsNumBox.BorderThickness = 2;
-            this.avialablePediatricBedsNumBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.avialablePediatricBedsNumBox.DefaultText = "";
-            this.avialablePediatricBedsNumBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.avialablePediatricBedsNumBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.avialablePediatricBedsNumBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.avialablePediatricBedsNumBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.avialablePediatricBedsNumBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.avialablePediatricBedsNumBox.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.avialablePediatricBedsNumBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.avialablePediatricBedsNumBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.avialablePediatricBedsNumBox.Location = new System.Drawing.Point(147, 32);
-            this.avialablePediatricBedsNumBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.avialablePediatricBedsNumBox.Name = "avialablePediatricBedsNumBox";
-            this.avialablePediatricBedsNumBox.PasswordChar = '\0';
-            this.avialablePediatricBedsNumBox.PlaceholderText = "ادخل الرقم";
-            this.avialablePediatricBedsNumBox.SelectedText = "";
-            this.avialablePediatricBedsNumBox.Size = new System.Drawing.Size(105, 89);
-            this.avialablePediatricBedsNumBox.TabIndex = 7;
-            this.avialablePediatricBedsNumBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.availablePediatricBedsNumBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.availablePediatricBedsNumBox.BorderRadius = 20;
+            this.availablePediatricBedsNumBox.BorderThickness = 2;
+            this.availablePediatricBedsNumBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.availablePediatricBedsNumBox.DefaultText = "";
+            this.availablePediatricBedsNumBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.availablePediatricBedsNumBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.availablePediatricBedsNumBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.availablePediatricBedsNumBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.availablePediatricBedsNumBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.availablePediatricBedsNumBox.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.availablePediatricBedsNumBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.availablePediatricBedsNumBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.availablePediatricBedsNumBox.Location = new System.Drawing.Point(147, 32);
+            this.availablePediatricBedsNumBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.availablePediatricBedsNumBox.Name = "availablePediatricBedsNumBox";
+            this.availablePediatricBedsNumBox.PasswordChar = '\0';
+            this.availablePediatricBedsNumBox.PlaceholderText = "ادخل الرقم";
+            this.availablePediatricBedsNumBox.SelectedText = "";
+            this.availablePediatricBedsNumBox.Size = new System.Drawing.Size(105, 89);
+            this.availablePediatricBedsNumBox.TabIndex = 7;
+            this.availablePediatricBedsNumBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // decreaseAvailablePediatricBedsNum
             // 
@@ -585,8 +601,9 @@
             this.decreaseAvailablePediatricBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseAvailablePediatricBedsNum.ImageSize = new System.Drawing.Size(30, 10);
             this.decreaseAvailablePediatricBedsNum.Location = new System.Drawing.Point(285, 45);
+            this.decreaseAvailablePediatricBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseAvailablePediatricBedsNum.Name = "decreaseAvailablePediatricBedsNum";
-            this.decreaseAvailablePediatricBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseAvailablePediatricBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseAvailablePediatricBedsNum.TabIndex = 8;
             // 
             // guna2GroupBox3
@@ -601,6 +618,7 @@
             this.guna2GroupBox3.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox3.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox3.Location = new System.Drawing.Point(18, 101);
+            this.guna2GroupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
             this.guna2GroupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.guna2GroupBox3.Size = new System.Drawing.Size(566, 365);
@@ -619,8 +637,9 @@
             this.guna2ContainerControl6.Controls.Add(this.totalTraumaBedsNumBox);
             this.guna2ContainerControl6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl6.Location = new System.Drawing.Point(15, 53);
+            this.guna2ContainerControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl6.Name = "guna2ContainerControl6";
-            this.guna2ContainerControl6.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl6.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl6.TabIndex = 6;
             this.guna2ContainerControl6.Text = "guna2ContainerControl6";
             // 
@@ -629,11 +648,11 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(381, 54);
+            this.label5.Location = new System.Drawing.Point(381, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 22);
+            this.label5.Size = new System.Drawing.Size(152, 37);
             this.label5.TabIndex = 0;
             this.label5.Text = "عدد الأسرّة الإجمالي:";
             // 
@@ -649,9 +668,10 @@
             this.increaseTotalTraumaBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("increaseTotalTraumaBedsNum.Image")));
             this.increaseTotalTraumaBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseTotalTraumaBedsNum.ImageSize = new System.Drawing.Size(32, 32);
-            this.increaseTotalTraumaBedsNum.Location = new System.Drawing.Point(50, 35);
+            this.increaseTotalTraumaBedsNum.Location = new System.Drawing.Point(50, 34);
+            this.increaseTotalTraumaBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseTotalTraumaBedsNum.Name = "increaseTotalTraumaBedsNum";
-            this.increaseTotalTraumaBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseTotalTraumaBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseTotalTraumaBedsNum.TabIndex = 4;
             // 
             // decreaseTotalTraumaBedsNum
@@ -666,9 +686,10 @@
             this.decreaseTotalTraumaBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("decreaseTotalTraumaBedsNum.Image")));
             this.decreaseTotalTraumaBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseTotalTraumaBedsNum.ImageSize = new System.Drawing.Size(30, 10);
-            this.decreaseTotalTraumaBedsNum.Location = new System.Drawing.Point(285, 35);
+            this.decreaseTotalTraumaBedsNum.Location = new System.Drawing.Point(285, 34);
+            this.decreaseTotalTraumaBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseTotalTraumaBedsNum.Name = "decreaseTotalTraumaBedsNum";
-            this.decreaseTotalTraumaBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseTotalTraumaBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseTotalTraumaBedsNum.TabIndex = 2;
             // 
             // totalTraumaBedsNumBox
@@ -702,11 +723,12 @@
             this.guna2Shapes3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2Shapes3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.guna2Shapes3.Location = new System.Drawing.Point(21, 197);
+            this.guna2Shapes3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Shapes3.Name = "guna2Shapes3";
             this.guna2Shapes3.PolygonSkip = 1;
             this.guna2Shapes3.Rotate = 0F;
             this.guna2Shapes3.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
-            this.guna2Shapes3.Size = new System.Drawing.Size(532, 9);
+            this.guna2Shapes3.Size = new System.Drawing.Size(532, 10);
             this.guna2Shapes3.TabIndex = 3;
             this.guna2Shapes3.Text = "guna2Shapes3";
             this.guna2Shapes3.UseTransparentBackground = true;
@@ -723,8 +745,9 @@
             this.guna2ContainerControl7.Controls.Add(this.decreaseAvailableTraumaBedsNum);
             this.guna2ContainerControl7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl7.Location = new System.Drawing.Point(15, 209);
+            this.guna2ContainerControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl7.Name = "guna2ContainerControl7";
-            this.guna2ContainerControl7.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl7.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl7.TabIndex = 10;
             this.guna2ContainerControl7.Text = "guna2ContainerControl7";
             // 
@@ -741,19 +764,20 @@
             this.increaseAvailableTraumaBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseAvailableTraumaBedsNum.ImageSize = new System.Drawing.Size(32, 32);
             this.increaseAvailableTraumaBedsNum.Location = new System.Drawing.Point(50, 45);
+            this.increaseAvailableTraumaBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseAvailableTraumaBedsNum.Name = "increaseAvailableTraumaBedsNum";
-            this.increaseAvailableTraumaBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseAvailableTraumaBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseAvailableTraumaBedsNum.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label6.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label6.Location = new System.Drawing.Point(392, 63);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 22);
+            this.label6.Size = new System.Drawing.Size(136, 37);
             this.label6.TabIndex = 0;
             this.label6.Text = "عدد الأسّرة المتاح:";
             // 
@@ -795,8 +819,9 @@
             this.decreaseAvailableTraumaBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseAvailableTraumaBedsNum.ImageSize = new System.Drawing.Size(30, 10);
             this.decreaseAvailableTraumaBedsNum.Location = new System.Drawing.Point(285, 45);
+            this.decreaseAvailableTraumaBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseAvailableTraumaBedsNum.Name = "decreaseAvailableTraumaBedsNum";
-            this.decreaseAvailableTraumaBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseAvailableTraumaBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseAvailableTraumaBedsNum.TabIndex = 8;
             // 
             // guna2GroupBox4
@@ -811,6 +836,7 @@
             this.guna2GroupBox4.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox4.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox4.Location = new System.Drawing.Point(1266, 509);
+            this.guna2GroupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
             this.guna2GroupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.guna2GroupBox4.Size = new System.Drawing.Size(566, 365);
@@ -829,8 +855,9 @@
             this.guna2ContainerControl8.Controls.Add(this.totalIsolationBedsNumBox);
             this.guna2ContainerControl8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl8.Location = new System.Drawing.Point(15, 53);
+            this.guna2ContainerControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl8.Name = "guna2ContainerControl8";
-            this.guna2ContainerControl8.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl8.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl8.TabIndex = 6;
             this.guna2ContainerControl8.Text = "guna2ContainerControl8";
             // 
@@ -838,11 +865,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(380, 54);
+            this.label7.Location = new System.Drawing.Point(381, 53);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 22);
+            this.label7.Size = new System.Drawing.Size(152, 37);
             this.label7.TabIndex = 0;
             this.label7.Text = "عدد الأسرّة الإجمالي:";
             // 
@@ -858,9 +885,10 @@
             this.increaseTotalIsolationBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("increaseTotalIsolationBedsNum.Image")));
             this.increaseTotalIsolationBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseTotalIsolationBedsNum.ImageSize = new System.Drawing.Size(32, 32);
-            this.increaseTotalIsolationBedsNum.Location = new System.Drawing.Point(50, 35);
+            this.increaseTotalIsolationBedsNum.Location = new System.Drawing.Point(50, 34);
+            this.increaseTotalIsolationBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseTotalIsolationBedsNum.Name = "increaseTotalIsolationBedsNum";
-            this.increaseTotalIsolationBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseTotalIsolationBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseTotalIsolationBedsNum.TabIndex = 4;
             // 
             // decreaseTotalIsolationBedsNum
@@ -875,9 +903,10 @@
             this.decreaseTotalIsolationBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("decreaseTotalIsolationBedsNum.Image")));
             this.decreaseTotalIsolationBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseTotalIsolationBedsNum.ImageSize = new System.Drawing.Size(30, 10);
-            this.decreaseTotalIsolationBedsNum.Location = new System.Drawing.Point(285, 35);
+            this.decreaseTotalIsolationBedsNum.Location = new System.Drawing.Point(285, 34);
+            this.decreaseTotalIsolationBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseTotalIsolationBedsNum.Name = "decreaseTotalIsolationBedsNum";
-            this.decreaseTotalIsolationBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseTotalIsolationBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseTotalIsolationBedsNum.TabIndex = 2;
             // 
             // totalIsolationBedsNumBox
@@ -911,11 +940,12 @@
             this.guna2Shapes4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2Shapes4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.guna2Shapes4.Location = new System.Drawing.Point(28, 197);
+            this.guna2Shapes4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Shapes4.Name = "guna2Shapes4";
             this.guna2Shapes4.PolygonSkip = 1;
             this.guna2Shapes4.Rotate = 0F;
             this.guna2Shapes4.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
-            this.guna2Shapes4.Size = new System.Drawing.Size(532, 9);
+            this.guna2Shapes4.Size = new System.Drawing.Size(532, 10);
             this.guna2Shapes4.TabIndex = 3;
             this.guna2Shapes4.Text = "guna2Shapes4";
             this.guna2Shapes4.UseTransparentBackground = true;
@@ -932,8 +962,9 @@
             this.guna2ContainerControl9.Controls.Add(this.decreaseAvailableIsolationBedsNum);
             this.guna2ContainerControl9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl9.Location = new System.Drawing.Point(15, 209);
+            this.guna2ContainerControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl9.Name = "guna2ContainerControl9";
-            this.guna2ContainerControl9.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl9.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl9.TabIndex = 10;
             this.guna2ContainerControl9.Text = "guna2ContainerControl9";
             // 
@@ -950,19 +981,20 @@
             this.increaseAvailableIsolationBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseAvailableIsolationBedsNum.ImageSize = new System.Drawing.Size(32, 32);
             this.increaseAvailableIsolationBedsNum.Location = new System.Drawing.Point(50, 45);
+            this.increaseAvailableIsolationBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseAvailableIsolationBedsNum.Name = "increaseAvailableIsolationBedsNum";
-            this.increaseAvailableIsolationBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseAvailableIsolationBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseAvailableIsolationBedsNum.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label8.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label8.Location = new System.Drawing.Point(392, 63);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 22);
+            this.label8.Size = new System.Drawing.Size(136, 37);
             this.label8.TabIndex = 0;
             this.label8.Text = "عدد الأسّرة المتاح:";
             // 
@@ -1004,8 +1036,9 @@
             this.decreaseAvailableIsolationBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseAvailableIsolationBedsNum.ImageSize = new System.Drawing.Size(30, 10);
             this.decreaseAvailableIsolationBedsNum.Location = new System.Drawing.Point(285, 45);
+            this.decreaseAvailableIsolationBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseAvailableIsolationBedsNum.Name = "decreaseAvailableIsolationBedsNum";
-            this.decreaseAvailableIsolationBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseAvailableIsolationBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseAvailableIsolationBedsNum.TabIndex = 8;
             // 
             // guna2GroupBox5
@@ -1020,6 +1053,7 @@
             this.guna2GroupBox5.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox5.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox5.Location = new System.Drawing.Point(645, 512);
+            this.guna2GroupBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GroupBox5.Name = "guna2GroupBox5";
             this.guna2GroupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.guna2GroupBox5.Size = new System.Drawing.Size(566, 365);
@@ -1038,8 +1072,9 @@
             this.guna2ContainerControl10.Controls.Add(this.totalCriticalCareBedsNumBox);
             this.guna2ContainerControl10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl10.Location = new System.Drawing.Point(15, 53);
+            this.guna2ContainerControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl10.Name = "guna2ContainerControl10";
-            this.guna2ContainerControl10.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl10.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl10.TabIndex = 6;
             this.guna2ContainerControl10.Text = "guna2ContainerControl10";
             // 
@@ -1047,11 +1082,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label9.Location = new System.Drawing.Point(376, 54);
+            this.label9.Location = new System.Drawing.Point(375, 53);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 22);
+            this.label9.Size = new System.Drawing.Size(152, 37);
             this.label9.TabIndex = 0;
             this.label9.Text = "عدد الأسرّة الإجمالي:";
             // 
@@ -1068,9 +1103,10 @@
             this.increaseTotalCriticalCareBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("increaseTotalCriticalCareBedsNum.Image")));
             this.increaseTotalCriticalCareBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseTotalCriticalCareBedsNum.ImageSize = new System.Drawing.Size(32, 32);
-            this.increaseTotalCriticalCareBedsNum.Location = new System.Drawing.Point(50, 35);
+            this.increaseTotalCriticalCareBedsNum.Location = new System.Drawing.Point(50, 34);
+            this.increaseTotalCriticalCareBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseTotalCriticalCareBedsNum.Name = "increaseTotalCriticalCareBedsNum";
-            this.increaseTotalCriticalCareBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseTotalCriticalCareBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseTotalCriticalCareBedsNum.TabIndex = 4;
             // 
             // decreaseTotalCriticalCareBedsNum
@@ -1085,9 +1121,10 @@
             this.decreaseTotalCriticalCareBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("decreaseTotalCriticalCareBedsNum.Image")));
             this.decreaseTotalCriticalCareBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseTotalCriticalCareBedsNum.ImageSize = new System.Drawing.Size(30, 10);
-            this.decreaseTotalCriticalCareBedsNum.Location = new System.Drawing.Point(285, 35);
+            this.decreaseTotalCriticalCareBedsNum.Location = new System.Drawing.Point(285, 34);
+            this.decreaseTotalCriticalCareBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseTotalCriticalCareBedsNum.Name = "decreaseTotalCriticalCareBedsNum";
-            this.decreaseTotalCriticalCareBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseTotalCriticalCareBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseTotalCriticalCareBedsNum.TabIndex = 2;
             // 
             // totalCriticalCareBedsNumBox
@@ -1121,11 +1158,12 @@
             this.guna2Shapes5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2Shapes5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.guna2Shapes5.Location = new System.Drawing.Point(15, 197);
+            this.guna2Shapes5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Shapes5.Name = "guna2Shapes5";
             this.guna2Shapes5.PolygonSkip = 1;
             this.guna2Shapes5.Rotate = 0F;
             this.guna2Shapes5.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
-            this.guna2Shapes5.Size = new System.Drawing.Size(532, 9);
+            this.guna2Shapes5.Size = new System.Drawing.Size(532, 10);
             this.guna2Shapes5.TabIndex = 3;
             this.guna2Shapes5.Text = "guna2Shapes5";
             this.guna2Shapes5.UseTransparentBackground = true;
@@ -1142,8 +1180,9 @@
             this.guna2ContainerControl11.Controls.Add(this.decreaseAvailableCriticalCareBedsNum);
             this.guna2ContainerControl11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl11.Location = new System.Drawing.Point(15, 209);
+            this.guna2ContainerControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl11.Name = "guna2ContainerControl11";
-            this.guna2ContainerControl11.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl11.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl11.TabIndex = 10;
             this.guna2ContainerControl11.Text = "guna2ContainerControl11";
             // 
@@ -1160,19 +1199,20 @@
             this.increaseAvailableCriticalCareBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseAvailableCriticalCareBedsNum.ImageSize = new System.Drawing.Size(32, 32);
             this.increaseAvailableCriticalCareBedsNum.Location = new System.Drawing.Point(50, 45);
+            this.increaseAvailableCriticalCareBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseAvailableCriticalCareBedsNum.Name = "increaseAvailableCriticalCareBedsNum";
-            this.increaseAvailableCriticalCareBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseAvailableCriticalCareBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseAvailableCriticalCareBedsNum.TabIndex = 9;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label11.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label11.Location = new System.Drawing.Point(392, 63);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(120, 22);
+            this.label11.Size = new System.Drawing.Size(136, 37);
             this.label11.TabIndex = 0;
             this.label11.Text = "عدد الأسّرة المتاح:";
             // 
@@ -1214,8 +1254,9 @@
             this.decreaseAvailableCriticalCareBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseAvailableCriticalCareBedsNum.ImageSize = new System.Drawing.Size(30, 10);
             this.decreaseAvailableCriticalCareBedsNum.Location = new System.Drawing.Point(285, 45);
+            this.decreaseAvailableCriticalCareBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseAvailableCriticalCareBedsNum.Name = "decreaseAvailableCriticalCareBedsNum";
-            this.decreaseAvailableCriticalCareBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseAvailableCriticalCareBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseAvailableCriticalCareBedsNum.TabIndex = 8;
             // 
             // guna2GroupBox6
@@ -1230,6 +1271,7 @@
             this.guna2GroupBox6.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox6.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox6.Location = new System.Drawing.Point(18, 512);
+            this.guna2GroupBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GroupBox6.Name = "guna2GroupBox6";
             this.guna2GroupBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.guna2GroupBox6.Size = new System.Drawing.Size(566, 365);
@@ -1248,8 +1290,9 @@
             this.guna2ContainerControl12.Controls.Add(this.totalVIPBedsNumBox);
             this.guna2ContainerControl12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl12.Location = new System.Drawing.Point(15, 53);
+            this.guna2ContainerControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl12.Name = "guna2ContainerControl12";
-            this.guna2ContainerControl12.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl12.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl12.TabIndex = 6;
             this.guna2ContainerControl12.Text = "guna2ContainerControl12";
             // 
@@ -1257,11 +1300,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label12.Location = new System.Drawing.Point(376, 54);
+            this.label12.Location = new System.Drawing.Point(375, 53);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 22);
+            this.label12.Size = new System.Drawing.Size(152, 37);
             this.label12.TabIndex = 0;
             this.label12.Text = "عدد الأسرّة الإجمالي:";
             // 
@@ -1277,9 +1320,10 @@
             this.increaseTotalVIPBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("increaseTotalVIPBedsNum.Image")));
             this.increaseTotalVIPBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseTotalVIPBedsNum.ImageSize = new System.Drawing.Size(32, 32);
-            this.increaseTotalVIPBedsNum.Location = new System.Drawing.Point(50, 35);
+            this.increaseTotalVIPBedsNum.Location = new System.Drawing.Point(50, 34);
+            this.increaseTotalVIPBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseTotalVIPBedsNum.Name = "increaseTotalVIPBedsNum";
-            this.increaseTotalVIPBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseTotalVIPBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseTotalVIPBedsNum.TabIndex = 4;
             // 
             // decreaseTotalVIPBedsNum
@@ -1294,9 +1338,10 @@
             this.decreaseTotalVIPBedsNum.Image = ((System.Drawing.Image)(resources.GetObject("decreaseTotalVIPBedsNum.Image")));
             this.decreaseTotalVIPBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseTotalVIPBedsNum.ImageSize = new System.Drawing.Size(30, 10);
-            this.decreaseTotalVIPBedsNum.Location = new System.Drawing.Point(285, 35);
+            this.decreaseTotalVIPBedsNum.Location = new System.Drawing.Point(285, 34);
+            this.decreaseTotalVIPBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseTotalVIPBedsNum.Name = "decreaseTotalVIPBedsNum";
-            this.decreaseTotalVIPBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseTotalVIPBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseTotalVIPBedsNum.TabIndex = 2;
             // 
             // totalVIPBedsNumBox
@@ -1330,11 +1375,12 @@
             this.guna2Shapes6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2Shapes6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.guna2Shapes6.Location = new System.Drawing.Point(21, 197);
+            this.guna2Shapes6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Shapes6.Name = "guna2Shapes6";
             this.guna2Shapes6.PolygonSkip = 1;
             this.guna2Shapes6.Rotate = 0F;
             this.guna2Shapes6.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
-            this.guna2Shapes6.Size = new System.Drawing.Size(532, 9);
+            this.guna2Shapes6.Size = new System.Drawing.Size(532, 10);
             this.guna2Shapes6.TabIndex = 3;
             this.guna2Shapes6.Text = "guna2Shapes6";
             this.guna2Shapes6.UseTransparentBackground = true;
@@ -1351,8 +1397,9 @@
             this.guna2ContainerControl13.Controls.Add(this.decreaseAvailableVIPBedsNum);
             this.guna2ContainerControl13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl13.Location = new System.Drawing.Point(15, 209);
+            this.guna2ContainerControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl13.Name = "guna2ContainerControl13";
-            this.guna2ContainerControl13.Size = new System.Drawing.Size(532, 143);
+            this.guna2ContainerControl13.Size = new System.Drawing.Size(532, 142);
             this.guna2ContainerControl13.TabIndex = 10;
             this.guna2ContainerControl13.Text = "guna2ContainerControl13";
             // 
@@ -1369,19 +1416,20 @@
             this.increaseAvailableVIPBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.increaseAvailableVIPBedsNum.ImageSize = new System.Drawing.Size(32, 32);
             this.increaseAvailableVIPBedsNum.Location = new System.Drawing.Point(50, 45);
+            this.increaseAvailableVIPBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.increaseAvailableVIPBedsNum.Name = "increaseAvailableVIPBedsNum";
-            this.increaseAvailableVIPBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.increaseAvailableVIPBedsNum.Size = new System.Drawing.Size(63, 61);
             this.increaseAvailableVIPBedsNum.TabIndex = 9;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label13.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label13.Location = new System.Drawing.Point(392, 63);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(120, 22);
+            this.label13.Size = new System.Drawing.Size(136, 37);
             this.label13.TabIndex = 0;
             this.label13.Text = "عدد الأسّرة المتاح:";
             // 
@@ -1423,8 +1471,9 @@
             this.decreaseAvailableVIPBedsNum.ImageOffset = new System.Drawing.Point(1, 0);
             this.decreaseAvailableVIPBedsNum.ImageSize = new System.Drawing.Size(30, 10);
             this.decreaseAvailableVIPBedsNum.Location = new System.Drawing.Point(285, 45);
+            this.decreaseAvailableVIPBedsNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.decreaseAvailableVIPBedsNum.Name = "decreaseAvailableVIPBedsNum";
-            this.decreaseAvailableVIPBedsNum.Size = new System.Drawing.Size(63, 60);
+            this.decreaseAvailableVIPBedsNum.Size = new System.Drawing.Size(63, 61);
             this.decreaseAvailableVIPBedsNum.TabIndex = 8;
             // 
             // EDBedsManagement
@@ -1441,6 +1490,7 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.guna2ContainerControl3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EDBedsManagement";
             this.Text = "EDBedsManagement";
             this.Load += new System.EventHandler(this.EDBedsManagement_Load);
@@ -1507,7 +1557,7 @@
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl5;
         private Guna.UI2.WinForms.Guna2Button increaseAvailablePediatricBedsNum;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox avialablePediatricBedsNumBox;
+        private Guna.UI2.WinForms.Guna2TextBox availablePediatricBedsNumBox;
         private Guna.UI2.WinForms.Guna2Button decreaseAvailablePediatricBedsNum;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl6;

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using CHS.Client.API;
+using CHS.Client.API.Models;
+using CHS.Client.API.Models.Facilities;
+using DocumentFormat.OpenXml.Office2016.Excel;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
@@ -21,6 +25,29 @@ namespace CHS_FrontEnd
 
         private void EDBedsManagement_Load(object sender, EventArgs e)
         {
+            try
+            {
+                GetEDBedsResponse response = RequestSender.SendRequest<CHSRequest, GetEDBedsResponse>(null);
+                if (response != null ) 
+                {
+                    totalGeneralBedsNumBox.Text = response.TotalGeneralBeds.ToString();
+                    availableGeneralBedsNumBox.Text = response.AvailableGeneralBeds.ToString();
+                    totalPediatricBedsNumBox.Text = response.TotalPediatricBeds.ToString();
+                    availablePediatricBedsNumBox.Text = response.AvailablePediatricBeds.ToString();
+                    totalTraumaBedsNumBox.Text = response.TotalTraumaBeds.ToString();
+                    availableTraumaBedsNumBox.Text = response.AvailableTraumaBeds.ToString();
+                    totalIsolationBedsNumBox.Text = response.TotalIsolationBeds.ToString();
+                    availableIsolationBedsNumBox.Text = response.AvailableIsolationBeds.ToString();
+                    totalCriticalCareBedsNumBox.Text = response.TotalCriticalCareBeds.ToString();
+                    availableCriticalCareBedsNumBox.Text = response.AvailableCriticalCareBeds.ToString();
+                    totalVIPBedsNumBox.Text = response.TotalVIPBeds.ToString();
+                    availableVIPBedsNumBox.Text = response.AvailableVIPBeds.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void numberBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -75,7 +102,7 @@ namespace CHS_FrontEnd
                 ["General"] = (totalGeneralBedsNumBox, availableGeneralBedsNumBox,
                                increaseTotalGeneralBedsNum, decreaseTotalGeneralBedsNum,
                                increaseAvailableGeneralBedsNum, deacreaseAvailableGeneralBedsNum),
-                ["Pediatric"] = (totalPediatricBedsNumBox, avialablePediatricBedsNumBox,
+                ["Pediatric"] = (totalPediatricBedsNumBox, availablePediatricBedsNumBox,
                                  increaseTotalPediatricBedsNum, decreaseTotalPediatricBedsNum,
                                  increaseAvailablePediatricBedsNum, decreaseAvailablePediatricBedsNum),
                 ["Trauma"] = (totalTraumaBedsNumBox, availableTraumaBedsNumBox,
@@ -162,7 +189,38 @@ namespace CHS_FrontEnd
                 }
             }
 
-            MessageBox.Show("All values are valid!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            UpdateEDBedsRequest request = new UpdateEDBedsRequest();
+
+            request.TotalGeneralBeds = int.Parse(totalGeneralBedsNumBox.Text);
+            request.AvailableGeneralBeds = int.Parse(availableGeneralBedsNumBox.Text);
+            request.TotalPediatricBeds = int.Parse(totalPediatricBedsNumBox.Text);
+            request.AvailablePediatricBeds = int.Parse(availablePediatricBedsNumBox.Text);
+            request.TotalTraumaBeds = int.Parse(totalTraumaBedsNumBox.Text);
+            request.AvailableTraumaBeds = int.Parse(availableTraumaBedsNumBox.Text);
+            request.TotalIsolationBeds = int.Parse(totalIsolationBedsNumBox.Text);
+            request.AvailableIsolationBeds = int.Parse(availableIsolationBedsNumBox.Text);
+            request.TotalCriticalCareBeds = int.Parse(totalCriticalCareBedsNumBox.Text);
+            request.AvailableCriticalCareBeds = int.Parse(availableCriticalCareBedsNumBox.Text);
+            request.TotalVIPBeds = int.Parse(totalVIPBedsNumBox.Text);
+            request.AvailableVIPBeds = int.Parse(availableVIPBedsNumBox.Text);
+
+
+            try
+            {
+                CHSResponse response = RequestSender.SendRequest<UpdateEDBedsRequest, CHSResponse>(request);
+                if (response != null)
+                {
+                    MessageBox.Show(response.MessageDescription);
+                }
+                else
+                {
+                    MessageBox.Show("failed");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private bool CompareTextBoxValues(string bedType)
