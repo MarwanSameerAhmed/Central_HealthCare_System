@@ -33,7 +33,7 @@ namespace CHS.Client.API
                     token = loginResponse.Token;
                     return loginResponse;
                 }
-                else if(CHSResponse.TryPars(responseBody, out chsResponse))
+                else if(CHSResponse.TryParse(responseBody, out chsResponse))
                 {
                     
                     throw new Exception(chsResponse.MessageDescription);
@@ -66,7 +66,7 @@ namespace CHS.Client.API
                     TResponse responseObject = JsonConvert.DeserializeObject<TResponse>(responseBody);
                     return responseObject;
                 }
-                else if (CHSResponse.TryPars(responseBody, out chsResponse))
+                else if (CHSResponse.TryParse(responseBody, out chsResponse))
                 {
 
                     throw new Exception(chsResponse.MessageDescription);

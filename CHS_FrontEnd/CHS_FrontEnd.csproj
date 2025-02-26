@@ -71,15 +71,6 @@
     <ManifestKeyFile>CHS_FrontEnd_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClosedXML, Version=0.104.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ClosedXML.0.104.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
-    </Reference>
-    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
-      <HintPath>..\packages\ClosedXML.Parser.1.2.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
-    </Reference>
-    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
-      <HintPath>..\packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
-    </Reference>
     <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
     </Reference>
@@ -289,6 +280,12 @@
     <Compile Include="Labs &amp; ED\LIMSFrm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Labs &amp; ED\FillResultsLabTestsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Labs &amp; ED\FillResultsLabTestsFrm.Designer.cs">
+      <DependentUpon>FillResultsLabTestsFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Labs &amp; ED\LIMSFrm.Designer.cs">
       <DependentUpon>LIMSFrm.cs</DependentUpon>
     </Compile>
@@ -424,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Labs &amp; ED\LIMSFrm.resx">
       <DependentUpon>LIMSFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Labs &amp; ED\FillResultsLabTestsFrm.resx">
+      <DependentUpon>FillResultsLabTestsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainService.resx">
       <DependentUpon>MainService.cs</DependentUpon>

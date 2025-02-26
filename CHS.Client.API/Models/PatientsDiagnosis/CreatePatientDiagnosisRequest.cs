@@ -10,5 +10,6 @@ namespace CHS.Client.API.Models.PatientsDiagnosis
     {
         public long PatientNumber { get; set; }
         public List<string> Symptoms { get; set; }
+        public List<int> LabTests { get; set; }
     }
 }

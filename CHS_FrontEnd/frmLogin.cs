@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CHS.Client.API.Models.Facilities;
 using Guna.UI2.WinForms;
+using CHS.Client.API.Helper_Classes;
 
 namespace CHS_FrontEnd
 {
@@ -210,7 +211,7 @@ namespace CHS_FrontEnd
                     FacilityName = facilityTxt.Text;
                     JobTitle = response.JobTitle;
                     UserRole = response.UserRole;
-
+                    Cache.InitialCache();
                     DialogResult = DialogResult.OK;
                     return;
                 }

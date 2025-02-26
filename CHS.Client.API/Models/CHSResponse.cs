@@ -13,7 +13,7 @@ namespace CHS.Client.API.Models
         public string ResponseCode { get; set; }
         public string MessageDescription { get; set; }
 
-        public static bool TryPars(string responseBody, out CHSResponse chsResponse)
+        public static bool TryParse(string responseBody, out CHSResponse chsResponse)
         {
             try
             {
