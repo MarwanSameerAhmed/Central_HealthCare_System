@@ -63,10 +63,9 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.newMedicinesHeader);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(15, 14);
-            this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(12, 12);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1814, 61);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1411, 51);
             this.guna2ContainerControl3.TabIndex = 8;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -76,10 +75,9 @@
             this.newMedicinesHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.newMedicinesHeader.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold);
             this.newMedicinesHeader.ForeColor = System.Drawing.Color.White;
-            this.newMedicinesHeader.Location = new System.Drawing.Point(753, 1);
-            this.newMedicinesHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.newMedicinesHeader.Location = new System.Drawing.Point(586, 1);
             this.newMedicinesHeader.Name = "newMedicinesHeader";
-            this.newMedicinesHeader.Size = new System.Drawing.Size(230, 61);
+            this.newMedicinesHeader.Size = new System.Drawing.Size(191, 52);
             this.newMedicinesHeader.TabIndex = 0;
             this.newMedicinesHeader.Text = "إضافة أدوية جديدة";
             this.newMedicinesHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -91,10 +89,9 @@
             this.medicineNamelabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.medicineNamelabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicineNamelabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.medicineNamelabel.Location = new System.Drawing.Point(330, 106);
-            this.medicineNamelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.medicineNamelabel.Location = new System.Drawing.Point(474, 89);
             this.medicineNamelabel.Name = "medicineNamelabel";
-            this.medicineNamelabel.Size = new System.Drawing.Size(77, 34);
+            this.medicineNamelabel.Size = new System.Drawing.Size(63, 27);
             this.medicineNamelabel.TabIndex = 21;
             this.medicineNamelabel.Text = "اسم الدواء";
             this.medicineNamelabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -105,10 +102,9 @@
             this.dosageFormLabelError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.dosageFormLabelError.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dosageFormLabelError.ForeColor = System.Drawing.Color.Red;
-            this.dosageFormLabelError.Location = new System.Drawing.Point(21, 393);
-            this.dosageFormLabelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dosageFormLabelError.Location = new System.Drawing.Point(44, 331);
             this.dosageFormLabelError.Name = "dosageFormLabelError";
-            this.dosageFormLabelError.Size = new System.Drawing.Size(27, 34);
+            this.dosageFormLabelError.Size = new System.Drawing.Size(22, 27);
             this.dosageFormLabelError.TabIndex = 26;
             this.dosageFormLabelError.Text = "\"\"";
             this.dosageFormLabelError.Visible = false;
@@ -129,15 +125,15 @@
             this.medicineNameTxtBox.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicineNameTxtBox.ForeColor = System.Drawing.Color.Black;
             this.medicineNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.medicineNameTxtBox.Location = new System.Drawing.Point(27, 148);
-            this.medicineNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.medicineNameTxtBox.Location = new System.Drawing.Point(21, 125);
+            this.medicineNameTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.medicineNameTxtBox.Name = "medicineNameTxtBox";
             this.medicineNameTxtBox.PasswordChar = '\0';
             this.medicineNameTxtBox.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.medicineNameTxtBox.PlaceholderText = "";
             this.medicineNameTxtBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.medicineNameTxtBox.SelectedText = "";
-            this.medicineNameTxtBox.Size = new System.Drawing.Size(402, 46);
+            this.medicineNameTxtBox.Size = new System.Drawing.Size(516, 39);
             this.medicineNameTxtBox.TabIndex = 22;
             // 
             // dosageFormLabel
@@ -147,10 +143,9 @@
             this.dosageFormLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.dosageFormLabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dosageFormLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dosageFormLabel.Location = new System.Drawing.Point(330, 393);
-            this.dosageFormLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dosageFormLabel.Location = new System.Drawing.Point(466, 331);
             this.dosageFormLabel.Name = "dosageFormLabel";
-            this.dosageFormLabel.Size = new System.Drawing.Size(89, 34);
+            this.dosageFormLabel.Size = new System.Drawing.Size(71, 27);
             this.dosageFormLabel.TabIndex = 24;
             this.dosageFormLabel.Text = "شكل الجرعة";
             this.dosageFormLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -162,10 +157,9 @@
             this.medicineNumberabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.medicineNumberabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicineNumberabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.medicineNumberabel.Location = new System.Drawing.Point(330, 251);
-            this.medicineNumberabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.medicineNumberabel.Location = new System.Drawing.Point(477, 211);
             this.medicineNumberabel.Name = "medicineNumberabel";
-            this.medicineNumberabel.Size = new System.Drawing.Size(73, 34);
+            this.medicineNumberabel.Size = new System.Drawing.Size(60, 27);
             this.medicineNumberabel.TabIndex = 27;
             this.medicineNumberabel.Text = "رقم الدواء";
             this.medicineNumberabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -176,10 +170,9 @@
             this.medicineNameLabelError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.medicineNameLabelError.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicineNameLabelError.ForeColor = System.Drawing.Color.Red;
-            this.medicineNameLabelError.Location = new System.Drawing.Point(21, 106);
-            this.medicineNameLabelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.medicineNameLabelError.Location = new System.Drawing.Point(44, 89);
             this.medicineNameLabelError.Name = "medicineNameLabelError";
-            this.medicineNameLabelError.Size = new System.Drawing.Size(27, 34);
+            this.medicineNameLabelError.Size = new System.Drawing.Size(22, 27);
             this.medicineNameLabelError.TabIndex = 23;
             this.medicineNameLabelError.Text = "\"\"";
             this.medicineNameLabelError.Visible = false;
@@ -200,15 +193,15 @@
             this.medicineNumberabelTxtBox.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicineNumberabelTxtBox.ForeColor = System.Drawing.Color.Black;
             this.medicineNumberabelTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.medicineNumberabelTxtBox.Location = new System.Drawing.Point(27, 293);
-            this.medicineNumberabelTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.medicineNumberabelTxtBox.Location = new System.Drawing.Point(21, 247);
+            this.medicineNumberabelTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.medicineNumberabelTxtBox.Name = "medicineNumberabelTxtBox";
             this.medicineNumberabelTxtBox.PasswordChar = '\0';
             this.medicineNumberabelTxtBox.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.medicineNumberabelTxtBox.PlaceholderText = "";
             this.medicineNumberabelTxtBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.medicineNumberabelTxtBox.SelectedText = "";
-            this.medicineNumberabelTxtBox.Size = new System.Drawing.Size(402, 46);
+            this.medicineNumberabelTxtBox.Size = new System.Drawing.Size(516, 39);
             this.medicineNumberabelTxtBox.TabIndex = 28;
             // 
             // medicineDataLabel
@@ -218,11 +211,10 @@
             this.medicineDataLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.medicineDataLabel.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold);
             this.medicineDataLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.medicineDataLabel.Location = new System.Drawing.Point(273, 0);
-            this.medicineDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.medicineDataLabel.Location = new System.Drawing.Point(419, 0);
             this.medicineDataLabel.Name = "medicineDataLabel";
-            this.medicineDataLabel.Padding = new System.Windows.Forms.Padding(21, 26, 21, 26);
-            this.medicineDataLabel.Size = new System.Drawing.Size(160, 95);
+            this.medicineDataLabel.Padding = new System.Windows.Forms.Padding(16, 22, 16, 22);
+            this.medicineDataLabel.Size = new System.Drawing.Size(127, 80);
             this.medicineDataLabel.TabIndex = 6;
             this.medicineDataLabel.Text = "بيانات الدواء";
             // 
@@ -232,10 +224,9 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label3.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(21, 251);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(44, 211);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 34);
+            this.label3.Size = new System.Drawing.Size(22, 27);
             this.label3.TabIndex = 29;
             this.label3.Text = "\"\"";
             this.label3.Visible = false;
@@ -255,10 +246,9 @@
             this.guna2ContainerControl5.Controls.Add(this.medicineNumberabel);
             this.guna2ContainerControl5.Controls.Add(this.medicineNameLabelError);
             this.guna2ContainerControl5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl5.Location = new System.Drawing.Point(1396, 82);
-            this.guna2ContainerControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ContainerControl5.Location = new System.Drawing.Point(877, 69);
             this.guna2ContainerControl5.Name = "guna2ContainerControl5";
-            this.guna2ContainerControl5.Size = new System.Drawing.Size(433, 502);
+            this.guna2ContainerControl5.Size = new System.Drawing.Size(546, 423);
             this.guna2ContainerControl5.TabIndex = 39;
             this.guna2ContainerControl5.Text = "الاسم الكامل ";
             // 
@@ -274,11 +264,11 @@
             this.dosageFormComboBox.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.dosageFormComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.dosageFormComboBox.ItemHeight = 30;
-            this.dosageFormComboBox.Location = new System.Drawing.Point(27, 439);
-            this.dosageFormComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dosageFormComboBox.Location = new System.Drawing.Point(21, 370);
+            this.dosageFormComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dosageFormComboBox.Name = "dosageFormComboBox";
             this.dosageFormComboBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dosageFormComboBox.Size = new System.Drawing.Size(401, 36);
+            this.dosageFormComboBox.Size = new System.Drawing.Size(516, 36);
             this.dosageFormComboBox.TabIndex = 33;
             // 
             // guna2ContainerControl1
@@ -295,20 +285,18 @@
             this.guna2ContainerControl1.Controls.Add(this.activeIngredientsCategoryLabel);
             this.guna2ContainerControl1.Controls.Add(this.diseasesContainer);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(535, 82);
-            this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(23, 69);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(854, 502);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(848, 423);
             this.guna2ContainerControl1.TabIndex = 40;
             this.guna2ContainerControl1.Text = "الاسم الكامل ";
             // 
             // activeIngredientsFlowLayoutPanel
             // 
             this.activeIngredientsFlowLayoutPanel.BackColor = System.Drawing.Color.White;
-            this.activeIngredientsFlowLayoutPanel.Location = new System.Drawing.Point(28, 216);
-            this.activeIngredientsFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.activeIngredientsFlowLayoutPanel.Location = new System.Drawing.Point(22, 182);
             this.activeIngredientsFlowLayoutPanel.Name = "activeIngredientsFlowLayoutPanel";
-            this.activeIngredientsFlowLayoutPanel.Size = new System.Drawing.Size(804, 246);
+            this.activeIngredientsFlowLayoutPanel.Size = new System.Drawing.Size(796, 207);
             this.activeIngredientsFlowLayoutPanel.TabIndex = 40;
             // 
             // activeIngredientsResultsComboBox
@@ -323,11 +311,11 @@
             this.activeIngredientsResultsComboBox.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.activeIngredientsResultsComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.activeIngredientsResultsComboBox.ItemHeight = 30;
-            this.activeIngredientsResultsComboBox.Location = new System.Drawing.Point(27, 152);
-            this.activeIngredientsResultsComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.activeIngredientsResultsComboBox.Location = new System.Drawing.Point(12, 125);
+            this.activeIngredientsResultsComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.activeIngredientsResultsComboBox.Name = "activeIngredientsResultsComboBox";
             this.activeIngredientsResultsComboBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.activeIngredientsResultsComboBox.Size = new System.Drawing.Size(378, 36);
+            this.activeIngredientsResultsComboBox.Size = new System.Drawing.Size(414, 36);
             this.activeIngredientsResultsComboBox.TabIndex = 39;
             // 
             // activeIngredientsResultsLabelError
@@ -336,10 +324,9 @@
             this.activeIngredientsResultsLabelError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.activeIngredientsResultsLabelError.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeIngredientsResultsLabelError.ForeColor = System.Drawing.Color.Red;
-            this.activeIngredientsResultsLabelError.Location = new System.Drawing.Point(21, 106);
-            this.activeIngredientsResultsLabelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.activeIngredientsResultsLabelError.Location = new System.Drawing.Point(51, 89);
             this.activeIngredientsResultsLabelError.Name = "activeIngredientsResultsLabelError";
-            this.activeIngredientsResultsLabelError.Size = new System.Drawing.Size(27, 34);
+            this.activeIngredientsResultsLabelError.Size = new System.Drawing.Size(22, 27);
             this.activeIngredientsResultsLabelError.TabIndex = 38;
             this.activeIngredientsResultsLabelError.Text = "\"\"";
             this.activeIngredientsResultsLabelError.Visible = false;
@@ -351,10 +338,9 @@
             this.activeIngredientsResultsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.activeIngredientsResultsLabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeIngredientsResultsLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.activeIngredientsResultsLabel.Location = new System.Drawing.Point(365, 106);
-            this.activeIngredientsResultsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.activeIngredientsResultsLabel.Location = new System.Drawing.Point(392, 89);
             this.activeIngredientsResultsLabel.Name = "activeIngredientsResultsLabel";
-            this.activeIngredientsResultsLabel.Size = new System.Drawing.Size(42, 34);
+            this.activeIngredientsResultsLabel.Size = new System.Drawing.Size(32, 27);
             this.activeIngredientsResultsLabel.TabIndex = 37;
             this.activeIngredientsResultsLabel.Text = "الفئة";
             this.activeIngredientsResultsLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -371,11 +357,11 @@
             this.activeIngredientsCategoryComboBox.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.activeIngredientsCategoryComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.activeIngredientsCategoryComboBox.ItemHeight = 30;
-            this.activeIngredientsCategoryComboBox.Location = new System.Drawing.Point(471, 152);
-            this.activeIngredientsCategoryComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.activeIngredientsCategoryComboBox.Location = new System.Drawing.Point(441, 125);
+            this.activeIngredientsCategoryComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.activeIngredientsCategoryComboBox.Name = "activeIngredientsCategoryComboBox";
             this.activeIngredientsCategoryComboBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.activeIngredientsCategoryComboBox.Size = new System.Drawing.Size(378, 36);
+            this.activeIngredientsCategoryComboBox.Size = new System.Drawing.Size(390, 36);
             this.activeIngredientsCategoryComboBox.TabIndex = 36;
             // 
             // activeIngredientsCategoryLabelError
@@ -384,10 +370,9 @@
             this.activeIngredientsCategoryLabelError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.activeIngredientsCategoryLabelError.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeIngredientsCategoryLabelError.ForeColor = System.Drawing.Color.Red;
-            this.activeIngredientsCategoryLabelError.Location = new System.Drawing.Point(464, 106);
-            this.activeIngredientsCategoryLabelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.activeIngredientsCategoryLabelError.Location = new System.Drawing.Point(478, 89);
             this.activeIngredientsCategoryLabelError.Name = "activeIngredientsCategoryLabelError";
-            this.activeIngredientsCategoryLabelError.Size = new System.Drawing.Size(27, 34);
+            this.activeIngredientsCategoryLabelError.Size = new System.Drawing.Size(22, 27);
             this.activeIngredientsCategoryLabelError.TabIndex = 35;
             this.activeIngredientsCategoryLabelError.Text = "\"\"";
             this.activeIngredientsCategoryLabelError.Visible = false;
@@ -399,11 +384,10 @@
             this.activeIngredientsLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.activeIngredientsLabel.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold);
             this.activeIngredientsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.activeIngredientsLabel.Location = new System.Drawing.Point(684, 0);
-            this.activeIngredientsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.activeIngredientsLabel.Location = new System.Drawing.Point(710, 0);
             this.activeIngredientsLabel.Name = "activeIngredientsLabel";
-            this.activeIngredientsLabel.Padding = new System.Windows.Forms.Padding(21, 26, 21, 26);
-            this.activeIngredientsLabel.Size = new System.Drawing.Size(170, 95);
+            this.activeIngredientsLabel.Padding = new System.Windows.Forms.Padding(16, 22, 16, 22);
+            this.activeIngredientsLabel.Size = new System.Drawing.Size(138, 80);
             this.activeIngredientsLabel.TabIndex = 6;
             this.activeIngredientsLabel.Text = "العناصر الفعالة";
             // 
@@ -414,10 +398,9 @@
             this.activeIngredientsCategoryLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.activeIngredientsCategoryLabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeIngredientsCategoryLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.activeIngredientsCategoryLabel.Location = new System.Drawing.Point(809, 106);
-            this.activeIngredientsCategoryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.activeIngredientsCategoryLabel.Location = new System.Drawing.Point(799, 89);
             this.activeIngredientsCategoryLabel.Name = "activeIngredientsCategoryLabel";
-            this.activeIngredientsCategoryLabel.Size = new System.Drawing.Size(42, 34);
+            this.activeIngredientsCategoryLabel.Size = new System.Drawing.Size(32, 27);
             this.activeIngredientsCategoryLabel.TabIndex = 34;
             this.activeIngredientsCategoryLabel.Text = "الفئة";
             this.activeIngredientsCategoryLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -428,10 +411,10 @@
             this.diseasesContainer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
             this.diseasesContainer.BorderRadius = 15;
             this.diseasesContainer.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diseasesContainer.Location = new System.Drawing.Point(15, 208);
-            this.diseasesContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.diseasesContainer.Location = new System.Drawing.Point(12, 175);
+            this.diseasesContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.diseasesContainer.Name = "diseasesContainer";
-            this.diseasesContainer.Size = new System.Drawing.Size(820, 261);
+            this.diseasesContainer.Size = new System.Drawing.Size(819, 220);
             this.diseasesContainer.TabIndex = 50;
             this.diseasesContainer.Text = "guna2ContainerControl6";
             // 
@@ -446,25 +429,24 @@
             this.createBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.createBtn.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBtn.ForeColor = System.Drawing.Color.White;
-            this.createBtn.Location = new System.Drawing.Point(642, 572);
-            this.createBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.createBtn.Location = new System.Drawing.Point(340, 519);
+            this.createBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(586, 57);
+            this.createBtn.Size = new System.Drawing.Size(226, 48);
             this.createBtn.TabIndex = 41;
             this.createBtn.Text = "إنشاء";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // AddNewMedicines
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1917, 1001);
+            this.ClientSize = new System.Drawing.Size(1491, 843);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.guna2ContainerControl1);
             this.Controls.Add(this.guna2ContainerControl3);
             this.Controls.Add(this.guna2ContainerControl5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddNewMedicines";
             this.Text = "AddNewMedicines";
             this.Load += new System.EventHandler(this.AddNewMedicines_Load);

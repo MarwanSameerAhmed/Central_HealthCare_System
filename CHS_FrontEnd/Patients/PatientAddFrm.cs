@@ -35,13 +35,9 @@ namespace CHS_FrontEnd
             this.dockPanel = dockPanel;
 
 
-            InitializeAutoComplete(sensitivitiesTxt, new[] { "السكري", "الربو", "ارتفاع ضغط الدم", "حساسية القمح" });
-            InitializeAutoComplete(diseasesTxt, new[] { "مرض السكري", "الضغط", "السرطان" });
-            InitializeAutoComplete(medicinesTxt, new[] { "أسبيرين", "أموكسيسيلين", "باراسيتامول" });
-
+           
             sensitivitiesTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الحساسية");
-            diseasesTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "المرض");
-            medicinesTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الدواء");
+           
 
 
 
@@ -67,15 +63,12 @@ namespace CHS_FrontEnd
 
             switch (type)
             {
-                case "المرض":
-                    errorLabel = label22;
-                    break;
+              
                 case "الحساسية":
                     errorLabel = label23;
                     break;
-                case "الدواء":
-                    errorLabel = label24;
-                    break;
+               
+                  
             }
 
             if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(textBox.Text))
@@ -83,13 +76,7 @@ namespace CHS_FrontEnd
                 string inputText = textBox.Text.Trim();
 
 
-                if (!IsValidInput(textBox, inputText))
-                {
-                    errorLabel.Visible = true;
-                    errorLabel.Text = $"{type} غير موجود بالقائمة*";
-                    textBox.Clear();
-                    return;
-                }
+              
 
 
                 errorLabel.Visible = false;
@@ -100,18 +87,12 @@ namespace CHS_FrontEnd
 
                     switch (type)
                     {
-                        case "المرض":
-                            diseasesList.Add(inputText);
-                            AddChip(inputText, type, flowLayoutPanel3);
-                            break;
+                      
                         case "الحساسية":
                             allergiesList.Add(inputText);
                             AddChip(inputText, type, flowLayoutPanel2);
                             break;
-                        case "الدواء":
-                            medicationsList.Add(inputText);
-                            AddChip(inputText, type, flowLayoutPanel1);
-                            break;
+                      
                     }
                     textBox.Clear();
                 }
@@ -131,12 +112,9 @@ namespace CHS_FrontEnd
         {
             switch (type)
             {
-                case "المرض":
-                    return diseasesList.Contains(inputText);
+              
                 case "الحساسية":
                     return allergiesList.Contains(inputText);
-                case "الدواء":
-                    return medicationsList.Contains(inputText);
                 default:
                     return false;
             }
@@ -181,12 +159,10 @@ namespace CHS_FrontEnd
         {
             switch (type)
             {
-                case "المرض":
-                    return Color.DarkBlue;
+               
                 case "الحساسية":
                     return Color.Green;
-                case "الدواء":
-                    return Color.Purple;
+               
                 default:
                     return Color.Gray;
             }
@@ -195,15 +171,12 @@ namespace CHS_FrontEnd
         {
             switch (type)
             {
-                case "المرض":
-                    diseasesList.Remove(text);
-                    break;
+               
                 case "الحساسية":
                     allergiesList.Remove(text);
                     break;
-                case "الدواء":
-                    medicationsList.Remove(text);
-                    break;
+               
+                   
             }
         }
 
@@ -307,6 +280,7 @@ namespace CHS_FrontEnd
             statetxt.Text = string.Empty;
             comuintystateCombo.SelectedIndex = -1;
             parenttxt.Text = string.Empty;
+            flowLayoutPanel2.ResetText();
 
 
         }
@@ -329,32 +303,31 @@ namespace CHS_FrontEnd
 
         private async void createBtn_Click(object sender, EventArgs e)
         {
-            //            List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)> textFields = new List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)>
-            //{
-            //    (fullNametxt, labelError, "هذا الحقل مطلوب*"),
-            //    (PhoneNumbertxt, labelerrorPhone, "يرجى إدخال رقم الهاتف*"),
-            //    (agetxt, errorlblage, "يرجى إدخال العمر*"),
+            List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)> textFields = new List<(Guna.UI2.WinForms.Guna2TextBox, Label, string)>
+            {
+                (fullNametxt, labelError, "هذا الحقل مطلوب*"),
+                (PhoneNumbertxt, labelerrorPhone, "يرجى إدخال رقم الهاتف*"),
+               
 
-            //    (nationalIDtxt, nationallblerror, "يرجى إدخال رقم الهوية*"),
-            //     (addresstxt, addresslblerror, "يرجى إدخال العنوان للمريض*"),
-            //      (parenttxt, parentlblerror, "يرجى إدخال اسم ولي الامر *")
-            //};
+                (nationalIDtxt, nationallblerror, "يرجى إدخال رقم الهوية*"),
+                 (addresstxt, addresslblerror, "يرجى إدخال العنوان للمريض*"),
+                  (parenttxt, parentlblerror, "يرجى إدخال اسم ولي الامر *")
+            };
 
-            //            List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)> comboFields = new List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)>
-            //{
-            //    (gendertxt, gendererrorlbl, "يرجى اختيار الجنس*"),
-            //    (statetxt, countryErrorLabel, "يرجى اختيار المحافظة*"),
-            //     (bloodtxt, bloodlbl, "يرجى اختيار فصيلة الدم*"),
-            //      (comuintystateCombo, cumintystatelblerror, "يرجى اختيار الحالة الاجتماعية*"),
-            //};
+            List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)> comboFields = new List<(Guna.UI2.WinForms.Guna2ComboBox, Label, string)>
+            {
+                (gendertxt, gendererrorlbl, "يرجى اختيار الجنس*"),
+                (statetxt, countryErrorLabel, "يرجى اختيار المحافظة*"),
+                 (bloodtxt, bloodlbl, "يرجى اختيار فصيلة الدم*"),
+            };
 
-            //            if (!ValidateFields(textFields, comboFields))
-            //            {
+            if (!ValidateFields(textFields, comboFields))
+            {
 
-            //                MessageBox.Show("يرجى ملء جميع الحقول المطلوبة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //                return;
+                MessageBox.Show("يرجى ملء جميع الحقول المطلوبة.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
 
-            //            }
+            }
 
             try
             {
@@ -369,6 +342,10 @@ namespace CHS_FrontEnd
                 string maritalStatus = comuintystateCombo.Text;
                 string birthPlace = statetxt.Text;
                 string companionName = parenttxt.Text;
+                foreach (Control al in flowLayoutPanel2.Controls)
+                {
+                    allergiesList.Add(al.Text);
+                }
 
                 var request = new CreatePatientFileRequest
                 {
@@ -383,6 +360,7 @@ namespace CHS_FrontEnd
                     maritalStatus = maritalStatus,
                     birthPlace = birthPlace,
                     companionName = companionName,
+                    allergies = allergiesList,
 
 
 
@@ -515,7 +493,7 @@ namespace CHS_FrontEnd
 
         private void diseasesTxt_TextChanged_1(object sender, EventArgs e)
         {
-            label17.Visible = true;
+            
         }
 
         private void sensitivitiesTxt_TextChanged_1(object sender, EventArgs e)
@@ -525,7 +503,7 @@ namespace CHS_FrontEnd
 
         private void medicinesTxt_TextChanged_1(object sender, EventArgs e)
         {
-            label21.Visible = true;
+           
         }
 
         private void guna2ContainerControl1_Click(object sender, EventArgs e)
@@ -555,6 +533,11 @@ namespace CHS_FrontEnd
                 int estimatedBirthYear = currentYear - age;
                 birthdaytxt.Value = new DateTime(estimatedBirthYear, 1, 1);
             }
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

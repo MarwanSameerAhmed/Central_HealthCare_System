@@ -14,6 +14,8 @@ using System.Windows.Forms;
 using CHS.Client.API.Models.PatientsDiagnosis;
 using CHS.Client.API.Models.Patients;
 using CHS.Client.API.Models;
+using CHS.Client.API.Models.Labs;
+using CHS.Client.API.Helper_Classes;
 
 namespace CHS_FrontEnd
 {
@@ -24,11 +26,12 @@ namespace CHS_FrontEnd
         private List<string> FinalDaignosisList = new List<string>();
 
         private List<string> testsList = new List<string>();
-
+        public event Action DiagnosisAdded;
         private List<string> demoMedicineNames = new List<string>
 {
     "أسبيرين", "باراسيتامول", "إيبوبروفين", "أموكسيسيلين", "كلاريثروميسين"
 };
+        List<LabTest> myLabTests = Cache.LabTests ?? new List<LabTest>();
 
         private List<string> demoDosages = new List<string>
 {
@@ -48,20 +51,23 @@ namespace CHS_FrontEnd
         };
         long medicalNumber;
         long PatientDiagnosisNumber;
+      
 
         public addNewDaignosis(long medicalNumber , long PatientDiagnosisNumber)
         {
             InitializeComponent();
             this.medicalNumber = medicalNumber;
+           
             this.PatientDiagnosisNumber = PatientDiagnosisNumber;
-            InitializeAutoComplete(testsTxt, new[] { "فحص الدم", "فحص السكري", "فحص الأشعة", "فحص البول" });
-
+            InitializeAutoComplete(testsTxt);
+            ApplyEventsToTextBoxes(guna2ContainerControl6);
+            ApplyEventsToTextBoxes(guna2ContainerControl7);
+            ApplyEventsToTextBoxes(guna2ContainerControl4);
 
             symptomsTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "العَرَض");
             AddFinalDagnosis.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الحالة المرضية");
-
             testsTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الفحص");
-            if (medicalNumber == 1)
+            if (medicalNumber == -1)
             {
                 guna2ContainerControl4.Enabled = true;
                 guna2ContainerControl7.Enabled = false;
@@ -74,14 +80,25 @@ namespace CHS_FrontEnd
                 guna2ContainerControl6.Enabled = true;
             }
         }
-        private void InitializeAutoComplete(Guna2TextBox textBox, string[] suggestions)
+
+
+
+        private void InitializeAutoComplete(Guna2TextBox textBox)
         {
+            if (Cache.LabTests == null || !Cache.LabTests.Any())
+            {
+                Cache.InitialCache();
+            }
+
+            List<string> suggestions = Cache.LabTests?.Select(l => l.Name).ToList() ?? new List<string>();
+
             textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
             var autoComplete = new AutoCompleteStringCollection();
-            autoComplete.AddRange(suggestions);
+            autoComplete.AddRange(suggestions.ToArray());
             textBox.AutoCompleteCustomSource = autoComplete;
         }
+
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e, string type)
         {
@@ -94,8 +111,12 @@ namespace CHS_FrontEnd
 
                 string inputText = textBox.Text.Trim();
 
+                if (textBox == null || string.IsNullOrWhiteSpace(inputText))
+                    return;
+
                 if (type == "الفحص" && !IsValidInput(textBox, inputText))
                 {
+                    e.SuppressKeyPress = true;
                     MessageBox.Show("الفحص غير موجود بالقائمة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox.Clear();
                     return;
@@ -129,8 +150,13 @@ namespace CHS_FrontEnd
 
         private bool IsValidInput(Guna2TextBox textBox, string inputText)
         {
-          
-            return textBox.AutoCompleteCustomSource.Contains(inputText);
+            if (textBox.AutoCompleteCustomSource == null || textBox.AutoCompleteCustomSource.Count == 0)
+            {
+                return false; 
+            }
+
+            return textBox.AutoCompleteCustomSource.Cast<string>()
+                   .Any(suggestion => suggestion.Equals(inputText, StringComparison.OrdinalIgnoreCase));
         }
 
         private bool IsDuplicate(string inputText, string type)
@@ -142,7 +168,7 @@ namespace CHS_FrontEnd
                 case "الفحص":
                     return testsList.Contains(inputText);
                 case "الحالة المرضية":
-                    return testsList.Contains(inputText);
+                    return FinalDaignosisList.Contains(inputText);
                 default:
                     return false;
             }
@@ -389,23 +415,37 @@ namespace CHS_FrontEnd
 
                 
                 string Symptoms = symptomsTxt.Text;
+                
 
                
 
                 foreach (Control al in flowLayoutPanel3.Controls)
                 {
                     symptomsList.Add(al.Text);
+                   
+                }
+                foreach (Control al in flowLayoutPanel1.Controls)
+                {
+                    testsList.Add(al.Text);
+
                 }
                 var request = new CreatePatientDiagnosisRequest
                 {
                     RequestID = Guid.NewGuid().ToString(),
                     PatientNumber = medicalNumber,
                     Symptoms = symptomsList,
+                    LabTests = testsList
+    .Select(testName => Cache.LabTests
+        .FirstOrDefault(t => t.Name == testName)?.ID) 
+    .Where(testId => testId.HasValue)  
+    .Select(testId => (int)testId.Value)  
+    .ToList()
 
 
 
 
-                };
+
+                }; 
 
 
                 var response = await Task.Run(() => RequestSender.SendRequest<CreatePatientDiagnosisRequest, CreatePatientDiagnosisResponse>(request));
@@ -414,6 +454,9 @@ namespace CHS_FrontEnd
                 {
 
                     CustomMessageBox.Show(CustomMessageBox.MessageType.Success, "نجاح!", response.MessageDescription);
+                    DiagnosisAdded?.Invoke(); // استدعاء الحدث لإعلام `PatientView` بتحديث البيانات
+
+                    this.Close();
 
                 }
                 else
@@ -428,6 +471,7 @@ namespace CHS_FrontEnd
             }
         }
 
+        
 
 
 
@@ -503,6 +547,49 @@ namespace CHS_FrontEnd
             }
 
             return isValid;
+        }
+        private void ApplyEventsToTextBoxes(Control parentControl)
+        {
+            foreach (Control control in parentControl.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    textBox.Enter += Guna2TextBox_Enter;
+                    textBox.Leave += Guna2TextBox_Leave;
+                }
+                else if (control.HasChildren)
+                {
+
+                    ApplyEventsToTextBoxes(control);
+                }
+            }
+        }
+
+
+
+        private Font normalFont = new Font("Traditional Arabic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+        private Font largeFont = new Font("Traditional Arabic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+        private void Guna2TextBox_Enter(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = largeFont;
+            }
+        }
+
+
+        private void Guna2TextBox_Leave(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = normalFont;
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

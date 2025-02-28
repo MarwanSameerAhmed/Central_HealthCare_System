@@ -19,7 +19,7 @@ namespace CHS_FrontEnd
         private DockPanel dockPanel;
         public PatientFileView(DockPanel dockPanel, string fullName, int age, string phoneNumber, long medicalNumber,
                               string idCardNumber, string birthDate, bool isMale,
-                              string patientAddress, string bloodType, string maritalStatus, string companionName, string birthPlace)
+                              string patientAddress, string bloodType, string maritalStatus, string companionName, string birthPlace,string allergies)
         {
             InitializeComponent();
             this.dockPanel = dockPanel;
@@ -35,6 +35,17 @@ namespace CHS_FrontEnd
             typeLbl.Text = isMale ? "ذكر" : "أنثى";
             addresslbl.Text = patientAddress;
             fathlbl.Text = companionName;
+            string allergiesData = allergies;
+            if (!string.IsNullOrEmpty(allergiesData))
+            {
+                string[] allergiesArray = allergiesData.Split(';');
+                flowLayoutPanel1.Controls.Clear();
+
+                foreach (var allergy in allergiesArray)
+                {
+                    AddChip(allergy);
+                }
+            }
 
             try
             {
@@ -47,10 +58,27 @@ namespace CHS_FrontEnd
             catch (Exception ex)
             {
                 CustomMessageBox.Show(CustomMessageBox.MessageType.Error, "خطأ", ex.Message);
+                
             }
 
 
         }
+        void AddChip(string allergy)
+        {
+            Label chip = new Label();
+            chip.Text = allergy;
+            chip.Font = new Font("Traditional Arabic", 15, FontStyle.Bold);  // تغيير الخط
+            chip.AutoSize = true;
+            chip.BackColor = Color.WhiteSmoke;  // تغيير الخلفية
+            chip.ForeColor = Color.Black;  // تغيير لون النص
+            chip.Padding = new Padding(5);
+            chip.Margin = new Padding(3);
+            chip.BorderStyle = BorderStyle.FixedSingle;
+            chip.TextAlign = System.Drawing.ContentAlignment.TopRight;
+
+            flowLayoutPanel1.Controls.Add(chip);
+        }
+
 
         private void FillDiagnosis(List<PatientsDiagnosisFile> patientsDiagnosisFiles)
         {
@@ -91,38 +119,13 @@ namespace CHS_FrontEnd
             }
         }
 
-        private void PopulatePatientCardData()
-        {
-
-
-
-            string allergies = "غبار, فول سوداني, سمك";
-            alg.Text = allergies;
-            string medications = "دواء A, دواء B, دواء C";
-            medlbl.Text = medications;
-            string chronicDiseases = "سكري, ضغط دم مرتفع, كوليسترول";
-            dislbl.Text = chronicDiseases;
-
-
-
-        }
+     
 
 
 
 
 
-        private void AddDemoData()
-        {
-            Viewdaig.Rows.Add("حالة مرضية 1", "2024-12-01", "فحص دم كامل", "دواء A, دواء B", "دكتور أحمد");
-            Viewdaig.Rows.Add("حالة مرضية 2", "2024-11-15", "فحص بول", "دواء C", "دكتور محمد");
-            Viewdaig.Rows.Add("حالة مرضية 3", "2024-10-10", "أشعة سينية", "دواء D, دواء E", "دكتورة ليلى");
-            Viewdaig.Rows.Add("حالة مرضية 1", "2024-12-01", "فحص دم كامل", "دواء A, دواء B", "دكتور أحمد");
-            Viewdaig.Rows.Add("حالة مرضية 2", "2024-11-15", "فحص بول", "دواء C", "دكتور محمد");
-            Viewdaig.Rows.Add("حالة مرضية 3", "2024-10-10", "أشعة سينية", "دواء D, دواء E", "دكتورة ليلى");
-
-
-
-        }
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -133,17 +136,46 @@ namespace CHS_FrontEnd
             guna2VScrollBar1.Minimum = 0;
             guna2VScrollBar1.Value = 0;
             Viewdaig.MouseWheel += dataGridView1_MouseWheel;
-            PopulatePatientCardData();
-            //  AddDemoData();
+     
+           
             UpdateScrollBar();
 
         }
+        private void LoadPatientDiagnosisData(long medicalNumber)
+        {
+            try
+            {
+                SearchPatientDiagnosisRequest request = new SearchPatientDiagnosisRequest()
+                {
+                    PatientNumber = medicalNumber,
+                    RequestID = Guid.NewGuid().ToString()
+                };
+
+                var response = RequestSender.SendRequest<SearchPatientDiagnosisRequest, SearchPatientDiagnosisResponse>(request);
+                if (response is null) return;
+
+                FillDiagnosis(response.PatientsDiagnosisFiles);
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show(CustomMessageBox.MessageType.Error, "خطأ", ex.Message);
+            }
+        }
+
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-            addNewDaignosis newform = new addNewDaignosis(long.Parse(medicalNum.Text),-1);
+            addNewDaignosis newform = new addNewDaignosis(long.Parse(medicalNum.Text), -1);
             newform.StartPosition = FormStartPosition.CenterScreen;
+
+            newform.DiagnosisAdded += () =>
+            {
+                Viewdaig.Rows.Clear(); // 🔥 امسح البيانات القديمة
+                LoadPatientDiagnosisData(long.Parse(medicalNum.Text)); // 🆕 تحديث القريد
+            };
+
             newform.Show();
 
         }

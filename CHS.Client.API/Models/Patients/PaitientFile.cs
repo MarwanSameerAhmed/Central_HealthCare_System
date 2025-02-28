@@ -18,5 +18,7 @@ namespace CHS.Client.API.Models.Patients
         public string birthPlace { get; set; }
         public string maritalStatus { get; set; }
         public string companionName { get; set; }
+        public List<string> allergies { get; set; }
+
     }
 }

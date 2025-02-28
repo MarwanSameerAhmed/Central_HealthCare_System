@@ -131,44 +131,43 @@ namespace CHS_FrontEnd
 
         private void searchPatientView_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (e.RowIndex >= 0) 
+            if (e.RowIndex >= 0)
             {
-               
                 DataGridViewRow selectedRow = searchPatientView.Rows[e.RowIndex];
-              
+
                 var patientData = selectedRow.Tag as dynamic;
                 if (patientData != null)
                 {
-                    
-                    var patientDetailsPage = new PatientFileView(
-                        dockPanel,
-                        patientData.FullName,
-                        patientData.Age,
-                        patientData.PhoneNumber,
-                        patientData.MedicalNumber,
-                        patientData.IDCardNumber,
-                        patientData.BirthDate,
-                        patientData.IsMale,
-                        patientData.PatientAddress,
-                        patientData.BloodType,
-                        patientData.maritalStatus,
-                        patientData.companionName,
-                        patientData.birthPlace
+                    if (BaseForm.UserRole == 4) 
+                    {
+                        var patientDetailsPage = new PatientFileView(
+                            dockPanel,
+                            patientData.FullName,
+                            patientData.Age,
+                            patientData.PhoneNumber,
+                            patientData.MedicalNumber,
+                            patientData.IDCardNumber,
+                            patientData.BirthDate,
+                            patientData.IsMale,
+                            patientData.PatientAddress,
+                            patientData.BloodType,
+                            patientData.maritalStatus,
+                            patientData.companionName,
+                            patientData.birthPlace,
+                            patientData.allergies
+                        );
 
+                        OpenForm(patientDetailsPage);
+                    }
+                    else
+                    {
+                        CustomMessageBox.Show(CustomMessageBox.MessageType.Success, "تنبيه", "! ليس لديك الصلاحية لعرض هذا الصفحة");
 
-
-
-
-                    );
-                  
-
-
-
-                 OpenForm(patientDetailsPage);
+                    }
                 }
             }
         }
+
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
@@ -200,7 +199,9 @@ namespace CHS_FrontEnd
                 }
                 else
                 {
-                    MessageBox.Show("يرجى إدخال قيمة البحث!", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    
+                    CustomMessageBox.Show(CustomMessageBox.MessageType.Warning, "تنبيه", "! يرجى إدخال قيمة البحث");
+
                     return;
                 }
 
@@ -233,6 +234,7 @@ namespace CHS_FrontEnd
                         maritalStatus = p.maritalStatus,
                         birthPlace= p.birthPlace,
                         companionName = p.companionName,
+                        allergies = string.Join(", ", p.allergies),
 
                     }).ToList();
 

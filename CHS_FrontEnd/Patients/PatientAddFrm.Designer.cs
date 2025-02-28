@@ -67,33 +67,19 @@ namespace CHS_FrontEnd
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.createBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.diseasesTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.medicinesTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.sensitivitiesTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.sensitivitiesContainer = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.diseasesContainer = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.medicinesContainerControl7 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.guna2ContainerControl4 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.label15 = new System.Windows.Forms.Label();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             this.guna2ContainerControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sensitivitiesContainer.SuspendLayout();
-            this.diseasesContainer.SuspendLayout();
-            this.medicinesContainerControl7.SuspendLayout();
             this.guna2ContainerControl4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,7 +164,7 @@ namespace CHS_FrontEnd
             this.countryErrorLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.countryErrorLabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countryErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.countryErrorLabel.Location = new System.Drawing.Point(248, 255);
+            this.countryErrorLabel.Location = new System.Drawing.Point(227, 253);
             this.countryErrorLabel.Name = "countryErrorLabel";
             this.countryErrorLabel.Size = new System.Drawing.Size(22, 27);
             this.countryErrorLabel.TabIndex = 28;
@@ -762,61 +748,6 @@ namespace CHS_FrontEnd
             this.createBtn.Text = "إنشاء";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label15.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label15.Location = new System.Drawing.Point(1413, 0);
-            this.label15.Name = "label15";
-            this.label15.Padding = new System.Windows.Forms.Padding(15, 18, 15, 18);
-            this.label15.Size = new System.Drawing.Size(188, 72);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "معلومات المريض الطبية";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label14.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(1513, 69);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 27);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "الامراض المزمنة ";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // diseasesTxt
-            // 
-            this.diseasesTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.diseasesTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.diseasesTxt.BorderRadius = 10;
-            this.diseasesTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.diseasesTxt.DefaultText = "";
-            this.diseasesTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.diseasesTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.diseasesTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.diseasesTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.diseasesTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.diseasesTxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.diseasesTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diseasesTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.diseasesTxt.Location = new System.Drawing.Point(1088, 103);
-            this.diseasesTxt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.diseasesTxt.Name = "diseasesTxt";
-            this.diseasesTxt.PasswordChar = '\0';
-            this.diseasesTxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.diseasesTxt.PlaceholderText = "ادخل الامراض لدى المريض";
-            this.diseasesTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.diseasesTxt.SelectedText = "";
-            this.diseasesTxt.Size = new System.Drawing.Size(500, 39);
-            this.diseasesTxt.TabIndex = 36;
-            this.diseasesTxt.TextChanged += new System.EventHandler(this.diseasesTxt_TextChanged_1);
-            // 
             // label18
             // 
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -824,53 +755,12 @@ namespace CHS_FrontEnd
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label18.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(957, 73);
+            this.label18.Location = new System.Drawing.Point(828, 70);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(127, 27);
             this.label18.TabIndex = 37;
             this.label18.Text = "الحساسيات لدى المريض";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label19.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label19.Location = new System.Drawing.Point(468, 71);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(108, 27);
-            this.label19.TabIndex = 41;
-            this.label19.Text = "الادوية التي تم تناولها";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // medicinesTxt
-            // 
-            this.medicinesTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.medicinesTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.medicinesTxt.BorderRadius = 10;
-            this.medicinesTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.medicinesTxt.DefaultText = "";
-            this.medicinesTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.medicinesTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.medicinesTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.medicinesTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.medicinesTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.medicinesTxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
-            this.medicinesTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medicinesTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.medicinesTxt.Location = new System.Drawing.Point(65, 103);
-            this.medicinesTxt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.medicinesTxt.Name = "medicinesTxt";
-            this.medicinesTxt.PasswordChar = '\0';
-            this.medicinesTxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.medicinesTxt.PlaceholderText = "ادخل جميع الادوية للمريض";
-            this.medicinesTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.medicinesTxt.SelectedText = "";
-            this.medicinesTxt.Size = new System.Drawing.Size(505, 39);
-            this.medicinesTxt.TabIndex = 42;
-            this.medicinesTxt.TextChanged += new System.EventHandler(this.medicinesTxt_TextChanged_1);
             // 
             // sensitivitiesTxt
             // 
@@ -887,7 +777,7 @@ namespace CHS_FrontEnd
             this.sensitivitiesTxt.FocusedState.PlaceholderForeColor = System.Drawing.Color.White;
             this.sensitivitiesTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sensitivitiesTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sensitivitiesTxt.Location = new System.Drawing.Point(578, 103);
+            this.sensitivitiesTxt.Location = new System.Drawing.Point(369, 112);
             this.sensitivitiesTxt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.sensitivitiesTxt.Name = "sensitivitiesTxt";
             this.sensitivitiesTxt.PasswordChar = '\0';
@@ -895,7 +785,7 @@ namespace CHS_FrontEnd
             this.sensitivitiesTxt.PlaceholderText = "ادخل الحساسيات للمريض";
             this.sensitivitiesTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sensitivitiesTxt.SelectedText = "";
-            this.sensitivitiesTxt.Size = new System.Drawing.Size(500, 39);
+            this.sensitivitiesTxt.Size = new System.Drawing.Size(586, 39);
             this.sensitivitiesTxt.TabIndex = 46;
             this.sensitivitiesTxt.TextChanged += new System.EventHandler(this.sensitivitiesTxt_TextChanged_1);
             // 
@@ -906,93 +796,21 @@ namespace CHS_FrontEnd
             this.sensitivitiesContainer.BorderRadius = 15;
             this.sensitivitiesContainer.Controls.Add(this.flowLayoutPanel2);
             this.sensitivitiesContainer.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sensitivitiesContainer.Location = new System.Drawing.Point(578, 150);
+            this.sensitivitiesContainer.Location = new System.Drawing.Point(369, 159);
             this.sensitivitiesContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sensitivitiesContainer.Name = "sensitivitiesContainer";
-            this.sensitivitiesContainer.Size = new System.Drawing.Size(500, 167);
+            this.sensitivitiesContainer.Size = new System.Drawing.Size(589, 167);
             this.sensitivitiesContainer.TabIndex = 47;
             this.sensitivitiesContainer.Text = "guna2ContainerControl5";
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 7);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(9, 7);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(466, 154);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(570, 154);
             this.flowLayoutPanel2.TabIndex = 1;
-            // 
-            // diseasesContainer
-            // 
-            this.diseasesContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.diseasesContainer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.diseasesContainer.BorderRadius = 15;
-            this.diseasesContainer.Controls.Add(this.flowLayoutPanel3);
-            this.diseasesContainer.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diseasesContainer.Location = new System.Drawing.Point(1088, 150);
-            this.diseasesContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.diseasesContainer.Name = "diseasesContainer";
-            this.diseasesContainer.Size = new System.Drawing.Size(504, 166);
-            this.diseasesContainer.TabIndex = 49;
-            this.diseasesContainer.Text = "guna2ContainerControl6";
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(18, 4);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(467, 158);
-            this.flowLayoutPanel3.TabIndex = 1;
-            // 
-            // medicinesContainerControl7
-            // 
-            this.medicinesContainerControl7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.medicinesContainerControl7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.medicinesContainerControl7.BorderRadius = 15;
-            this.medicinesContainerControl7.Controls.Add(this.flowLayoutPanel1);
-            this.medicinesContainerControl7.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medicinesContainerControl7.Location = new System.Drawing.Point(65, 150);
-            this.medicinesContainerControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.medicinesContainerControl7.Name = "medicinesContainerControl7";
-            this.medicinesContainerControl7.Size = new System.Drawing.Size(505, 167);
-            this.medicinesContainerControl7.TabIndex = 48;
-            this.medicinesContainerControl7.Text = "guna2ContainerControl7";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 4);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(471, 157);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label17.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label17.Location = new System.Drawing.Point(1390, 70);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 27);
-            this.label17.TabIndex = 45;
-            this.label17.Text = "\"إختياري\"";
-            this.label17.Visible = false;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label22.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(1181, 63);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(22, 27);
-            this.label22.TabIndex = 40;
-            this.label22.Text = "\"\"";
-            this.label22.Visible = false;
             // 
             // label23
             // 
@@ -1000,25 +818,13 @@ namespace CHS_FrontEnd
             this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label23.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(681, 65);
+            this.label23.Location = new System.Drawing.Point(441, 70);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(22, 27);
             this.label23.TabIndex = 39;
             this.label23.Text = "\"\"";
             this.label23.Visible = false;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label24.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(132, 64);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(22, 27);
-            this.label24.TabIndex = 38;
-            this.label24.Text = "\"\"";
-            this.label24.Visible = false;
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // label20
             // 
@@ -1026,54 +832,45 @@ namespace CHS_FrontEnd
             this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label20.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label20.Location = new System.Drawing.Point(835, 70);
+            this.label20.Location = new System.Drawing.Point(1071, 70);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(60, 27);
             this.label20.TabIndex = 44;
             this.label20.Text = "\"إختياري\"";
             this.label20.Visible = false;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label21.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label21.Location = new System.Drawing.Point(324, 69);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(60, 27);
-            this.label21.TabIndex = 43;
-            this.label21.Text = "\"اختياري\"";
-            this.label21.Visible = false;
-            // 
             // guna2ContainerControl4
             // 
             this.guna2ContainerControl4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl4.BackColor = System.Drawing.Color.White;
             this.guna2ContainerControl4.BorderRadius = 15;
-            this.guna2ContainerControl4.Controls.Add(this.label21);
             this.guna2ContainerControl4.Controls.Add(this.label20);
-            this.guna2ContainerControl4.Controls.Add(this.label24);
             this.guna2ContainerControl4.Controls.Add(this.label23);
-            this.guna2ContainerControl4.Controls.Add(this.label22);
-            this.guna2ContainerControl4.Controls.Add(this.label17);
-            this.guna2ContainerControl4.Controls.Add(this.medicinesContainerControl7);
-            this.guna2ContainerControl4.Controls.Add(this.diseasesContainer);
             this.guna2ContainerControl4.Controls.Add(this.sensitivitiesContainer);
             this.guna2ContainerControl4.Controls.Add(this.sensitivitiesTxt);
-            this.guna2ContainerControl4.Controls.Add(this.medicinesTxt);
-            this.guna2ContainerControl4.Controls.Add(this.label19);
             this.guna2ContainerControl4.Controls.Add(this.label18);
-            this.guna2ContainerControl4.Controls.Add(this.diseasesTxt);
-            this.guna2ContainerControl4.Controls.Add(this.label14);
             this.guna2ContainerControl4.Controls.Add(this.label15);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(0, 530);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(630, 530);
             this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(1601, 344);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(971, 344);
             this.guna2ContainerControl4.TabIndex = 3;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.label15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label15.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.label15.Location = new System.Drawing.Point(783, 0);
+            this.label15.Name = "label15";
+            this.label15.Padding = new System.Windows.Forms.Padding(15, 18, 15, 18);
+            this.label15.Size = new System.Drawing.Size(188, 72);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "معلومات المريض الطبية";
             // 
             // addingPatientFrm
             // 
@@ -1100,8 +897,6 @@ namespace CHS_FrontEnd
             this.guna2ContainerControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sensitivitiesContainer.ResumeLayout(false);
-            this.diseasesContainer.ResumeLayout(false);
-            this.medicinesContainerControl7.ResumeLayout(false);
             this.guna2ContainerControl4.ResumeLayout(false);
             this.guna2ContainerControl4.PerformLayout();
             this.ResumeLayout(false);
@@ -1147,25 +942,13 @@ namespace CHS_FrontEnd
         private Label addresslblerror;
         private Guna.UI2.WinForms.Guna2TextBox Agetxt;
         private PictureBox pictureBox1;
-        private Label label15;
-        private Label label14;
-        private Guna.UI2.WinForms.Guna2TextBox diseasesTxt;
         private Label label18;
-        private Label label19;
-        private Guna.UI2.WinForms.Guna2TextBox medicinesTxt;
         private Guna.UI2.WinForms.Guna2TextBox sensitivitiesTxt;
         private Guna.UI2.WinForms.Guna2ContainerControl sensitivitiesContainer;
         private FlowLayoutPanel flowLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2ContainerControl diseasesContainer;
-        private FlowLayoutPanel flowLayoutPanel3;
-        private Guna.UI2.WinForms.Guna2ContainerControl medicinesContainerControl7;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Label label17;
-        private Label label22;
         private Label label23;
-        private Label label24;
         private Label label20;
-        private Label label21;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl4;
+        private Label label15;
     }
 }

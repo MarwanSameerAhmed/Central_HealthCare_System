@@ -150,7 +150,7 @@
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(192, 47);
             this.createBtn.TabIndex = 42;
-            this.createBtn.Text = "إنشاء";
+            this.createBtn.Text = "إضافة";
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // guna2ContainerControl2
@@ -647,7 +647,7 @@
             // 
             // guna2Button3
             // 
-            this.guna2Button3.BorderRadius = 10;
+            this.guna2Button3.BorderRadius = 15;
             this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -655,10 +655,10 @@
             this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2Button3.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(130, 425);
+            this.guna2Button3.Location = new System.Drawing.Point(145, 425);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(228, 47);
+            this.guna2Button3.Size = new System.Drawing.Size(189, 47);
             this.guna2Button3.TabIndex = 43;
             this.guna2Button3.Text = "حفظ التشخيص";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);

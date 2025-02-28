@@ -961,14 +961,14 @@
             // lebJobName
             // 
             this.lebJobName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lebJobName.AutoSize = true;
             this.lebJobName.Font = new System.Drawing.Font("Traditional Arabic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lebJobName.ForeColor = System.Drawing.Color.White;
-            this.lebJobName.Location = new System.Drawing.Point(153, 32);
+            this.lebJobName.Location = new System.Drawing.Point(-38, 32);
             this.lebJobName.Name = "lebJobName";
-            this.lebJobName.Size = new System.Drawing.Size(36, 23);
+            this.lebJobName.Size = new System.Drawing.Size(226, 23);
             this.lebJobName.TabIndex = 3;
             this.lebJobName.Text = "موظف";
+            this.lebJobName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pictureBoxUserName
             // 
@@ -1020,7 +1020,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HmbSizeBtn)).EndInit();
             this.UserInfoPanel.ResumeLayout(false);
-            this.UserInfoPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserName)).EndInit();
             this.ResumeLayout(false);
 

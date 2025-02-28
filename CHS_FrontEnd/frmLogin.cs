@@ -19,7 +19,7 @@ namespace CHS_FrontEnd
     {
         public static string EmployeeName { get; private set; }
         public static string FacilityName { get; private set; }
-        public string JobTitle { get; private set; }
+        public static string JobTitle { get; private set; }
         public static int UserRole { get; private set; }
 
 
@@ -211,6 +211,7 @@ namespace CHS_FrontEnd
                     FacilityName = facilityTxt.Text;
                     JobTitle = response.JobTitle;
                     UserRole = response.UserRole;
+                    BaseForm.SetUserRole(response.UserRole);
                     Cache.InitialCache();
                     DialogResult = DialogResult.OK;
                     return;

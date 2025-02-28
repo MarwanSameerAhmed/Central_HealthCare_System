@@ -64,7 +64,6 @@
             this.dislbl = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.guna2ContainerControl4 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.alg = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.guna2ContainerControl5 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.medlbl = new System.Windows.Forms.Label();
@@ -76,6 +75,7 @@
             this.finalDiagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DaigonsisDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl3.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
@@ -121,15 +121,15 @@
             // 
             // fathlbl
             // 
-            this.fathlbl.AutoSize = true;
             this.fathlbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.fathlbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fathlbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fathlbl.ForeColor = System.Drawing.Color.Black;
-            this.fathlbl.Location = new System.Drawing.Point(568, 159);
+            this.fathlbl.Location = new System.Drawing.Point(517, 166);
             this.fathlbl.Name = "fathlbl";
-            this.fathlbl.Size = new System.Drawing.Size(22, 27);
+            this.fathlbl.Size = new System.Drawing.Size(213, 27);
             this.fathlbl.TabIndex = 38;
             this.fathlbl.Text = "\"\"";
+            this.fathlbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label11
             // 
@@ -137,7 +137,7 @@
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label11.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label11.Location = new System.Drawing.Point(758, 156);
+            this.label11.Location = new System.Drawing.Point(745, 156);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 37);
             this.label11.TabIndex = 37;
@@ -203,132 +203,132 @@
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label19.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label19.Location = new System.Drawing.Point(735, 110);
+            this.label19.Location = new System.Drawing.Point(736, 110);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(114, 32);
+            this.label19.Size = new System.Drawing.Size(100, 32);
             this.label19.TabIndex = 33;
             this.label19.Text = ": رقم الهاتف ";
             this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // viewPhonelbl
             // 
-            this.viewPhonelbl.AutoSize = true;
             this.viewPhonelbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.viewPhonelbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewPhonelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewPhonelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewPhonelbl.Location = new System.Drawing.Point(568, 115);
+            this.viewPhonelbl.Location = new System.Drawing.Point(517, 119);
             this.viewPhonelbl.Name = "viewPhonelbl";
-            this.viewPhonelbl.Size = new System.Drawing.Size(22, 27);
+            this.viewPhonelbl.Size = new System.Drawing.Size(213, 27);
             this.viewPhonelbl.TabIndex = 25;
             this.viewPhonelbl.Text = "\"\"";
+            this.viewPhonelbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // viewCumlbl
             // 
-            this.viewCumlbl.AutoSize = true;
             this.viewCumlbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.viewCumlbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewCumlbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewCumlbl.ForeColor = System.Drawing.Color.Black;
-            this.viewCumlbl.Location = new System.Drawing.Point(895, 115);
+            this.viewCumlbl.Location = new System.Drawing.Point(836, 120);
             this.viewCumlbl.Name = "viewCumlbl";
-            this.viewCumlbl.Size = new System.Drawing.Size(22, 27);
+            this.viewCumlbl.Size = new System.Drawing.Size(199, 27);
             this.viewCumlbl.TabIndex = 25;
             this.viewCumlbl.Text = "\"\"";
+            this.viewCumlbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // addresslbl
             // 
-            this.addresslbl.AutoSize = true;
             this.addresslbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.addresslbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addresslbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addresslbl.ForeColor = System.Drawing.Color.Black;
-            this.addresslbl.Location = new System.Drawing.Point(895, 159);
+            this.addresslbl.Location = new System.Drawing.Point(836, 165);
             this.addresslbl.Name = "addresslbl";
-            this.addresslbl.Size = new System.Drawing.Size(22, 27);
+            this.addresslbl.Size = new System.Drawing.Size(199, 27);
             this.addresslbl.TabIndex = 25;
             this.addresslbl.Text = "\"\"";
+            this.addresslbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // typeLbl
             // 
-            this.typeLbl.AutoSize = true;
             this.typeLbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.typeLbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeLbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeLbl.ForeColor = System.Drawing.Color.Black;
-            this.typeLbl.Location = new System.Drawing.Point(1230, 157);
+            this.typeLbl.Location = new System.Drawing.Point(1190, 162);
             this.typeLbl.Name = "typeLbl";
-            this.typeLbl.Size = new System.Drawing.Size(22, 27);
+            this.typeLbl.Size = new System.Drawing.Size(217, 27);
             this.typeLbl.TabIndex = 25;
             this.typeLbl.Text = "\"\"";
+            this.typeLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // viewbloodlbl
             // 
-            this.viewbloodlbl.AutoSize = true;
             this.viewbloodlbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.viewbloodlbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewbloodlbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewbloodlbl.ForeColor = System.Drawing.Color.Black;
-            this.viewbloodlbl.Location = new System.Drawing.Point(216, 115);
+            this.viewbloodlbl.Location = new System.Drawing.Point(204, 117);
             this.viewbloodlbl.Name = "viewbloodlbl";
-            this.viewbloodlbl.Size = new System.Drawing.Size(22, 27);
+            this.viewbloodlbl.Size = new System.Drawing.Size(186, 27);
             this.viewbloodlbl.TabIndex = 25;
             this.viewbloodlbl.Text = "\"\"";
+            this.viewbloodlbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // viewStatelbl
             // 
-            this.viewStatelbl.AutoSize = true;
             this.viewStatelbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.viewStatelbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewStatelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewStatelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewStatelbl.Location = new System.Drawing.Point(1230, 115);
+            this.viewStatelbl.Location = new System.Drawing.Point(1190, 120);
             this.viewStatelbl.Name = "viewStatelbl";
-            this.viewStatelbl.Size = new System.Drawing.Size(22, 27);
+            this.viewStatelbl.Size = new System.Drawing.Size(217, 27);
             this.viewStatelbl.TabIndex = 27;
             this.viewStatelbl.Text = "\"\"";
+            this.viewStatelbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // veiwBirthDaylbl
             // 
-            this.veiwBirthDaylbl.AutoSize = true;
             this.veiwBirthDaylbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.veiwBirthDaylbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.veiwBirthDaylbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.veiwBirthDaylbl.ForeColor = System.Drawing.Color.Black;
-            this.veiwBirthDaylbl.Location = new System.Drawing.Point(216, 65);
+            this.veiwBirthDaylbl.Location = new System.Drawing.Point(198, 67);
             this.veiwBirthDaylbl.Name = "veiwBirthDaylbl";
-            this.veiwBirthDaylbl.Size = new System.Drawing.Size(22, 27);
+            this.veiwBirthDaylbl.Size = new System.Drawing.Size(192, 27);
             this.veiwBirthDaylbl.TabIndex = 29;
             this.veiwBirthDaylbl.Text = "\"\"";
+            this.veiwBirthDaylbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // viewAgelbl
             // 
-            this.viewAgelbl.AutoSize = true;
             this.viewAgelbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.viewAgelbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewAgelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewAgelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewAgelbl.Location = new System.Drawing.Point(568, 65);
+            this.viewAgelbl.Location = new System.Drawing.Point(512, 70);
             this.viewAgelbl.Name = "viewAgelbl";
-            this.viewAgelbl.Size = new System.Drawing.Size(22, 27);
+            this.viewAgelbl.Size = new System.Drawing.Size(218, 27);
             this.viewAgelbl.TabIndex = 31;
             this.viewAgelbl.Text = "\"\"";
+            this.viewAgelbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // medicalNum
             // 
-            this.medicalNum.AutoSize = true;
             this.medicalNum.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.medicalNum.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicalNum.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicalNum.ForeColor = System.Drawing.Color.Black;
-            this.medicalNum.Location = new System.Drawing.Point(895, 66);
+            this.medicalNum.Location = new System.Drawing.Point(831, 70);
             this.medicalNum.Name = "medicalNum";
-            this.medicalNum.Size = new System.Drawing.Size(22, 27);
+            this.medicalNum.Size = new System.Drawing.Size(204, 27);
             this.medicalNum.TabIndex = 32;
             this.medicalNum.Text = "\"\"";
+            this.medicalNum.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // veiwtNamelbl
             // 
-            this.veiwtNamelbl.AutoSize = true;
             this.veiwtNamelbl.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.veiwtNamelbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.veiwtNamelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.veiwtNamelbl.ForeColor = System.Drawing.Color.Black;
-            this.veiwtNamelbl.Location = new System.Drawing.Point(1230, 70);
+            this.veiwtNamelbl.Location = new System.Drawing.Point(1185, 75);
             this.veiwtNamelbl.Name = "veiwtNamelbl";
-            this.veiwtNamelbl.Size = new System.Drawing.Size(22, 27);
+            this.veiwtNamelbl.Size = new System.Drawing.Size(222, 27);
             this.veiwtNamelbl.TabIndex = 32;
             this.veiwtNamelbl.Text = "\"\"";
+            this.veiwtNamelbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label13
             // 
@@ -375,7 +375,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label2.Location = new System.Drawing.Point(769, 60);
+            this.label2.Location = new System.Drawing.Point(756, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 37);
             this.label2.TabIndex = 21;
@@ -400,12 +400,12 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label4.Location = new System.Drawing.Point(1329, 0);
+            this.label4.Location = new System.Drawing.Point(1285, 0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(15);
-            this.label4.Size = new System.Drawing.Size(224, 66);
+            this.label4.Size = new System.Drawing.Size(268, 73);
             this.label4.TabIndex = 6;
             this.label4.Text = "المعلومات الشخصية للمريض";
             // 
@@ -444,7 +444,7 @@
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl2.Location = new System.Drawing.Point(29, 303);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(500, 128);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(500, 310);
             this.guna2ContainerControl2.TabIndex = 4;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -480,28 +480,14 @@
             // 
             this.guna2ContainerControl4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl4.BorderRadius = 15;
-            this.guna2ContainerControl4.Controls.Add(this.alg);
+            this.guna2ContainerControl4.Controls.Add(this.flowLayoutPanel1);
             this.guna2ContainerControl4.Controls.Add(this.label17);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl4.Location = new System.Drawing.Point(535, 303);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(520, 128);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(520, 310);
             this.guna2ContainerControl4.TabIndex = 5;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
-            // 
-            // alg
-            // 
-            this.alg.AutoSize = true;
-            this.alg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.alg.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alg.ForeColor = System.Drawing.Color.Black;
-            this.alg.Location = new System.Drawing.Point(163, 59);
-            this.alg.Name = "alg";
-            this.alg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.alg.Size = new System.Drawing.Size(27, 36);
-            this.alg.TabIndex = 1;
-            this.alg.Text = "\"\"";
-            this.alg.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label17
             // 
@@ -526,7 +512,7 @@
             this.guna2ContainerControl5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl5.Location = new System.Drawing.Point(1062, 303);
             this.guna2ContainerControl5.Name = "guna2ContainerControl5";
-            this.guna2ContainerControl5.Size = new System.Drawing.Size(520, 128);
+            this.guna2ContainerControl5.Size = new System.Drawing.Size(520, 310);
             this.guna2ContainerControl5.TabIndex = 5;
             this.guna2ContainerControl5.Text = "guna2ContainerControl4";
             this.guna2ContainerControl5.Click += new System.EventHandler(this.guna2ContainerControl5_Click);
@@ -566,7 +552,7 @@
             this.guna2ContainerControl6.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl6.Controls.Add(this.Viewdaig);
             this.guna2ContainerControl6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl6.Location = new System.Drawing.Point(29, 452);
+            this.guna2ContainerControl6.Location = new System.Drawing.Point(29, 639);
             this.guna2ContainerControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ContainerControl6.Name = "guna2ContainerControl6";
             this.guna2ContainerControl6.Size = new System.Drawing.Size(1555, 274);
@@ -597,7 +583,7 @@
             this.Viewdaig.Anchor = System.Windows.Forms.AnchorStyles.Top;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -702,13 +688,21 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2Button1.Font = new System.Drawing.Font("Traditional Arabic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(630, 745);
+            this.guna2Button1.Location = new System.Drawing.Point(630, 932);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.DarkBlue;
             this.guna2Button1.Size = new System.Drawing.Size(308, 56);
             this.guna2Button1.TabIndex = 10;
             this.guna2Button1.Text = "إضافة تشخيص جديد";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 58);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(488, 236);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // PatientFileView
             // 
@@ -770,7 +764,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label viewPhonelbl;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl4;
-        private System.Windows.Forms.Label alg;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl5;
         private System.Windows.Forms.Label medlbl;
@@ -790,5 +783,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diagnosisName;
         private System.Windows.Forms.DataGridViewTextBoxColumn finalDiagnosis;
         private System.Windows.Forms.DataGridViewTextBoxColumn DaigonsisDate;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

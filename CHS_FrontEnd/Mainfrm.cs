@@ -40,6 +40,7 @@ namespace CHS_FrontEnd
             dockPanel.BringToFront();
 
             labEmployeeName.Text =  frmLogin.EmployeeName;
+            lebJobName.Text = frmLogin.JobTitle;
 
 
         }
