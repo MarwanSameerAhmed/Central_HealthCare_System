@@ -18,6 +18,7 @@ namespace CHS.Client.API.Models.Labs
 
     public class ResultLabTest
     {
+        public long ID { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
         public List<ResultLabTest> SubResults { get; set; }

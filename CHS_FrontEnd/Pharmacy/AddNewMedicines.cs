@@ -1,4 +1,4 @@
-﻿using ClosedXML.Excel;
+﻿//using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -174,46 +174,46 @@ namespace CHS_FrontEnd.Pharmacy
 
         private void ImportFromExcel(string filePath)
         {
-            using (var workbook = new XLWorkbook(filePath))
-            {
-                var worksheet = workbook.Worksheet("Medicine Data");  // Use the sheet name from the Excel file
-                var rows = worksheet.RangeUsed().RowsUsed().Skip(1);  // Skip header row
+            //using (var workbook = new XLWorkbook(filePath))
+            //{
+            //    var worksheet = workbook.Worksheet("Medicine Data");  // Use the sheet name from the Excel file
+            //    var rows = worksheet.RangeUsed().RowsUsed().Skip(1);  // Skip header row
 
-                using (var connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
+            //    using (var connection = new SqlConnection(connectionString))
+            //    {
+            //        connection.Open();
 
-                    foreach (var row in rows)
-                    {
-                        string medicineName = row.Cell(1).GetValue<string>().Trim();
-                        string medicineNumber = row.Cell(2).GetValue<string>().Trim();
-                        string dosageForm = row.Cell(3).GetValue<string>().Trim();
-                        string activeIngredients = row.Cell(4).GetValue<string>().Trim();
+            //        foreach (var row in rows)
+            //        {
+            //            string medicineName = row.Cell(1).GetValue<string>().Trim();
+            //            string medicineNumber = row.Cell(2).GetValue<string>().Trim();
+            //            string dosageForm = row.Cell(3).GetValue<string>().Trim();
+            //            string activeIngredients = row.Cell(4).GetValue<string>().Trim();
 
-                        // Skip row if any field is empty
-                        if (string.IsNullOrEmpty(medicineName) ||
-                            string.IsNullOrEmpty(medicineNumber) ||
-                            string.IsNullOrEmpty(dosageForm) ||
-                            string.IsNullOrEmpty(activeIngredients))
-                        {
-                            continue; // Skip this row
-                        }
+            //            // Skip row if any field is empty
+            //            if (string.IsNullOrEmpty(medicineName) ||
+            //                string.IsNullOrEmpty(medicineNumber) ||
+            //                string.IsNullOrEmpty(dosageForm) ||
+            //                string.IsNullOrEmpty(activeIngredients))
+            //            {
+            //                continue; // Skip this row
+            //            }
 
-                        // Insert data into the database
-                        string insertQuery = @"
-                        INSERT INTO medicines_table (medicineName, medicineNumber, dosageForm, activeIngredients)
-                        VALUES (@MedicineName, @MedicineNumber, @DosageForm, @ActiveIngredients)";
-                        using (SqlCommand command = new SqlCommand(insertQuery, connection))
-                        {
-                            command.Parameters.AddWithValue("@MedicineName", medicineName);
-                            command.Parameters.AddWithValue("@MedicineNumber", medicineNumber);
-                            command.Parameters.AddWithValue("@DosageForm", dosageForm);
-                            command.Parameters.AddWithValue("@ActiveIngredients", activeIngredients);
-                            int i = command.ExecuteNonQuery();
-                        }
-                    }
-                }
-            }
+            //            // Insert data into the database
+            //            string insertQuery = @"
+            //            INSERT INTO medicines_table (medicineName, medicineNumber, dosageForm, activeIngredients)
+            //            VALUES (@MedicineName, @MedicineNumber, @DosageForm, @ActiveIngredients)";
+            //            using (SqlCommand command = new SqlCommand(insertQuery, connection))
+            //            {
+            //                command.Parameters.AddWithValue("@MedicineName", medicineName);
+            //                command.Parameters.AddWithValue("@MedicineNumber", medicineNumber);
+            //                command.Parameters.AddWithValue("@DosageForm", dosageForm);
+            //                command.Parameters.AddWithValue("@ActiveIngredients", activeIngredients);
+            //                int i = command.ExecuteNonQuery();
+            //            }
+            //        }
+            //    }
+            //}
         }
 
         private void createBtn_Click(object sender, EventArgs e)

@@ -73,7 +73,9 @@
     <Compile Include="Models\Facilities\UpdateEDBedsRequest.cs" />
     <Compile Include="Models\Labs\GetLabTestsResponse.cs" />
     <Compile Include="Models\Labs\ResultLabTestRequest.cs" />
+    <Compile Include="Models\Labs\ResultLabTestRespons.cs" />
     <Compile Include="Models\Labs\ResultLabTestTemplateResponse.cs" />
+    <Compile Include="Models\Labs\SaveLabTestsResultsRequest.cs" />
     <Compile Include="Models\LoginResponse.cs" />
     <Compile Include="Models\PatientsDiagnosis\AddMedicalConditionRequest.cs" />
     <Compile Include="Models\PatientsDiagnosis\AddSymptomsRequest.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Models\Patients\PaitientFile.cs" />
     <Compile Include="Models\Patients\SearchPatientsFilesRequest.cs" />
     <Compile Include="Models\Patients\SearchPatientsFilesResponse.cs" />
+    <Compile Include="Models\Pharmacies\GetLabMedicinesResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestSender.cs" />
   </ItemGroup>
