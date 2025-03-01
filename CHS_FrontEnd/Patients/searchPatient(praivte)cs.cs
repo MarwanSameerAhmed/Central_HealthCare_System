@@ -98,8 +98,8 @@ namespace CHS_FrontEnd
             if (e.RowIndex >= 0)
             {
 
-                PatientFileViewrFrm fr = new PatientFileViewrFrm();
-                fr.Show();
+                //PatientFileViewrFrm fr = new PatientFileViewrFrm();
+                //fr.Show();
 
 
             }

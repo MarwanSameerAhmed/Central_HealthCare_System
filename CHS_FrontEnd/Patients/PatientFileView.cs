@@ -172,8 +172,8 @@ namespace CHS_FrontEnd
 
             newform.DiagnosisAdded += () =>
             {
-                Viewdaig.Rows.Clear(); // 🔥 امسح البيانات القديمة
-                LoadPatientDiagnosisData(long.Parse(medicalNum.Text)); // 🆕 تحديث القريد
+                Viewdaig.Rows.Clear(); 
+                LoadPatientDiagnosisData(long.Parse(medicalNum.Text)); 
             };
 
             newform.Show();
@@ -251,8 +251,23 @@ namespace CHS_FrontEnd
                 }
                 else
                 {
-                    DaignosisesViewFrm addForm = new DaignosisesViewFrm();
-                    addForm.Show();
+                    var patientDetailsPage = new DaignosisesViewFrm(
+
+                       rowData.PatientDiagnosisNumber,
+                       rowData.CreateAt,
+                       rowData.Symptoms,
+                       rowData.lastUpdateTimeSysmptoms,
+                        rowData.medicalConditions,
+                         rowData.enterTimeMedicalConditions,
+                       rowData.createByCurrentDoctor,
+                       rowData.isChronic
+                     
+                          
+                        
+                          
+
+                       );
+                    patientDetailsPage.Show();
                 }
                 }
             }

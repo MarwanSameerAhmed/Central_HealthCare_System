@@ -138,7 +138,7 @@ namespace CHS_FrontEnd
                 var patientData = selectedRow.Tag as dynamic;
                 if (patientData != null)
                 {
-                    if (BaseForm.UserRole == 4) 
+                    if (BaseForm.UserRole == 4)
                     {
                         var patientDetailsPage = new PatientFileView(
                             dockPanel,
@@ -159,10 +159,29 @@ namespace CHS_FrontEnd
 
                         OpenForm(patientDetailsPage);
                     }
+                    else if (BaseForm.UserRole == 2 || BaseForm.UserRole == 3 || BaseForm.UserRole == 1)
+                    {
+                        var patientDetailsPage = new PatientFileViewrFrm(
+                            patientData.FullName,
+                            patientData.Age,
+                            patientData.PhoneNumber,
+                            patientData.MedicalNumber,
+                            patientData.IDCardNumber,
+                            patientData.BirthDate,
+                            patientData.IsMale,
+                            patientData.PatientAddress,
+                            patientData.BloodType,
+                            patientData.maritalStatus,
+                            patientData.companionName,
+                            patientData.birthPlace,
+                            patientData.allergies
+                        );
+
+                        patientDetailsPage.Show();
+                    }
                     else
                     {
-                        CustomMessageBox.Show(CustomMessageBox.MessageType.Success, "تنبيه", "! ليس لديك الصلاحية لعرض هذا الصفحة");
-
+                        CustomMessageBox.Show(CustomMessageBox.MessageType.Warning, "تنبيه", "ليس لديك صلاحية لعرض هذة الصفحة");
                     }
                 }
             }
