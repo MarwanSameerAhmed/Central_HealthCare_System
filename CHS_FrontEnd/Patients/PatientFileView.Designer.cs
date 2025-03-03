@@ -215,7 +215,7 @@
             this.viewPhonelbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewPhonelbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewPhonelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewPhonelbl.Location = new System.Drawing.Point(514, 119);
+            this.viewPhonelbl.Location = new System.Drawing.Point(514, 121);
             this.viewPhonelbl.Name = "viewPhonelbl";
             this.viewPhonelbl.Size = new System.Drawing.Size(213, 27);
             this.viewPhonelbl.TabIndex = 25;
@@ -227,7 +227,7 @@
             this.viewCumlbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewCumlbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewCumlbl.ForeColor = System.Drawing.Color.Black;
-            this.viewCumlbl.Location = new System.Drawing.Point(836, 120);
+            this.viewCumlbl.Location = new System.Drawing.Point(836, 118);
             this.viewCumlbl.Name = "viewCumlbl";
             this.viewCumlbl.Size = new System.Drawing.Size(199, 27);
             this.viewCumlbl.TabIndex = 25;
@@ -239,7 +239,7 @@
             this.addresslbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.addresslbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addresslbl.ForeColor = System.Drawing.Color.Black;
-            this.addresslbl.Location = new System.Drawing.Point(836, 165);
+            this.addresslbl.Location = new System.Drawing.Point(836, 169);
             this.addresslbl.Name = "addresslbl";
             this.addresslbl.Size = new System.Drawing.Size(199, 27);
             this.addresslbl.TabIndex = 25;
@@ -251,19 +251,20 @@
             this.typeLbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.typeLbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeLbl.ForeColor = System.Drawing.Color.Black;
-            this.typeLbl.Location = new System.Drawing.Point(1190, 162);
+            this.typeLbl.Location = new System.Drawing.Point(1190, 166);
             this.typeLbl.Name = "typeLbl";
             this.typeLbl.Size = new System.Drawing.Size(217, 27);
             this.typeLbl.TabIndex = 25;
             this.typeLbl.Text = "\"\"";
             this.typeLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.typeLbl.Click += new System.EventHandler(this.typeLbl_Click);
             // 
             // viewbloodlbl
             // 
             this.viewbloodlbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewbloodlbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewbloodlbl.ForeColor = System.Drawing.Color.Black;
-            this.viewbloodlbl.Location = new System.Drawing.Point(204, 117);
+            this.viewbloodlbl.Location = new System.Drawing.Point(204, 120);
             this.viewbloodlbl.Name = "viewbloodlbl";
             this.viewbloodlbl.Size = new System.Drawing.Size(186, 27);
             this.viewbloodlbl.TabIndex = 25;
@@ -287,7 +288,7 @@
             this.veiwBirthDaylbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.veiwBirthDaylbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.veiwBirthDaylbl.ForeColor = System.Drawing.Color.Black;
-            this.veiwBirthDaylbl.Location = new System.Drawing.Point(198, 67);
+            this.veiwBirthDaylbl.Location = new System.Drawing.Point(198, 69);
             this.veiwBirthDaylbl.Name = "veiwBirthDaylbl";
             this.veiwBirthDaylbl.Size = new System.Drawing.Size(192, 27);
             this.veiwBirthDaylbl.TabIndex = 29;
@@ -299,7 +300,7 @@
             this.viewAgelbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewAgelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewAgelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewAgelbl.Location = new System.Drawing.Point(512, 70);
+            this.viewAgelbl.Location = new System.Drawing.Point(512, 68);
             this.viewAgelbl.Name = "viewAgelbl";
             this.viewAgelbl.Size = new System.Drawing.Size(218, 27);
             this.viewAgelbl.TabIndex = 31;
@@ -311,7 +312,7 @@
             this.medicalNum.BackColor = System.Drawing.Color.WhiteSmoke;
             this.medicalNum.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicalNum.ForeColor = System.Drawing.Color.Black;
-            this.medicalNum.Location = new System.Drawing.Point(831, 70);
+            this.medicalNum.Location = new System.Drawing.Point(830, 66);
             this.medicalNum.Name = "medicalNum";
             this.medicalNum.Size = new System.Drawing.Size(204, 27);
             this.medicalNum.TabIndex = 32;
@@ -323,7 +324,7 @@
             this.veiwtNamelbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.veiwtNamelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.veiwtNamelbl.ForeColor = System.Drawing.Color.Black;
-            this.veiwtNamelbl.Location = new System.Drawing.Point(1185, 75);
+            this.veiwtNamelbl.Location = new System.Drawing.Point(1185, 71);
             this.veiwtNamelbl.Name = "veiwtNamelbl";
             this.veiwtNamelbl.Size = new System.Drawing.Size(222, 27);
             this.veiwtNamelbl.TabIndex = 32;

@@ -65,6 +65,7 @@ namespace CHS_FrontEnd
             ApplyEventsToTextBoxes(guna2ContainerControl7);
             ApplyEventsToTextBoxes(guna2ContainerControl4);
 
+
             symptomsTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "العَرَض");
             AddFinalDagnosis.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الحالة المرضية");
             testsTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الفحص");
@@ -251,54 +252,97 @@ namespace CHS_FrontEnd
                 }
             };
         }
-        private bool IsValidInputTextBox(Guna.UI2.WinForms.Guna2TextBox textBox, List<string> demoData)
-        {
 
-            return demoData.Contains(textBox.Text.Trim(), StringComparer.OrdinalIgnoreCase);
+        private void InitializeAutoCompleteMedicine(Guna2TextBox textBox)
+        {
+            if (Cache.Medicines == null || !Cache.Medicines.Any())
+            {
+                Cache.InitialCache(); // تأكد من تهيئة الكاش إذا لم يكن موجودًا
+            }
+
+            List<string> medicineSuggestions = Cache.Medicines?.Select(m => m.Name).ToList() ?? new List<string>();
+
+            textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            var autoComplete = new AutoCompleteStringCollection();
+            autoComplete.AddRange(medicineSuggestions.ToArray());
+            textBox.AutoCompleteCustomSource = autoComplete;
         }
+      
         private void UpdateAutoCompleteData()
         {
 
-            InitializeAutoCompleteTextbox(medicineNameTxt, demoMedicineNames);
+            List<string> medicineNames = Cache.Medicines?.Select(m => m.Name).ToList() ?? new List<string>();
+
+            InitializeAutoCompleteMedicine(medicineNameTxt); // إضافة الأدوية للكاش
             InitializeAutoCompleteTextbox(dosageTxt, demoDosages);
             InitializeAutoCompleteTextbox(MidTimeTxt, MidTimes);
             InitializeAutoCompleteTextbox(midDratxt, demoDurations);
 
         }
 
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; 
+
+                if (IsValidInputTextBox(medicineNameTxt, Cache.Medicines.Select(m => m.Name).ToList()) &&
+                    IsValidInputTextBox(dosageTxt, demoDosages) &&
+                    IsValidInputTextBox(MidTimeTxt, MidTimes) &&
+                    IsValidInputTextBox(midDratxt, demoDurations))
+                {
+                    gunaDataGridView1.Rows.Add(
+                        medicineNameTxt.Text.Trim(),
+                        dosageTxt.Text.Trim(),
+                        MidTimeTxt.Text.Trim(),
+                        midDratxt.Text.Trim()
+                    );
+
+                  
+                    medicineNameTxt.Clear();
+                    dosageTxt.Clear();
+                    MidTimeTxt.Clear();
+                    midDratxt.Clear();
+
+                  
+                    medicineNameTxt.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("الرجاء إدخال قيمة صحيحة من القائمة المعروضة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private bool IsValidInputTextBox(Guna.UI2.WinForms.Guna2TextBox textBox, List<string> demoData)
+        {
+            string input = textBox.Text.Trim();
+
+            bool exists = demoData.Contains(input, StringComparer.OrdinalIgnoreCase);
+
+            if (!exists)
+            {
+                MessageBox.Show($"القيمة '{input}' غير موجودة في القائمة المسموحة.", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            return exists;
+        }
+
         private void addNewDaignosis_Load(object sender, EventArgs e)
         {
+          
             UpdateAutoCompleteData();
+            medicineNameTxt.KeyDown += TextBox_KeyDown;
+            dosageTxt.KeyDown += TextBox_KeyDown;
+            MidTimeTxt.KeyDown += TextBox_KeyDown;
+            midDratxt.KeyDown += TextBox_KeyDown;
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-            if (IsValidInputTextBox(medicineNameTxt, demoMedicineNames) &&
-               IsValidInputTextBox(dosageTxt, demoDosages) &&
-                IsValidInputTextBox(MidTimeTxt, MidTimes) &&
-                IsValidInputTextBox(midDratxt, demoDurations))
-            {
-
-                string medicineName = medicineNameTxt.Text.Trim();
-                string dosage = dosageTxt.Text.Trim();
-                string Time = MidTimeTxt.Text.Trim();
-                string duration = midDratxt.Text.Trim();
-
-
-                gunaDataGridView1.Rows.Add(medicineName, dosage, Time, duration);
-
-                medicineNameTxt.Clear();
-                dosageTxt.Clear();
-                MidTimeTxt.Clear();
-                midDratxt.Clear();
-
-                MessageBox.Show("تم إضافة البيانات بنجاح إلى الجدول.", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("الرجاء إدخال قيمة صحيحة من القائمة المعروضة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
         }
 
 
@@ -381,6 +425,8 @@ namespace CHS_FrontEnd
                     PatientDiagnosisNumber = PatientDiagnosisNumber,
                     MedicalConditions = FinalDaignosisList,
                     IsChronic = chornicCheckbox,
+                    Medicines = new List<MedicineDose>()
+
 
 
 
@@ -388,19 +434,35 @@ namespace CHS_FrontEnd
 
 
                 };
-
-
-                var response = await Task.Run(() => RequestSender.SendRequest<AddMedicalConditionRequest,CHSResponse >(request));
-
-                if (response.ResponseCode == "1")
+                foreach (DataGridViewRow row in gunaDataGridView1.Rows)
                 {
+                    if (row.IsNewRow) continue;
 
-                    CustomMessageBox.Show(CustomMessageBox.MessageType.Success, "نجاح!", response.MessageDescription);
+                    var medicineDose = new MedicineDose
+                    {
+                        MedicineID = Cache.Medicines
+            .FirstOrDefault(m => m.Name == row.Cells["medName"].Value?.ToString())?.ID ?? 0,
+                        Dose = row.Cells["medDOS"].Value?.ToString(),
+                        DoseTime = row.Cells["MedTime"].Value?.ToString(),
+                        PeriodUse = row.Cells["midDra"].Value?.ToString(),
 
-                }
-                else
-                {
-                    CustomMessageBox.Show(CustomMessageBox.MessageType.Error, "!خطأ", response.MessageDescription);
+                    };
+
+                    request.Medicines.Add(medicineDose);
+
+                    var response = await Task.Run(() => RequestSender.SendRequest<AddMedicalConditionRequest, CHSResponse>(request));
+
+                    if (response.ResponseCode == "1")
+                    {
+
+                        CustomMessageBox.Show(CustomMessageBox.MessageType.Success, "نجاح!", response.MessageDescription);
+
+                    }
+                    else
+                    {
+                        CustomMessageBox.Show(CustomMessageBox.MessageType.Error, "!خطأ", response.MessageDescription);
+                    }
+
                 }
             }
             catch (Exception ex)
@@ -457,7 +519,7 @@ namespace CHS_FrontEnd
                 {
 
                     CustomMessageBox.Show(CustomMessageBox.MessageType.Success, "نجاح!", response.MessageDescription);
-                    DiagnosisAdded?.Invoke(); // استدعاء الحدث لإعلام `PatientView` بتحديث البيانات
+                    DiagnosisAdded?.Invoke(); 
 
                     this.Close();
 
@@ -605,6 +667,11 @@ namespace CHS_FrontEnd
             if (PatientDiagnosisNumber <= 0) return;
             ShowLabTestsResultsFrm frm = new ShowLabTestsResultsFrm(PatientDiagnosisNumber);
             frm.ShowDialog();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            showTestResults();
         }
     }
 }

@@ -295,6 +295,11 @@ namespace CHS_FrontEnd
 
 
         }
+
+        private void typeLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
