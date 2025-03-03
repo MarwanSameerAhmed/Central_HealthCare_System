@@ -596,6 +596,13 @@ namespace CHS_FrontEnd
         {
 
         }
+
+        private void showTestResults()
+        {
+            if (PatientDiagnosisNumber <= 0) return;
+            ShowLabTestsResultsFrm frm = new ShowLabTestsResultsFrm(PatientDiagnosisNumber);
+            frm.ShowDialog();
+        }
     }
 }
     

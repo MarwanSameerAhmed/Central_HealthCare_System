@@ -296,6 +296,12 @@
     <Compile Include="Labs &amp; ED\LIMSFrm.Designer.cs">
       <DependentUpon>LIMSFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Labs &amp; ED\ShowLabTestsResultsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Labs &amp; ED\ShowLabTestsResultsFrm.Designer.cs">
+      <DependentUpon>ShowLabTestsResultsFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patients\PatientFileViewrFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Labs &amp; ED\FillResultsLabTestsFrm.resx">
       <DependentUpon>FillResultsLabTestsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Labs &amp; ED\ShowLabTestsResultsFrm.resx">
+      <DependentUpon>ShowLabTestsResultsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainService.resx">
       <DependentUpon>MainService.cs</DependentUpon>
