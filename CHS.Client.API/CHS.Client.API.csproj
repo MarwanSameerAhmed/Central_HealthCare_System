@@ -59,6 +59,7 @@
     <Compile Include="Models\Employees\CreateEmployeeResponse.cs" />
     <Compile Include="Models\Employees\DoctorFile.cs" />
     <Compile Include="Models\Employees\EmployeeFile.cs" />
+    <Compile Include="Models\Employees\LinkDoctorWithFacilityRequest.cs" />
     <Compile Include="Models\Employees\SearchDoctorFilesResponse.cs" />
     <Compile Include="Models\Employees\SearchDoctorsFilesRequest.cs" />
     <Compile Include="Models\Employees\SearchEmployeesFilesRequest.cs" />

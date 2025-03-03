@@ -16,6 +16,7 @@ using CHS.Client.API.Models.Patients;
 using CHS.Client.API.Models;
 using CHS.Client.API.Models.Labs;
 using CHS.Client.API.Helper_Classes;
+using CHS_FrontEnd.Labs___ED;
 
 namespace CHS_FrontEnd
 {

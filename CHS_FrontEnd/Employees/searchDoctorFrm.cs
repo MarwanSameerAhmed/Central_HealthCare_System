@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
+using CHS.Client.API.Models;
 
 namespace CHS_FrontEnd
 {
@@ -94,12 +95,40 @@ namespace CHS_FrontEnd
 
         private void searchDoctorView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
 
-                DoctorViewrFrmcs detailsForm = new DoctorViewrFrmcs();
-                detailsForm.Show();
+            if (e.RowIndex >= 0 && frmLogin.UserRole == 2)
+            {
+                var result = MessageBox.Show("هل تريد ربط الطبيب " + searchDoctorView.Rows[e.RowIndex].Cells["doctorName"].Value + " بالمنشأة؟", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result != DialogResult.Yes) return;
+
+                try
+                {
+                    LinkDoctorWithFacilityRequest request = new LinkDoctorWithFacilityRequest
+                    {
+                        DoctorNumber = (long)searchDoctorView.Rows[e.RowIndex].Cells["doctorNumber"].Value,
+                        RequestID = Guid.NewGuid().ToString()
+                    };
+                    CHSResponse response = RequestSender.SendRequest<LinkDoctorWithFacilityRequest, CHSResponse>(request);
+                    if (response is null)
+                    {
+                        MessageBox.Show("حدث خطأ");
+                        return;
+                    }
+
+                    MessageBox.Show(response.MessageDescription);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+
+            //if (e.RowIndex >= 0)
+            //{
+
+            //    DoctorViewrFrmcs detailsForm = new DoctorViewrFrmcs();
+            //    detailsForm.Show();
+            //}
 
 
         }
