@@ -68,7 +68,7 @@ namespace CHS_FrontEnd
             symptomsTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "العَرَض");
             AddFinalDagnosis.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الحالة المرضية");
             testsTxt.KeyDown += (sender, e) => OnKeyDownHandler(sender, e, "الفحص");
-            if (medicalNumber == -1)
+            if (PatientDiagnosisNumber == -1)
             {
                 guna2ContainerControl4.Enabled = true;
                 guna2ContainerControl7.Enabled = false;
@@ -370,6 +370,7 @@ namespace CHS_FrontEnd
 
 
 
+
                 foreach (Control al in flowLayoutPanel2.Controls)
                 {
                     FinalDaignosisList.Add(al.Text);
@@ -377,9 +378,10 @@ namespace CHS_FrontEnd
                 var request = new AddMedicalConditionRequest
                 {
                     RequestID = Guid.NewGuid().ToString(),
-                    PatientDiagnosisNumber = medicalNumber,
+                    PatientDiagnosisNumber = PatientDiagnosisNumber,
                     MedicalConditions = FinalDaignosisList,
                     IsChronic = chornicCheckbox,
+
 
 
 
