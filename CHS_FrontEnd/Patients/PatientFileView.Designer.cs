@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.fathlbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -124,7 +124,7 @@
             this.fathlbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.fathlbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fathlbl.ForeColor = System.Drawing.Color.Black;
-            this.fathlbl.Location = new System.Drawing.Point(517, 166);
+            this.fathlbl.Location = new System.Drawing.Point(517, 164);
             this.fathlbl.Name = "fathlbl";
             this.fathlbl.Size = new System.Drawing.Size(213, 27);
             this.fathlbl.TabIndex = 38;
@@ -215,7 +215,7 @@
             this.viewPhonelbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewPhonelbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewPhonelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewPhonelbl.Location = new System.Drawing.Point(514, 121);
+            this.viewPhonelbl.Location = new System.Drawing.Point(514, 119);
             this.viewPhonelbl.Name = "viewPhonelbl";
             this.viewPhonelbl.Size = new System.Drawing.Size(213, 27);
             this.viewPhonelbl.TabIndex = 25;
@@ -239,7 +239,7 @@
             this.addresslbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.addresslbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addresslbl.ForeColor = System.Drawing.Color.Black;
-            this.addresslbl.Location = new System.Drawing.Point(836, 169);
+            this.addresslbl.Location = new System.Drawing.Point(836, 164);
             this.addresslbl.Name = "addresslbl";
             this.addresslbl.Size = new System.Drawing.Size(199, 27);
             this.addresslbl.TabIndex = 25;
@@ -251,7 +251,7 @@
             this.typeLbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.typeLbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeLbl.ForeColor = System.Drawing.Color.Black;
-            this.typeLbl.Location = new System.Drawing.Point(1190, 166);
+            this.typeLbl.Location = new System.Drawing.Point(1191, 164);
             this.typeLbl.Name = "typeLbl";
             this.typeLbl.Size = new System.Drawing.Size(217, 27);
             this.typeLbl.TabIndex = 25;
@@ -264,7 +264,7 @@
             this.viewbloodlbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewbloodlbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewbloodlbl.ForeColor = System.Drawing.Color.Black;
-            this.viewbloodlbl.Location = new System.Drawing.Point(204, 120);
+            this.viewbloodlbl.Location = new System.Drawing.Point(204, 117);
             this.viewbloodlbl.Name = "viewbloodlbl";
             this.viewbloodlbl.Size = new System.Drawing.Size(186, 27);
             this.viewbloodlbl.TabIndex = 25;
@@ -288,7 +288,7 @@
             this.veiwBirthDaylbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.veiwBirthDaylbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.veiwBirthDaylbl.ForeColor = System.Drawing.Color.Black;
-            this.veiwBirthDaylbl.Location = new System.Drawing.Point(198, 69);
+            this.veiwBirthDaylbl.Location = new System.Drawing.Point(198, 67);
             this.veiwBirthDaylbl.Name = "veiwBirthDaylbl";
             this.veiwBirthDaylbl.Size = new System.Drawing.Size(192, 27);
             this.veiwBirthDaylbl.TabIndex = 29;
@@ -300,7 +300,7 @@
             this.viewAgelbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewAgelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewAgelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewAgelbl.Location = new System.Drawing.Point(512, 68);
+            this.viewAgelbl.Location = new System.Drawing.Point(510, 67);
             this.viewAgelbl.Name = "viewAgelbl";
             this.viewAgelbl.Size = new System.Drawing.Size(218, 27);
             this.viewAgelbl.TabIndex = 31;
@@ -585,33 +585,33 @@
             // 
             this.Viewdaig.AllowUserToAddRows = false;
             this.Viewdaig.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.Viewdaig.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
+            this.Viewdaig.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.Viewdaig.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Viewdaig.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Viewdaig.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.Viewdaig.ColumnHeadersHeight = 40;
             this.Viewdaig.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Viewdaig.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.diagnosisName,
             this.finalDiagnosis,
             this.DaigonsisDate});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Viewdaig.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Viewdaig.DefaultCellStyle = dataGridViewCellStyle28;
             this.Viewdaig.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.Viewdaig.GridColor = System.Drawing.Color.Gray;
             this.Viewdaig.Location = new System.Drawing.Point(28, 15);
@@ -619,18 +619,18 @@
             this.Viewdaig.Name = "Viewdaig";
             this.Viewdaig.ReadOnly = true;
             this.Viewdaig.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Viewdaig.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Viewdaig.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.Viewdaig.RowHeadersVisible = false;
             this.Viewdaig.RowHeadersWidth = 51;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Viewdaig.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Viewdaig.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.Viewdaig.RowTemplate.Height = 50;
             this.Viewdaig.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Viewdaig.Size = new System.Drawing.Size(1501, 244);
@@ -662,8 +662,8 @@
             // 
             // diagnosisName
             // 
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Traditional Arabic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diagnosisName.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Traditional Arabic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diagnosisName.DefaultCellStyle = dataGridViewCellStyle27;
             this.diagnosisName.FillWeight = 112.2995F;
             this.diagnosisName.HeaderText = " الحالة المرضية";
             this.diagnosisName.MinimumWidth = 6;
