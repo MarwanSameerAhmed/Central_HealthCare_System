@@ -1,4 +1,9 @@
-﻿using System;
+﻿using CHS.Client.API;
+using CHS.Client.API.Helper_Classes;
+using CHS.Client.API.Models;
+using CHS.Client.API.Models.PatientsDiagnosis;
+using CHS.Client.API.Models.Pharmacies;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +30,7 @@ namespace CHS_FrontEnd.Pharmacy
         private void PharmacyMainFrm_Load(object sender, EventArgs e)
         {
             SyncScrollbar();
-            PopulateData();
+            //PopulateData();
             medicineStateGridView.MouseWheel += medicineStateGridView_MouseWheel;
         }
 
@@ -148,6 +153,76 @@ namespace CHS_FrontEnd.Pharmacy
         private void setTranslation()
         {
             
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                medicineStateGridView.Rows.Clear();
+                GetPatientsDiagnosisMedicinesRequest request = new GetPatientsDiagnosisMedicinesRequest
+                {
+                    RequestID = Guid.NewGuid().ToString(),
+                    PatientDiagnosisNumber = long.Parse(midSearchtxt.Text)
+                };
+                GetPatientsDiagnosisMedicinesResponse response = RequestSender.SendRequest<GetPatientsDiagnosisMedicinesRequest, GetPatientsDiagnosisMedicinesResponse>(request);
+                if (response.ResponseCode != "1")
+                {
+                    MessageBox.Show(response.MessageDescription);
+                    return;
+                }
+                searchBtn.Enabled = false;
+                btnSave.Enabled = true;
+                foreach (var md in response.Medicines)
+                {
+                    Medicine medicine = Cache.Medicines.FirstOrDefault(m => m.ID == md.MedicineID);
+                    if (medicine is default(Medicine))
+                    {
+                        MessageBox.Show("Erorr");
+                        return;
+                    }
+                    int index = medicineStateGridView.Rows.Add(md.Dispensed, md.Dose, "", medicine.ActiveIngredients, medicine.DosageFom, medicine.Name, md.MedicineID);
+                    medicineStateGridView.Rows[index].Tag = md;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            List<MedicineDose> medicineDoses = new List<MedicineDose>();
+            foreach (DataGridViewRow row in medicineStateGridView.Rows)
+            {
+                MedicineDose md = (MedicineDose)row.Tag;
+                if (md.Dispensed) continue;
+                if (!(bool)row.Cells["exchangeStatus"].Value) continue;
+                medicineDoses.Add(md);
+            }
+            if (medicineDoses.Count == 0)
+            {
+                MessageBox.Show("لم يتم صرف ادوية");
+                return;
+            }
+
+            DispensedMedicinesRequest request = new DispensedMedicinesRequest
+            {
+                PatientDiagnosisNumber = long.Parse(midSearchtxt.Text),
+                MedicineDoseIDs = medicineDoses.Select(md => md.ID).ToList(),
+                RequestID = Guid.NewGuid().ToString()
+            };
+
+            CHSResponse response = RequestSender.SendRequest<DispensedMedicinesRequest, CHSResponse>(request);
+            MessageBox.Show(response.MessageDescription);
+        }
+
+        private void midSearchtxt_TextChanged(object sender, EventArgs e)
+        {
+            searchBtn.Enabled = true;
+            btnSave.Enabled = false;
+            medicineStateGridView.Rows.Clear();
         }
     }
 }
