@@ -181,7 +181,7 @@ namespace CHS_FrontEnd.Pharmacy
                         MessageBox.Show("Erorr");
                         return;
                     }
-                    int index = medicineStateGridView.Rows.Add(md.Dispensed, md.Dose, "", medicine.ActiveIngredients, medicine.DosageFom, medicine.Name, md.MedicineID);
+                    int index = medicineStateGridView.Rows.Add(md.Dispensed, md.Dose, medicine.ActiveIngredients, medicine.DosageFom, medicine.Name, md.MedicineID);
                     medicineStateGridView.Rows[index].Tag = md;
                 }
             }
