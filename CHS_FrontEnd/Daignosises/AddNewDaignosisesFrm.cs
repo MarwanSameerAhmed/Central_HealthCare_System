@@ -434,14 +434,6 @@ namespace CHS_FrontEnd
 
                 string MedicalConditions = AddFinalDagnosis.Text;
                 bool chornicCheckbox = chornicCheckBox.Checked;
-
-
-
-
-                foreach (Control al in flowLayoutPanel2.Controls)
-                {
-                    FinalDaignosisList.Add(al.Text);
-                }
                 var request = new AddMedicalConditionRequest
                 {
                     RequestID = Guid.NewGuid().ToString(),
@@ -507,17 +499,6 @@ namespace CHS_FrontEnd
                 
 
                
-
-                foreach (Control al in flowLayoutPanel3.Controls)
-                {
-                    symptomsList.Add(al.Text);
-                   
-                }
-                foreach (Control al in flowLayoutPanel1.Controls)
-                {
-                    testsList.Add(al.Text);
-
-                }
                 var request = new CreatePatientDiagnosisRequest
                 {
                     RequestID = Guid.NewGuid().ToString(),

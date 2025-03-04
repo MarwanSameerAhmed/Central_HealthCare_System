@@ -86,7 +86,7 @@
             this.guna2ContainerControl1.Controls.Add(this.searchForpatientLabel);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl1.Location = new System.Drawing.Point(9, 64);
-            this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1410, 119);
             this.guna2ContainerControl1.TabIndex = 1;
@@ -185,7 +185,7 @@
             this.midSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
             this.midSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.midSearchtxt.Location = new System.Drawing.Point(1077, 58);
-            this.midSearchtxt.Margin = new System.Windows.Forms.Padding(5);
+            this.midSearchtxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.midSearchtxt.Name = "midSearchtxt";
             this.midSearchtxt.PasswordChar = '\0';
             this.midSearchtxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -205,7 +205,7 @@
             this.searchForpatientLabel.Location = new System.Drawing.Point(1265, 0);
             this.searchForpatientLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.searchForpatientLabel.Name = "searchForpatientLabel";
-            this.searchForpatientLabel.Padding = new System.Windows.Forms.Padding(15);
+            this.searchForpatientLabel.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.searchForpatientLabel.Size = new System.Drawing.Size(145, 66);
             this.searchForpatientLabel.TabIndex = 0;
             this.searchForpatientLabel.Text = "ابحث عن مريض";
@@ -233,7 +233,7 @@
             this.guna2ContainerControl3.Controls.Add(this.limsHeader);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2ContainerControl3.Location = new System.Drawing.Point(9, 4);
-            this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
             this.guna2ContainerControl3.Size = new System.Drawing.Size(1410, 52);
             this.guna2ContainerControl3.TabIndex = 6;
@@ -384,7 +384,7 @@
             this.guna2ContainerControl4.Controls.Add(this.testsGridView);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2ContainerControl4.Location = new System.Drawing.Point(9, 346);
-            this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
             this.guna2ContainerControl4.Size = new System.Drawing.Size(1412, 399);
             this.guna2ContainerControl4.TabIndex = 10;
@@ -403,7 +403,7 @@
             this.guna2ContainerControl5.Controls.Add(this.patientDataLabel);
             this.guna2ContainerControl5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.guna2ContainerControl5.Location = new System.Drawing.Point(10, 191);
-            this.guna2ContainerControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ContainerControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ContainerControl5.Name = "guna2ContainerControl5";
             this.guna2ContainerControl5.Size = new System.Drawing.Size(1410, 148);
             this.guna2ContainerControl5.TabIndex = 36;
