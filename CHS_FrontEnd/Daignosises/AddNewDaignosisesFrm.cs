@@ -28,28 +28,36 @@ namespace CHS_FrontEnd
 
         private List<string> testsList = new List<string>();
         public event Action DiagnosisAdded;
-        private List<string> demoMedicineNames = new List<string>
-{
-    "أسبيرين", "باراسيتامول", "إيبوبروفين", "أموكسيسيلين", "كلاريثروميسين"
-};
+        
         List<LabTest> myLabTests = Cache.LabTests ?? new List<LabTest>();
 
         private List<string> demoDosages = new List<string>
 {
-    "500 ملجم", "250 ملجم", "1 جم", "5 مل", "10 مل"
+    "125 mg", "250 mg", "500 mg", "750 mg", "1 g", "1.5 g", "2 g",
+    "2.5 ml", "5 ml", "7.5 ml", "10 ml", "15 ml", "20 ml",
+    "1 tablet", "Half tablet", "Quarter tablet", "1.5 tablets", "2 tablets", "3 tablets",
+    "1 capsule", "2 capsules", "3 capsules", "1 suppository", "2 suppositories",
+    "1 drop", "2 drops", "3 drops", "5 drops", "10 drops",
+    "1 unit", "2 units", "5 units", "10 units", "20 units",
+    "1 spray", "2 sprays", "3 sprays", "4 sprays", "5 sprays"
 };
+
         private List<string> demoDurations = new List<string>
 {
-    "5 أيام", "7 أيام", "10 أيام", "2 أسابيع", "شهر"
-        };
-        List<string> MidTimes = new List<string>
-        {
-            "08:00 صباحًا",
-            "12:00 ظهرًا",
-            "04:00 مساءً",
-            "08:00 مساءً",
-            "06:00 صباحًا"
-        };
+    "One day", "Two days", "3 days", "4 days", "5 days", "7 days", "10 days",
+    "14 days (Two weeks)", "21 days (Three weeks)", "One month", "One and a half months",
+    "Two months", "Three months", "Six months", "One year", "Lifetime as needed"
+};
+
+        private List<string> MidTimes = new List<string>
+{
+    "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM",
+    "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM",
+    "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM",
+    "09:00 PM", "10:00 PM", "11:00 PM", "Midnight",
+    "Before bed", "Right after waking up", "Before meals", "After meals", "With meals"
+};
+
         long medicalNumber;
         long PatientDiagnosisNumber;
       
@@ -229,22 +237,23 @@ namespace CHS_FrontEnd
         }
         private void InitializeAutoCompleteTextbox(Guna.UI2.WinForms.Guna2TextBox textBox, List<string> demoData)
         {
-
             var autoComplete = new AutoCompleteStringCollection();
             autoComplete.AddRange(demoData.ToArray());
-
 
             textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
             textBox.AutoCompleteCustomSource = autoComplete;
 
+            // حفظ البيانات في قائمة منفصلة للتحقق منها لاحقًا
+            var demoDataList = demoData.Select(d => d.Trim()).ToList();
 
             textBox.KeyDown += (sender, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
                 {
+                    string userInput = textBox.Text.Trim();
 
-                    if (!autoComplete.Contains(textBox.Text.Trim()))
+                    if (!demoDataList.Contains(userInput, StringComparer.OrdinalIgnoreCase))
                     {
                         MessageBox.Show("القيمة المدخلة غير موجودة في القائمة. الرجاء اختيار قيمة من الاقتراحات.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox.Clear();
@@ -253,11 +262,12 @@ namespace CHS_FrontEnd
             };
         }
 
+
         private void InitializeAutoCompleteMedicine(Guna2TextBox textBox)
         {
             if (Cache.Medicines == null || !Cache.Medicines.Any())
             {
-                Cache.InitialCache(); // تأكد من تهيئة الكاش إذا لم يكن موجودًا
+                Cache.InitialCache(); 
             }
 
             List<string> medicineSuggestions = Cache.Medicines?.Select(m => m.Name).ToList() ?? new List<string>();
@@ -285,48 +295,61 @@ namespace CHS_FrontEnd
         {
             if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true; 
+                e.SuppressKeyPress = true; // منع إضافة سطر جديد في TextBox
 
-                if (IsValidInputTextBox(medicineNameTxt, Cache.Medicines.Select(m => m.Name).ToList()) &&
-                    IsValidInputTextBox(dosageTxt, demoDosages) &&
-                    IsValidInputTextBox(MidTimeTxt, MidTimes) &&
-                    IsValidInputTextBox(midDratxt, demoDurations))
+                if (sender is Guna2TextBox textBox)
                 {
-                    gunaDataGridView1.Rows.Add(
-                        medicineNameTxt.Text.Trim(),
-                        dosageTxt.Text.Trim(),
-                        MidTimeTxt.Text.Trim(),
-                        midDratxt.Text.Trim()
-                    );
+                    string input = textBox.Text.Trim();
 
-                  
-                    medicineNameTxt.Clear();
-                    dosageTxt.Clear();
-                    MidTimeTxt.Clear();
-                    midDratxt.Clear();
+                    // إذا كان الحقل فارغًا، لا تقم بعملية التحقق
+                    if (string.IsNullOrEmpty(input))
+                    {
+                        return;
+                    }
 
-                  
-                    medicineNameTxt.Focus();
-                }
-                else
-                {
-                    MessageBox.Show("الرجاء إدخال قيمة صحيحة من القائمة المعروضة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // التحقق من القيم المدخلة لجميع الحقول
+                    if (IsValidInputTextBox(medicineNameTxt) &&
+                        IsValidInputTextBox(dosageTxt) &&
+                        IsValidInputTextBox(MidTimeTxt) &&
+                        IsValidInputTextBox(midDratxt))
+                    {
+                        // إضافة البيانات إلى الجدول
+                        gunaDataGridView1.Rows.Add(
+                            medicineNameTxt.Text.Trim(),
+                            dosageTxt.Text.Trim(),
+                            MidTimeTxt.Text.Trim(),
+                            midDratxt.Text.Trim()
+                        );
+
+                        // مسح الحقول بعد الإضافة
+                        medicineNameTxt.Clear();
+                        dosageTxt.Clear();
+                        MidTimeTxt.Clear();
+                        midDratxt.Clear();
+
+                        // إعادة التركيز إلى أول عنصر
+                        medicineNameTxt.Focus();
+                    }
                 }
             }
         }
-        private bool IsValidInputTextBox(Guna.UI2.WinForms.Guna2TextBox textBox, List<string> demoData)
-        {
-            string input = textBox.Text.Trim();
 
-            bool exists = demoData.Contains(input, StringComparer.OrdinalIgnoreCase);
+        private bool IsValidInputTextBox(Guna.UI2.WinForms.Guna2TextBox textBox)
+        {
+            string input = textBox.Text.Trim();  
+
+            var autoCompleteList = textBox.AutoCompleteCustomSource.Cast<string>().Select(x => x.Trim()).ToList();
+
+            bool exists = autoCompleteList.Any(item => string.Equals(item, input, StringComparison.OrdinalIgnoreCase));
 
             if (!exists)
             {
-                MessageBox.Show($"القيمة '{input}' غير موجودة في القائمة المسموحة.", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             return exists;
         }
+
+
 
         private void addNewDaignosis_Load(object sender, EventArgs e)
         {
@@ -440,8 +463,8 @@ namespace CHS_FrontEnd
 
                     var medicineDose = new MedicineDose
                     {
-                        MedicineID = Cache.Medicines
-            .FirstOrDefault(m => m.Name == row.Cells["medName"].Value?.ToString())?.ID ?? 0,
+                         MedicineID = Cache.Medicines
+            .FirstOrDefault(m => m.Name == row.Cells["medName"].Value?.ToString())?.ID ?? 0, 
                         Dose = row.Cells["medDOS"].Value?.ToString(),
                         DoseTime = row.Cells["MedTime"].Value?.ToString(),
                         PeriodUse = row.Cells["midDra"].Value?.ToString(),
