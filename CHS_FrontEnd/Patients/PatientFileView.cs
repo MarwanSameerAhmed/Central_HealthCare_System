@@ -155,6 +155,9 @@ namespace CHS_FrontEnd
                     Viewdaig.Rows[rowIndex].Cells["diagnosisName"].Value = item.Symptoms;
                     Viewdaig.Rows[rowIndex].Cells["finalDiagnosis"].Value = item.medicalConditions;
                     Viewdaig.Rows[rowIndex].Cells["DaigonsisDate"].Value = item.CreateAt;
+                    Viewdaig.Rows[rowIndex].Cells["daignosisNumber"].Value = item.PatientDiagnosisNumber;
+
+
 
                     Viewdaig.Rows[rowIndex].Tag = item;
 

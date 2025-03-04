@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.pharmacyHeader = new System.Windows.Forms.Label();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -63,9 +63,9 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.pharmacyHeader);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(14, 15);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(82, 15);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(1411, 51);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(1368, 51);
             this.guna2ContainerControl3.TabIndex = 7;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -75,7 +75,7 @@
             this.pharmacyHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.pharmacyHeader.Font = new System.Drawing.Font("Traditional Arabic", 19.8F, System.Drawing.FontStyle.Bold);
             this.pharmacyHeader.ForeColor = System.Drawing.Color.White;
-            this.pharmacyHeader.Location = new System.Drawing.Point(586, 1);
+            this.pharmacyHeader.Location = new System.Drawing.Point(587, 1);
             this.pharmacyHeader.Name = "pharmacyHeader";
             this.pharmacyHeader.Size = new System.Drawing.Size(240, 52);
             this.pharmacyHeader.TabIndex = 0;
@@ -92,9 +92,9 @@
             this.guna2ContainerControl1.Controls.Add(this.midSearchtxt);
             this.guna2ContainerControl1.Controls.Add(this.searchForpatientLabel);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(14, 74);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(82, 74);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(1411, 120);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(1368, 120);
             this.guna2ContainerControl1.TabIndex = 37;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
@@ -110,10 +110,10 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.btnSave.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(571, 56);
+            this.btnSave.Location = new System.Drawing.Point(532, 58);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(232, 49);
+            this.btnSave.Size = new System.Drawing.Size(232, 48);
             this.btnSave.TabIndex = 41;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -129,10 +129,10 @@
             this.searchBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.searchBtn.Font = new System.Drawing.Font("Traditional Arabic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(810, 58);
+            this.searchBtn.Location = new System.Drawing.Point(770, 58);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(232, 49);
+            this.searchBtn.Size = new System.Drawing.Size(232, 48);
             this.searchBtn.TabIndex = 41;
             this.searchBtn.Text = "بحث";
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
@@ -150,8 +150,10 @@
             this.midSearchtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.midSearchtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.midSearchtxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold);
+            this.midSearchtxt.ForeColor = System.Drawing.Color.Black;
             this.midSearchtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.midSearchtxt.Location = new System.Drawing.Point(1076, 58);
+            this.midSearchtxt.HoverState.PlaceholderForeColor = System.Drawing.Color.White;
+            this.midSearchtxt.Location = new System.Drawing.Point(1033, 58);
             this.midSearchtxt.Margin = new System.Windows.Forms.Padding(5);
             this.midSearchtxt.Name = "midSearchtxt";
             this.midSearchtxt.PasswordChar = '\0';
@@ -170,7 +172,7 @@
             this.searchForpatientLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.searchForpatientLabel.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold);
             this.searchForpatientLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.searchForpatientLabel.Location = new System.Drawing.Point(1264, 0);
+            this.searchForpatientLabel.Location = new System.Drawing.Point(1221, 0);
             this.searchForpatientLabel.Name = "searchForpatientLabel";
             this.searchForpatientLabel.Padding = new System.Windows.Forms.Padding(16, 15, 16, 15);
             this.searchForpatientLabel.Size = new System.Drawing.Size(147, 66);
@@ -185,9 +187,9 @@
             this.guna2ContainerControl4.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl4.Controls.Add(this.medicineStateGridView);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(16, 355);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(82, 216);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(1412, 399);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(1368, 399);
             this.guna2ContainerControl4.TabIndex = 40;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
             // 
@@ -206,18 +208,18 @@
             // 
             this.medicineStateGridView.AllowUserToAddRows = false;
             this.medicineStateGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.medicineStateGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.medicineStateGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.medicineStateGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.medicineStateGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.medicineStateGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.medicineStateGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.medicineStateGridView.ColumnHeadersHeight = 40;
             this.medicineStateGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.medicineStateGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -229,35 +231,35 @@
             this.activeIngredient,
             this.medicineName,
             this.medicineID});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.medicineStateGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.medicineStateGridView.DefaultCellStyle = dataGridViewCellStyle18;
             this.medicineStateGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.medicineStateGridView.Location = new System.Drawing.Point(17, 16);
+            this.medicineStateGridView.Location = new System.Drawing.Point(16, 16);
             this.medicineStateGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.medicineStateGridView.Name = "medicineStateGridView";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.medicineStateGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.medicineStateGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.medicineStateGridView.RowHeadersVisible = false;
             this.medicineStateGridView.RowHeadersWidth = 62;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.medicineStateGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.medicineStateGridView.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.medicineStateGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.medicineStateGridView.RowTemplate.Height = 29;
             this.medicineStateGridView.RowTemplate.ReadOnly = true;
             this.medicineStateGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.medicineStateGridView.Size = new System.Drawing.Size(1379, 368);
+            this.medicineStateGridView.Size = new System.Drawing.Size(1332, 368);
             this.medicineStateGridView.TabIndex = 7;
             this.medicineStateGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.medicineStateGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -339,7 +341,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1459, 890);
+            this.ClientSize = new System.Drawing.Size(1623, 890);
             this.Controls.Add(this.guna2ContainerControl4);
             this.Controls.Add(this.guna2ContainerControl1);
             this.Controls.Add(this.guna2ContainerControl3);

@@ -3,6 +3,7 @@ using CHS.Client.API.Helper_Classes;
 using CHS.Client.API.Models;
 using CHS.Client.API.Models.PatientsDiagnosis;
 using CHS.Client.API.Models.Pharmacies;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,7 @@ namespace CHS_FrontEnd.Pharmacy
             InitializeComponent();
             this.dockPanel = dockPanel;
             guna2VScrollBar1.Scroll += Guna2VScrollBar1_Scroll;
+            ApplyEventsToTextBoxes(guna2ContainerControl1);
         }
 
         private void PharmacyMainFrm_Load(object sender, EventArgs e)
@@ -149,7 +151,49 @@ namespace CHS_FrontEnd.Pharmacy
                 }
             }
         }
+        private void ApplyEventsToTextBoxes(Control parentControl)
+        {
+            foreach (Control control in parentControl.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    textBox.Enter += Guna2TextBox_Enter;
+                    textBox.Leave += Guna2TextBox_Leave;
+                }
+                else if (control.HasChildren)
+                {
 
+                    ApplyEventsToTextBoxes(control);
+                }
+            }
+        }
+
+
+
+        private Font normalFont = new Font("Traditional Arabic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+        private Font largeFont = new Font("Traditional Arabic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+
+        private void Guna2TextBox_Enter(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = largeFont;
+            }
+        }
+
+
+        private void Guna2TextBox_Leave(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = sender as Guna2TextBox;
+            if (textBox != null)
+            {
+                textBox.Font = normalFont;
+            }
+        }
         private void setTranslation()
         {
             
