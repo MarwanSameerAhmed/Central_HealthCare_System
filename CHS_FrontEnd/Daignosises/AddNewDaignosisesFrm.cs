@@ -28,7 +28,8 @@ namespace CHS_FrontEnd
 
         private List<string> testsList = new List<string>();
         public event Action DiagnosisAdded;
-        
+        public event Action FinalDiagnosisAdded;
+
         List<LabTest> myLabTests = Cache.LabTests ?? new List<LabTest>();
 
         private List<string> demoDosages = new List<string>
@@ -244,7 +245,6 @@ namespace CHS_FrontEnd
             textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
             textBox.AutoCompleteCustomSource = autoComplete;
 
-            // حفظ البيانات في قائمة منفصلة للتحقق منها لاحقًا
             var demoDataList = demoData.Select(d => d.Trim()).ToList();
 
             textBox.KeyDown += (sender, e) =>
@@ -284,7 +284,7 @@ namespace CHS_FrontEnd
 
             List<string> medicineNames = Cache.Medicines?.Select(m => m.Name).ToList() ?? new List<string>();
 
-            InitializeAutoCompleteMedicine(medicineNameTxt); // إضافة الأدوية للكاش
+            InitializeAutoCompleteMedicine(medicineNameTxt); 
             InitializeAutoCompleteTextbox(dosageTxt, demoDosages);
             InitializeAutoCompleteTextbox(MidTimeTxt, MidTimes);
             InitializeAutoCompleteTextbox(midDratxt, demoDurations);
@@ -295,25 +295,25 @@ namespace CHS_FrontEnd
         {
             if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true; // منع إضافة سطر جديد في TextBox
+                e.SuppressKeyPress = true; 
 
                 if (sender is Guna2TextBox textBox)
                 {
                     string input = textBox.Text.Trim();
 
-                    // إذا كان الحقل فارغًا، لا تقم بعملية التحقق
+              
                     if (string.IsNullOrEmpty(input))
                     {
                         return;
                     }
 
-                    // التحقق من القيم المدخلة لجميع الحقول
+                  
                     if (IsValidInputTextBox(medicineNameTxt) &&
                         IsValidInputTextBox(dosageTxt) &&
                         IsValidInputTextBox(MidTimeTxt) &&
                         IsValidInputTextBox(midDratxt))
                     {
-                        // إضافة البيانات إلى الجدول
+                      
                         gunaDataGridView1.Rows.Add(
                             medicineNameTxt.Text.Trim(),
                             dosageTxt.Text.Trim(),
@@ -321,13 +321,13 @@ namespace CHS_FrontEnd
                             midDratxt.Text.Trim()
                         );
 
-                        // مسح الحقول بعد الإضافة
+                     
                         medicineNameTxt.Clear();
                         dosageTxt.Clear();
                         MidTimeTxt.Clear();
                         midDratxt.Clear();
 
-                        // إعادة التركيز إلى أول عنصر
+                       
                         medicineNameTxt.Focus();
                     }
                 }
@@ -479,7 +479,8 @@ namespace CHS_FrontEnd
                     {
 
                         CustomMessageBox.Show(CustomMessageBox.MessageType.Success, "نجاح!", response.MessageDescription);
-
+                        DiagnosisAdded?.Invoke();
+                        this.Close();
                     }
                     else
                     {

@@ -38,6 +38,8 @@ namespace CHS_FrontEnd
             this.BackColor = Color.White;
             this.Opacity = 0; // **تأثير التلاشي عند الفتح**
             this.ControlBox = false; // إزالة زر الإغلاق العلوي
+            this.RightToLeft = RightToLeft.Yes; // 📌 **تمكين دعم الاتجاه من اليمين إلى اليسار**
+            this.RightToLeftLayout = true; // 📌
             this.Load += (s, e) =>
             {
                 this.Top += 30; // يمكنك تغيير الرقم لتعديل المسافة
@@ -90,11 +92,11 @@ namespace CHS_FrontEnd
                 AutoSize = false,
                 Location = new Point(20, 125), // رفع النص للأعلى
                 Size = new Size(358, 30),
-                TextAlignment = ContentAlignment.MiddleCenter
+                TextAlignment = ContentAlignment.MiddleRight, // 📌 **ضبط الاتجاه لليمين**
+                RightToLeft = RightToLeft.Yes // 📌 **تمكين دعم النص العربي**
             };
             borderPanel.Controls.Add(mainTextLabel);
 
-            // 🔹 تحسين نص العنوان الفرعي (تم رفعه للأعلى)
             subTextLabel = new Guna2HtmlLabel
             {
                 Text = subText,
@@ -103,10 +105,10 @@ namespace CHS_FrontEnd
                 AutoSize = false,
                 Location = new Point(20, 155), // رفع النص للأعلى
                 Size = new Size(358, 30),
-                TextAlignment = ContentAlignment.MiddleCenter
+                TextAlignment = ContentAlignment.MiddleRight, // 📌 **ضبط الاتجاه لليمين**
+                RightToLeft = RightToLeft.Yes // 📌 **تمكين دعم النص العربي**
             };
             borderPanel.Controls.Add(subTextLabel);
-
             // 🔹 تحسين زر "موافق" مع تأثيرات أنيقة (تم رفعه للأعلى)
             okButton = new Guna2Button
             {

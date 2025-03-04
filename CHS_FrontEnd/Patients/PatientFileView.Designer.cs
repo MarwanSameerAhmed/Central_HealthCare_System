@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.fathlbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,14 +61,11 @@
             this.guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.dislbl = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label18 = new System.Windows.Forms.Label();
             this.guna2ContainerControl4 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
-            this.guna2ContainerControl5 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.medlbl = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.guna2ContainerControl6 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Viewdaig = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -80,7 +77,6 @@
             this.guna2ContainerControl3.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
             this.guna2ContainerControl4.SuspendLayout();
-            this.guna2ContainerControl5.SuspendLayout();
             this.guna2ContainerControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Viewdaig)).BeginInit();
             this.SuspendLayout();
@@ -113,7 +109,7 @@
             this.guna2ContainerControl1.Controls.Add(this.label1);
             this.guna2ContainerControl1.Controls.Add(this.label4);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(29, 71);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(20, 71);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1553, 222);
             this.guna2ContainerControl1.TabIndex = 1;
@@ -124,12 +120,13 @@
             this.fathlbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.fathlbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fathlbl.ForeColor = System.Drawing.Color.Black;
-            this.fathlbl.Location = new System.Drawing.Point(517, 164);
+            this.fathlbl.Location = new System.Drawing.Point(517, 166);
             this.fathlbl.Name = "fathlbl";
             this.fathlbl.Size = new System.Drawing.Size(213, 27);
             this.fathlbl.TabIndex = 38;
             this.fathlbl.Text = "\"\"";
             this.fathlbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.fathlbl.Click += new System.EventHandler(this.fathlbl_Click);
             // 
             // label11
             // 
@@ -182,7 +179,6 @@
             this.label5.TabIndex = 34;
             this.label5.Text = ": الرقم الطبي";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label8
             // 
@@ -215,7 +211,7 @@
             this.viewPhonelbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewPhonelbl.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewPhonelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewPhonelbl.Location = new System.Drawing.Point(514, 119);
+            this.viewPhonelbl.Location = new System.Drawing.Point(517, 118);
             this.viewPhonelbl.Name = "viewPhonelbl";
             this.viewPhonelbl.Size = new System.Drawing.Size(213, 27);
             this.viewPhonelbl.TabIndex = 25;
@@ -251,20 +247,19 @@
             this.typeLbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.typeLbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeLbl.ForeColor = System.Drawing.Color.Black;
-            this.typeLbl.Location = new System.Drawing.Point(1191, 164);
+            this.typeLbl.Location = new System.Drawing.Point(1191, 162);
             this.typeLbl.Name = "typeLbl";
             this.typeLbl.Size = new System.Drawing.Size(217, 27);
             this.typeLbl.TabIndex = 25;
             this.typeLbl.Text = "\"\"";
             this.typeLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.typeLbl.Click += new System.EventHandler(this.typeLbl_Click);
             // 
             // viewbloodlbl
             // 
             this.viewbloodlbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewbloodlbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewbloodlbl.ForeColor = System.Drawing.Color.Black;
-            this.viewbloodlbl.Location = new System.Drawing.Point(204, 117);
+            this.viewbloodlbl.Location = new System.Drawing.Point(204, 114);
             this.viewbloodlbl.Name = "viewbloodlbl";
             this.viewbloodlbl.Size = new System.Drawing.Size(186, 27);
             this.viewbloodlbl.TabIndex = 25;
@@ -276,7 +271,7 @@
             this.viewStatelbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewStatelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewStatelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewStatelbl.Location = new System.Drawing.Point(1190, 120);
+            this.viewStatelbl.Location = new System.Drawing.Point(1191, 117);
             this.viewStatelbl.Name = "viewStatelbl";
             this.viewStatelbl.Size = new System.Drawing.Size(217, 27);
             this.viewStatelbl.TabIndex = 27;
@@ -288,7 +283,7 @@
             this.veiwBirthDaylbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.veiwBirthDaylbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.veiwBirthDaylbl.ForeColor = System.Drawing.Color.Black;
-            this.veiwBirthDaylbl.Location = new System.Drawing.Point(198, 67);
+            this.veiwBirthDaylbl.Location = new System.Drawing.Point(201, 66);
             this.veiwBirthDaylbl.Name = "veiwBirthDaylbl";
             this.veiwBirthDaylbl.Size = new System.Drawing.Size(192, 27);
             this.veiwBirthDaylbl.TabIndex = 29;
@@ -300,7 +295,7 @@
             this.viewAgelbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.viewAgelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewAgelbl.ForeColor = System.Drawing.Color.Black;
-            this.viewAgelbl.Location = new System.Drawing.Point(510, 67);
+            this.viewAgelbl.Location = new System.Drawing.Point(514, 66);
             this.viewAgelbl.Name = "viewAgelbl";
             this.viewAgelbl.Size = new System.Drawing.Size(218, 27);
             this.viewAgelbl.TabIndex = 31;
@@ -312,7 +307,7 @@
             this.medicalNum.BackColor = System.Drawing.Color.WhiteSmoke;
             this.medicalNum.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicalNum.ForeColor = System.Drawing.Color.Black;
-            this.medicalNum.Location = new System.Drawing.Point(830, 66);
+            this.medicalNum.Location = new System.Drawing.Point(833, 64);
             this.medicalNum.Name = "medicalNum";
             this.medicalNum.Size = new System.Drawing.Size(204, 27);
             this.medicalNum.TabIndex = 32;
@@ -324,7 +319,7 @@
             this.veiwtNamelbl.BackColor = System.Drawing.Color.WhiteSmoke;
             this.veiwtNamelbl.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.veiwtNamelbl.ForeColor = System.Drawing.Color.Black;
-            this.veiwtNamelbl.Location = new System.Drawing.Point(1185, 71);
+            this.veiwtNamelbl.Location = new System.Drawing.Point(1188, 69);
             this.veiwtNamelbl.Name = "veiwtNamelbl";
             this.veiwtNamelbl.Size = new System.Drawing.Size(222, 27);
             this.veiwtNamelbl.TabIndex = 32;
@@ -416,7 +411,7 @@
             this.guna2ContainerControl3.BorderRadius = 15;
             this.guna2ContainerControl3.Controls.Add(this.label10);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl3.Location = new System.Drawing.Point(29, 6);
+            this.guna2ContainerControl3.Location = new System.Drawing.Point(20, 6);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
             this.guna2ContainerControl3.Size = new System.Drawing.Size(1560, 55);
             this.guna2ContainerControl3.TabIndex = 3;
@@ -440,28 +435,24 @@
             // 
             this.guna2ContainerControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl2.BorderRadius = 15;
-            this.guna2ContainerControl2.Controls.Add(this.dislbl);
+            this.guna2ContainerControl2.Controls.Add(this.flowLayoutPanel2);
             this.guna2ContainerControl2.Controls.Add(this.label18);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(29, 303);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(23, 303);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(500, 283);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(773, 174);
             this.guna2ContainerControl2.TabIndex = 4;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
-            // dislbl
+            // flowLayoutPanel2
             // 
-            this.dislbl.AutoSize = true;
-            this.dislbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.dislbl.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dislbl.ForeColor = System.Drawing.Color.Black;
-            this.dislbl.Location = new System.Drawing.Point(103, 58);
-            this.dislbl.Name = "dislbl";
-            this.dislbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dislbl.Size = new System.Drawing.Size(27, 36);
-            this.dislbl.TabIndex = 1;
-            this.dislbl.Text = "\"\"";
-            this.dislbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.ForeColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 60);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(734, 97);
+            this.flowLayoutPanel2.TabIndex = 2;
             // 
             // label18
             // 
@@ -470,7 +461,7 @@
             this.label18.Dock = System.Windows.Forms.DockStyle.Right;
             this.label18.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label18.Location = new System.Drawing.Point(307, 0);
+            this.label18.Location = new System.Drawing.Point(580, 0);
             this.label18.Name = "label18";
             this.label18.Padding = new System.Windows.Forms.Padding(15);
             this.label18.Size = new System.Drawing.Size(193, 66);
@@ -484,18 +475,20 @@
             this.guna2ContainerControl4.Controls.Add(this.flowLayoutPanel1);
             this.guna2ContainerControl4.Controls.Add(this.label17);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl4.Location = new System.Drawing.Point(535, 303);
+            this.guna2ContainerControl4.Location = new System.Drawing.Point(801, 303);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(520, 283);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(771, 174);
             this.guna2ContainerControl4.TabIndex = 5;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 58);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 60);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(488, 205);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(734, 97);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label17
@@ -505,54 +498,12 @@
             this.label17.Dock = System.Windows.Forms.DockStyle.Right;
             this.label17.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label17.Location = new System.Drawing.Point(326, 0);
+            this.label17.Location = new System.Drawing.Point(577, 0);
             this.label17.Name = "label17";
             this.label17.Padding = new System.Windows.Forms.Padding(15);
             this.label17.Size = new System.Drawing.Size(194, 66);
             this.label17.TabIndex = 0;
             this.label17.Text = "الحساسيات لدى المريض";
-            // 
-            // guna2ContainerControl5
-            // 
-            this.guna2ContainerControl5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2ContainerControl5.BorderRadius = 15;
-            this.guna2ContainerControl5.Controls.Add(this.medlbl);
-            this.guna2ContainerControl5.Controls.Add(this.label22);
-            this.guna2ContainerControl5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl5.Location = new System.Drawing.Point(1062, 303);
-            this.guna2ContainerControl5.Name = "guna2ContainerControl5";
-            this.guna2ContainerControl5.Size = new System.Drawing.Size(520, 283);
-            this.guna2ContainerControl5.TabIndex = 5;
-            this.guna2ContainerControl5.Text = "guna2ContainerControl4";
-            this.guna2ContainerControl5.Click += new System.EventHandler(this.guna2ContainerControl5_Click);
-            // 
-            // medlbl
-            // 
-            this.medlbl.AutoSize = true;
-            this.medlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.medlbl.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medlbl.ForeColor = System.Drawing.Color.Black;
-            this.medlbl.Location = new System.Drawing.Point(134, 59);
-            this.medlbl.Name = "medlbl";
-            this.medlbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.medlbl.Size = new System.Drawing.Size(27, 36);
-            this.medlbl.TabIndex = 1;
-            this.medlbl.Text = "\"\"";
-            this.medlbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label22.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label22.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.label22.Location = new System.Drawing.Point(311, 0);
-            this.label22.Name = "label22";
-            this.label22.Padding = new System.Windows.Forms.Padding(15);
-            this.label22.Size = new System.Drawing.Size(209, 66);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "الادوية التي ياخذها المريض";
             // 
             // guna2ContainerControl6
             // 
@@ -561,10 +512,10 @@
             this.guna2ContainerControl6.Controls.Add(this.guna2VScrollBar1);
             this.guna2ContainerControl6.Controls.Add(this.Viewdaig);
             this.guna2ContainerControl6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            this.guna2ContainerControl6.Location = new System.Drawing.Point(29, 599);
+            this.guna2ContainerControl6.Location = new System.Drawing.Point(20, 493);
             this.guna2ContainerControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ContainerControl6.Name = "guna2ContainerControl6";
-            this.guna2ContainerControl6.Size = new System.Drawing.Size(1555, 274);
+            this.guna2ContainerControl6.Size = new System.Drawing.Size(1555, 332);
             this.guna2ContainerControl6.TabIndex = 9;
             this.guna2ContainerControl6.Text = "guna2ContainerControl6";
             // 
@@ -577,7 +528,7 @@
             this.guna2VScrollBar1.Maximum = 99;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 204);
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 259);
             this.guna2VScrollBar1.TabIndex = 6;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.DarkGray;
             // 
@@ -585,33 +536,33 @@
             // 
             this.Viewdaig.AllowUserToAddRows = false;
             this.Viewdaig.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
-            this.Viewdaig.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle55.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle55.Font = new System.Drawing.Font("Traditional Arabic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle55.ForeColor = System.Drawing.Color.Black;
+            this.Viewdaig.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle55;
             this.Viewdaig.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Viewdaig.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle56.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Viewdaig.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle56;
             this.Viewdaig.ColumnHeadersHeight = 40;
             this.Viewdaig.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Viewdaig.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.diagnosisName,
             this.finalDiagnosis,
             this.DaigonsisDate});
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Viewdaig.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle58.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Viewdaig.DefaultCellStyle = dataGridViewCellStyle58;
             this.Viewdaig.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.Viewdaig.GridColor = System.Drawing.Color.Gray;
             this.Viewdaig.Location = new System.Drawing.Point(28, 15);
@@ -619,21 +570,21 @@
             this.Viewdaig.Name = "Viewdaig";
             this.Viewdaig.ReadOnly = true;
             this.Viewdaig.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Viewdaig.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle59.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Viewdaig.RowHeadersDefaultCellStyle = dataGridViewCellStyle59;
             this.Viewdaig.RowHeadersVisible = false;
             this.Viewdaig.RowHeadersWidth = 51;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Viewdaig.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Viewdaig.RowsDefaultCellStyle = dataGridViewCellStyle60;
             this.Viewdaig.RowTemplate.Height = 50;
             this.Viewdaig.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Viewdaig.Size = new System.Drawing.Size(1501, 244);
+            this.Viewdaig.Size = new System.Drawing.Size(1501, 299);
             this.Viewdaig.TabIndex = 0;
             this.Viewdaig.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.Viewdaig.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -656,14 +607,12 @@
             this.Viewdaig.ThemeStyle.RowsStyle.Height = 50;
             this.Viewdaig.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Viewdaig.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.Viewdaig.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Viewdaig_CellContentClick);
             this.Viewdaig.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Viewdaig_CellDoubleClick);
-            this.Viewdaig.DoubleClick += new System.EventHandler(this.Viewdaig_DoubleClick);
             // 
             // diagnosisName
             // 
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Traditional Arabic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diagnosisName.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle57.Font = new System.Drawing.Font("Traditional Arabic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diagnosisName.DefaultCellStyle = dataGridViewCellStyle57;
             this.diagnosisName.FillWeight = 112.2995F;
             this.diagnosisName.HeaderText = " الحالة المرضية";
             this.diagnosisName.MinimumWidth = 6;
@@ -697,7 +646,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.guna2Button1.Font = new System.Drawing.Font("Traditional Arabic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(655, 888);
+            this.guna2Button1.Location = new System.Drawing.Point(620, 851);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.DarkBlue;
             this.guna2Button1.Size = new System.Drawing.Size(308, 56);
@@ -714,7 +663,6 @@
             this.ClientSize = new System.Drawing.Size(1595, 1055);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2ContainerControl6);
-            this.Controls.Add(this.guna2ContainerControl5);
             this.Controls.Add(this.guna2ContainerControl4);
             this.Controls.Add(this.guna2ContainerControl2);
             this.Controls.Add(this.guna2ContainerControl3);
@@ -733,8 +681,6 @@
             this.guna2ContainerControl2.PerformLayout();
             this.guna2ContainerControl4.ResumeLayout(false);
             this.guna2ContainerControl4.PerformLayout();
-            this.guna2ContainerControl5.ResumeLayout(false);
-            this.guna2ContainerControl5.PerformLayout();
             this.guna2ContainerControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Viewdaig)).EndInit();
             this.ResumeLayout(false);
@@ -761,14 +707,10 @@
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label viewCumlbl;
-        private System.Windows.Forms.Label dislbl;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label viewPhonelbl;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl4;
         private System.Windows.Forms.Label label17;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl5;
-        private System.Windows.Forms.Label medlbl;
-        private System.Windows.Forms.Label label22;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl6;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2DataGridView Viewdaig;
@@ -785,5 +727,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn finalDiagnosis;
         private System.Windows.Forms.DataGridViewTextBoxColumn DaigonsisDate;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

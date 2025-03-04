@@ -16,6 +16,8 @@ namespace CHS_FrontEnd
 {
     public partial class PatientFileView : Form
     {
+        
+
         private DockPanel dockPanel;
         public PatientFileView(DockPanel dockPanel, string fullName, int age, string phoneNumber, long medicalNumber,
                               string idCardNumber, string birthDate, bool isMale,
@@ -35,6 +37,9 @@ namespace CHS_FrontEnd
             typeLbl.Text = isMale ? "ذكر" : "أنثى";
             addresslbl.Text = patientAddress;
             fathlbl.Text = companionName;
+            
+
+            
             string allergiesData = allergies;
             if (!string.IsNullOrEmpty(allergiesData))
             {
@@ -45,7 +50,13 @@ namespace CHS_FrontEnd
                 {
                     AddChip(allergy);
                 }
+
             }
+            else
+            {
+                ShowNoDataMessage();
+            }
+        
 
             try
             {
@@ -79,6 +90,44 @@ namespace CHS_FrontEnd
             flowLayoutPanel1.Controls.Add(chip);
         }
 
+        void ShowNoDataMessage()
+        {
+            Label noDataLabel = new Label();
+            noDataLabel.Text = " لا يوجد اي حساسيات";
+            noDataLabel.Font = new Font("Traditional Arabic", 15, FontStyle.Bold);
+            noDataLabel.AutoSize = true;
+            noDataLabel.ForeColor = Color.Gray;
+            noDataLabel.Padding = new Padding(5);
+            flowLayoutPanel1.Controls.Add(noDataLabel);
+        }
+
+        void ShowNoDataMessagesdes()
+        {
+            Label noDataLabel = new Label();
+            noDataLabel.Text = " لا يوجد أمراض مزمنة";
+            noDataLabel.Font = new Font("Traditional Arabic", 15, FontStyle.Bold);
+            noDataLabel.AutoSize = true;
+            noDataLabel.ForeColor = Color.Gray;
+            noDataLabel.Padding = new Padding(5);
+            flowLayoutPanel2.Controls.Add(noDataLabel);
+        }
+
+      
+
+        private void ShowNoDataMessage(FlowLayoutPanel panel, string message)
+        {
+            Label noDataLabel = new Label
+            {
+                Text = message,
+                Font = new Font("Traditional Arabic", 15, FontStyle.Bold),
+                AutoSize = true,
+                ForeColor = Color.Gray,
+                Padding = new Padding(5)
+            };
+
+            panel.Controls.Add(noDataLabel);
+        }
+
 
         private void FillDiagnosis(List<PatientsDiagnosisFile> patientsDiagnosisFiles)
         {
@@ -90,18 +139,15 @@ namespace CHS_FrontEnd
                     CreateAt = p.CreatedAt,
                     Symptoms = string.Join(", ", p.Symptoms),
                     lastUpdateTimeSysmptoms = p.LastUpdateTimeSymptoms,
-
-
                     medicalConditions = string.Join(", ", p.MedicalConditions),
                     enterTimeMedicalConditions = p.EnterTimeMedicalCondition,
                     createByCurrentDoctor = p.CreatedByCurrentDoctor,
-                    isChronic = p.IsChronic,
-
-
+                    isChronic = p.IsChronic
                 }).ToList();
 
+                Viewdaig.Rows.Clear(); // مسح أي بيانات سابقة في الجدول
 
-                //   Viewdaig.Rows.Clear();
+                List<string> chronicConditionsList = new List<string>();
 
                 foreach (var item in formattedData)
                 {
@@ -110,22 +156,44 @@ namespace CHS_FrontEnd
                     Viewdaig.Rows[rowIndex].Cells["finalDiagnosis"].Value = item.medicalConditions;
                     Viewdaig.Rows[rowIndex].Cells["DaigonsisDate"].Value = item.CreateAt;
 
-
-
-
                     Viewdaig.Rows[rowIndex].Tag = item;
+
+                    // ✅ استخراج الأمراض المزمنة فقط
+                    if (item.isChronic && !string.IsNullOrWhiteSpace(item.medicalConditions))
+                    {
+                        chronicConditionsList.Add(item.medicalConditions);
+                    }
                 }
 
+                // ✅ عرض الأمراض المزمنة في `FlowLayoutPanel`
+                DisplayChronicConditions(chronicConditionsList);
             }
         }
 
-     
+
+        private void DisplayChronicConditions(List<string> chronicConditions)
+        {
+            flowLayoutPanel2.Controls.Clear(); // مسح البيانات السابقة
+
+            if (chronicConditions.Any())
+            {
+                foreach (var condition in chronicConditions)
+                {
+                    AddChip(condition, flowLayoutPanel2);
+                }
+            }
+            else
+            {
+                ShowNoDataMessage(flowLayoutPanel2, "لا يوجد أمراض مزمنة");
+            }
+        }
 
 
 
 
 
-      
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -272,31 +340,28 @@ namespace CHS_FrontEnd
                 }
             }
 
-        
 
 
-        private void guna2ContainerControl5_Click(object sender, EventArgs e)
+
+        private void AddChip(string text, FlowLayoutPanel panel, bool isMessage = false)
         {
+            Label chip = new Label
+            {
+                Text = text,
+                Font = new Font("Traditional Arabic", 14, FontStyle.Bold),
+                AutoSize = true,
+                ForeColor = isMessage ? Color.Gray : Color.Black,
+                BackColor = isMessage ? Color.Transparent : Color.WhiteSmoke,
+                Padding = new Padding(5),
+                Margin = new Padding(3),
+                BorderStyle = isMessage ? BorderStyle.None : BorderStyle.FixedSingle,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
 
+            panel.Controls.Add(chip);
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Viewdaig_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Viewdaig_DoubleClick(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void typeLbl_Click(object sender, EventArgs e)
+        private void fathlbl_Click(object sender, EventArgs e)
         {
 
         }

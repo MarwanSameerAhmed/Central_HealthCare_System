@@ -71,7 +71,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.sensitivitiesContainer = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.sensitivitiesTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -727,7 +726,6 @@
             this.guna2ContainerControl4.Controls.Add(this.label20);
             this.guna2ContainerControl4.Controls.Add(this.label23);
             this.guna2ContainerControl4.Controls.Add(this.sensitivitiesContainer);
-            this.guna2ContainerControl4.Controls.Add(this.sensitivitiesTxt);
             this.guna2ContainerControl4.Controls.Add(this.label18);
             this.guna2ContainerControl4.Controls.Add(this.label15);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
@@ -771,7 +769,7 @@
             this.sensitivitiesContainer.BorderRadius = 15;
             this.sensitivitiesContainer.Controls.Add(this.flowLayoutPanel2);
             this.sensitivitiesContainer.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sensitivitiesContainer.Location = new System.Drawing.Point(263, 145);
+            this.sensitivitiesContainer.Location = new System.Drawing.Point(263, 104);
             this.sensitivitiesContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sensitivitiesContainer.Name = "sensitivitiesContainer";
             this.sensitivitiesContainer.Size = new System.Drawing.Size(560, 141);
@@ -786,31 +784,6 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(534, 121);
             this.flowLayoutPanel2.TabIndex = 1;
-            // 
-            // sensitivitiesTxt
-            // 
-            this.sensitivitiesTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.sensitivitiesTxt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.sensitivitiesTxt.BorderRadius = 10;
-            this.sensitivitiesTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sensitivitiesTxt.DefaultText = "";
-            this.sensitivitiesTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.sensitivitiesTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.sensitivitiesTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.sensitivitiesTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.sensitivitiesTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sensitivitiesTxt.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sensitivitiesTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sensitivitiesTxt.Location = new System.Drawing.Point(263, 98);
-            this.sensitivitiesTxt.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.sensitivitiesTxt.Name = "sensitivitiesTxt";
-            this.sensitivitiesTxt.PasswordChar = '\0';
-            this.sensitivitiesTxt.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.sensitivitiesTxt.PlaceholderText = "";
-            this.sensitivitiesTxt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.sensitivitiesTxt.SelectedText = "";
-            this.sensitivitiesTxt.Size = new System.Drawing.Size(560, 39);
-            this.sensitivitiesTxt.TabIndex = 37;
             // 
             // label18
             // 
@@ -935,7 +908,6 @@
         private System.Windows.Forms.Label label23;
         private Guna.UI2.WinForms.Guna2ContainerControl sensitivitiesContainer;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2TextBox sensitivitiesTxt;
         private System.Windows.Forms.Label label18;
     }
 }

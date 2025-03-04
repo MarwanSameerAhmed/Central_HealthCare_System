@@ -155,6 +155,8 @@ namespace CHS_FrontEnd
                             patientData.companionName,
                             patientData.birthPlace,
                             patientData.allergies
+                           
+                            
                         );
 
                         OpenForm(patientDetailsPage);
