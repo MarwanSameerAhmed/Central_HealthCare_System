@@ -24,6 +24,7 @@ namespace CHS_FrontEnd
         private Form currentForm = null;
         private bool isCollapsed = false;
 
+        private Dictionary<string, DockContent> openForms = new Dictionary<string, DockContent>();
 
 
         public Mainfrm()
@@ -97,6 +98,7 @@ namespace CHS_FrontEnd
             dockContent.Show(dockPanel);
 
         }
+
 
 
         private void show()
@@ -192,11 +194,21 @@ namespace CHS_FrontEnd
 
         private void patientAddFrmBtn_Click(object sender, EventArgs e)
         {
-            OpenForm(new addingPatientFrm(dockPanel));
-            patientManagementSubBtn.Image = Properties.Resources.icons8_expand_arrow_64__2_;
-            
+           
 
-        }
+            if (BaseForm.UserRole == 4 || BaseForm.UserRole == 1)
+            {
+                OpenForm(new addingPatientFrm(dockPanel));
+                patientManagementSubBtn.Image = Properties.Resources.icons8_expand_arrow_64__2_;
+            }
+        
+                    else
+                    {
+                        CustomMessageBox.Show(CustomMessageBox.MessageType.Warning, "تنبيه", "ليس لديك صلاحية لعرض هذة الصفحة");
+                    }
+
+
+}
 
         private void PatientSearchFrmBtn_Click(object sender, EventArgs e)
         {
@@ -291,14 +303,32 @@ namespace CHS_FrontEnd
 
         private void EmployessAddBtn_Click(object sender, EventArgs e)
         {
-            OpenForm(new employeeAddFrm(dockPanel));
-           
+          
+            if (BaseForm.UserRole == 4 || BaseForm.UserRole == 1)
+            {
+                OpenForm(new employeeAddFrm(dockPanel));
+            }
+
+            else
+            {
+                CustomMessageBox.Show(CustomMessageBox.MessageType.Warning, "تنبيه", "ليس لديك صلاحية لعرض هذة الصفحة");
+            }
+
         }
 
         private void EmployessSearchBtn_Click(object sender, EventArgs e)
         {
-            OpenForm(new employeeSearchFrm(dockPanel));
            
+            if (BaseForm.UserRole == 4 || BaseForm.UserRole == 1)
+            {
+                OpenForm(new employeeSearchFrm(dockPanel));
+            }
+
+            else
+            {
+                CustomMessageBox.Show(CustomMessageBox.MessageType.Warning, "تنبيه", "ليس لديك صلاحية لعرض هذة الصفحة");
+            }
+
         }
 
         private void PharmacyDepBtn_Click(object sender, EventArgs e)
@@ -378,17 +408,22 @@ namespace CHS_FrontEnd
 
         private void LogOutBtn_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("هل تريد تسجيل الخروج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+           DialogResult result = MessageBox.Show("هل تريد تسجيل الخروج؟", "تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (result == DialogResult.Yes)
-            {
-
-                frmLogin loginForm = new frmLogin();
-                loginForm.Show();
-
-
-                this.Close();
-            }
+    if (result == DialogResult.Yes)
+    {
+        this.Hide(); // ✅ إخفاء النافذة الحالية
+        frmLogin loginForm = new frmLogin();
+        
+        if (loginForm.ShowDialog() == DialogResult.OK) // ✅ فتح شاشة تسجيل الدخول وانتظار الإدخال
+        {
+            this.Show(); // ✅ إعادة إظهار الشاشة الرئيسية بعد تسجيل الدخول
+        }
+        else
+        {
+            Application.Exit(); // ❌ إذا أغلق المستخدم شاشة تسجيل الدخول، اغلق التطبيق بالكامل
+        }
+    }
         }
 
         private void AddNewDoctorBtn_Click(object sender, EventArgs e)

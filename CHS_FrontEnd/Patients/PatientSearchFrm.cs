@@ -161,7 +161,7 @@ namespace CHS_FrontEnd
 
                         OpenForm(patientDetailsPage);
                     }
-                    else if (BaseForm.UserRole == 2 || BaseForm.UserRole == 3 || BaseForm.UserRole == 1)
+                    else if (BaseForm.UserRole == 2 || BaseForm.UserRole == 3 )
                     {
                         var patientDetailsPage = new PatientFileViewrFrm(
                             patientData.FullName,

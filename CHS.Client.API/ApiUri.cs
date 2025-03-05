@@ -20,7 +20,7 @@ namespace CHS.Client.API
         public string Uri { 
             get
             {
-                return "http://localhost:44332/api/" + _Uri;
+                return "http://192.168.0.115:44332/api/" + _Uri;
             }
         }
 

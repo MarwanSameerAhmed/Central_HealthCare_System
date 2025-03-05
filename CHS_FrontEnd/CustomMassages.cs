@@ -39,7 +39,8 @@ namespace CHS_FrontEnd
             this.Opacity = 0; // **تأثير التلاشي عند الفتح**
             this.ControlBox = false; // إزالة زر الإغلاق العلوي
             this.RightToLeft = RightToLeft.Yes; // 📌 **تمكين دعم الاتجاه من اليمين إلى اليسار**
-            this.RightToLeftLayout = true; // 📌
+            this.RightToLeftLayout = true;
+            // 📌
             this.Load += (s, e) =>
             {
                 this.Top += 30; // يمكنك تغيير الرقم لتعديل المسافة
@@ -84,31 +85,38 @@ namespace CHS_FrontEnd
             borderPanel.Controls.Add(iconPictureBox);
 
             // 🔹 تحسين نص العنوان الرئيسي (تم رفعه للأعلى)
-            mainTextLabel = new Guna2HtmlLabel
+            Label mainTextLabel = new Label
             {
                 Text = mainText,
                 Font = new Font("Traditional Arabic", 20, FontStyle.Bold),
                 ForeColor = Color.Black,
                 AutoSize = false,
-                Location = new Point(20, 125), // رفع النص للأعلى
+                Location = new Point(20, 125),
                 Size = new Size(358, 30),
-                TextAlignment = ContentAlignment.MiddleRight, // 📌 **ضبط الاتجاه لليمين**
-                RightToLeft = RightToLeft.Yes // 📌 **تمكين دعم النص العربي**
+                TextAlign = ContentAlignment.MiddleCenter, // ✅ النص في المنتصف
+                RightToLeft = RightToLeft.Yes,
+                 BackColor = Color.Transparent // ✅ دعم العربية
+
             };
             borderPanel.Controls.Add(mainTextLabel);
 
-            subTextLabel = new Guna2HtmlLabel
+            Label subTextLabel = new Label
             {
                 Text = subText,
-                Font = new Font("Traditional Arabic", 18, FontStyle.Bold),
+                Font = new Font("Traditional Arabic", 16, FontStyle.Bold),
                 ForeColor = Color.DarkGray,
                 AutoSize = false,
-                Location = new Point(20, 155), // رفع النص للأعلى
+                Location = new Point(20, 160),
                 Size = new Size(358, 30),
-                TextAlignment = ContentAlignment.MiddleRight, // 📌 **ضبط الاتجاه لليمين**
-                RightToLeft = RightToLeft.Yes // 📌 **تمكين دعم النص العربي**
+                TextAlign = ContentAlignment.MiddleCenter, // ✅ النص في المنتصف
+                RightToLeft = RightToLeft.Yes,
+                                 BackColor = Color.Transparent // ✅ دعم العربية
+                                                               // ✅ دعم العربية
             };
             borderPanel.Controls.Add(subTextLabel);
+
+
+
             // 🔹 تحسين زر "موافق" مع تأثيرات أنيقة (تم رفعه للأعلى)
             okButton = new Guna2Button
             {

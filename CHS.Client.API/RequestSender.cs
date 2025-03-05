@@ -23,7 +23,7 @@ namespace CHS.Client.API
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", credentials);
                 client.DefaultRequestHeaders.Add("FacilityName", Convert.ToBase64String(Encoding.UTF8.GetBytes(facilityName)));
                 client.DefaultRequestHeaders.Add("OTP", otp);
-                HttpResponseMessage response = client.GetAsync("http://localhost:44332/api/Login").Result;
+                HttpResponseMessage response = client.GetAsync("http://192.168.0.115:44332/api/Login").Result;
                 string responseBody = response.Content.ReadAsStringAsync().Result;
                 CHSResponse chsResponse;
                 if (response.IsSuccessStatusCode)
