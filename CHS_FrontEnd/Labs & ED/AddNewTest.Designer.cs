@@ -44,10 +44,12 @@ namespace CHS_FrontEnd.Labs___ED
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CustomTree = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.switchView = new Guna.UI2.WinForms.Guna2Button();
             this.diseasesContainer = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.treLabTests = new System.Windows.Forms.TreeView();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.addResultButton = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ContainerControl3.SuspendLayout();
             this.guna2ContainerControl5.SuspendLayout();
             this.guna2ContainerControl1.SuspendLayout();
@@ -140,6 +142,7 @@ namespace CHS_FrontEnd.Labs___ED
             this.patientDiagnosisNumber.SelectedText = "";
             this.patientDiagnosisNumber.Size = new System.Drawing.Size(313, 39);
             this.patientDiagnosisNumber.TabIndex = 22;
+            this.patientDiagnosisNumber.TextChanged += new System.EventHandler(this.patientDiagnosisNumber_TextChanged);
             // 
             // patientDiagnosisNumberLabel
             // 
@@ -172,13 +175,14 @@ namespace CHS_FrontEnd.Labs___ED
             // 
             this.guna2ContainerControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2ContainerControl1.BorderRadius = 15;
+            this.guna2ContainerControl1.Controls.Add(this.addResultButton);
             this.guna2ContainerControl1.Controls.Add(this.txtResult);
             this.guna2ContainerControl1.Controls.Add(this.resultLabel);
             this.guna2ContainerControl1.Controls.Add(this.resultLabelError);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2ContainerControl1.Location = new System.Drawing.Point(1001, 247);
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(944, 247);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(422, 105);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(479, 105);
             this.guna2ContainerControl1.TabIndex = 41;
             this.guna2ContainerControl1.Text = "vv";
             // 
@@ -198,7 +202,7 @@ namespace CHS_FrontEnd.Labs___ED
             this.txtResult.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResult.ForeColor = System.Drawing.Color.Black;
             this.txtResult.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtResult.Location = new System.Drawing.Point(97, 43);
+            this.txtResult.Location = new System.Drawing.Point(154, 43);
             this.txtResult.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtResult.Name = "txtResult";
             this.txtResult.PasswordChar = '\0';
@@ -216,7 +220,7 @@ namespace CHS_FrontEnd.Labs___ED
             this.resultLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.resultLabel.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.resultLabel.Location = new System.Drawing.Point(371, 11);
+            this.resultLabel.Location = new System.Drawing.Point(428, 11);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(45, 27);
             this.resultLabel.TabIndex = 21;
@@ -229,7 +233,7 @@ namespace CHS_FrontEnd.Labs___ED
             this.resultLabelError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.resultLabelError.Font = new System.Drawing.Font("Traditional Arabic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabelError.ForeColor = System.Drawing.Color.Red;
-            this.resultLabelError.Location = new System.Drawing.Point(92, 7);
+            this.resultLabelError.Location = new System.Drawing.Point(149, 7);
             this.resultLabelError.Name = "resultLabelError";
             this.resultLabelError.Size = new System.Drawing.Size(22, 27);
             this.resultLabelError.TabIndex = 23;
@@ -262,6 +266,7 @@ namespace CHS_FrontEnd.Labs___ED
             this.label4.TabIndex = 24;
             this.label4.Text = ":العمر";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label4.Visible = false;
             // 
             // label2
             // 
@@ -276,6 +281,7 @@ namespace CHS_FrontEnd.Labs___ED
             this.label2.TabIndex = 21;
             this.label2.Text = ":اسم المريض";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label2.Visible = false;
             // 
             // CustomTree
             // 
@@ -284,6 +290,16 @@ namespace CHS_FrontEnd.Labs___ED
             this.CustomTree.Name = "CustomTree";
             this.CustomTree.Size = new System.Drawing.Size(793, 374);
             this.CustomTree.TabIndex = 44;
+            // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(3, 3);
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 300);
+            this.guna2VScrollBar1.TabIndex = 0;
             // 
             // switchView
             // 
@@ -296,12 +312,13 @@ namespace CHS_FrontEnd.Labs___ED
             this.switchView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
             this.switchView.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.switchView.ForeColor = System.Drawing.Color.White;
-            this.switchView.Location = new System.Drawing.Point(884, 247);
+            this.switchView.Location = new System.Drawing.Point(779, 247);
             this.switchView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.switchView.Name = "switchView";
             this.switchView.Size = new System.Drawing.Size(132, 82);
             this.switchView.TabIndex = 43;
             this.switchView.Text = "تغيير طريقة العرض";
+            this.switchView.Visible = false;
             this.switchView.Click += new System.EventHandler(this.switchView_Click);
             // 
             // diseasesContainer
@@ -327,21 +344,51 @@ namespace CHS_FrontEnd.Labs___ED
             this.treLabTests.TabIndex = 0;
             this.treLabTests.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treLabTests_AfterSelect);
             // 
-            // guna2VScrollBar1
+            // addResultButton
             // 
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(3, 3);
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 300);
-            this.guna2VScrollBar1.TabIndex = 0;
+            this.addResultButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.addResultButton.BorderRadius = 15;
+            this.addResultButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addResultButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addResultButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addResultButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addResultButton.Enabled = false;
+            this.addResultButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.addResultButton.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addResultButton.ForeColor = System.Drawing.Color.White;
+            this.addResultButton.Location = new System.Drawing.Point(57, 34);
+            this.addResultButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.addResultButton.Name = "addResultButton";
+            this.addResultButton.Size = new System.Drawing.Size(91, 48);
+            this.addResultButton.TabIndex = 43;
+            this.addResultButton.Text = "إضافة";
+            this.addResultButton.Click += new System.EventHandler(this.addResultButton_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSave.BorderRadius = 15;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(146)))));
+            this.btnSave.Font = new System.Drawing.Font("Traditional Arabic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(572, 218);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(91, 48);
+            this.btnSave.TabIndex = 43;
+            this.btnSave.Text = "حفظ";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // AddNewTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1491, 843);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.treLabTests);
             this.Controls.Add(this.switchView);
             this.Controls.Add(this.CustomTree);
@@ -388,5 +435,7 @@ namespace CHS_FrontEnd.Labs___ED
         private Guna.UI2.WinForms.Guna2ContainerControl diseasesContainer;
         private System.Windows.Forms.TreeView treLabTests;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
+        private Guna.UI2.WinForms.Guna2Button addResultButton;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
     }
 }

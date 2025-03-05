@@ -1,4 +1,5 @@
 ﻿using CHS.Client;
+using CHS_FrontEnd.Labs___ED;
 using CHS_FrontEnd.Pharmacy;
 using FontAwesome.Sharp;
 using Guna.UI2.WinForms;
@@ -463,8 +464,9 @@ namespace CHS_FrontEnd
 
         private void LabDepSearchBtn_Click(object sender, EventArgs e)
         {
-            OpenForm(new LIMSFrm(dockPanel));
+            OpenForm(new AddNewTest(dockPanel));
         }
+
 
         private void patientManagementSubBtn_Click(object sender, EventArgs e)
         {

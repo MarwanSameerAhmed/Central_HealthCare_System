@@ -30,7 +30,7 @@ namespace CHS.Client
         private void LIMBsFrm_Load(object sender, EventArgs e)
         {
             SyncScrollbar();
-            PopulateData();
+            //PopulateData();
             testsGridView.MouseWheel += testsGridView_MouseWheel;
         }
 

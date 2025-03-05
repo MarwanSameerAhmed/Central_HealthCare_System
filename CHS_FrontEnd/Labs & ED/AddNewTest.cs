@@ -1,8 +1,11 @@
 ﻿using CHS.Client.API;
+using CHS.Client.API.Models;
 using CHS.Client.API.Models.Labs;
+using OpenTK.Graphics.OpenGL;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Web.Management;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 
@@ -149,7 +152,12 @@ namespace CHS_FrontEnd.Labs___ED
 
             ResultLabTest result = (ResultLabTest)e.Node.Tag;
             if (result.SubResults == null || result.SubResults.Count == 0)
+            {
                 txtResult.Enabled = true;
+                txtResult.Text = result.Value;
+                resultLabel.Text = $"النتيجة: {result.Name}";
+            }
+            else resultLabel.Text = "النتيجة";
         }
 
         private void btnSearch_Click_1(object sender, EventArgs e)
@@ -159,22 +167,36 @@ namespace CHS_FrontEnd.Labs___ED
                 PatientDiagnosisNumber = long.Parse(patientDiagnosisNumber.Text),
                 RequestID = Guid.NewGuid().ToString()
             };
-            ResultLabTestTemplateResponse response = RequestSender.SendRequest<ResultLabTestRequest, ResultLabTestTemplateResponse>(request);
+            try
+            {
 
-            // Populate the TreeView.
-            treLabTests.Nodes.Clear();
-            TreeNode root = new TreeNode("Lab tests");
-            FillTree(response.Results, root);
-            treLabTests.Nodes.Add(root);
-            treLabTests.ExpandAll();
+                ResultLabTestTemplateResponse response = RequestSender.SendRequest<ResultLabTestRequest, ResultLabTestTemplateResponse>(request);
+                if (response.ResponseCode != "1")
+                {
+                    MessageBox.Show(response.MessageDescription);
+                    return;
+                }
+                btnSearch.Enabled = false;
+                addResultButton.Enabled = true;
+                // Populate the TreeView.
+                treLabTests.Nodes.Clear();
+                TreeNode root = new TreeNode("Lab tests");
+                FillTree(response.Results, root);
+                treLabTests.Nodes.Add(root);
+                treLabTests.ExpandAll();
 
-            // Populate the CustomTree view.
-            CustomTree.Controls.Clear();
-            currentSelectedPanel = null;
-            PopulateCustomTree(response.Results, CustomTree, 0);
+                // Populate the CustomTree view.
+                CustomTree.Controls.Clear();
+                currentSelectedPanel = null;
+                PopulateCustomTree(response.Results, CustomTree, 0);
 
-            // Update the custom scrollbar maximum.
-            UpdateCustomTreeScrollBar();
+                // Update the custom scrollbar maximum.
+                UpdateCustomTreeScrollBar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void switchView_Click(object sender, EventArgs e)
@@ -191,6 +213,66 @@ namespace CHS_FrontEnd.Labs___ED
                 treLabTests.Visible = true;
                 switchView.Text = "Switch to Custom View";
             }
+        }
+
+        private void addResultButton_Click(object sender, EventArgs e)
+        {
+            if (treLabTests.SelectedNode is null) return;
+            ResultLabTest labTest = (ResultLabTest)treLabTests.SelectedNode.Tag;
+            if (string.IsNullOrEmpty(txtResult.Text)) return;
+
+            labTest.Value = txtResult.Text;
+            txtResult.Clear();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            List<ResultLabTest> resultLabTests = new List<ResultLabTest>();
+            foreach (TreeNode node  in treLabTests.Nodes[0].Nodes)
+            {
+                if (hasValue((ResultLabTest)node.Tag)) 
+                {
+                    resultLabTests.Add((ResultLabTest)node.Tag);
+                }
+            }
+            if (resultLabTests.Count == 0)
+            {
+                MessageBox.Show("Error");
+                return;
+            }
+
+            try
+            {
+                SaveLabTestsResultsRequest request = new SaveLabTestsResultsRequest()
+                {
+                    RequestID = Guid.NewGuid().ToString(),
+                    PatientDiagnosisNumber = long.Parse(patientDiagnosisNumber.Text),
+                    Results = resultLabTests
+                };
+                CHSResponse response = RequestSender.SendRequest<SaveLabTestsResultsRequest, CHSResponse>(request);
+                MessageBox.Show(response.MessageDescription);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private bool hasValue(ResultLabTest result)
+        {
+            if ((result.SubResults == null || result.SubResults.Count == 0)) return !string.IsNullOrEmpty(result.Value);
+            foreach(ResultLabTest subResults in result.SubResults)
+            {
+                if (hasValue(subResults)) return true;
+            }
+            return false;
+        }
+
+        private void patientDiagnosisNumber_TextChanged(object sender, EventArgs e)
+        {
+            btnSearch.Enabled = true;
+            addResultButton.Enabled = false;
+            treLabTests.Nodes.Clear();
         }
     }
 }
